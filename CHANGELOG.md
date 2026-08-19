@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- „Anleitung“ aus der normalen Section-Linkliste gelöst und als eigenständige sekundäre Headeraktion für Desktop und mobiles Menü umgesetzt.
+- Veraltete Portfolio-Referenz auf das nicht mehr ausgelieferte Landschaftsbild entfernt und durch die vorhandenen responsiven Topografie-Assets ersetzt.
 - Desktopnavigation nach der manuellen Live-Prüfung auf ein explizites horizontales Flex-Layout zurückgesetzt; Standalone-Build und gezielter Desktop-/Mobile-Smoke-Test bestanden.
 - Eigenständiges Repository unter `https://github.com/deresjot/a11y-copilot` veröffentlicht und den korrigierten Stand als Commit `70f7907` auf `main` synchronisiert.
 - Dokumentation an die aktuelle öffentliche Repository-Sichtbarkeit, den realen Git-Status und die weiterhin offene Lizenz-/Fontrechte-Entscheidung angepasst.
