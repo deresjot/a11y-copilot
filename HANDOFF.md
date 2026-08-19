@@ -1,12 +1,12 @@
 # Übergabe: a11y-copilot
 
-Stand: 15. August 2026
+Stand: 19. August 2026
 
 ## Auftrag und Leitgedanke
 
 Der fachliche Scope umfasst digitale Barrierefreiheit über den gesamten Lebenszyklus: Strategie und Governance, Beschaffung, Research und Konzeption, Anforderungen, Gestaltung, Inhalte, technische Umsetzung, Dokumentation, Qualitätssicherung, Veröffentlichung, Support, Betrieb und Weiterentwicklung. Der Copilot leitet aus einer konkreten Frage die relevanten Zusammenhänge ab, ohne Rollenpakete zu verlangen oder jede Antwort unnötig auf alle Phasen auszuweiten.
 
-`a11y-copilot` ist eine öffentliche, frei nutzbare Wissens- und Arbeitsgrundlage für digitale Barrierefreiheit von Sebastian Jansen / [@deresjot](https://github.com/deresjot). Das Repository soll Menschen, Coding-Agents und LLMs bei Anforderungen, Gestaltung, Content, Frontend-Umsetzung und Testing unterstützen.
+`a11y-copilot` ist eine öffentlich einsehbare Wissens- und Arbeitsgrundlage für digitale Barrierefreiheit von Sebastian Jansen / [@deresjot](https://github.com/deresjot). Das Repository soll Menschen, Coding-Agents und LLMs bei Anforderungen, Gestaltung, Content, Frontend-Umsetzung und Testing unterstützen. Da noch keine Lizenz festgelegt ist, bedeutet die öffentliche Sichtbarkeit derzeit keine eingeräumte freie Nachnutzung.
 
 Das Projekt ist kein rollenbasierter Prozessbaukasten. Accessibility-Fragen werden als zusammenhängende Produktfragen behandelt: Semantik, visuelle Gestaltung, Sprache, Interaktion, Tastatur, Fokus, assistive Technologien, Anforderungen und Tests gehören gemeinsam betrachtet.
 
@@ -210,6 +210,9 @@ Der Bereich „Kein falsches Versprechen“ nutzt eine gemeinsame dunkle Träger
 
 ## Bereits durchgeführte technische Prüfungen
 
+- vollständige Portfolio-Regression mit 99 Playwright-Fällen und 32 WCAG-EM-orientierten axe-Zustands-/Viewportfällen ohne bestätigte automatische Regel- oder Reflow-Befunde abgeschlossen;
+- nach dem Live-Deployment 16 gezielte Browser-Smoke-Tests für Navigation, mobile Sections, Copilot-Hero, gemeinsame Dialoge und lokale Ressourcen bestanden;
+- eigenständigen Build erzeugt und Desktopnavigation, mobilen View sowie Ressourcen lokal gezielt geprüft;
 - HTML mit `html-validate` geprüft;
 - Transparenz, Abmessungen und Darstellung des PNG-Maskottchens auf dunklem Hintergrund geprüft;
 - Hero und responsive Darstellung in Desktop- und Mobilansichten visuell geprüft;
@@ -218,7 +221,16 @@ Der Bereich „Kein falsches Versprechen“ nutzt eine gemeinsame dunkle Träger
 - frühere automatische axe-Prüfung der statischen Seite ohne gemeldete Violations durchgeführt;
 - repo-weite Suche nach früheren organisationsspezifischen Begriffen im aktuellen Arbeitsstand durchgeführt.
 
-Diese Prüfungen sind kein vollständiger Audit und keine Konformitätsgarantie. Vor Veröffentlichung sind insbesondere eine systematische manuelle Prüfung bei 200 % und 400 %, Tastatur- und Fokusprüfung, Forced Colors, Screenreader-Prüfung sowie ein erneuter automatisierter Test des finalen Stands erforderlich.
+Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safari und aufgabenbasierte Tests mit Menschen bleiben als reale manuelle Prüfungen offen und müssen für weitergehende Nutzungsaussagen ergänzt werden.
+
+## Veröffentlichungsstand
+
+- Repository: `https://github.com/deresjot/a11y-copilot`
+- Standardbranch: `main`
+- Dokumentierter Live-Fix: Commit `70f7907bec3df0fcca542ccbfa28c9d5bf870897`
+- Sichtbarkeit: öffentlich
+- Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
+- Portfolio-Integration: live unter beiden auf `/home/webp4t2ii/html/deresjot` zeigenden Domains; der veröffentlichte Webroot wurde nach dem Deployment vollständig per SHA-256 gegen das lokale Release geprüft.
 
 ## Offene Veröffentlichungspunkte
 
@@ -226,9 +238,9 @@ Diese Prüfungen sind kein vollständiger Audit und keine Konformitätsgarantie.
 - Fremde Texte dürfen nicht ungeprüft übernommen werden. Inhalte externer Guides wurden nur als Impulse behandelt und eigenständig formuliert.
 - Herkunft und Nutzungsrecht aller lokalen Fonts, Bilder, Favicons und sonstigen Assets müssen vor Veröffentlichung dokumentiert werden.
 - Relative Links und externe Links im finalen Veröffentlichungsstand erneut prüfen.
-- Repository-Name, Ziel-Remote und Download-URL festlegen. Unbekannte Remotes nicht überschreiben und nicht ohne eindeutiges Ziel pushen.
-- Sensible Informationen, interne Domains, Metadaten, Binärdateien und generierte Artefakte nochmals repo-weit scannen.
-- Die Git-Historie enthält möglicherweise frühere organisationsspezifische Inhalte. Sie wurde nicht umgeschrieben und muss vor einem öffentlichen Push separat geprüft und gegebenenfalls kontrolliert bereinigt werden.
+- Solange Lizenz und Fontrechte nicht geklärt sind, bewusst entscheiden, ob das Repository öffentlich bleiben soll.
+- Sensible Informationen, interne Domains, Metadaten, Binärdateien und generierte Artefakte bei künftigen Releases weiterhin repo-weit scannen.
+- Die bereits veröffentlichte Git-Historie wurde nicht umgeschrieben. Falls eine nachträgliche Historienbereinigung erforderlich wird, muss sie separat geplant, gesichert und kontrolliert durchgeführt werden.
 
 ## Pflegeprinzipien
 

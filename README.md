@@ -40,8 +40,8 @@ Das Projekt wird von [Sebastian Jansen](https://sebastianjansen.com/) / `@deresj
 
 ## Lizenz
 
-Für dieses Repository ist noch keine Lizenz festgelegt. Ohne eine Lizenz gelten die gesetzlichen Standardrechte; eine freie Weiterverwendung ist dadurch noch nicht rechtssicher eingeräumt. Vor Veröffentlichung sollte eine passende Open-Source-/Open-Content-Lizenz bewusst gewählt und als `LICENSE` ergänzt werden.
+Dieses Repository ist derzeit öffentlich, aber es ist noch keine Lizenz festgelegt. Ohne eine Lizenz gelten die gesetzlichen Standardrechte; die öffentliche Sichtbarkeit räumt keine freie Weiterverwendung ein. Eine passende Open-Source-/Open-Content-Lizenz muss bewusst gewählt und als `LICENSE` ergänzt werden.
 
-Die Startseite verwendet lokale Dateien der Schriftfamilie Neue Machina aus sebastianjansen.com. Vor einer öffentlichen Weitergabe des vollständigen Repositorys müssen die vorhandenen Nutzungs- und Distributionsrechte für diese Fontdateien ausdrücklich geprüft werden; eine spätere Projektlizenz schließt sie nicht automatisch ein.
+Die Startseite verwendet lokale Dateien der Schriftfamilie Neue Machina aus sebastianjansen.com. Die Nutzungs- und Distributionsrechte für diese Fontdateien müssen ausdrücklich geprüft werden; eine spätere Projektlizenz schließt sie nicht automatisch ein. Bis zur Klärung sollte auch die öffentliche Repository-Sichtbarkeit bewusst bewertet werden.
 
 Die Wortmarke verwendet lokal **Kiwi Soda** von jeti unter [CC BY 4.0](font/KiwiSoda-LICENSE.txt). Die erforderliche Namensnennung und die Herkunft der Fontdatei sind im Repository dokumentiert.

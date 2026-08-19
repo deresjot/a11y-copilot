@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Desktopnavigation nach der manuellen Live-Prüfung auf ein explizites horizontales Flex-Layout zurückgesetzt; Standalone-Build und gezielter Desktop-/Mobile-Smoke-Test bestanden.
+- Eigenständiges Repository unter `https://github.com/deresjot/a11y-copilot` veröffentlicht und den korrigierten Stand als Commit `70f7907` auf `main` synchronisiert.
+- Dokumentation an die aktuelle öffentliche Repository-Sichtbarkeit, den realen Git-Status und die weiterhin offene Lizenz-/Fontrechte-Entscheidung angepasst.
 - Eigenständigen dependency-freien `npm start`-/`npm run build`-Workflow sowie einen reproduzierbaren bidirektionalen Abgleich mit der Portfolio-Integration ergänzt; gemeinsame Styles, Scripts, Assets und Dokumentseiten werden für den Standalone-Build lokal vendort.
 - Aktuelle zentrale Dialog-, Hero-, Navigation- und Reduced-Motion-Implementierung aus dem final geprüften Portfolio-Stand übernommen; die fachlichen Markdown-Dateien bleiben die kanonische Quelle dieses Projekts.
 - Zentrale Kopierstrecke verkürzt: Der Dialog kopiert jetzt die fachliche Grundlage zusammen mit einer direkt verwendbaren Startanweisung und zeigt den nächsten Schritt unmittelbar an.
