@@ -296,7 +296,7 @@
   .site-header.is-scrolled .site-breadcrumb a { color: var(--black); text-decoration-color: var(--black); }
   .site-header.is-scrolled .site-breadcrumb li + li::before { color: var(--black); }
   .site-header nav { min-height: 0; padding: 0; }
-  .site-header nav ul { gap: .5rem 2rem; }
+  .site-header nav ul { display: flex; align-items: center; gap: .5rem 2rem; margin: 0; padding: 0; list-style: none; }
   .site-header .section-nav li { font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size: .6875rem; font-weight: 700; letter-spacing: 1px; line-height: 1.3; text-transform: uppercase; }
   .site-header .section-nav a { display: block; padding: 1.6rem 0; color: var(--white); text-decoration: none; text-decoration-thickness: .2rem; text-underline-offset: .35rem; transition: color .16s ease,text-decoration-color .16s ease; }
   .site-header .section-nav a:hover,
