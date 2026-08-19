@@ -1,0 +1,14 @@
+Kiwi Soda
+==========
+
+Typeface designer: jeti / Font End Dev
+Source: https://fontenddev.com/fonts/kiwi-soda/
+Download source: https://www.dafont.com/kiwisoda.font
+
+The author states:
+"You are free to use this font for personal or commercial projects as long as you give credit."
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+The font is used locally for the a11y-copilot wordmark. No external font request is made by the website.

@@ -1,0 +1,14 @@
+{
+  "name": "a11y-copilot",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "bundle:markdown": "node scripts/build-markdown-bundle.mjs",
+    "sync:portfolio": "node scripts/sync-portfolio-content.mjs",
+    "sync:app": "node scripts/sync-portfolio-app.mjs",
+    "sync": "npm run sync:portfolio && npm run sync:app"
+  }
+}

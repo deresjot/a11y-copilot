@@ -1,0 +1,35 @@
+@import url("ui-system.css");
+@font-face { font-family:"GlobalFooterMachina"; src:url("../font/NeueMachina-Medium.woff2") format("woff2"); font-weight:500; font-style:normal; font-display:swap; }
+.global-footer.global-footer { position:static; margin:0; padding:clamp(4rem,8vw,7.43rem) 1rem; border-top:1px solid rgba(255,255,255,.18); background:#111; color:#fff; color-scheme:dark; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; font-size:16px; font-weight:400; line-height:normal; text-align:center; -webkit-font-smoothing:antialiased; }
+.global-footer * { box-sizing:border-box; }
+.global-footer a { text-underline-offset:auto; }
+.global-footer h2 { position:static; hyphens:auto; overflow-wrap:break-word; }
+.global-footer .footer-visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.global-footer > .container,
+.global-footer > .footer-container,
+.global-footer > .container > .row,
+.global-footer > .container > .row > [class*="col-"] { display:contents; }
+.global-footer .global-footer-inner { position:static; display:block; width:min(100%,64rem); margin:0 auto; padding:0; }
+.global-footer nav { display:block; width:100%; min-height:0; padding:0; align-items:normal; justify-content:normal; gap:normal; }
+.global-footer .profile-badge-figure { margin:0; }
+.global-footer .footer-badge,.global-footer .profile-badge-figure img { display:block; width:min(100%,16rem); max-width:100%; height:auto; margin:0 auto 1.5rem; vertical-align:middle; }
+.global-footer .footer-proof { position:static; max-width:30rem; margin:0 auto 2rem; }
+.global-footer .footer-proof h2 { width:auto; max-width:none; margin:0 0 1rem; color:#fff; font-family:"GlobalFooterMachina",ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace; font-size:clamp(1.1rem,2vw,1.45rem); font-weight:500; line-height:1.25; letter-spacing:normal; text-align:center; text-wrap:balance; }
+.global-footer .footer-proof-list { display:grid; grid-template-columns:1fr; gap:.625rem; margin:0; padding:0; list-style:none; }
+.global-footer .footer-proof-list li { min-width:0; margin:0; border:1px solid rgba(255,255,255,.24); background:rgba(17,17,17,.55); text-align:left; }
+.global-footer .footer-proof-list a { display:flex; min-height:100%; flex-direction:column; padding:.9rem 1rem; color:#fff; text-decoration:none; transition:background-color .18s ease,transform .18s ease; }
+.global-footer .footer-proof-list strong { margin-bottom:.65rem; color:#ff004f; font-weight:900; overflow-wrap:anywhere; }
+.global-footer .footer-proof-list span { margin-top:.15rem; color:#fff; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:.78rem; font-weight:400; line-height:1.45; overflow-wrap:anywhere; }
+.global-footer .footer-proof-list a:hover,.global-footer .footer-proof-list a:focus-visible { background:rgba(255,255,255,.08); color:#fff; }
+.global-footer .footer-proof-list a:active { transform:scale(.985); }
+.global-footer .footer-proof-list .footer-proof-link-note { margin-top:auto; padding-top:.65rem; color:#ff004f; font-weight:800; text-decoration:underline; text-underline-offset:.2em; }
+.global-footer .footer-nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem 1.25rem; margin:0 0 1.5rem; padding:0; list-style:none; }
+.global-footer .footer-nav li { margin:0; }
+.global-footer .footer-nav a { display:inline-flex; min-height:2.75rem; align-items:center; padding:.35rem .15rem; color:#fff; font-size:.8rem; font-weight:400; letter-spacing:normal; text-decoration:underline; text-decoration-thickness:.1em; text-underline-offset:.2em; text-transform:none; transition:color .4s ease-in-out; }
+.global-footer .footer-nav a:hover,.global-footer .footer-nav a:focus-visible,.global-footer .footer-nav a[aria-current="page"] { color:#ff004f; }
+.global-footer .footer-meta { margin:0; color:#fff; font-size:.75rem; line-height:1.7; }
+.global-footer.global-footer .footer-top { display:inline-flex; width:3rem; height:3rem; align-items:center; justify-content:center; margin-top:.75rem; border:1px solid #ff004f; border-radius:50%; background:#ff004f; color:#111; font-size:1.675rem; line-height:1; text-decoration:none; transition:color .14s ease,background-color .14s ease,border-color .14s ease,transform .14s ease; }
+.global-footer .footer-top:hover,.global-footer .footer-top:focus-visible { border-color:#fff; background:transparent; color:#fff; }
+.global-footer .footer-top:active { transform:scale(.985); }
+@media (prefers-reduced-motion:reduce) { .global-footer .footer-proof-list a,.global-footer .footer-top { transition:none; } }
+@media (forced-colors:active) { .global-footer .footer-proof-list li,.global-footer .footer-top { border-color:CanvasText; } }

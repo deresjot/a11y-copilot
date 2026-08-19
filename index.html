@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>a11y-copilot: Accessibility-Wissensbasis – Sebastian Jansen</title>
+  <meta name="description" content="a11y-copilot von Sebastian Jansen ist eine freie Wissensbasis für digitale Barrierefreiheit, WCAG, inklusive Produktentwicklung und KI-Assistenten.">
+  <meta name="author" content="Sebastian Jansen">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <link rel="canonical" href="https://www.sebastianjansen.com/a11y-copilot/">
+  <meta property="og:title" content="a11y-copilot: Accessibility-Wissensbasis – Sebastian Jansen">
+  <meta property="og:description" content="Freie Wissens- und Arbeitsgrundlage für Fragen zur digitalen Barrierefreiheit – für Menschen und die KI ihrer Wahl.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sebastianjansen.com/a11y-copilot/">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="https://www.sebastianjansen.com/a11y-copilot/assets/a11y-copilot-topography-glossy-4k-v3.jpg">
+  <meta property="og:image:alt" content="Abstrakte, pixelige topografische Reliefstruktur in Schwarz mit pinken Akzenten">
+  <meta property="og:image:width" content="3840">
+  <meta property="og:image:height" content="2160">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="a11y-copilot: Accessibility-Wissensbasis – Sebastian Jansen">
+  <meta name="twitter:description" content="Freie Wissens- und Arbeitsgrundlage für Fragen zur digitalen Barrierefreiheit – für Menschen und die KI ihrer Wahl.">
+  <meta name="twitter:image" content="https://www.sebastianjansen.com/a11y-copilot/assets/a11y-copilot-topography-glossy-4k-v3.jpg">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "@id": "https://www.sebastianjansen.com/a11y-copilot/#toolkit",
+      "url": "https://www.sebastianjansen.com/a11y-copilot/",
+      "name": "a11y-copilot",
+      "alternateName": "Accessibility Copilot",
+      "description": "Frei zugängliche, maschinenlesbare Wissensgrundlage für Fragen und Entscheidungen zur digitalen Barrierefreiheit.",
+      "inLanguage": "de-DE",
+      "isAccessibleForFree": true,
+      "dateModified": "2026-08-17",
+      "creator": {
+        "@type": "Person",
+        "@id": "https://www.sebastianjansen.com/#person",
+        "name": "Sebastian Jansen",
+        "alternateName": "@deresjot",
+        "url": "https://www.sebastianjansen.com/"
+      }
+    }
+  </script>
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="stylesheet" href="shared/css/global-footer.css">
+  <link rel="preload" href="shared/css/status-document.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="shared/css/status-document.css"></noscript>
+  <link rel="stylesheet" href="a11y-copilot.css">
+  <link rel="preload" href="shared/css/footer-document-modal.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="shared/css/footer-document-modal.css"></noscript>
+  <link rel="stylesheet" href="shared/css/ui-system.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Zum Hauptinhalt</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-identity">
+        <a class="site-logo" href="https://www.sebastianjansen.com/" aria-label="Zur Hauptseite">
+          <img src="shared/img/sebastian-jansen-80.png" alt="" width="80" height="80">
+        </a>
+        <nav class="site-breadcrumb" aria-label="Pfadnavigation">
+          <ol>
+            <li><a href="https://www.sebastianjansen.com/">Hauptseite</a></li>
+            <li><span aria-current="page">a11y-copilot</span></li>
+          </ol>
+        </nav>
+      </div>
+      <button class="nav-toggle ui-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="nav-toggle-lines ui-nav-toggle__lines" aria-hidden="true"></span>
+        <span class="sr-only">Navigation öffnen</span>
+      </button>
+      <nav class="section-nav" aria-label="Bereichsnavigation a11y-copilot">
+        <ul id="site-navigation">
+          <li><a href="#main" aria-current="location">Überblick</a></li>
+          <li><a href="#wirklichkeit">Warum</a></li>
+          <li><a href="#inhalt">Inhalt</a></li>
+          <li><a href="#start">Benutzung</a></li>
+          <li><a href="tutorial.html" data-open-tutorial>Anleitung</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero ui-hero ui-section-target ui-section-target--top" aria-labelledby="title">
+      <div class="hero-grid">
+        <div class="map-cell">
+          <div class="hero-visual">
+            <picture class="map-background" aria-hidden="true">
+              <source srcset="assets/a11y-copilot-topography-glossy-960.avif 960w, assets/a11y-copilot-topography-glossy-v3.avif 1672w, assets/a11y-copilot-topography-glossy-4k-v3.avif 3840w" sizes="(max-width: 48rem) 100vw, 55vw" type="image/avif">
+              <source srcset="assets/a11y-copilot-topography-glossy-v3.jpg 1672w, assets/a11y-copilot-topography-glossy-4k-v3.jpg 3840w" sizes="(max-width: 48rem) 100vw, 55vw" type="image/jpeg">
+              <img src="assets/a11y-copilot-topography-glossy-v3.jpg" alt="" width="1672" height="941" fetchpriority="high">
+            </picture>
+            <h1 class="hero-heading" id="title">
+              <span class="sr-only">a11y-copilot</span>
+              <svg class="hero-wordmark" viewBox="0 0 600 235" aria-hidden="true" focusable="false">
+                <text class="hero-wordmark-top" x="300" y="82" textLength="500" lengthAdjust="spacingAndGlyphs">a11y</text>
+                <text class="hero-wordmark-shadow" x="307" y="207" textLength="500" lengthAdjust="spacingAndGlyphs">COPILOT</text>
+                <text class="hero-wordmark-bottom" x="300" y="198" textLength="500" lengthAdjust="spacingAndGlyphs">COPILOT</text>
+              </svg>
+            </h1>
+            <picture class="mascot">
+              <source srcset="assets/a11y-copilot-mascot-3d-512.avif 512w, assets/a11y-copilot-mascot-3d.avif 1024w" sizes="(max-width: 48rem) 76vw, 31vw" type="image/avif">
+              <img class="mascot-image" src="assets/a11y-copilot-mascot-3d.png" alt="" width="1024" height="1536" fetchpriority="high">
+            </picture>
+          </div>
+          <div class="hero-copy">
+            <div>
+              <p class="kicker">@deresjot · a11y-copilot</p>
+              <p class="lead">Fachliche Arbeitsgrundlage für digitale Barrierefreiheit – von Strategie und Anforderungen über Gestaltung, Inhalte und Umsetzung bis zu Prüfung und Betrieb. Für Menschen, Teams und den KI-Assistenten ihrer Wahl.</p>
+            </div>
+            <div class="actions">
+              <a class="ui-button ui-button--large" href="ACCESSIBILITY.md">Arbeitsgrundlage öffnen</a>
+              <a class="ui-button ui-button--large ui-button--secondary" href="tutorial.html" data-open-tutorial>Anleitung öffnen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reality ui-section-target" id="wirklichkeit" aria-labelledby="reality-title">
+      <div class="wrap section-grid">
+        <div class="chapter">
+          <span class="chapter-no">01</span>
+          <div>
+            <p class="kicker">Die Wirklichkeit</p>
+            <h2 id="reality-title">Barrieren sind Eigenschaften eines Produkts.</h2>
+            <p>Wenn eine Aufgabe nur mit Maus, gutem Sehvermögen, hoher Konzentration oder perfekter Feinmotorik gelingt, liegt das Problem nicht beim Menschen. Das Produkt stellt eine unnötige Bedingung. Gute Accessibility-Arbeit findet diese Bedingungen, bevor sie Menschen von einer Aufgabe ausschließen.</p>
+          </div>
+        </div>
+        <ul class="situations">
+          <li><small>sehen</small>Zoom, Kontrast, Blendung, Screenreader</li>
+          <li><small>hören</small>Untertitel, Transkript, visuelle Signale</li>
+          <li><small>bedienen</small>Tastatur, Touch, Sprache, Schalter</li>
+          <li><small>verstehen</small>klare Sprache, Struktur, Rückmeldung</li>
+          <li><small>konzentrieren</small>weniger Ablenkung, genug Zeit, Fehlertoleranz</li>
+          <li><small>wechseln</small>kleiner Bildschirm, laute Umgebung, nur eine freie Hand</li>
+        </ul>
+        <p class="pullquote">Accessibility ist Produktqualität. Sie wird entworfen, gebaut und nachgewiesen.</p>
+      </div>
+    </section>
+
+    <section class="contents ui-section-target" id="inhalt" aria-labelledby="contents-title">
+      <div class="wrap section-grid">
+        <div class="chapter">
+          <span class="chapter-no">02</span>
+          <div>
+            <p class="kicker">Das Werkzeug</p>
+            <h2 id="contents-title">Fachlicher Kontext für deine nächste Entscheidung.</h2>
+            <p>a11y-copilot stellt Menschen und KI-Assistenten dieselbe fachliche Grundlage bereit: Regeln, Primärquellen, Prüfmethoden und klare Grenzen automatisierter Aussagen. Das Werkzeug prüft nicht selbst und ersetzt weder Expertise noch Tests mit Menschen.</p>
+          </div>
+        </div>
+        <ul class="route-list">
+          <li><span class="no">A</span><h3>Copilot kopieren</h3><p>Öffne die Hilfsdatei und kopiere sie mit einem Klick in den KI-Chat, bevor du deine Frage stellst.</p><a href="ACCESSIBILITY.md">Hilfsdatei öffnen</a></li>
+          <li><span class="no">B</span><h3>Quellen prüfen</h3><p>Vertiefungen führen zu WCAG, BIK, HTML, WAI-ARIA, APG und den passenden Testmethoden.</p><a href="references/standards.md">Referenzen</a></li>
+          <li><span class="no">C</span><h3>Komponenten beurteilen</h3><p>Patterns helfen bei konkreten Interaktionen, ohne eine allgemeine Regel vorzutäuschen.</p><a href="patterns/dialog.md">Patterns</a></li>
+          <li><span class="no">D</span><h3>Dauerhaft verwenden</h3><p>In geeigneten Entwicklungswerkzeugen übernimmt die Agent-Anweisung das Laden und die Auswahl der Quellen.</p><a href="SKILL.md">Agent-Anweisung ansehen</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="start ui-section-target" id="start" aria-labelledby="start-title">
+      <div class="wrap section-grid">
+        <div class="chapter">
+          <span class="chapter-no">03</span>
+          <div>
+            <p class="kicker">So wird es benutzt</p>
+            <h2 id="start-title">Erst Kontext laden. Dann die Aufgabe stellen.</h2>
+            <p>Ein KI-Assistent kennt dein Produkt nicht und erinnert sich nicht zuverlässig an jede fachliche Feinheit. Gib ihm deshalb zuerst die Hilfsdatei und danach den konkreten Nutzungspfad, Code oder Entwurf. Die Anleitung führt dich Schritt für Schritt durch diesen Ablauf.</p>
+            <p><a href="tutorial.html" data-open-tutorial>Step-by-step-Anleitung öffnen</a></p>
+          </div>
+        </div>
+        <ol class="steps">
+          <li><h3>Datei mitgeben</h3><p>Die Hilfsdatei in den KI-Chat deiner Wahl kopieren oder dort als Datei anhängen.</p></li>
+          <li><h3>Konkret fragen</h3><p>Aufgabe, betroffenen Ablauf, Code und bekannte Rahmenbedingungen nennen. Eine konkrete Frage liefert eine überprüfbare Antwort.</p></li>
+          <li><h3>Quelle und Test verlangen</h3><p>Normative Aussagen belegen lassen. Die vorgeschlagene Lösung anschließend im echten Produkt manuell und technisch prüfen.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="limits ui-section-target" id="grenzen" aria-labelledby="limits-title">
+      <div class="wrap section-grid">
+        <div class="chapter">
+          <span class="chapter-no">04</span>
+          <div>
+            <p class="kicker">Was eine Datei nicht leisten kann</p>
+            <h2 id="limits-title">Gute Antworten sind noch kein Nachweis.</h2>
+            <p>a11y-copilot kann eine Analyse schärfen und schlechte Abkürzungen sichtbar machen. Ob eine Lösung trägt, zeigt sich erst im vollständigen Ablauf, mit realen Browsern, assistiven Technologien und Menschen.</p>
+          </div>
+        </div>
+        <div class="limits-list">
+          <p>Ein Toollauf ist kein Audit. Eine Stichprobe ist kein Beleg für ungeprüfte Seiten. Und eine plausible Antwort ist keine normative Quelle.</p>
+          <p>Konformität braucht einen definierten Scope, reproduzierbare Evidenz und manuelle Prüfung. Rechtliche Einordnung und Tests mit Menschen bleiben eigene Aufgaben.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer global-footer gap-double-sm bg-secondary">
+      <div class="global-footer-inner">
+        <figure class="profile-badge-figure">
+          <img class="footer-badge" src="shared/img/footer-badge-320.png" srcset="shared/img/footer-badge-320.png 217w, shared/img/footer-badge-512.png 347w" sizes="(max-width: 767px) 12rem, 16rem" alt="Profilbadge von Sebastian Jansen mit GUPA, IAAP, WCAG, UX und UI" width="2047" height="3021" loading="lazy" decoding="async">
+          <figcaption class="footer-visually-hidden">Profilbadge von Sebastian Jansen mit GUPA, IAAP, WCAG, UX und UI.</figcaption>
+        </figure>
+        <section class="footer-proof" aria-labelledby="footer-proof-title">
+          <h2 id="footer-proof-title">Zertifizierungen, Mitgliedschaften &amp; Engagement</h2>
+          <ul class="footer-proof-list">
+            <li><a href="https://www.credly.com/badges/5a1e8752-3ee7-4ecc-8259-878d3fe07e9c" target="_blank" rel="noopener noreferrer"><strong>IAAP CPACC</strong><span>Certified Professional in Accessibility Core Competencies</span><span class="footer-proof-link-note">Zertifikat verifizieren<span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></span></a></li>
+            <li><a href="https://www.certible.com/de/verify/?id=0714fe38ecbe429d335ef97b8cb5338d" target="_blank" rel="noopener noreferrer"><strong>UXQB CPUX-F</strong><span>Certified Professional for Usability and User Experience</span><span class="footer-proof-link-note">Zertifikat verifizieren<span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></span></a></li>
+            <li><a href="https://my.typo3.org/u/sjansen" target="_blank" rel="noopener noreferrer"><strong>TYPO3 Accessibility Team</strong><span>Co-Lead</span><span class="footer-proof-link-note">TYPO3-Profil ansehen<span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></span></a></li>
+            <li><a href="https://www.credly.com/badges/e0a42831-6fb2-49c1-91e1-0a5f04ff0ba2/linked_in_profile" target="_blank" rel="noopener noreferrer"><strong>IAAP</strong><span>Mitglied</span><span class="footer-proof-link-note">Mitgliedschaft nachweisen<span class="footer-visually-hidden"> bei Credly, öffnet in einem neuen Tab</span></span></a></li>
+            <li><a href="https://germanupa.de/arbeitskreise/arbeitskreis-barrierefreiheit/mitglieder" target="_blank" rel="noopener noreferrer"><strong>German UPA</strong><span>Arbeitskreis Barrierefreiheit</span><span class="footer-proof-link-note">Mitglieder ansehen<span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></span></a></li>
+          </ul>
+        </section>
+        <nav aria-label="Informationen">
+          <ul class="footer-nav">
+            <li><a href="shared/legal/impressum.html" data-footer-document data-document-title="Impressum" data-document-eyebrow="Rechtliches">Impressum</a></li>
+            <li><a href="shared/legal/bildnutzung.html" data-footer-document data-document-title="Bildnutzung" data-document-eyebrow="Hinweise">Bildnutzung</a></li>
+            <li><a href="shared/legal/barrierefreiheit.html" data-footer-document data-document-title="Stand der Barrierefreiheit" data-document-eyebrow="Dokumentation">Stand der Barrierefreiheit</a></li>
+          </ul>
+        </nav>
+        <p class="footer-meta">@deresjot · Sebastian Jansen · © 2026</p>
+        <a class="footer-top" href="#top" aria-label="Zurück zum Seitenanfang"><span aria-hidden="true">↑</span><span class="footer-visually-hidden">Zurück zum Seitenanfang</span></a>
+    </div>
+  </footer>
+
+  <dialog class="ui-dialog ui-dialog--wide" id="markdown-dialog" aria-labelledby="markdown-dialog-title">
+    <div class="ui-dialog__shell ui-dialog__shell--markdown">
+      <div class="ui-dialog__header">
+        <div class="ui-dialog__heading">
+          <p class="ui-dialog__eyebrow">Arbeitsgrundlage</p>
+          <h2 class="ui-dialog__title" id="markdown-dialog-title">Dokument</h2>
+        </div>
+        <div class="ui-action-group">
+          <a class="ui-action" href="ACCESSIBILITY.md" data-direct-document>Als eigene Seite öffnen</a>
+          <button class="ui-icon-button" type="button" data-dialog-close="markdown" aria-label="Dokument schließen"><span aria-hidden="true">×</span></button>
+        </div>
+      </div>
+      <div class="dialog-toolbar">
+        <div class="dialog-toolbar-actions">
+          <button class="ui-button copy-markdown" type="button">Für KI kopieren</button>
+        </div>
+        <p class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="markdown-dialog-body ui-dialog__body" id="markdown-dialog-body" tabindex="0"></div>
+      <section class="copy-next" hidden>
+        <h3>Bereit für deine Frage</h3>
+        <p>Öffne jetzt deinen KI-Chat, füge den kopierten Inhalt ein und schreibe anschließend, wobei du Unterstützung brauchst.</p>
+      </section>
+    </div>
+  </dialog>
+
+  <dialog class="ui-dialog ui-dialog--tutorial" id="tutorial-dialog" aria-labelledby="tutorial-title">
+    <div class="ui-dialog__shell">
+      <div class="ui-dialog__header">
+        <div class="tutorial-progress-wrap">
+          <p class="tutorial-progress" id="tutorial-progress">Schritt 1 von 7</p>
+          <progress class="tutorial-progress-bar" id="tutorial-progress-bar" value="1" max="7" aria-label="Fortschritt der Anleitung">1 von 7</progress>
+          <h2 class="ui-dialog__title" id="tutorial-title">a11y-copilot benutzen</h2>
+        </div>
+        <div class="ui-action-group">
+          <a class="ui-action" href="tutorial.html">Als eigene Seite öffnen</a>
+          <button class="ui-icon-button" type="button" data-dialog-close="tutorial" aria-label="Anleitung schließen"><span aria-hidden="true">×</span></button>
+        </div>
+      </div>
+      <div class="tutorial-body ui-dialog__body" id="tutorial-body" tabindex="-1"></div>
+      <div class="tutorial-controls">
+        <div class="tutorial-controls-group">
+          <button class="ui-button ui-button--secondary tutorial-back" type="button">Zurück</button>
+          <button class="ui-button ui-button--secondary tutorial-next" type="button">Weiter</button>
+        </div>
+        <button class="ui-button tutorial-open-md" type="button" hidden>Jetzt Hilfsdatei öffnen</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="ui-dialog" id="footer-document-dialog" aria-labelledby="footer-document-title" data-footer-document-modal>
+    <div class="ui-dialog__shell ui-dialog__shell--document">
+      <div class="ui-dialog__header">
+        <div class="ui-dialog__heading">
+          <p class="ui-dialog__eyebrow" data-footer-document-eyebrow>Dokument</p>
+          <h2 class="ui-dialog__title" id="footer-document-title">Information</h2>
+        </div>
+        <div class="ui-action-group">
+          <a class="ui-action" href="shared/legal/impressum.html" data-footer-document-page>Als eigene Seite öffnen</a>
+          <button class="ui-icon-button" type="button" data-dialog-close="document" aria-label="Dialog schließen"><span aria-hidden="true">×</span></button>
+        </div>
+      </div>
+      <p class="document-dialog__status" data-footer-document-status role="status" aria-live="polite"></p>
+      <div class="document-dialog__body ui-dialog__body" data-footer-document-body tabindex="0" hidden></div>
+    </div>
+  </dialog>
+
+  <script src="a11y-copilot.js"></script>
+</body>
+</html>

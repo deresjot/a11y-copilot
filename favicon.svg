@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">a11y-copilot</title>
+  <desc id="desc">Pinke abgerundete Form mit freundlichem Gesicht und Werkzeugfach.</desc>
+  <rect width="64" height="64" rx="20" fill="#ff004f"/>
+  <path d="M12 20c0-4 5-6 8-2 3-4 8-2 8 2 0 5-8 10-8 10s-8-5-8-10Zm24 0c0-4 5-6 8-2 3-4 8-2 8 2 0 5-8 10-8 10s-8-5-8-10Z" fill="#fff"/>
+  <path d="M10 37h44c0 11-9 18-22 18S10 48 10 37Z" fill="#fff"/>
+  <path d="M25 37v5h14v-5" fill="none" stroke="#ff004f" stroke-width="3"/>
+</svg>
