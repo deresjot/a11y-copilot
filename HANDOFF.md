@@ -228,10 +228,10 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Dokumentierter Live-Fix: Commit `70f7907bec3df0fcca542ccbfa28c9d5bf870897`
+- Aktueller funktionaler Stand: Commit `b8a73fe` auf `main`
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: live unter beiden auf `/home/webp4t2ii/html/deresjot` zeigenden Domains; der veröffentlichte Webroot wurde nach dem Deployment vollständig per SHA-256 gegen das lokale Release geprüft.
+- Portfolio-Integration: Release 1.0.6 ist unter beiden auf denselben Webroot zeigenden Domains live. Der veröffentlichte Stand wurde mit 120/120 identischen SHA-256-Prüfsummen gegen den Release-Build bestätigt; die fokussierten Live-Interaktionen und das Mobile-WebKit-Gate sind grün.
 
 ## Offene Veröffentlichungspunkte
 
