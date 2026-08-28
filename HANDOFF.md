@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-Stand: 19. August 2026
+Stand: 28. August 2026
 
 ## Auftrag und Leitgedanke
 
@@ -12,9 +12,9 @@ Das Projekt ist kein rollenbasierter Prozessbaukasten. Accessibility-Fragen werd
 
 Die zentrale fachliche Quelle ist [ACCESSIBILITY.md](ACCESSIBILITY.md). Andere Dateien dürfen sie konkretisieren oder ihre Anwendung erklären, aber keine konkurrierende Wissensbasis aufbauen.
 
-Die Startseite stellt die maschinenlesbare Hauptquelle bewusst in einem scrollbaren Dialog bereit. Das ist eine begrenzte Transferaufgabe: Menschen sollen den vollständigen Inhalt nicht im Dialog durcharbeiten müssen, sondern ihn mit einer vorbereiteten Startanweisung in den KI-Assistenten ihrer Wahl kopieren. Ein direkter Dateilink bleibt als robuste Alternative erhalten. Diese begründete Ausnahme ist in [patterns/dialog.md](patterns/dialog.md) festgehalten.
+Die Startseite trennt drei Nutzungswege: ein direkt kopierbares Startpaket für einen KI-Chat, die dauerhafte Verwendung im Repository mit der Agent-Anweisung und das eigene Nachschlagen in der Wissensbasis. Das Startpaket wird aus [PROMPT.md](PROMPT.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md) zusammengesetzt. Die maschinenlesbaren Dokumente bleiben zusätzlich in einem scrollbaren Dialog und über einen direkten Dateilink erreichbar. Diese begrenzte Transferaufgabe und ihre begründete Dialog-Ausnahme sind in [patterns/dialog.md](patterns/dialog.md) festgehalten.
 
-Die empfohlene Einbindung in die persönliche Website ist in [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit soll als technisch eigenständige Unterseite unter derselben Domain erscheinen; die Hauptseite erhält einen kompakten Teaser und einen klaren Einstieg.
+Die empfohlene Einbindung in die persönliche Website ist in [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des gemeinsamen Webauftritts auf `sebastianjansen.com` und `deresjot.de`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen und auf beiden Domains zu prüfen.
 
 ## Anspruch – und eine wichtige Aussagegrenze
 
@@ -102,6 +102,7 @@ WCAG ist dabei die prüfbare Mindestgrundlage, nicht die Obergrenze guter Produk
 /
 ├── README.md                  Öffentlicher Einstieg für GitHub
 ├── ACCESSIBILITY.md           Fachliche Source of Truth
+├── PROMPT.md                  Startanweisung und Schema für die konkrete Aufgabe
 ├── SKILL.md                   Arbeitsanweisung für Agents und LLMs
 ├── TUTORIAL.md                Schrittweise Nutzung mit Prompt-Beispielen
 ├── HANDOFF.md                 Diese Übergabe
@@ -189,7 +190,7 @@ Die Dateien unter `patterns/` konkretisieren wiederkehrende Komponenten. Sie sin
 
 ## Stand der öffentlichen Einstiegsseite
 
-`index.html` ist eine statische Seite ohne Framework oder Tracking. Sie verwendet lokale Schriften und lokale Assets. Minimales JavaScript steuert die mobile Navigation, zeigt lokale Markdown-Dokumente mit Kopierfunktion in einem nativen Dialog und führt durch eine siebenstufige interaktive Anleitung. Ohne JavaScript bleiben die Markdown-Dateien und `tutorial.html` normal erreichbar. Die Gestaltung orientiert sich an der reduzierten visuellen Sprache von sebastianjansen.com:
+`index.html` ist eine statische Seite ohne Framework oder Tracking. Sie verwendet lokale Schriften und lokale Assets. Minimales JavaScript steuert die mobile Navigation, setzt das Startpaket aus den beiden kanonischen Markdown-Dateien zusammen und zeigt lokale Dokumente in nativen Dialogen. Die Anleitung wird vollständig aus `TUTORIAL.md` dargestellt, damit Website und Markdown-Set denselben Inhalt verwenden. Ohne JavaScript bleiben die Markdown-Dateien und `tutorial.html` normal erreichbar. Die Gestaltung orientiert sich an der reduzierten visuellen Sprache von sebastianjansen.com:
 
 Damit die Markdown-Dialoge auch beim direkten Öffnen von `index.html` über `file://` funktionieren, enthält `assets/markdown-content.js` eine generierte lokale Kopie der Markdown-Dateien. Nach fachlichen Änderungen wird sie mit `node scripts/build-markdown-bundle.mjs` aktualisiert. Über HTTP(S) lädt die Seite weiterhin zuerst die jeweilige Markdown-Datei und verwendet den Bundle nur als Fallback.
 
@@ -204,7 +205,7 @@ Damit die Markdown-Dialoge auch beim direkten Öffnen von `index.html` über `fi
 - überlagerter Header mit Sebastians Bildlogo, kompakter mobiler Navigation und pinkem Scrollzustand nach dem Vorbild der Hauptseite;
 - schwarzer Footer strukturell nach der Hauptseite: identische Badge-Größen, zentrierte schmale Inhaltsspalte, Textgröße und Zeilenhöhe, Impressum-/Bildnutzungslinks sowie runder Zurück-nach-oben-Link;
 - lokale Markdown-Dokumente in einem fokussierten, scrollbar begrenzten Dialog;
-- ein deutlich priorisierter Download-CTA und zwei sekundäre Aktionen.
+- eine deutlich priorisierte Kopieraktion und getrennte sekundäre Aktionen zum Ansehen und Verstehen.
 
 Der Bereich „Kein falsches Versprechen“ nutzt eine gemeinsame dunkle Trägerfläche mit gleichmäßigen Trennlinien statt überlappender Borders. Die Linienstärke wird auf kleinen Viewports reduziert. Buttonfarben sind für normale, besuchte, Hover-, Fokus- und Forced-Colors-Zustände explizit definiert.
 

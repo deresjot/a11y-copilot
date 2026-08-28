@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Bedienung in drei klar benannte Wege gegliedert: Startpaket für einen KI-Chat, Projektkontext für Agenten und direktes Nachschlagen in den Dokumenten.
+- `PROMPT.md` als kanonische Startanweisung ergänzt; die Website erzeugt das kopierbare Startpaket jetzt aus `PROMPT.md` und `ACCESSIBILITY.md`, statt einen abweichenden Prompt im JavaScript zu pflegen.
+- Siebenstufige modale Klickstrecke durch eine vollständig sichtbare, scrollbar begrenzte Anleitung aus `TUTORIAL.md` ersetzt; direkte Kopier- und Downloadaktionen bleiben am Dialoganfang erreichbar.
+- Portfolio-Synchronisation über `A11Y_COPILOT_PORTFOLIO_SOURCE` für getrennte lokale Checkouts konfigurierbar gemacht und die zuvor fehlende `HANDOFF.md` in den Inhaltsabgleich aufgenommen.
 - „Anleitung“ aus der normalen Section-Linkliste gelöst und als eigenständige sekundäre Headeraktion für Desktop und mobiles Menü umgesetzt.
 - Die pinke 8-Bit-Landschaft bleibt bewusst Teil des Portfolio-Teasers und des Release-Bestands; ihre versehentliche Einstufung als entbehrliches Alt-Asset wurde rückgängig gemacht und durch einen Build-Regressionstest abgesichert.
 - Desktopnavigation nach der manuellen Live-Prüfung auf ein explizites horizontales Flex-Layout zurückgesetzt; Standalone-Build und gezielter Desktop-/Mobile-Smoke-Test bestanden.

@@ -41,8 +41,7 @@ function revealInitialInPageTarget() {
 window.addEventListener('load', revealInitialInPageTarget);
 revealInitialInPageTarget();
 
-function updateHeader() {
-  siteHeader.classList.toggle('is-scrolled', window.scrollY > 48);
+function updateCurrentSection() {
   const localSections = [
     ['#main', document.querySelector('#main')],
     ['#wirklichkeit', document.querySelector('#wirklichkeit')],
@@ -57,9 +56,9 @@ function updateHeader() {
   document.querySelectorAll('#site-navigation a[aria-current="location"]').forEach(link => link.removeAttribute('aria-current'));
   document.querySelector(`#site-navigation a[href="${currentHref}"]`)?.setAttribute('aria-current', 'location');
 }
-window.addEventListener('scroll', updateHeader, { passive: true });
+window.addEventListener('scroll', updateCurrentSection, { passive: true });
 window.addEventListener('hashchange', () => activateInPageTarget(location.hash, false));
-updateHeader();
+updateCurrentSection();
 
 const mdDialog = document.querySelector('#markdown-dialog');
 const mdTitle = document.querySelector('#markdown-dialog-title');
@@ -68,6 +67,7 @@ const copyMarkdownButton = document.querySelector('.copy-markdown');
 const copyStatus = document.querySelector('.copy-status');
 const copyNext = document.querySelector('.copy-next');
 const documentDirectLink = document.querySelector('[data-direct-document]');
+const startKitButtons = [...document.querySelectorAll('[data-copy-start-kit]')];
 let currentMarkdown = '';
 let currentDocumentUrl = '';
 let markdownReturnTarget = null;
@@ -92,23 +92,28 @@ function findBundledMarkdown(documentUrl) {
   return Object.entries(window.A11Y_MARKDOWN_CONTENT || {}).find(([file]) => pathname.endsWith('/' + file));
 }
 
+async function loadMarkdownText(url) {
+  const documentUrl = new URL(url, location.href).href;
+  if (location.protocol === 'file:') {
+    await loadMarkdownBundle();
+    const bundled = findBundledMarkdown(documentUrl);
+    if (!bundled) throw new Error('markdown-not-bundled');
+    return { documentUrl, markdown: bundled[1] };
+  }
+  try {
+    const response = await fetch(documentUrl);
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    return { documentUrl, markdown: await response.text() };
+  } catch (fetchError) {
+    await loadMarkdownBundle();
+    const bundled = findBundledMarkdown(documentUrl);
+    if (!bundled) throw fetchError;
+    return { documentUrl, markdown: bundled[1] };
+  }
+}
+
 const tutorialDialog = document.querySelector('#tutorial-dialog');
 const tutorialBody = document.querySelector('#tutorial-body');
-const tutorialProgress = document.querySelector('#tutorial-progress');
-const tutorialProgressBar = document.querySelector('#tutorial-progress-bar');
-const tutorialBack = document.querySelector('.tutorial-back');
-const tutorialNext = document.querySelector('.tutorial-next');
-const tutorialOpenMarkdown = document.querySelector('.tutorial-open-md');
-const tutorialSteps = [
-  ['Was du gleich machst', 'Du gibst deinem KI-Chat zuerst eine Hilfsdatei. Darin stehen die wichtigsten Grundlagen für bessere Antworten zur digitalen Barrierefreiheit.'],
-  ['Die Hilfsdatei kopieren', 'Am Ende dieser Anleitung öffnest du die Datei direkt auf dieser Seite. Dort kopierst du den vollständigen Text mit einem einzigen Klick. Du musst nichts markieren.'],
-  ['Einen neuen KI-Chat starten', 'Öffne den KI-Chat, den du sonst auch verwendest. Das kann ein Chat im Browser oder ein Assistent in deinem Editor sein. Das genaue Werkzeug spielt keine Rolle.'],
-  ['Den kopierten Text einfügen', 'Füge den Text als erste Nachricht in den neuen Chat ein. Schreibe dazu: „Nutze diesen Text als Grundlage für meine nächsten Fragen zur Barrierefreiheit.“'],
-  ['Deine eigentliche Frage stellen', 'Beschreibe danach möglichst konkret, wobei du Hilfe brauchst. Du kannst zum Beispiel Code, einen Text, einen Screenshot oder den Ablauf eines Formulars zeigen.'],
-  ['Nach Quelle und Prüfung fragen', 'Bitte die KI zu erklären, worauf ihre Antwort beruht und was du selbst testen musst. Eine automatisch erzeugte Antwort kann wichtige praktische Prüfungen nicht ersetzen.'],
-  ['Antwort nicht ungeprüft übernehmen', 'Probiere die vorgeschlagene Lösung im echten Produkt aus. Wenn möglich, lass sie auch von Menschen prüfen, die Tastatur, Vergrößerung oder assistive Technik verwenden.']
-];
-let tutorialStep = 0;
 
 const footerDocumentDialog = document.querySelector('#footer-document-dialog');
 const footerDocumentTitle = document.querySelector('#footer-document-title');
@@ -208,7 +213,7 @@ function withoutFrontmatter(markdown) {
   return closingFence === -1 ? normalized : normalized.slice(closingFence + 5).replace(/^\n+/, '');
 }
 
-function renderMarkdown(markdown, baseUrl) {
+function renderMarkdown(markdown, baseUrl, target = mdBody) {
   const fragment = document.createDocumentFragment();
   const lines = withoutFrontmatter(markdown).split('\n');
   let paragraph = [];
@@ -268,7 +273,7 @@ function renderMarkdown(markdown, baseUrl) {
   }
   flushParagraph();
   if (code) fragment.append(code);
-  mdBody.replaceChildren(fragment);
+  target.replaceChildren(fragment);
 }
 
 async function openMarkdown(url, returnTarget = document.activeElement) {
@@ -285,24 +290,7 @@ async function openMarkdown(url, returnTarget = document.activeElement) {
   if (!mdDialog.open) mdDialog.showModal();
   document.body.classList.add('is-modal-open');
   try {
-    let markdown;
-    if (location.protocol === 'file:') {
-      await loadMarkdownBundle();
-      const bundled = findBundledMarkdown(documentUrl);
-      if (!bundled) throw new Error('markdown-not-bundled');
-      markdown = bundled[1];
-    } else {
-      try {
-        const response = await fetch(documentUrl);
-        if (!response.ok) throw new Error('HTTP ' + response.status);
-        markdown = await response.text();
-      } catch (fetchError) {
-        await loadMarkdownBundle();
-        const bundled = findBundledMarkdown(documentUrl);
-        if (!bundled) throw fetchError;
-        markdown = bundled[1];
-      }
-    }
+    const { markdown } = await loadMarkdownText(documentUrl);
     currentMarkdown = markdown;
     copyMarkdownButton.disabled = false;
     const renderedMarkdown = withoutFrontmatter(markdown);
@@ -338,12 +326,19 @@ async function openMarkdown(url, returnTarget = document.activeElement) {
 
 async function copyMarkdown() {
   if (!currentMarkdown) return;
+  await writeClipboard(currentMarkdown);
+  copyStatus.textContent = 'Dokument wurde kopiert.';
+  copyNext.hidden = false;
+  copyMarkdownButton.textContent = 'Dokument kopiert';
+  window.setTimeout(() => { copyMarkdownButton.textContent = 'Dokument kopieren'; }, 2500);
+}
+
+async function writeClipboard(text) {
   try {
-    const transferText = 'Nutze das folgende Dokument als fachliche Grundlage für meine nächsten Fragen zur digitalen Barrierefreiheit. Trenne normative Anforderungen, technische Umsetzung, Best Practice und Kontextentscheidungen. Benenne Quellen und offene praktische Prüfungen.\n\n' + currentMarkdown;
-    await navigator.clipboard.writeText(transferText);
+    await navigator.clipboard.writeText(text);
   } catch (error) {
     const field = document.createElement('textarea');
-    field.value = 'Nutze das folgende Dokument als fachliche Grundlage für meine nächsten Fragen zur digitalen Barrierefreiheit. Trenne normative Anforderungen, technische Umsetzung, Best Practice und Kontextentscheidungen. Benenne Quellen und offene praktische Prüfungen.\n\n' + currentMarkdown;
+    field.value = text;
     field.setAttribute('readonly', '');
     field.style.position = 'fixed';
     field.style.opacity = '0';
@@ -353,44 +348,45 @@ async function copyMarkdown() {
     field.remove();
     if (!copied) throw error;
   }
-  copyStatus.textContent = 'Copilot und Startanweisung wurden kopiert.';
-  copyNext.hidden = false;
-  copyMarkdownButton.textContent = 'Für KI kopiert';
-  window.setTimeout(() => { copyMarkdownButton.textContent = 'Für KI kopieren'; }, 2500);
 }
 
-function renderTutorialStep(moveFocus = false) {
-  const [title, text] = tutorialSteps[tutorialStep];
-  const article = document.createElement('article');
-  article.className = 'tutorial-step';
-  const number = document.createElement('p');
-  number.className = 'tutorial-step-no';
-  number.textContent = 'Schritt ' + (tutorialStep + 1);
-  const heading = document.createElement('h3');
-  heading.id = 'tutorial-step-title';
-  heading.tabIndex = -1;
-  heading.textContent = title;
-  const paragraph = document.createElement('p');
-  paragraph.textContent = text;
-  article.append(number, heading, paragraph);
-  tutorialBody.replaceChildren(article);
-  tutorialProgress.textContent = 'Schritt ' + (tutorialStep + 1) + ' von ' + tutorialSteps.length;
-  tutorialProgressBar.value = tutorialStep + 1;
-  tutorialProgressBar.max = tutorialSteps.length;
-  tutorialProgressBar.textContent = (tutorialStep + 1) + ' von ' + tutorialSteps.length;
-  tutorialBack.disabled = tutorialStep === 0;
-  tutorialNext.textContent = tutorialStep === tutorialSteps.length - 1 ? 'Fertig' : 'Weiter';
-  tutorialOpenMarkdown.hidden = tutorialStep !== tutorialSteps.length - 1;
-  if (moveFocus) heading.focus();
+async function copyStartKit(button) {
+  const status = button.closest('.hero-copy, .route-list li, .ui-dialog')?.querySelector('[data-copy-status]');
+  const previousLabel = button.textContent;
+  button.disabled = true;
+  if (status) status.textContent = 'Startpaket wird vorbereitet …';
+  try {
+    const [prompt, accessibility] = await Promise.all([
+      loadMarkdownText('PROMPT.md'),
+      loadMarkdownText('ACCESSIBILITY.md')
+    ]);
+    const payload = `${prompt.markdown.trim()}\n\n---\n\n${accessibility.markdown.trim()}\n`;
+    await writeClipboard(payload);
+    if (status) status.textContent = 'Startanweisung und ACCESSIBILITY.md wurden kopiert. Füge das Startpaket jetzt als erste Nachricht in einen neuen KI-Chat ein.';
+    button.textContent = 'Startpaket kopiert';
+  } catch (error) {
+    if (status) status.textContent = 'Das Startpaket konnte nicht kopiert werden. Öffne stattdessen PROMPT.md und ACCESSIBILITY.md.';
+  } finally {
+    button.disabled = false;
+    window.setTimeout(() => { button.textContent = previousLabel; }, 2500);
+  }
 }
 
-function openTutorial(returnTarget = document.activeElement) {
+async function openTutorial(returnTarget = document.activeElement) {
   tutorialReturnTarget = returnTarget instanceof HTMLElement ? returnTarget : null;
-  tutorialStep = 0;
-  renderTutorialStep();
+  tutorialBody.textContent = 'Anleitung wird geladen.';
   tutorialDialog.showModal();
   document.body.classList.add('is-modal-open');
-  tutorialBody.querySelector('h3').focus();
+  tutorialBody.focus();
+  try {
+    const { documentUrl, markdown } = await loadMarkdownText('TUTORIAL.md');
+    if (!tutorialDialog.open) return;
+    renderMarkdown(markdown, documentUrl, tutorialBody);
+    tutorialBody.scrollTop = 0;
+  } catch (error) {
+    tutorialDialog.close();
+    location.href = 'tutorial.html';
+  }
 }
 
 document.addEventListener('click', event => {
@@ -411,6 +407,7 @@ document.addEventListener('click', event => {
 copyMarkdownButton.addEventListener('click', () => {
   copyMarkdown().catch(() => { copyStatus.textContent = 'Kopieren war nicht möglich. Markiere den Text und kopiere ihn manuell.'; });
 });
+startKitButtons.forEach(button => button.addEventListener('click', () => copyStartKit(button)));
 document.querySelector('[data-dialog-close="markdown"]').addEventListener('click', () => mdDialog.close());
 mdDialog.addEventListener('close', () => {
   if (!tutorialDialog.open) document.body.classList.remove('is-modal-open');
@@ -418,15 +415,6 @@ mdDialog.addEventListener('close', () => {
 });
 mdDialog.addEventListener('click', event => { if (event.target === mdDialog) mdDialog.close(); });
 document.querySelector('[data-dialog-close="tutorial"]').addEventListener('click', () => tutorialDialog.close());
-tutorialBack.addEventListener('click', () => { if (tutorialStep > 0) { tutorialStep -= 1; renderTutorialStep(true); } });
-tutorialNext.addEventListener('click', () => {
-  if (tutorialStep < tutorialSteps.length - 1) { tutorialStep += 1; renderTutorialStep(true); }
-  else tutorialDialog.close();
-});
-tutorialOpenMarkdown.addEventListener('click', () => {
-  tutorialDialog.close();
-  openMarkdown('ACCESSIBILITY.md', tutorialReturnTarget);
-});
 tutorialDialog.addEventListener('close', () => {
   if (!mdDialog.open) {
     document.body.classList.remove('is-modal-open');

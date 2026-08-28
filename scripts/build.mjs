@@ -6,7 +6,7 @@ const output = resolve(root, "dist");
 const publicEntries = [
   "index.html", "tutorial.html", "favicon.ico", "favicon.svg",
   "a11y-copilot.css", "a11y-copilot.js", "tutorial.css",
-  "ACCESSIBILITY.md", "SKILL.md", "TUTORIAL.md", "README.md", "CHANGELOG.md",
+  "ACCESSIBILITY.md", "PROMPT.md", "SKILL.md", "TUTORIAL.md", "README.md", "CHANGELOG.md", "HANDOFF.md",
   "assets", "font", "patterns", "references", "shared"
 ];
 

@@ -23,10 +23,11 @@
   <link rel="stylesheet" href="shared/css/document-pages.css">
   <link rel="stylesheet" href="tutorial.css">
   <link rel="stylesheet" href="shared/css/ui-system.css">
+  <link rel="stylesheet" href="shared/css/site-header.css">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Zum Hauptinhalt</a>
-  <header class="document-site-header">
+  <header class="document-site-header" data-site-header data-site-header-mode="sticky">
     <div class="document-site-header-inner">
       <div class="document-site-identity">
         <a class="document-site-logo" href="https://www.sebastianjansen.com/" aria-label="Zur Hauptseite"><img src="shared/img/sebastian-jansen-80.png" alt="" width="80" height="80"></a>
@@ -36,20 +37,17 @@
   </header>
   <main id="main">
     <p class="kicker">Anleitung</p>
-    <h1>Erst Kontext. Dann die Frage.</h1>
-    <p class="intro">a11y-copilot prüft nicht selbstständig im Hintergrund. Du kopierst zuerst die Hilfsdatei in deinen KI-Chat und stellst danach deine konkrete Frage zur digitalen Barrierefreiheit. Welchen KI-Chat oder Editor du verwendest, spielt dabei keine Rolle.</p>
+    <h1>Wähle den passenden Weg.</h1>
+    <p class="intro">a11y-copilot prüft nicht selbstständig im Hintergrund. Er stellt fachlichen Kontext für einen KI-Chat, einen Coding-Agenten oder das eigene Nachschlagen bereit. Du brauchst nicht für jede Aufgabe das gesamte Repository.</p>
     <ol>
-      <li><div><h2>Hilfsdatei kopieren</h2><p>Öffne <a href="ACCESSIBILITY.md">die Hilfsdatei</a> und kopiere ihren vollständigen Inhalt. Auf der Startseite erledigt das die Schaltfläche „Für KI kopieren“ mit einem Klick. Du musst nichts von Hand markieren.</p></div></li>
-      <li><div><h2>Neuen KI-Chat öffnen</h2><p>Starte einen neuen Chat in dem KI-Werkzeug, das du bereits verwendest. Das kann eine Website oder ein Assistent in deinem Editor sein.</p></div></li>
-      <li><div><h2>Text einfügen</h2><p>Füge den kopierten Text als erste Nachricht ein. Die kopierte Fassung enthält bereits die Anweisung, wie die KI mit der Hilfsdatei arbeiten soll.</p></div></li>
-      <li><div><h2>Eigentliche Frage stellen</h2><p>Beschreibe möglichst konkret, wobei du Hilfe brauchst. Du kannst zum Beispiel Code, einen Text, einen Screenshot oder den Ablauf eines Formulars zeigen.</p></div></li>
-      <li><div><h2>Nach Quelle und Prüfung fragen</h2><p>Bitte die KI zu erklären, worauf ihre Antwort beruht und was du selbst testen musst. Nicht prüfbare Punkte müssen als offen benannt werden.</p></div></li>
-      <li><div><h2>Lösung praktisch prüfen</h2><p>Probiere den Vorschlag im echten Produkt aus. Prüfe den vollständigen Ablauf mit den relevanten Eingabemethoden, Browsern und assistiven Technologien. Automatische Prüfungen reichen dafür nicht aus.</p></div></li>
-      <li><div><h2>Grenzen festhalten</h2><p>Notiere, was geprüft wurde und was noch offen ist. Eine plausibel klingende KI-Antwort ist weder Audit noch Konformitätsnachweis oder Rechtsberatung.</p></div></li>
+      <li><div><h2>Eine Frage im KI-Chat</h2><p>Gib <a href="PROMPT.md">Startanweisung</a> und <a href="ACCESSIBILITY.md">Arbeitsgrundlage</a> als ersten Kontext in einen neuen Chat. Auf der Startseite kopiert „Startpaket kopieren“ beides gemeinsam. Stelle danach deine konkrete Aufgabe in einer zweiten Nachricht.</p></div></li>
+      <li><div><h2>Im Repository arbeiten</h2><p>Stelle <a href="SKILL.md">Agent-Anweisung</a>, Arbeitsgrundlage, <code>references/</code> und <code>patterns/</code> als Projektkontext bereit. Der Agent lädt nur die für die Aufgabe nötigen Vertiefungen und dokumentiert praktische Prüfungen und Grenzen.</p></div></li>
+      <li><div><h2>Selbst nachschlagen</h2><p>Beginne mit der Arbeitsgrundlage und folge den thematischen Referenzen oder Komponenten-Patterns. Prüfe wesentliche normative Aussagen in den direkt verlinkten Primärquellen.</p></div></li>
     </ol>
-    <div class="actions"><a class="ui-button" href="ACCESSIBILITY.md" download>ACCESSIBILITY.md laden</a><a class="ui-button" href="TUTORIAL.md">Markdown-Version</a><a class="ui-button" href="index.html">Zurück zum Toolkit</a></div>
+    <section class="tutorial-check" aria-labelledby="tutorial-check-title"><h2 id="tutorial-check-title">Für jede Aufgabe</h2><p>Nenne Ziel, vollständigen Ablauf, relevante Zustände, vorhandenes Material und bekannte Rahmenbedingungen. Verlange direkte Quellen für normative Aussagen und lasse offene praktische Prüfungen ausdrücklich benennen. Übernimm das Ergebnis nicht ungeprüft.</p></section>
+    <div class="actions"><a class="ui-button" href="PROMPT.md">Startanweisung ansehen</a><a class="ui-button" href="ACCESSIBILITY.md" download>Hauptdatei laden</a><a class="ui-button" href="TUTORIAL.md">Markdown-Version</a><a class="ui-button" href="index.html">Zurück zum Toolkit</a></div>
   </main>
-  <footer class="global-footer"><div class="global-footer-inner">
+  <footer class="global-footer" data-site-footer><div class="global-footer-inner">
     <figure class="profile-badge-figure"><img class="footer-badge" src="shared/img/footer-badge-320.png" srcset="shared/img/footer-badge-320.png 217w, shared/img/footer-badge-512.png 347w" sizes="(max-width:767px) 12rem, 16rem" alt="Profilbadge von Sebastian Jansen mit GUPA, IAAP, WCAG, UX und UI" width="2047" height="3021" loading="lazy" decoding="async"></figure>
     <section class="footer-proof" aria-labelledby="footer-proof-title"><h2 id="footer-proof-title">Zertifizierungen, Mitgliedschaften &amp; Engagement</h2><ul class="footer-proof-list">
       <li><a href="https://www.credly.com/badges/5a1e8752-3ee7-4ecc-8259-878d3fe07e9c" target="_blank" rel="noopener noreferrer"><strong>IAAP CPACC</strong><span>Certified Professional in Accessibility Core Competencies</span><span class="footer-proof-link-note">Zertifikat verifizieren<span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></span></a></li>
@@ -59,8 +57,8 @@
       <li><a href="https://germanupa.de/arbeitskreise/arbeitskreis-barrierefreiheit/mitglieder" target="_blank" rel="noopener noreferrer"><strong>German UPA</strong><span>Arbeitskreis Barrierefreiheit</span><span class="footer-proof-link-note">Mitglieder ansehen<span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></span></a></li>
     </ul></section>
     <nav aria-label="Informationen"><ul class="footer-nav"><li><a href="shared/legal/impressum.html">Impressum</a></li><li><a href="shared/legal/bildnutzung.html">Bildnutzung</a></li><li><a href="shared/legal/barrierefreiheit.html">Stand der Barrierefreiheit</a></li></ul></nav>
-    <p class="footer-meta">@deresjot · Sebastian Jansen · © 2026</p><a class="footer-top" href="#top" aria-label="Zurück zum Seitenanfang"><span aria-hidden="true">↑</span></a>
+    <p class="footer-meta">@deresjot · Sebastian Jansen · © 2026</p><p class="footer-release">Live-Version 1.0.5 · <time datetime="2026-08-28">28.08.2026</time></p><a class="footer-top" href="#top" aria-label="Zurück zum Seitenanfang"><span aria-hidden="true">↑</span></a>
   </div></footer>
-  <script src="shared/js/document-header.js"></script>
+  <script src="shared/js/site-header.js"></script>
 </body>
 </html>

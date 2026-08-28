@@ -8,15 +8,19 @@ Ich pflege das Toolkit, weil eine überzeugend klingende Antwort noch lange kein
 
 ## So benutzt du a11y-copilot
 
-Lade [ACCESSIBILITY.md](ACCESSIBILITY.md) herunter und kopiere den Inhalt in ChatGPT, Claude oder die LLM deiner Wahl. Du kannst die Datei auch als Kontext anhängen. Stelle erst danach deine konkrete Frage und gib den betroffenen Code, den Nutzungspfad und bekannte Rahmenbedingungen mit. Bitte bei normativen Aussagen um die genaue Quelle und teste die vorgeschlagene Lösung anschließend im echten Produkt.
+Für eine einzelne Aufgabe kopierst du das **Startpaket** aus [PROMPT.md](PROMPT.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md) in einen neuen KI-Chat. Alternativ kannst du beide Dateien als Kontext anhängen. Stelle danach deine konkrete Frage und gib den betroffenen Code, den Nutzungspfad und bekannte Rahmenbedingungen mit. Bitte bei normativen Aussagen um die genaue Quelle und teste die vorgeschlagene Lösung anschließend im echten Produkt.
 
 Eine vollständige Anleitung mit kopierbaren Prompt-Beispielen steht in [TUTORIAL.md](TUTORIAL.md).
 
 In Codex, Claude Code oder vergleichbaren agentenfähigen Werkzeugen kann [SKILL.md](SKILL.md) als Einstieg verwendet werden. Der Skill lädt die fachliche Hauptquelle und zieht abhängig von der Aufgabe die passende Vertiefung hinzu. Eine Rollenwahl gibt es absichtlich nicht. Ein Formularproblem kann gleichzeitig Semantik, Content, Fokus, visuelle Gestaltung und Fehlermanagement betreffen.
 
+## Teil des gemeinsamen Webauftritts
+
+Die öffentliche Copilot-Unterseite ist Teil des Webauftritts von [sebastianjansen.com](https://www.sebastianjansen.com/) und [deresjot.de](https://www.deresjot.de/), keine unabhängige Designinsel. Die Hauptseite mit ihrem a11y-copilot-Teaser ist die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser und Unterseite müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Änderungen an Oberfläche oder Markdown-Kern werden deshalb immer auf beide Berührungspunkte und beide Domains geprüft.
+
 ## Was im Repository liegt
 
-[ACCESSIBILITY.md](ACCESSIBILITY.md) ist die fachliche Hauptquelle. [references/](references/) enthält Vertiefungen und führt zu WCAG, BIK, HTML, WAI-ARIA, APG und weiteren Primär- beziehungsweise Methodenquellen. [patterns/](patterns/) behandelt konkrete Komponenten, wenn eine allgemeine Regel nicht ausreicht. Die öffentliche Einstiegsseite liegt in [index.html](index.html). Eine technische und redaktionelle Zusammenfassung für die Weitergabe an andere Systeme steht in [HANDOFF.md](HANDOFF.md).
+[ACCESSIBILITY.md](ACCESSIBILITY.md) ist die fachliche Hauptquelle. [PROMPT.md](PROMPT.md) enthält ausschließlich die Startanweisung und das Schema für eine konkrete Aufgabe. [references/](references/) enthält Vertiefungen und führt zu WCAG, BIK, HTML, WAI-ARIA, APG und weiteren Primär- beziehungsweise Methodenquellen. [patterns/](patterns/) behandelt konkrete Komponenten, wenn eine allgemeine Regel nicht ausreicht. Die öffentliche Einstiegsseite liegt in [index.html](index.html). Eine technische und redaktionelle Zusammenfassung für die Weitergabe an andere Systeme steht in [HANDOFF.md](HANDOFF.md).
 
 Diese Aufteilung ist bewusst klein. Das Fachwissen soll nicht noch einmal im Skill, im README oder in Rollenpaketen gepflegt werden. Wenn eine Aussage geändert wird, gehört die Änderung in die Hauptquelle oder in genau eine zuständige Vertiefung.
 
@@ -24,7 +28,7 @@ Diese Aufteilung ist bewusst klein. Das Fachwissen soll nicht noch einmal im Ski
 
 Das Projekt hat keine Laufzeit- oder Paketabhängigkeiten. `npm start` stellt es lokal unter `http://127.0.0.1:4180` bereit. `npm run build` erzeugt aus denselben lokalen Dateien den statisch deploybaren Ordner `dist/`.
 
-Dieser Ordner ist die kanonische Quelle für die fachlichen Markdown-Dateien, Referenzen und Patterns. `npm run sync:portfolio` überträgt genau diese Inhalte und den daraus generierten Markdown-Bundle in die benachbarte Portfolio-Integration. `npm run sync:app` übernimmt umgekehrt die dort zentral geprüfte UI-Integration einschließlich gemeinsamer Styles und lokaler Dokumentseiten. `npm run sync` führt beide Richtungen in definierter Reihenfolge aus. Die eigenständige Anwendung bleibt auch ohne diesen optionalen Entwicklungsabgleich vollständig lauffähig.
+Dieser Ordner ist die kanonische Quelle für die fachlichen Markdown-Dateien, Referenzen und Patterns. `npm run sync:portfolio` überträgt genau diese Inhalte und den daraus generierten Markdown-Bundle in die Portfolio-Integration. Liegt diese nicht direkt daneben, wird ihr `source`-Ordner über `A11Y_COPILOT_PORTFOLIO_SOURCE` angegeben. `npm run sync:app` übernimmt umgekehrt die dort zentral geprüfte UI-Integration einschließlich gemeinsamer Styles und lokaler Dokumentseiten. `npm run sync` führt beide Richtungen in definierter Reihenfolge aus. Die eigenständige Anwendung bleibt auch ohne diesen optionalen Entwicklungsabgleich vollständig lauffähig.
 
 ## Fachliche Grundlage
 

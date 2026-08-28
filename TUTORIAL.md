@@ -1,97 +1,68 @@
 # a11y-copilot benutzen
 
-`a11y-copilot` ist Kontext für eine LLM. Die Markdown-Datei wird nicht ausgeführt und sie prüft auch nicht selbstständig eine Website. Du gibst sie einem Sprachmodell, bevor du eine konkrete Accessibility-Frage stellst. Dadurch kennt das Modell die fachlichen Leitplanken, die Quellenhierarchie und die Grenzen seiner eigenen Aussage.
+`a11y-copilot` ist fachlicher Kontext für Menschen und KI-Systeme. Die Dateien prüfen keine Website selbstständig. Sie helfen einem Sprachmodell oder Coding-Agenten, Accessibility-Fragen einzuordnen, relevante Quellen zu wählen, Grenzen zu benennen und aus einer konkreten Aufgabe prüfbare nächste Schritte abzuleiten.
 
-Die folgenden Schritte sind bewusst unabhängig von einem bestimmten Anbieter, einer bestimmten LLM oder einer bestimmten Entwicklungsumgebung formuliert. Ob die verwendete Oberfläche Dateien, Projektkontext, Skills oder nur Texteingabe unterstützt, ändert den Transportweg – nicht den fachlichen Ablauf.
+Wähle den Weg, der zu deiner Aufgabe passt. Du musst nicht das gesamte Repository in jeden Chat kopieren.
 
-## Schritt für Schritt
+## 1. Eine konkrete Frage im KI-Chat
 
-### 1. Hauptdatei laden
+Dieser Weg passt für einen einzelnen Text, Entwurf, Screenshot, Codeausschnitt oder Nutzungspfad.
 
-Öffne [ACCESSIBILITY.md](ACCESSIBILITY.md). Stelle sie der LLM vollständig als Datei, Projektkontext oder eingefügten Text bereit. Wenn das System keine Dateien akzeptiert, kopiere den vollständigen Inhalt in die Unterhaltung.
+1. Öffne einen neuen KI-Chat.
+2. Gib [PROMPT.md](PROMPT.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md) als ersten Kontext mit. Die Website fasst beides als **Startpaket** zusammen und kopiert es mit einer Aktion.
+3. Stelle deine konkrete Aufgabe in einer zweiten Nachricht. Nenne Ziel, Ablauf, relevante Zustände und vorhandenes Material.
+4. Verlange direkte Quellen für normative Aussagen und eine klare Liste der Punkte, die praktisch geprüft werden müssen.
+5. Prüfe die vorgeschlagene Lösung im echten Produkt.
 
-Schreibe dazu:
+Der KI-Chat darf die Startanweisung bestätigen, soll aber nicht die komplette Arbeitsgrundlage wiederholen. Bei einer langen Unterhaltung oder einem neuen Chat gibst du das Startpaket erneut mit.
 
-```text
-Nutze die angehängte ACCESSIBILITY.md als fachliche Grundlage für alle
-Accessibility-Aussagen in diesem Chat. Unterscheide normative Anforderungen,
-technische Umsetzung, Best Practice und Kontextentscheidung. Verweise bei
-wesentlichen Aussagen auf die passende Primär- oder Methodenquelle.
-```
+## 2. In einem Repository oder mit einem Coding-Agenten arbeiten
 
-Warte auf die Bestätigung, dass die Datei gelesen wurde. Ein Modell mit knappem Kontextfenster kann lange Unterhaltungen später zusammenfassen oder Teile des Kontexts verlieren. Hänge die Datei in einem neuen Chat erneut an.
+Dieser Weg passt, wenn ein Agent Code, Dokumentation oder Tests im Projekt untersuchen und verändern darf.
 
-### 2. Die konkrete Aufgabe beschreiben
+Stelle mindestens diese Inhalte als Repository- oder Projektkontext bereit:
 
-Nenne nicht nur die Komponente. Beschreibe, was ein Mensch erreichen möchte, welche Zustände dazugehören und was bereits bekannt ist. Füge den relevanten Code, einen Screenshot oder eine URL hinzu, wenn das verwendete System darauf zugreifen kann.
+- [SKILL.md](SKILL.md) für den Arbeitsablauf;
+- [ACCESSIBILITY.md](ACCESSIBILITY.md) als fachliche Hauptquelle;
+- `references/` für thematische Vertiefungen;
+- `patterns/` für konkrete Komponenten.
 
-Ein brauchbarer Auftrag sieht beispielsweise so aus:
-
-```text
-Prüfe dieses Registrierungsformular. Menschen sollen ein Konto anlegen,
-Serverfehler korrigieren und anschließend an derselben Stelle weiterarbeiten
-können. Untersuche Semantik, Tastaturbedienung, Fokus, zugängliche Namen,
-Hinweise, Validierung und Statusmeldungen. Nenne die betroffenen WCAG-2.2-
-Erfolgskriterien nur dort, wo die Zuordnung belastbar ist. Trenne Befunde,
-Empfehlungen und offene manuelle Prüfungen.
-
-[Code oder Link einfügen]
-```
-
-### 3. Quellen und Evidenz verlangen
-
-Bitte bei normativen Aussagen um Erfolgskriterium, Version und Level. Bei HTML- oder ARIA-Fragen soll das Modell außerdem den HTML Standard, ARIA in HTML oder WAI-ARIA berücksichtigen. APG und BIK sind wichtige Pattern- beziehungsweise Methodenquellen, aber keine zusätzlichen WCAG-Anforderungen.
-
-```text
-Belege jede normative Aussage mit einer direkten Quelle. Kennzeichne APG-
-Patterns, BIK-Prüfschritte und Best Practices als informative beziehungsweise
-methodische Hilfen. Erkläre, welche Punkte sich aus dem vorliegenden Material
-nicht zuverlässig bewerten lassen.
-```
-
-### 4. Antwort in eine prüfbare Änderung übersetzen
-
-Lass dir nicht nur eine Liste möglicher Probleme geben. Bitte um eine konkrete Änderung und um die Tests, mit denen genau diese Änderung überprüft wird.
-
-```text
-Schlage die kleinste robuste Änderung vor. Zeige den relevanten Code und nenne
-danach die manuellen Tastatur-, Zoom-, Reflow- und Screenreader-Prüfungen.
-Automatisierte Tests sollen die manuelle Prüfung ergänzen, nicht ersetzen.
-```
-
-### 5. Im Produkt testen
-
-Übernimm eine Antwort nicht ungeprüft. Bediene den vollständigen Ablauf mit Tastatur, prüfe Fokus und Fehlersituationen, vergrößere die Darstellung und teste relevante Browser-/Screenreader-Kombinationen. Wenn Playwright und axe-core vorhanden sind, scanne die tatsächlich erreichbaren Zustände und untersuche neben `violations` auch `incomplete`.
-
-Dokumentiere anschließend, was geprüft wurde und was offen blieb. Eine gute Antwort kann die Prüfung vorbereiten. Sie ist selbst kein Audit und kein Konformitätsnachweis.
-
-## Verwendung in einem Repository oder Agent-System
-
-Kopiere `ACCESSIBILITY.md`, `SKILL.md` sowie die benötigten Verzeichnisse `references/` und `patterns/` in das Projekt oder stelle das gesamte Toolkit als Repository-Kontext bereit. Weise den Agent an, zuerst `SKILL.md` und anschließend die dort verlangte Hauptquelle zu lesen.
+Beispielauftrag:
 
 ```text
 Lies SKILL.md und die dort vorgeschriebene ACCESSIBILITY.md vollständig.
 Untersuche anschließend den Checkout-Prozess dieses Repositorys auf digitale
 Barrierefreiheit. Lade nur die für die Aufgabe benötigten Referenzen und
-Patterns. Implementiere keine Änderung, bevor du Ursache, Normbezug,
-Nutzerwirkung und Teststrategie bestimmt hast.
+Patterns. Bestimme vor einer Änderung Ursache, Nutzerwirkung, belastbaren
+Normbezug und Teststrategie. Implementiere und prüfe danach die kleinste
+robuste Lösung. Dokumentiere auch, was nicht geprüft werden konnte.
 ```
 
-Der Skill verteilt die Arbeit nicht nach Rollen. Das ist beabsichtigt. Ein Dialog kann gleichzeitig HTML-Semantik, visuelle Gestaltung, Fokusmanagement, verständliche Beschriftungen und Tests betreffen. Der Agent soll diese Abhängigkeiten gemeinsam bearbeiten.
+Der Agent soll Zusammenhänge gemeinsam bearbeiten. Eine Rollenwahl ist nicht nötig: Ein Dialog kann gleichzeitig Semantik, visuelle Gestaltung, Fokusmanagement, verständliche Beschriftungen und Tests betreffen.
 
-## Verwendung für eine einzelne Frage
+## 3. Selbst nachschlagen und vertiefen
 
-Auch bei einer einzelnen Frage lohnt sich die Hauptdatei. Hänge `ACCESSIBILITY.md` an und stelle danach die Frage so konkret wie möglich.
+Dieser Weg passt, wenn du eine Aussage, Quelle oder Komponente direkt nachvollziehen möchtest.
 
-```text
-Auf Grundlage der angehängten ACCESSIBILITY.md: Ist dieses Element ein Link
-oder ein Button? Es öffnet clientseitig einen Dialog, verändert aber nicht die
-URL. Begründe die Antwort anhand von HTML-Semantik und nenne die notwendigen
-Tastatur- und Fokusprüfungen.
-```
+- [ACCESSIBILITY.md](ACCESSIBILITY.md) enthält den gemeinsamen fachlichen Kern.
+- [Standards und Primärquellen](references/standards.md) ordnet WCAG, HTML, WAI-ARIA, APG, BIK und rechtliche Bezüge ein.
+- Die übrigen Dateien unter `references/` vertiefen Semantik, Tastatur und Fokus, Formulare, visuelle Zugänglichkeit, Medien, ARIA und Testing.
+- `patterns/` beschreibt wiederkehrende Komponenten wie Dialoge, Tabs, Comboboxes, Navigation, Formulare und Tabellen.
 
-## Welche Dateien wann gebraucht werden
+Vertiefungen ersetzen die Hauptquelle nicht. Sie werden nur hinzugezogen, wenn die konkrete Aufgabe sie braucht.
 
-Für die normale Verwendung reicht zunächst `ACCESSIBILITY.md`. `SKILL.md` ist für Systeme gedacht, die Skills oder Repository-Anweisungen selbstständig laden können. Die Dateien unter `references/` werden benötigt, wenn eine Frage tiefer in Standards, Semantik, Fokus, Formulare, visuelle Zugänglichkeit, Medien, ARIA oder Testing führt. `patterns/` hilft bei konkreten Komponenten wie Dialogen, Tabs oder Comboboxes.
+## Was eine gute Aufgabe enthält
 
-Die fachliche Hauptquelle bleibt trotzdem `ACCESSIBILITY.md`. Ergänzende Dateien vertiefen eine Frage; sie ersetzen die Hauptquelle nicht und bilden keine Rollenpakete.
+Beschreibe möglichst:
+
+- das Ziel des Menschen statt nur den Namen einer Komponente;
+- den vollständigen Ablauf und relevante Initial-, Lade-, Fehler- und Erfolgszustände;
+- Code, Text, Entwurf, Screenshot oder URL;
+- bekannte Browser, Geräte, Eingabemethoden und assistive Technologien;
+- ob du einen fokussierten Review, eine Umsetzung, einen Testplan oder eine konformitätsorientierte Prüfung erwartest.
+
+Ein brauchbares Beispiel steht in [PROMPT.md](PROMPT.md).
+
+## Ergebnis und Grenzen
+
+Eine überzeugend klingende Antwort ist kein Nachweis. Übernimm Änderungen nicht ungeprüft. Dokumentiere den geprüften Scope, die verwendeten Umgebungen und Methoden, reproduzierbare Evidenz, offene manuelle Prüfungen und nicht erreichbare Bereiche. Ein automatisierter Lauf, eine einzelne Browser-/Screenreader-Kombination oder eine KI-Ausgabe belegt keine vollständige Barrierefreiheit und keine rechtliche Konformität.

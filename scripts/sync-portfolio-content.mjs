@@ -2,8 +2,11 @@ import { cp, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { relative, resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
-const portfolio = resolve(root, "../deresjot-web/source/a11y-copilot");
-const documentFiles = ["ACCESSIBILITY.md", "CHANGELOG.md", "README.md", "SKILL.md", "TUTORIAL.md"];
+const portfolioSource = process.env.A11Y_COPILOT_PORTFOLIO_SOURCE
+  ? resolve(process.env.A11Y_COPILOT_PORTFOLIO_SOURCE)
+  : resolve(root, "../deresjot-web/source");
+const portfolio = resolve(portfolioSource, "a11y-copilot");
+const documentFiles = ["ACCESSIBILITY.md", "CHANGELOG.md", "HANDOFF.md", "PROMPT.md", "README.md", "SKILL.md", "TUTORIAL.md"];
 const documentFolders = ["patterns", "references"];
 
 for (const file of documentFiles) await cp(resolve(root, file), resolve(portfolio, file));

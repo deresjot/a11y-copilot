@@ -2,7 +2,9 @@ import { cp, mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
-const portfolioRoot = resolve(root, "../deresjot-web/source");
+const portfolioRoot = process.env.A11Y_COPILOT_PORTFOLIO_SOURCE
+  ? resolve(process.env.A11Y_COPILOT_PORTFOLIO_SOURCE)
+  : resolve(root, "../deresjot-web/source");
 const portfolioApp = resolve(portfolioRoot, "a11y-copilot");
 const shared = resolve(root, "shared");
 
@@ -42,7 +44,9 @@ for (const file of ["sebastian-jansen-80.png", "sebastian-jansen-160.png", "foot
 for (const file of ["NeueMachina-Medium.woff2", "NeueMachina-Regular.woff"]) {
   await cp(resolve(portfolioRoot, "font", file), resolve(shared, "font", file));
 }
-await cp(resolve(portfolioRoot, "js", "document-header.js"), resolve(shared, "js", "document-header.js"));
+for (const file of ["site-header.js", "script.js"]) {
+  await cp(resolve(portfolioRoot, "js", file), resolve(shared, "js", file));
+}
 
 const transformLegalHtml = value => value
   .replaceAll('href="css/', 'href="../css/')

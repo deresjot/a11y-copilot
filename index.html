@@ -48,14 +48,14 @@
   <link rel="stylesheet" href="shared/css/global-footer.css">
   <link rel="preload" href="shared/css/status-document.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="shared/css/status-document.css"></noscript>
-  <link rel="stylesheet" href="a11y-copilot.css">
-  <link rel="preload" href="shared/css/footer-document-modal.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="shared/css/footer-document-modal.css"></noscript>
+  <link rel="stylesheet" href="a11y-copilot.css?v=3">
+  <link rel="stylesheet" href="shared/css/footer-document-modal.css">
   <link rel="stylesheet" href="shared/css/ui-system.css">
+  <link rel="stylesheet" href="shared/css/site-header.css">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Zum Hauptinhalt</a>
-  <header class="site-header">
+  <header class="site-header" data-site-header data-site-header-mode="overlay">
     <div class="site-header-inner">
       <div class="site-identity">
         <a class="site-logo" href="https://www.sebastianjansen.com/" aria-label="Zur Hauptseite">
@@ -90,9 +90,8 @@
         <div class="map-cell">
           <div class="hero-visual">
             <picture class="map-background" aria-hidden="true">
-              <source srcset="assets/a11y-copilot-topography-glossy-960.avif 960w, assets/a11y-copilot-topography-glossy-v3.avif 1672w, assets/a11y-copilot-topography-glossy-4k-v3.avif 3840w" sizes="(max-width: 48rem) 100vw, 55vw" type="image/avif">
-              <source srcset="assets/a11y-copilot-topography-glossy-v3.jpg 1672w, assets/a11y-copilot-topography-glossy-4k-v3.jpg 3840w" sizes="(max-width: 48rem) 100vw, 55vw" type="image/jpeg">
-              <img src="assets/a11y-copilot-topography-glossy-v3.jpg" alt="" width="1672" height="941" fetchpriority="high">
+              <source srcset="assets/a11y-copilot-topography-glossy-4k-16bit.png" media="(prefers-reduced-motion: reduce)" type="image/png">
+              <img src="assets/a11y-copilot-topography-glossy-4k-16bit.gif" alt="" width="3840" height="2160" fetchpriority="high" decoding="async">
             </picture>
             <h1 class="hero-heading" id="title">
               <span class="sr-only">a11y-copilot</span>
@@ -113,9 +112,11 @@
               <p class="lead">Fachliche Arbeitsgrundlage für digitale Barrierefreiheit – von Strategie und Anforderungen über Gestaltung, Inhalte und Umsetzung bis zu Prüfung und Betrieb. Für Menschen, Teams und den KI-Assistenten ihrer Wahl.</p>
             </div>
             <div class="actions">
-              <a class="ui-button ui-button--large" href="ACCESSIBILITY.md">Arbeitsgrundlage öffnen</a>
-              <a class="ui-button ui-button--large ui-button--secondary" href="tutorial.html" data-open-tutorial>Anleitung öffnen</a>
+              <button class="ui-button ui-button--large" type="button" data-copy-start-kit>Startpaket kopieren</button>
+              <a class="ui-button ui-button--large ui-button--secondary" href="ACCESSIBILITY.md">Arbeitsgrundlage ansehen</a>
+              <a class="ui-button ui-button--large ui-button--secondary" href="tutorial.html" data-open-tutorial>Anleitung</a>
             </div>
+            <p class="hero-copy-status" role="status" aria-live="polite" data-copy-status></p>
           </div>
         </div>
       </div>
@@ -154,10 +155,10 @@
           </div>
         </div>
         <ul class="route-list">
-          <li><span class="no">A</span><h3>Copilot kopieren</h3><p>Öffne die Hilfsdatei und kopiere sie mit einem Klick in den KI-Chat, bevor du deine Frage stellst.</p><a href="ACCESSIBILITY.md">Hilfsdatei öffnen</a></li>
-          <li><span class="no">B</span><h3>Quellen prüfen</h3><p>Vertiefungen führen zu WCAG, BIK, HTML, WAI-ARIA, APG und den passenden Testmethoden.</p><a href="references/standards.md">Referenzen</a></li>
-          <li><span class="no">C</span><h3>Komponenten beurteilen</h3><p>Patterns helfen bei konkreten Interaktionen, ohne eine allgemeine Regel vorzutäuschen.</p><a href="patterns/dialog.md">Patterns</a></li>
-          <li><span class="no">D</span><h3>Dauerhaft verwenden</h3><p>In geeigneten Entwicklungswerkzeugen übernimmt die Agent-Anweisung das Laden und die Auswahl der Quellen.</p><a href="SKILL.md">Agent-Anweisung ansehen</a></li>
+          <li><span class="no">A</span><h3>Im KI-Chat starten</h3><p>Kopiert die Startanweisung und die fachliche Hauptquelle als ein Startpaket. Danach stellst du deine konkrete Aufgabe.</p><button class="route-action" type="button" data-copy-start-kit>Startpaket kopieren</button><p class="route-copy-status" role="status" aria-live="polite" data-copy-status></p></li>
+          <li><span class="no">B</span><h3>Selbst nachlesen</h3><p>Öffne die fachliche Hauptquelle, folge ihren Vertiefungen und prüfe die verlinkten Primärquellen.</p><a href="ACCESSIBILITY.md">Arbeitsgrundlage ansehen</a></li>
+          <li><span class="no">C</span><h3>Benutzung verstehen</h3><p>Die Anleitung erklärt die drei Wege für KI-Chat, Repository/Agent und eigenes Nachschlagen.</p><a href="tutorial.html" data-open-tutorial>Anleitung öffnen</a></li>
+          <li><span class="no">D</span><h3>Im Projekt verwenden</h3><p>Ein Coding-Agent liest zuerst die Agent-Anweisung und lädt danach nur die für die Aufgabe nötigen Quellen und Patterns.</p><a href="SKILL.md">Agent-Anweisung ansehen</a></li>
         </ul>
       </div>
     </section>
@@ -168,15 +169,15 @@
           <span class="chapter-no">03</span>
           <div>
             <p class="kicker">So wird es benutzt</p>
-            <h2 id="start-title">Erst Kontext laden. Dann die Aufgabe stellen.</h2>
-            <p>Ein KI-Assistent kennt dein Produkt nicht und erinnert sich nicht zuverlässig an jede fachliche Feinheit. Gib ihm deshalb zuerst die Hilfsdatei und danach den konkreten Nutzungspfad, Code oder Entwurf. Die Anleitung führt dich Schritt für Schritt durch diesen Ablauf.</p>
-            <p><a href="tutorial.html" data-open-tutorial>Step-by-step-Anleitung öffnen</a></p>
+            <h2 id="start-title">Weg wählen. Kontext geben. Ergebnis prüfen.</h2>
+            <p>Für eine einzelne Frage reicht das Startpaket. In einem Repository steuert die Agent-Anweisung, welche Vertiefungen hinzukommen. Zum Nachschlagen kannst du jede Markdown-Datei direkt öffnen. Die Anleitung erklärt alle drei Wege ohne Werkzeugbindung.</p>
+            <p><a href="tutorial.html" data-open-tutorial>Vollständige Anleitung öffnen</a></p>
           </div>
         </div>
         <ol class="steps">
-          <li><h3>Datei mitgeben</h3><p>Die Hilfsdatei in den KI-Chat deiner Wahl kopieren oder dort als Datei anhängen.</p></li>
-          <li><h3>Konkret fragen</h3><p>Aufgabe, betroffenen Ablauf, Code und bekannte Rahmenbedingungen nennen. Eine konkrete Frage liefert eine überprüfbare Antwort.</p></li>
-          <li><h3>Quelle und Test verlangen</h3><p>Normative Aussagen belegen lassen. Die vorgeschlagene Lösung anschließend im echten Produkt manuell und technisch prüfen.</p></li>
+          <li><h3>Passenden Einstieg wählen</h3><p>Startpaket für einen KI-Chat, Agent-Anweisung für ein Repository oder die Dokumente zum eigenen Nachschlagen verwenden.</p></li>
+          <li><h3>Aufgabe konkret machen</h3><p>Ziel, vollständigen Ablauf, Zustände, Material und bekannte Rahmenbedingungen nennen. So wird aus einer allgemeinen Frage ein prüfbarer Auftrag.</p></li>
+          <li><h3>Quellen und Tests prüfen</h3><p>Normative Aussagen belegen lassen und offene Prüfungen benennen. Die vorgeschlagene Lösung anschließend im echten Produkt überprüfen.</p></li>
         </ol>
       </div>
     </section>
@@ -199,7 +200,7 @@
     </section>
   </main>
 
-  <footer class="footer global-footer gap-double-sm bg-secondary">
+  <footer class="footer global-footer gap-double-sm bg-secondary" data-site-footer>
       <div class="global-footer-inner">
         <figure class="profile-badge-figure">
           <img class="footer-badge" src="shared/img/footer-badge-320.png" srcset="shared/img/footer-badge-320.png 217w, shared/img/footer-badge-512.png 347w" sizes="(max-width: 767px) 12rem, 16rem" alt="Profilbadge von Sebastian Jansen mit GUPA, IAAP, WCAG, UX und UI" width="2047" height="3021" loading="lazy" decoding="async">
@@ -223,6 +224,7 @@
           </ul>
         </nav>
         <p class="footer-meta">@deresjot · Sebastian Jansen · © 2026</p>
+        <p class="footer-release">Live-Version 1.0.5 · <time datetime="2026-08-28">28.08.2026</time></p>
         <a class="footer-top" href="#top" aria-label="Zurück zum Seitenanfang"><span aria-hidden="true">↑</span><span class="footer-visually-hidden">Zurück zum Seitenanfang</span></a>
     </div>
   </footer>
@@ -241,24 +243,23 @@
       </div>
       <div class="dialog-toolbar">
         <div class="dialog-toolbar-actions">
-          <button class="ui-button copy-markdown" type="button">Für KI kopieren</button>
+          <button class="ui-button copy-markdown" type="button">Dokument kopieren</button>
         </div>
         <p class="copy-status" role="status" aria-live="polite"></p>
       </div>
       <div class="markdown-dialog-body ui-dialog__body" id="markdown-dialog-body" tabindex="0"></div>
       <section class="copy-next" hidden>
-        <h3>Bereit für deine Frage</h3>
-        <p>Öffne jetzt deinen KI-Chat, füge den kopierten Inhalt ein und schreibe anschließend, wobei du Unterstützung brauchst.</p>
+        <h3>Dokument kopiert</h3>
+        <p>Du kannst den Inhalt jetzt in einem anderen Werkzeug einfügen. Für einen neuen KI-Chat ist das vollständige Startpaket der empfohlene Einstieg.</p>
       </section>
     </div>
   </dialog>
 
   <dialog class="ui-dialog ui-dialog--tutorial" id="tutorial-dialog" aria-labelledby="tutorial-title">
-    <div class="ui-dialog__shell">
+    <div class="ui-dialog__shell ui-dialog__shell--markdown">
       <div class="ui-dialog__header">
-        <div class="tutorial-progress-wrap">
-          <p class="tutorial-progress" id="tutorial-progress">Schritt 1 von 7</p>
-          <progress class="tutorial-progress-bar" id="tutorial-progress-bar" value="1" max="7" aria-label="Fortschritt der Anleitung">1 von 7</progress>
+        <div class="ui-dialog__heading">
+          <p class="ui-dialog__eyebrow">Benutzung</p>
           <h2 class="ui-dialog__title" id="tutorial-title">a11y-copilot benutzen</h2>
         </div>
         <div class="ui-action-group">
@@ -266,14 +267,14 @@
           <button class="ui-icon-button" type="button" data-dialog-close="tutorial" aria-label="Anleitung schließen"><span aria-hidden="true">×</span></button>
         </div>
       </div>
-      <div class="tutorial-body ui-dialog__body" id="tutorial-body" tabindex="-1"></div>
-      <div class="tutorial-controls">
-        <div class="tutorial-controls-group">
-          <button class="ui-button ui-button--secondary tutorial-back" type="button">Zurück</button>
-          <button class="ui-button ui-button--secondary tutorial-next" type="button">Weiter</button>
+      <div class="dialog-toolbar">
+        <div class="dialog-toolbar-actions">
+          <button class="ui-button" type="button" data-copy-start-kit>Startpaket kopieren</button>
+          <a class="ui-button ui-button--secondary" href="ACCESSIBILITY.md" download>Hauptdatei laden</a>
         </div>
-        <button class="ui-button tutorial-open-md" type="button" hidden>Jetzt Hilfsdatei öffnen</button>
+        <p class="copy-status" role="status" aria-live="polite" data-copy-status></p>
       </div>
+      <div class="tutorial-body markdown-dialog-body ui-dialog__body" id="tutorial-body" tabindex="0"></div>
     </div>
   </dialog>
 
@@ -294,6 +295,7 @@
     </div>
   </dialog>
 
-  <script src="a11y-copilot.js"></script>
+  <script src="shared/js/site-header.js"></script>
+  <script src="a11y-copilot.js?v=3"></script>
 </body>
 </html>

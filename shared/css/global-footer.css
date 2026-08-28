@@ -28,6 +28,7 @@
 .global-footer .footer-nav a { display:inline-flex; min-height:2.75rem; align-items:center; padding:.35rem .15rem; color:#fff; font-size:.8rem; font-weight:400; letter-spacing:normal; text-decoration:underline; text-decoration-thickness:.1em; text-underline-offset:.2em; text-transform:none; transition:color .4s ease-in-out; }
 .global-footer .footer-nav a:hover,.global-footer .footer-nav a:focus-visible,.global-footer .footer-nav a[aria-current="page"] { color:#ff004f; }
 .global-footer .footer-meta { margin:0; color:#fff; font-size:.75rem; line-height:1.7; }
+.global-footer .footer-release { margin:.15rem 0 0; color:#aaa; font-size:.675rem; line-height:1.5; letter-spacing:.02em; }
 .global-footer.global-footer .footer-top { display:inline-flex; width:3rem; height:3rem; align-items:center; justify-content:center; margin-top:.75rem; border:1px solid #ff004f; border-radius:50%; background:#ff004f; color:#111; font-size:1.675rem; line-height:1; text-decoration:none; transition:color .14s ease,background-color .14s ease,border-color .14s ease,transform .14s ease; }
 .global-footer .footer-top:hover,.global-footer .footer-top:focus-visible { border-color:#fff; background:transparent; color:#fff; }
 .global-footer .footer-top:active { transform:scale(.985); }
