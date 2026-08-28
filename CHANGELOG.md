@@ -1,10 +1,17 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 – 2026-08-28
 
+- Fachliche Standardprofile von Werkzeugadaptern getrennt und als skalierbares Ruleset-Modell unter `rulesets/` verankert; WCAG 2.2 A/AA, EN 301 549, ACT, Best Practices, experimentelle Regeln, Ergebnisgruppen und manuelle Prüflücken sind ausdrücklich eingeordnet.
+- Migrationsprinzip für künftige normative Grundlagen wie WCAG 3 ergänzt: neue Profile werden parallel und mit eigener Bewertungslogik eingeführt, statt WCAG-2-Nachweise stillschweigend umzudeuten.
+- Schnell veraltende redaktionelle Datumszeile aus der fachlichen Hauptquelle entfernt; echte Release-, Übergabe- und Prüfzeitpunkte bleiben als notwendige Evidenz erhalten.
+- Eigenständige Anleitung als progressive siebenstufige Klickstrecke mit nativer Fortschrittsanzeige, Vor/Zurück-Steuerung, Fokusführung und vollständig lesbarem No-JavaScript-Fallback umgesetzt.
+- Direkte Markdown-Aktion ehrlich als Rohdatei gekennzeichnet und in einen neuen Tab verlegt, damit die navigierbare Copilot-Seite erhalten bleibt.
+- Startseitentexte menschenzentriert überarbeitet und den Nutzen robuster Semantik für assistive Technologien, Browser-Automation und agentische Systeme sachlich eingeordnet.
+- Bento-Raster auf eine gemeinsame Konturquelle bereinigt, Überschriftenlaufweite entspannt und die mobile Navigation der Hauptseite sowie des Copiloten als daumennahes Bedienfeld mit großen Tap-Flächen vereinheitlicht.
 - Bedienung in drei klar benannte Wege gegliedert: Startpaket für einen KI-Chat, Projektkontext für Agenten und direktes Nachschlagen in den Dokumenten.
 - `PROMPT.md` als kanonische Startanweisung ergänzt; die Website erzeugt das kopierbare Startpaket jetzt aus `PROMPT.md` und `ACCESSIBILITY.md`, statt einen abweichenden Prompt im JavaScript zu pflegen.
-- Siebenstufige modale Klickstrecke durch eine vollständig sichtbare, scrollbar begrenzte Anleitung aus `TUTORIAL.md` ersetzt; direkte Kopier- und Downloadaktionen bleiben am Dialoganfang erreichbar.
+- Lange Anleitung aus dem Inhaltsdialog gelöst; die eigenständige Tutorialseite führt nun schrittweise durch denselben kanonischen Inhalt aus `TUTORIAL.md`.
 - Portfolio-Synchronisation über `A11Y_COPILOT_PORTFOLIO_SOURCE` für getrennte lokale Checkouts konfigurierbar gemacht und die zuvor fehlende `HANDOFF.md` in den Inhaltsabgleich aufgenommen.
 - „Anleitung“ aus der normalen Section-Linkliste gelöst und als eigenständige sekundäre Headeraktion für Desktop und mobiles Menü umgesetzt.
 - Die pinke 8-Bit-Landschaft bleibt bewusst Teil des Portfolio-Teasers und des Release-Bestands; ihre versehentliche Einstufung als entbehrliches Alt-Asset wurde rückgängig gemacht und durch einen Build-Regressionstest abgesichert.

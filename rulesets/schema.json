@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.sebastianjansen.com/a11y-copilot/rulesets/schema.json",
+  "title": "a11y-copilot ruleset catalog",
+  "type": "object",
+  "required": ["schemaVersion", "defaultProfile", "profiles", "migrationPolicy"],
+  "properties": {
+    "schemaVersion": { "type": "integer", "minimum": 1 },
+    "defaultProfile": { "type": "string", "minLength": 1 },
+    "profiles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "standard", "automationAdapters", "manualCoverage"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9.-]+$" },
+          "label": { "type": "string", "minLength": 1 },
+          "standard": { "type": "object" },
+          "mappings": { "type": "array" },
+          "automationAdapters": { "type": "array" },
+          "manualCoverage": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+        },
+        "additionalProperties": true
+      }
+    },
+    "migrationPolicy": { "type": "object" }
+  },
+  "additionalProperties": false
+}

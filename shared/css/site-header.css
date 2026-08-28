@@ -1,0 +1,86 @@
+:root {
+  --site-header-black: #111;
+  --site-header-white: #fff;
+  --site-header-pink: #ff004f;
+  --site-header-height: 4rem;
+  --site-header-layer: 1000;
+  --site-header-motion: 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-site-header],
+[data-site-header] * {
+  box-sizing: border-box;
+}
+
+[data-site-header] {
+  top: 0;
+  left: 0;
+  z-index: var(--site-header-layer);
+  width: 100%;
+  border-bottom: 1px solid transparent;
+  color: var(--site-header-white);
+  opacity: 1;
+  transition:
+    opacity 0.28s ease,
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    box-shadow 0.28s ease;
+  view-transition-name: site-header;
+}
+
+[data-site-header][data-site-header-mode="overlay"] {
+  position: absolute;
+  background: transparent;
+}
+
+[data-site-header][data-site-header-mode="overlay"].is-scrolled {
+  position: fixed;
+}
+
+[data-site-header][data-site-header-mode="sticky"] {
+  position: sticky;
+  background: var(--site-header-black);
+}
+
+[data-site-header].is-scrolled {
+  border-bottom-color: rgba(255, 255, 255, 0.68);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.08) 38%, rgba(255, 255, 255, 0) 68%),
+    linear-gradient(102deg, rgba(255, 0, 79, 0.92) 0%, rgba(255, 0, 79, 0.88) 38%, rgba(255, 83, 137, 0.84) 64%, rgba(255, 255, 255, 0.88) 100%);
+  box-shadow: 0 0.75rem 2.75rem rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.62), inset 0 -1px 0 rgba(255, 0, 79, 0.22);
+  color: var(--site-header-black);
+  color-scheme: light;
+  -webkit-backdrop-filter: saturate(190%) blur(26px);
+  backdrop-filter: saturate(190%) blur(26px);
+}
+
+[data-site-header].is-scroll-hidden {
+  transform: translate3d(0, calc(-100% - 0.75rem), 0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  [data-site-header].is-scrolled {
+    background: var(--site-header-pink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-site-header] {
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  [data-site-header] {
+    border-bottom-color: CanvasText;
+  }
+
+  [data-site-header].is-scrolled {
+    background: Canvas;
+    color: CanvasText;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}

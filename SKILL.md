@@ -15,6 +15,7 @@ Lies anschließend nur die Referenzen und Patterns, die für den Prüfgegenstand
 
 - Normstatus, WCAG, EN, BITV oder Recht: [Standards](references/standards.md)
 - vollständiger Test, Auditplanung oder Befundbericht: [Testing](references/testing.md)
+- automatisierte Regelprofile, axe-core, ACT, EN 301 549 oder Versionswechsel: [Automatisierte Rulesets](references/automated-rulesets.md) und [`rulesets/catalog.json`](rulesets/catalog.json)
 - DOM, Überschriften, Landmarken, Listen, Links oder Tabellen: [Semantik](references/semantics-and-structure.md)
 - Tastatur, Fokus, Shortcuts oder Overlays: [Tastatur und Fokus](references/keyboard-and-focus.md)
 - Labels, Validierung, Authentifizierung oder Live-Meldungen: [Formulare, Fehler und Status](references/forms-errors-and-status.md)
@@ -81,6 +82,8 @@ Prüfe zuerst die Aufgabe, dann einzelne Regeln. Für jeden relevanten Pfad:
 7. Mit einer dokumentierten Browser-/Screenreader-Kombination Überschriften, Landmarken, Links, Formulare, Tabellen, Widgets und Statusmeldungen prüfen.
 8. Fehler, Ladezustände, Zeitbegrenzungen, Authentifizierung und Wiederaufnahme durchspielen.
 9. Automatisierte Checks auf alle erreichbaren relevanten Zustände anwenden und jeden Befund manuell einordnen. Wenn Playwright und axe-core verfügbar sind, relevante Zustände im echten Browser herstellen, `violations` und `incomplete` auswerten und vollständige Resultate als Testartefakt sichern.
+
+Wenn automatisierte Rulesets verwendet werden, wähle zuerst das fachliche Profil und dann den Adapter für die tatsächlich installierte Engine. Dokumentiere Profil-ID, exakte Engine-Version, ausgeführte Regel-IDs, Zustände und Ausnahmen. Verwende für WCAG 2.2 A/AA nicht nur den Tag `wcag22aa`: Er bezeichnet in axe-core die zusätzlichen WCAG-2.2-Regeln und ersetzt die Tags der früheren, weiterhin anwendbaren A-/AA-Kriterien nicht. Best-Practice- und experimentelle Regeln laufen in getrennten Bewertungsspuren.
 
 Nutze für eine vollständige Abdeckung die Prüfmatrix in [Testing](references/testing.md). Ein einzelner Toollauf oder eine einzelne Assistive-Technology-Kombination ersetzt diese Abdeckung nicht.
 

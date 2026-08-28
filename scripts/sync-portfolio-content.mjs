@@ -7,7 +7,7 @@ const portfolioSource = process.env.A11Y_COPILOT_PORTFOLIO_SOURCE
   : resolve(root, "../deresjot-web/source");
 const portfolio = resolve(portfolioSource, "a11y-copilot");
 const documentFiles = ["ACCESSIBILITY.md", "CHANGELOG.md", "HANDOFF.md", "PROMPT.md", "README.md", "SKILL.md", "TUTORIAL.md"];
-const documentFolders = ["patterns", "references"];
+const documentFolders = ["patterns", "references", "rulesets"];
 
 for (const file of documentFiles) await cp(resolve(root, file), resolve(portfolio, file));
 for (const folder of documentFolders) {

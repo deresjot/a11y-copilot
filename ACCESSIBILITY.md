@@ -1,12 +1,14 @@
 # a11y-copilot
 
-> Zentrale fachliche Quelle für digitale Barrierefreiheit über den Lebenszyklus digitaler Angebote. Stand: 15. August 2026.
+> Zentrale fachliche Quelle für digitale Barrierefreiheit über den Lebenszyklus digitaler Angebote.
 
 Barrierefreiheit ist eine Eigenschaft digitaler Angebote und der Prozesse, die sie hervorbringen. Sie steckt in Strategie und Budget, Beschaffung und Anforderungen, Research und Konzeption, Gestaltung und Sprache, Technik und Dokumentation sowie Prüfung, Support und Betrieb. Wenn sie erst beim abschließenden Toollauf auftaucht, ist ein großer Teil der Arbeit bereits an der falschen Stelle passiert.
 
 Diese Datei gibt Menschen und AI-Agents einen gemeinsamen fachlichen Kontext. Sie hilft dabei, Ausschlussrisiken zu erkennen und daraus Entscheidungen, Anforderungen, Gestaltung, Inhalte, technische Lösungen, Prüfungen und betriebliche Maßnahmen abzuleiten. Für die Nutzung mit einer LLM wird der Inhalt vor der eigentlichen Accessibility-Frage in den Chat kopiert oder als Datei angehängt. Danach folgen die konkrete Aufgabe, das betroffene Angebot oder Artefakt, der Nutzungskontext und bekannte Rahmenbedingungen.
 
 Eine Antwort soll normative Aussagen auf eine konkrete Quelle zurückführen. Maßgeblich sind insbesondere [WCAG 2.2](https://www.w3.org/TR/WCAG22/), der [HTML Standard](https://html.spec.whatwg.org/), [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/), [ARIA in HTML](https://www.w3.org/TR/html-aria/) und – als Prüfmethode – der [BIK WCAG-Test](https://bitvtest.de/pruefverfahren/wcag-22-web). Der [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) ist eine informative Patternreferenz und keine zusätzliche WCAG-Anforderung. Weitere Einordnung steht in [Standards und Primärquellen](references/standards.md).
+
+Normfassungen und automatisierte Prüfregeln ändern sich unabhängig voneinander. Der jeweils vereinbarte Standard wird deshalb als fachliches Profil behandelt und erst danach mit einem konkreten Werkzeugadapter verbunden. Die versionierte Zuordnung für axe-core, ACT, EN 301 549, Best Practices und experimentelle Regeln steht in [Automatisierte Rulesets und Versionswechsel](references/automated-rulesets.md); die maschinenlesbare Konfiguration liegt unter [`rulesets/`](rulesets/). Dadurch kann eine künftige normative Grundlage wie WCAG 3 ergänzt werden, ohne WCAG 2.2, historische Nachweise oder werkzeugspezifische Regeln stillschweigend umzudeuten.
 
 Diese Arbeitsgrundlage ersetzt keinen vollständigen Audit und keine Tests mit Menschen. Sie garantiert keine Konformität und leistet keine Rechtsberatung.
 

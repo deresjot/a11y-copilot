@@ -8,7 +8,6 @@
 
   const updateHeaders = () => {
     const currentScrollPosition = Math.max(window.scrollY, 0);
-
     for (const header of headers) {
       header.classList.toggle("is-scrolled", currentScrollPosition > 48);
       header.classList.remove("is-scroll-hidden");

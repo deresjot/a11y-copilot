@@ -1,0 +1,64 @@
+{
+  "$schema": "./schema.json",
+  "schemaVersion": 1,
+  "defaultProfile": "web-wcag-2.2-aa",
+  "profiles": [
+    {
+      "id": "web-wcag-2.2-aa",
+      "label": "Web · WCAG 2.2 A/AA",
+      "standard": {
+        "family": "WCAG",
+        "version": "2.2",
+        "status": "W3C Recommendation",
+        "levels": ["A", "AA"],
+        "normativeUri": "https://www.w3.org/TR/WCAG22/"
+      },
+      "mappings": [
+        {
+          "id": "en-301-549-web",
+          "type": "jurisdictional",
+          "useWhen": "European scope requires the applicable EN 301 549 web requirements",
+          "sourceUri": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/"
+        },
+        {
+          "id": "act-rules",
+          "type": "test-method",
+          "useWhen": "An implemented rule has a documented ACT mapping",
+          "sourceUri": "https://www.w3.org/WAI/standards-guidelines/act/rules/"
+        }
+      ],
+      "automationAdapters": [
+        {
+          "engine": "axe-core",
+          "versionPolicy": "Record the exact installed version and resolved rule IDs for every result",
+          "testedWith": "4.13.0",
+          "normativeTags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"],
+          "mappingTags": ["ACT", "EN-301-549"],
+          "advisoryTags": ["best-practice"],
+          "optInTags": ["experimental"],
+          "resultPolicy": {
+            "violations": "manual-triage-required",
+            "incomplete": "manual-review-required",
+            "passes": "scoped-automation-evidence-only",
+            "inapplicable": "not-a-pass"
+          }
+        }
+      ],
+      "manualCoverage": [
+        "keyboard-and-focus",
+        "screen-reader-output",
+        "zoom-reflow-and-text-spacing",
+        "complete-user-processes",
+        "dynamic-errors-and-status",
+        "alternative-text-quality",
+        "understandability-and-cognitive-load",
+        "tests-with-people-when-risk-requires"
+      ]
+    }
+  ],
+  "migrationPolicy": {
+    "futureStandards": "Add a new profile; never mutate historical profile meaning",
+    "defaultChange": "Requires an explicit documented migration decision",
+    "historicalResults": "Retain original profile ID, engine version, rule IDs and evidence"
+  }
+}

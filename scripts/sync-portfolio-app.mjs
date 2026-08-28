@@ -28,6 +28,7 @@ await copyText(resolve(portfolioApp, "tutorial.html"), resolve(root, "tutorial.h
 await copyText(resolve(portfolioApp, "a11y-copilot.css"), resolve(root, "a11y-copilot.css"), value => value.replaceAll('../font/', 'font/'));
 await cp(resolve(portfolioApp, "a11y-copilot.js"), resolve(root, "a11y-copilot.js"));
 await copyText(resolve(portfolioApp, "tutorial.css"), resolve(root, "tutorial.css"), value => value.replaceAll('../font/', 'font/'));
+await cp(resolve(portfolioApp, "tutorial.js"), resolve(root, "tutorial.js"));
 await cp(resolve(portfolioApp, "assets"), resolve(root, "assets"), { recursive: true, force: true });
 
 await mkdir(resolve(shared, "css"), { recursive: true });
@@ -35,7 +36,7 @@ await mkdir(resolve(shared, "img"), { recursive: true });
 await mkdir(resolve(shared, "js"), { recursive: true });
 await mkdir(resolve(shared, "font"), { recursive: true });
 await mkdir(resolve(shared, "legal"), { recursive: true });
-for (const file of ["ui-system.css", "global-footer.css", "status-document.css", "footer-document-modal.css", "document-pages.css", "accessibility-report.css"]) {
+for (const file of ["ui-system.css", "global-footer.css", "status-document.css", "footer-document-modal.css", "document-pages.css", "accessibility-report.css", "site-header.css"]) {
   await cp(resolve(portfolioRoot, "css", file), resolve(shared, "css", file));
 }
 for (const file of ["sebastian-jansen-80.png", "sebastian-jansen-160.png", "footer-badge-320.png", "footer-badge-512.png", "sebastian_jansen.jpg"]) {

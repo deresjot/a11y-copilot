@@ -248,6 +248,8 @@ Nutze `.include()` nur, wenn ein begrenzter Komponenten-Scan beabsichtigt und al
 
 Regel-Tags sind versionsabhängig. Stimme sie auf die installierte axe-core-Version und den vereinbarten Standard ab, statt ungeprüft eine Tagliste zu kopieren. Der Standardsatz enthält neben WCAG-bezogenen Regeln auch Best-Practice-Regeln; ein solcher Befund ist nicht automatisch ein WCAG-Verstoß.
 
+Verwende dafür das fachliche Profil und den axe-Adapter aus [Automatisierte Rulesets und Versionswechsel](automated-rulesets.md). Ein WCAG-2.2-AA-Lauf umfasst in axe-core die weiterhin anwendbaren A-/AA-Regeln aus WCAG 2.0 und 2.1 sowie die zusätzlichen 2.2-Regeln. `wcag22aa` allein bildet diesen Umfang nicht ab. Halte die tatsächlich von der installierten Engine aufgelöste Regel-ID-Liste als Artefakt fest; nur so bleiben ein späterer Regelzugang, eine Umklassifizierung oder eine entfernte Regel sichtbar.
+
 Ausgeschlossene Bereiche und deaktivierte Regeln können reale Barrieren verbergen. Verwende sie so klein wie möglich und dokumentiere Begründung, verantwortliche Person, Ablaufdatum und Retest. Für bekannte Befunde sind stabile Fingerprints aus Regel-ID und betroffenem Ziel meist belastbarer als Snapshots des gesamten Ergebnisobjekts. Bewahre vollständige Resultate einschließlich `incomplete` als Testartefakt auf.
 
 Automatisiere bevorzugt wiederkehrende Zustände und Regressionen. Ergänze jeden Lauf durch die manuellen Routinen und die Prüfmatrix dieses Dokuments sowie – abhängig von Risiko und Anspruch – Tests mit assistiven Technologien und Menschen.

@@ -20,13 +20,13 @@ Die öffentliche Copilot-Unterseite ist Teil des Webauftritts von [sebastianjans
 
 ## Was im Repository liegt
 
-[ACCESSIBILITY.md](ACCESSIBILITY.md) ist die fachliche Hauptquelle. [PROMPT.md](PROMPT.md) enthält ausschließlich die Startanweisung und das Schema für eine konkrete Aufgabe. [references/](references/) enthält Vertiefungen und führt zu WCAG, BIK, HTML, WAI-ARIA, APG und weiteren Primär- beziehungsweise Methodenquellen. [patterns/](patterns/) behandelt konkrete Komponenten, wenn eine allgemeine Regel nicht ausreicht. Die öffentliche Einstiegsseite liegt in [index.html](index.html). Eine technische und redaktionelle Zusammenfassung für die Weitergabe an andere Systeme steht in [HANDOFF.md](HANDOFF.md).
+[ACCESSIBILITY.md](ACCESSIBILITY.md) ist die fachliche Hauptquelle. [PROMPT.md](PROMPT.md) enthält ausschließlich die Startanweisung und das Schema für eine konkrete Aufgabe. [references/](references/) enthält Vertiefungen und führt zu WCAG, BIK, HTML, WAI-ARIA, APG und weiteren Primär- beziehungsweise Methodenquellen. [patterns/](patterns/) behandelt konkrete Komponenten, wenn eine allgemeine Regel nicht ausreicht. [`rulesets/`](rulesets/) trennt fachliche Standardprofile von versionierten Werkzeugadaptern, damit Regeln aktualisiert oder später um eine normative Grundlage wie WCAG 3 ergänzt werden können, ohne bestehende Nachweise umzudeuten. Die öffentliche Einstiegsseite liegt in [index.html](index.html). Eine technische und redaktionelle Zusammenfassung für die Weitergabe an andere Systeme steht in [HANDOFF.md](HANDOFF.md).
 
 Diese Aufteilung ist bewusst klein. Das Fachwissen soll nicht noch einmal im Skill, im README oder in Rollenpaketen gepflegt werden. Wenn eine Aussage geändert wird, gehört die Änderung in die Hauptquelle oder in genau eine zuständige Vertiefung.
 
 ## Lokal starten und bauen
 
-Das Projekt hat keine Laufzeit- oder Paketabhängigkeiten. `npm start` stellt es lokal unter `http://127.0.0.1:4180` bereit. `npm run build` erzeugt aus denselben lokalen Dateien den statisch deploybaren Ordner `dist/`.
+Das Projekt hat keine Laufzeit- oder Paketabhängigkeiten. `npm start` stellt es lokal unter `http://127.0.0.1:4180` bereit. `npm run build` erzeugt aus denselben lokalen Dateien den statisch deploybaren Ordner `dist/`. Die Ruleset-Konfiguration beschreibt Adapter, installiert aber bewusst keine Prüfengine; das konsumierende Projekt protokolliert seine tatsächliche Engine-Version und die ausgeführten Regel-IDs.
 
 Dieser Ordner ist die kanonische Quelle für die fachlichen Markdown-Dateien, Referenzen und Patterns. `npm run sync:portfolio` überträgt genau diese Inhalte und den daraus generierten Markdown-Bundle in die Portfolio-Integration. Liegt diese nicht direkt daneben, wird ihr `source`-Ordner über `A11Y_COPILOT_PORTFOLIO_SOURCE` angegeben. `npm run sync:app` übernimmt umgekehrt die dort zentral geprüfte UI-Integration einschließlich gemeinsamer Styles und lokaler Dokumentseiten. `npm run sync` führt beide Richtungen in definierter Reihenfolge aus. Die eigenständige Anwendung bleibt auch ohne diesen optionalen Entwicklungsabgleich vollständig lauffähig.
 
