@@ -231,7 +231,7 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 - Aktueller funktionaler Stand: Version `0.2.0` auf `main`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: Auslieferungsstand `1.0.1` vom 28. August 2026. Rulesets, Tutorial und gemeinsame Navigation sind synchronisiert; 24 fokussierte Browserprüfungen und 6 Mobile-WebKit-Prüfungen bestanden. Der abschließende Live-Abgleich wird im datierten Deployment-Archiv des Website-Repositories dokumentiert.
+- Portfolio-Integration: Auslieferungsstand `1.0.7` vom 28. August 2026. Rulesets, Tutorial und gemeinsame Navigation sind synchronisiert; die fokussierten Browserprüfungen und das Mobile-WebKit-Gate sind grün. Der abschließende Live-Abgleich wird im datierten Deployment-Archiv des Website-Repositories dokumentiert.
 
 ## Offene Veröffentlichungspunkte
 
