@@ -18,7 +18,10 @@
   --ui-radius-lg: 1rem;
   --ui-radius-pill: 999rem;
   --ui-control-min: 2.75rem;
+  --ui-control-touch: 3rem;
   --ui-header-height: 4rem;
+  --ui-viewport-small: 100vh;
+  --ui-viewport-dynamic: 100vh;
   --ui-content-width: 71.25rem;
   --ui-text-width: 42rem;
   --ui-layer-header: 1000;
@@ -30,6 +33,13 @@
   --ui-easing-standard: cubic-bezier(.2, .75, .25, 1);
   --ui-disclosure-duration: var(--ui-duration-normal);
   --ui-disclosure-easing: var(--ui-easing-standard);
+}
+
+@supports (height: 100svh) {
+  :root {
+    --ui-viewport-small: 100svh;
+    --ui-viewport-dynamic: 100dvh;
+  }
 }
 
 a[href] {
@@ -93,7 +103,7 @@ a.skip-link,
 .ui-button:focus-visible { border-color: var(--ui-color-text); background: var(--ui-color-text); color: var(--ui-color-bg); transform: translateY(-1px); }
 .ui-button:active { transform: translateY(0) scale(.985); }
 
-.ui-nav-toggle { width: 3rem; height: 3rem; padding: .65rem; border: 0; background: transparent; color: var(--ui-color-text); cursor: pointer; }
+.ui-nav-toggle { width: var(--ui-control-touch); height: var(--ui-control-touch); padding: .65rem; border: 0; background: transparent; color: var(--ui-color-text); cursor: pointer; }
 .ui-nav-toggle__lines,
 .ui-nav-toggle__lines::before,
 .ui-nav-toggle__lines::after { display: block; width: 100%; height: 2px; background: currentColor; content: ""; transition: transform var(--ui-duration-fast) ease,top var(--ui-duration-fast) ease; }
@@ -106,7 +116,7 @@ a.skip-link,
 
 .ui-section-target { scroll-margin-block-start: var(--ui-header-height); }
 .ui-section-target--top { scroll-margin-block-start: 0; }
-.ui-hero { min-block-size: 100vh; min-block-size: 100dvh; }
+.ui-hero { min-block-size: var(--ui-viewport-small); }
 
 .ui-dialog { width: min(calc(100vw - 2rem),52rem); max-width: 52rem; height: auto; max-height: min(calc(100vh - 2rem),48rem); max-height: min(calc(100dvh - 2rem),48rem); margin: auto; padding: 0; border: 1px solid rgba(255,255,255,.14); border-radius: var(--ui-radius-lg); background: var(--ui-color-bg); color: var(--ui-color-text); box-shadow: 0 2rem 5rem rgba(0,0,0,.55); transform: translateY(.35rem) scale(.985); transition: transform var(--ui-duration-dialog) var(--ui-easing-standard),display var(--ui-duration-dialog) allow-discrete,overlay var(--ui-duration-dialog) allow-discrete; }
 .ui-dialog[open] { transform: translateY(0) scale(1); }
@@ -134,12 +144,12 @@ details > summary::before,
 details > summary::after { transition: transform var(--ui-disclosure-duration) var(--ui-disclosure-easing),background-color var(--ui-duration-fast) ease-out,border-color var(--ui-duration-fast) ease-out,color var(--ui-duration-fast) ease-out; }
 
 @media (max-width:48rem) {
-  .ui-section-target:target { min-block-size: calc(100vh - var(--ui-header-height)); min-block-size: calc(100dvh - var(--ui-header-height)); }
+  .ui-section-target:target { min-block-size: calc(var(--ui-viewport-small) - var(--ui-header-height)); }
   .ui-dialog,
   .ui-dialog--wide,
-  .ui-dialog--tutorial { width: calc(100vw - 1rem); max-height: calc(100vh - 1rem); max-height: calc(100dvh - 1rem); }
+  .ui-dialog--tutorial { width: calc(100vw - 1rem); max-height: calc(var(--ui-viewport-small) - 1rem); }
   .ui-dialog--wide,
-  .ui-dialog--tutorial { height: calc(100vh - 1rem); height: calc(100dvh - 1rem); }
+  .ui-dialog--tutorial { height: calc(var(--ui-viewport-small) - 1rem); }
   .ui-dialog__header { align-items: center; flex-wrap: wrap; padding: var(--ui-space-4); }
   .ui-dialog__header .ui-action-group { width: 100%; flex-wrap: nowrap; }
   .ui-dialog__header .ui-action { width: auto; min-width: 0; flex: 1 1 auto; }

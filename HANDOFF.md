@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-Stand: 28. August 2026
+Stand: 29. August 2026
 
 ## Auftrag und Leitgedanke
 
@@ -228,10 +228,10 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.0` auf `main`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
+- Aktueller funktionaler Stand: Version `0.2.1` auf `main`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: Auslieferungsstand `1.0.7` vom 28. August 2026. Rulesets, Tutorial und gemeinsame Navigation sind synchronisiert; die fokussierten Browserprüfungen und das Mobile-WebKit-Gate sind grün. Der abschließende Live-Abgleich wird im datierten Deployment-Archiv des Website-Repositories dokumentiert.
+- Portfolio-Integration: vorbereiteter Auslieferungsstand `1.0.8` vom 29. August 2026. GitHub-Links, bereinigtes Bento-Raster und kontraststabile Kartenakzente sind synchronisiert; 117 Browser-/Accessibility-Regressionen und das Mobile-WebKit-Gate mit sieben Fällen sind grün. Der abschließende Live-Abgleich wird im datierten Deployment-Archiv des Website-Repositories dokumentiert.
 
 ## Offene Veröffentlichungspunkte
 

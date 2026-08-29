@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.1 – 2026-08-29
+
+- Footer um einen sichtbaren Link zum GitHub-Profil von `@deresjot` und den projektspezifischen Einstieg „Quellcode auf GitHub“ ergänzt; beide Links bleiben bewusst außerhalb der Liste fachlicher Nachweise.
+- Veralteten zweizeiligen Grid-Span des Inhaltskapitels entfernt, damit das aktuelle 12-Spalten-Raster unter den Bento-Karten keine leere Restzeile erzeugt.
+- Pink für kleine Labels sowie Hover-Zustände auf den grauen A-/D-Karten gezielt auf `#ff4778` aufgehellt. Der Markenfarbton bleibt auf schwarzen und pinken Flächen unverändert; normaler Text erreicht auf `#242424` nun mindestens 4,5:1.
+- Desktop-, Tablet- und Mobile-Layout sowie Linkplatzierung, Kontrast, Hover und sichtbaren Tastaturfokus mit gezielten Browserregressionen abgesichert.
+
 ## 0.2.0 – 2026-08-28
 
 - Fachliche Standardprofile von Werkzeugadaptern getrennt und als skalierbares Ruleset-Modell unter `rulesets/` verankert; WCAG 2.2 A/AA, EN 301 549, ACT, Best Practices, experimentelle Regeln, Ergebnisgruppen und manuelle Prüflücken sind ausdrücklich eingeordnet.

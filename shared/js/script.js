@@ -134,6 +134,7 @@
         }
 
         nav.classList.toggle("is-open", isOpen);
+        document.body.classList.toggle("navigation-open", isOpen);
         button.setAttribute("aria-expanded", String(isOpen));
         button.setAttribute("aria-label", isOpen ? "Navigation schließen" : "Navigation öffnen");
         nav.setAttribute("aria-hidden", String(!isOpen));
@@ -150,6 +151,7 @@
 
         if (!mobileMedia.matches) {
             nav.classList.remove("is-open");
+            document.body.classList.remove("navigation-open");
             nav.removeAttribute("aria-hidden");
             button.setAttribute("aria-expanded", "false");
             button.setAttribute("aria-label", "Navigation öffnen");

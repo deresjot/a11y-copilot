@@ -54,12 +54,6 @@
   backdrop-filter: saturate(190%) blur(26px);
 }
 
-[data-site-header].is-scroll-hidden {
-  transform: translate3d(0, calc(-100% - 0.75rem), 0);
-  opacity: 0;
-  pointer-events: none;
-}
-
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
   [data-site-header].is-scrolled {
     background: var(--site-header-pink);
