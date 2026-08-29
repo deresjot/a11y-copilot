@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.2 – 2026-08-29
+
+- GitHub-Profillink als eigene, global einheitliche Footerzeile mit gestalterisch integriertem GitHub-Icon auf allen veröffentlichten Seitentypen ergänzt.
+- Projektregeln für globale Header- und Footeränderungen in Portfolio und Standalone-Repository festgeschrieben; ein All-Routes-Test prüft künftig Struktur, Linkziel, zugänglichen Namen und Position des Profileinstiegs.
+- Synchronisierte Standalone-Anwendung und gemeinsame Footer-Styles gegen den geprüften Portfolio-Stand aktualisiert.
+
 ## 0.2.1 – 2026-08-29
 
 - Footer um einen sichtbaren Link zum GitHub-Profil von `@deresjot` und den projektspezifischen Einstieg „Quellcode auf GitHub“ ergänzt; beide Links bleiben bewusst außerhalb der Liste fachlicher Nachweise.
