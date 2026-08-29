@@ -231,7 +231,7 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 - Aktueller funktionaler Stand: Version `0.2.1` auf `main`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: vorbereiteter Auslieferungsstand `1.0.8` vom 29. August 2026. GitHub-Links, bereinigtes Bento-Raster und kontraststabile Kartenakzente sind synchronisiert; 117 Browser-/Accessibility-Regressionen und das Mobile-WebKit-Gate mit sieben Fällen sind grün. Der abschließende Live-Abgleich wird im datierten Deployment-Archiv des Website-Repositories dokumentiert.
+- Portfolio-Integration: veröffentlichter Auslieferungsstand `1.0.8` vom 29. August 2026. GitHub-Links, bereinigtes Bento-Raster und kontraststabile Kartenakzente sind synchronisiert; 117 lokale Browser-/Accessibility-Regressionen, vier gezielte Live-Regressionen und das Mobile-WebKit-Live-Gate mit sieben Fällen sind grün. Der vollständige 125/125-SHA-256-Abgleich liegt im datierten Deployment-Archiv des Website-Repositories.
 
 ## Offene Veröffentlichungspunkte
 
