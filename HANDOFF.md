@@ -16,6 +16,8 @@ Die Startseite trennt drei Nutzungswege: ein direkt kopierbares Startpaket für 
 
 Die empfohlene Einbindung in die persönliche Website ist in [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des gemeinsamen Webauftritts auf `sebastianjansen.com` und `deresjot.de`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen und auf beiden Domains zu prüfen.
 
+Der UI-Stand `0.2.2` ist mit Website-Release `1.0.9` synchronisiert: Der globale Footer enthält auf allen sieben öffentlichen Seitentypen eine eigene GitHub-Profilzeile mit Icon; ein All-Routes-Test verhindert künftig einseitige Header-/Footer-Änderungen. Der Live-Webroot wurde mit 125/125 identischen Dateien verifiziert, beide Domains stimmen auf zehn Referenzpfaden mit dem Build überein, und die globalen Footer- sowie mobilen WebKit-Liveprüfungen bestanden.
+
 ## Anspruch – und eine wichtige Aussagegrenze
 
 Das Ziel ist eine möglichst umfassende, belastbare und nachvollziehbar geprüfte Barrierefreiheit. Die Formulierung „100 % barrierefrei“ darf trotzdem nicht als pauschales Versprechen verwendet werden:
