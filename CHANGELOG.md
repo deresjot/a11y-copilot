@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.3 – 2026-08-30
+
+- Gemeinsame mobile Header-/Navigationskomponente aus der Portfolio-Integration übernommen; die eigenständige App verwendet damit denselben Burger-, Fokus-, Safe-Area-, Viewport- und Escape-Mechanismus.
+- Die eigene Abschnittsnavigation des a11y-copilot beibehalten und „Grenzen“ als verständlicheren „Einsatzrahmen“ neu benannt.
+- Mobile Heroaktionen über die verfügbare Breite gestapelt und den globalen Footer mit der zentralen Website-Komponente synchronisiert.
+- Aussagegrenzen in den fachlichen Narrativen präziser als Aussagekraft, Einschränkungen oder offene Prüfpunkte formuliert; technisch gemeinte visuelle Grenzen bleiben unverändert.
+
 ## 0.2.2 – 2026-08-29
 
 - GitHub-Profillink als eigene, global einheitliche Footerzeile mit gestalterisch integriertem GitHub-Icon auf allen veröffentlichten Seitentypen ergänzt.

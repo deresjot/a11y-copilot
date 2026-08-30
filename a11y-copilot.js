@@ -1,41 +1,3 @@
-document.documentElement.classList.add('js');
-
-const navToggle = document.querySelector('.nav-toggle');
-const siteNav = document.querySelector('.site-header .section-nav');
-const siteHeader = document.querySelector('.site-header');
-const navToggleLabel = navToggle.querySelector('.sr-only');
-
-function setSectionNavigation(open) {
-  navToggle.setAttribute('aria-expanded', String(open));
-  navToggleLabel.textContent = open ? 'Navigation schließen' : 'Navigation öffnen';
-  siteNav.classList.toggle('is-open', open);
-  document.body.classList.toggle('is-mobile-nav-open', open);
-}
-
-navToggle.addEventListener('click', () => {
-  const open = navToggle.getAttribute('aria-expanded') === 'true';
-  setSectionNavigation(!open);
-});
-siteNav.addEventListener('click', (event) => {
-  const link = event.target.closest('a');
-  if (!link) return;
-  setSectionNavigation(false);
-  if (link.hash) window.setTimeout(() => activateInPageTarget(link.hash, false), 0);
-});
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && siteNav.classList.contains('is-open')) {
-    setSectionNavigation(false);
-    navToggle.focus();
-  }
-});
-document.addEventListener('click', event => {
-  if (!siteNav.classList.contains('is-open') || siteNav.contains(event.target) || navToggle.contains(event.target)) return;
-  setSectionNavigation(false);
-});
-window.addEventListener('resize', () => {
-  if (window.innerWidth > 768 && siteNav.classList.contains('is-open')) setSectionNavigation(false);
-}, { passive: true });
-
 function activateInPageTarget(hash, reveal) {
   if (!hash?.startsWith('#')) return;
   const target = document.getElementById(decodeURIComponent(hash.slice(1)));
@@ -58,24 +20,33 @@ function revealInitialInPageTarget() {
 window.addEventListener('load', revealInitialInPageTarget);
 revealInitialInPageTarget();
 
-function updateCurrentSection() {
-  const localSections = [
-    ['#main', document.querySelector('#main')],
-    ['#wirklichkeit', document.querySelector('#wirklichkeit')],
-    ['#inhalt', document.querySelector('#inhalt')],
-    ['#start', document.querySelector('#start')]
-  ];
-  const marker = window.scrollY + siteHeader.offsetHeight + 24;
-  let currentHref = '#main';
-  for (const [href, section] of localSections) {
-    if (section && section.offsetTop <= marker) currentHref = href;
-  }
-  document.querySelectorAll('#site-navigation a[aria-current="location"]').forEach(link => link.removeAttribute('aria-current'));
-  document.querySelector(`#site-navigation a[href="${currentHref}"]`)?.setAttribute('aria-current', 'location');
-}
-window.addEventListener('scroll', updateCurrentSection, { passive: true });
 window.addEventListener('hashchange', () => activateInPageTarget(location.hash, false));
-updateCurrentSection();
+
+const copilotHeader = document.querySelector('[data-site-header]');
+const copilotSectionLinks = [...document.querySelectorAll('[data-site-navigation-list] a[href^="#"]')]
+  .map(link => ({ link, section: document.querySelector(link.hash) }))
+  .filter(item => item.section);
+
+function updateCurrentCopilotSection() {
+  if (!copilotSectionLinks.length) return;
+  const marker = window.scrollY + (copilotHeader?.offsetHeight || 0) + 24;
+  const current = copilotSectionLinks.reduce((active, item) =>
+    item.section.offsetTop <= marker ? item : active, copilotSectionLinks[0]);
+  copilotSectionLinks.forEach(item => {
+    if (item === current) item.link.setAttribute('aria-current', 'location');
+    else item.link.removeAttribute('aria-current');
+  });
+}
+
+document.addEventListener('click', event => {
+  const link = event.target.closest('[data-site-navigation] a[href^="#"]');
+  if (!link) return;
+  window.setTimeout(() => activateInPageTarget(link.hash, false));
+});
+window.addEventListener('scroll', updateCurrentCopilotSection, { passive: true });
+window.addEventListener('hashchange', updateCurrentCopilotSection);
+window.addEventListener('load', updateCurrentCopilotSection);
+updateCurrentCopilotSection();
 
 const mdDialog = document.querySelector('#markdown-dialog');
 const mdTitle = document.querySelector('#markdown-dialog-title');
@@ -308,6 +279,8 @@ async function openMarkdown(url, returnTarget = document.activeElement) {
   document.body.classList.add('is-modal-open');
   try {
     const { markdown } = await loadMarkdownText(documentUrl);
+    if (!mdDialog.open || currentDocumentUrl !== documentUrl) return;
+    if (!mdDialog.open || currentDocumentUrl !== documentUrl) return;
     currentMarkdown = markdown;
     copyMarkdownButton.disabled = false;
     const renderedMarkdown = withoutFrontmatter(markdown);
@@ -317,6 +290,8 @@ async function openMarkdown(url, returnTarget = document.activeElement) {
     mdBody.scrollTop = 0;
     mdBody.focus();
   } catch (error) {
+    if (!mdDialog.open || currentDocumentUrl !== documentUrl) return;
+    if (!mdDialog.open || currentDocumentUrl !== documentUrl) return;
     mdTitle.textContent = 'Dokument konnte nicht geladen werden';
     const errorBox = document.createElement('div');
     errorBox.className = 'document-error';

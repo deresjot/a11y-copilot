@@ -214,7 +214,7 @@ Behandle die Ergebnisgruppen unterschiedlich:
 - `incomplete` enthält Fälle, die das Werkzeug nicht abschließend entscheiden konnte und die manuell untersucht werden müssen;
 - `passes` belegt nur bestandene automatisierte Regeln im konkreten Zustand, nicht die Konformität einer Seite oder eines Prozesses.
 
-Scans in einer simulierten DOM-Umgebung haben zusätzliche Grenzen. axe-core weist beispielsweise darauf hin, dass die Kontrastregel in JSDOM nicht funktioniert. Für browserabhängige Eigenschaften ist deshalb ein echter Browserlauf erforderlich.
+Scans in einer simulierten DOM-Umgebung haben zusätzliche Einschränkungen. axe-core weist beispielsweise darauf hin, dass die Kontrastregel in JSDOM nicht funktioniert. Für browserabhängige Eigenschaften ist deshalb ein echter Browserlauf erforderlich.
 
 ### Playwright mit axe-core
 
@@ -269,6 +269,6 @@ Ein reproduzierbarer Befund nennt:
 - Normbezug mit Version und Level, falls belastbar;
 - empfohlene Lösung, Alternativen und offene Entscheidungen;
 - Status, Verantwortlichkeit und Retest;
-- nicht geprüfte Bereiche und Grenzen.
+- nicht geprüfte Bereiche und offene Punkte.
 
 Priorisiere nach Blockadegrad, Häufigkeit, Reichweite, vollständigen Prozessen, Sicherheits-/Geschäftsrisiko und Reparaturabhängigkeiten. Ein Audit ersetzt keine Forschung mit Menschen; Forschung ersetzt umgekehrt keinen normorientierten Audit.

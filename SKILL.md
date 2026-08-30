@@ -127,8 +127,8 @@ Ein Befund enthält mindestens:
 
 Priorisiere nach Blockadegrad, Reichweite, Häufigkeit, betroffenen Pfaden, Sicherheits- oder Geschäftsrisiko und Reparaturabhängigkeiten. WCAG-Level allein ist keine ausreichende Produktpriorisierung.
 
-## 8. Abschluss und Grenzen
+## 8. Abschluss und Aussagekraft
 
-Der Abschluss nennt in zusammenhängender, knapper Form, was geprüft wurde, was nicht erreichbar war, welche Browser-, Assistive-Technology- und Toolkombinationen verwendet wurden und ob die Aussage aus einer Stichprobe, Teilprüfung oder einem vollständig vereinbarten Scope stammt. Offene manuelle Prüfungen und die Grenzen der Aussage gehören in denselben Bericht.
+Der Abschluss nennt in zusammenhängender, knapper Form, was geprüft wurde, was nicht erreichbar war, welche Browser-, Assistive-Technology- und Toolkombinationen verwendet wurden und ob die Aussage aus einer Stichprobe, Teilprüfung oder einem vollständig vereinbarten Scope stammt. Offene manuelle Prüfungen und die Aussagekraft des Ergebnisses gehören in denselben Bericht.
 
 Simuliere keine Rechtsberatung. Leite aus Code-Review, Komponentenprüfung, Stichprobe, AI-Ausgabe oder „null Violations“ keine Konformitätsgarantie ab. Verlinke im Ergebnis die Primär- oder Methodenquellen, auf denen wesentliche fachliche Aussagen beruhen.

@@ -35,7 +35,7 @@ Digitale Barrierefreiheit erzeugt nicht nur technische Aufgaben. Aus einem erkan
 - Inhalte, Dokumente, Medien und Supportinformationen müssen auffindbar, verständlich und in den benötigten Alternativen verfügbar sein.
 - Entwicklung und Integration erhalten Semantik, Bedienlogik, Anpassbarkeit und Plattformkompatibilität über Komponenten und vollständige Prozesse hinweg.
 - Qualitätssicherung verbindet frühe Reviews, automatisierte Regressionstests, manuelle Prüfungen, assistive Technologien und – abhängig vom Risiko – Tests mit Menschen.
-- Veröffentlichung und Betrieb benötigen Monitoring, erreichbare Rückmeldewege, Priorisierung, nachvollziehbare Behebung, Regressionsschutz und transparente Kommunikation über bekannte Grenzen.
+- Veröffentlichung und Betrieb benötigen Monitoring, erreichbare Rückmeldewege, Priorisierung, nachvollziehbare Behebung, Regressionsschutz und transparente Kommunikation über bekannte Einschränkungen.
 
 Welche Ableitung relevant ist, hängt vom Auftrag und Artefakt ab. Eine Codefrage kann eine unklare Anforderung offenlegen; ein wiederkehrender Inhaltsfehler kann eine Redaktions- oder Systementscheidung erfordern; eine Barriere eines eingekauften Produkts kann Beschaffung, Vertrag, Support und Alternativprozess betreffen. Der Copilot soll diese Zusammenhänge sichtbar machen, ohne jede Antwort künstlich auf alle Phasen auszuweiten.
 
@@ -214,7 +214,7 @@ Eine belastbare Prüfung kombiniert:
 - repräsentative Aufgaben, Zustände, Fehlersituationen und vollständige Prozesse;
 - bei angemessenem Risiko Tests mit Menschen mit Behinderungen.
 
-Dokumentiere Prüfgegenstand, Anwendbarkeit, Umgebung, Pfad, erwartetes und tatsächliches Ergebnis, Auswirkung, Evidenz, Empfehlung, Status und Grenzen. Nutze bei umfassenden Prüfungen eine begründete Seitenauswahl und erfasse vollständige Prozesse. Mehr: [Testing](references/testing.md).
+Dokumentiere Prüfgegenstand, Anwendbarkeit, Umgebung, Pfad, erwartetes und tatsächliches Ergebnis, Auswirkung, Evidenz, Empfehlung, Status und offene Punkte. Nutze bei umfassenden Prüfungen eine begründete Seitenauswahl und erfasse vollständige Prozesse. Mehr: [Testing](references/testing.md).
 
 ## Typische Antipatterns
 

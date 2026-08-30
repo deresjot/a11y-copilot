@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-Stand: 29. August 2026
+Stand: 30. August 2026
 
 ## Auftrag und Leitgedanke
 
@@ -16,9 +16,9 @@ Die Startseite trennt drei Nutzungswege: ein direkt kopierbares Startpaket für 
 
 Die empfohlene Einbindung in die persönliche Website ist in [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des gemeinsamen Webauftritts auf `sebastianjansen.com` und `deresjot.de`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen und auf beiden Domains zu prüfen.
 
-Der UI-Stand `0.2.2` ist mit Website-Release `1.0.9` synchronisiert: Der globale Footer enthält auf allen sieben öffentlichen Seitentypen eine eigene GitHub-Profilzeile mit Icon; ein All-Routes-Test verhindert künftig einseitige Header-/Footer-Änderungen. Der Live-Webroot wurde mit 125/125 identischen Dateien verifiziert, beide Domains stimmen auf zehn Referenzpfaden mit dem Build überein, und die globalen Footer- sowie mobilen WebKit-Liveprüfungen bestanden.
+Der UI-Stand `0.2.3` ist mit Website-Release `1.0.10` synchronisiert. Header, mobile Navigation und Footer werden als globale Komponenten gepflegt; Hauptseite und a11y-copilot besitzen jeweils ihre eigene Abschnittsnavigation, Dokumentseiten ausschließlich ihren hierarchischen Pfad. Der frühere Abschnitt „Grenzen“ heißt fachlich eindeutiger „Einsatzrahmen“. Vor der Veröffentlichung bestanden 120/120 reguläre Browser- und Accessibility-Regressionen sowie 9/9 mobile WebKit-Prüfungen. Der abschließende Live-Abgleich wird im Website-Changelog mit dem Deployment-Nachweis dokumentiert.
 
-## Anspruch – und eine wichtige Aussagegrenze
+## Anspruch und Aussagekraft
 
 Das Ziel ist eine möglichst umfassende, belastbare und nachvollziehbar geprüfte Barrierefreiheit. Die Formulierung „100 % barrierefrei“ darf trotzdem nicht als pauschales Versprechen verwendet werden:
 
@@ -29,7 +29,7 @@ Das Ziel ist eine möglichst umfassende, belastbare und nachvollziehbar geprüft
 - KI-Ausgaben können Fehler enthalten und sind kein Konformitätsnachweis.
 - Rechtliche Pflichten hängen von Produkt, Markt, Träger, Zeitpunkt und Jurisdiktion ab.
 
-Für eine belastbare Aussage muss deshalb formuliert werden, **was** gegen **welche Fassung und welches Level**, in **welchem Scope**, mit **welchen Methoden und Umgebungen** und zu **welchem Zeitpunkt** geprüft wurde. Nicht geprüfte Bereiche und verbleibende Grenzen gehören zur Aussage.
+Für eine belastbare Aussage muss deshalb formuliert werden, **was** gegen **welche Fassung und welches Level**, in **welchem Scope**, mit **welchen Methoden und Umgebungen** und zu **welchem Zeitpunkt** geprüft wurde. Nicht geprüfte Bereiche und offene Punkte gehören zur Aussage.
 
 ## Fachliches Modell
 
@@ -93,8 +93,8 @@ Die zentrale Wissensbasis muss mindestens folgende Themen zusammenhängend behan
 - Authentifizierung und Vermeidung unnötiger kognitiver Tests;
 - komplexe Widgets, ARIA und komponentenspezifische Patterns;
 - automatisierte, manuelle und screenreader-orientierte Tests;
-- Anforderungen, Akzeptanzkriterien, Befunde, Retests und Aussagegrenzen;
-- typische Antipatterns und Grenzen von Tools, Automatisierung und KI.
+- Anforderungen, Akzeptanzkriterien, Befunde, Retests und Aussagekraft;
+- typische Antipatterns und die Aussagekraft von Tools, Automatisierung und KI.
 
 WCAG ist dabei die prüfbare Mindestgrundlage, nicht die Obergrenze guter Produktarbeit. Forschung und Tests mit Menschen ergänzen normorientierte Prüfungen, ersetzen sie aber nicht; umgekehrt ersetzt ein Audit keine Forschung mit Menschen.
 
@@ -230,10 +230,10 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.1` auf `main`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
+- Aktueller funktionaler Stand: Version `0.2.3`; der jeweilige Git-Commit auf `main` ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: veröffentlichter Auslieferungsstand `1.0.8` vom 29. August 2026. GitHub-Links, bereinigtes Bento-Raster und kontraststabile Kartenakzente sind synchronisiert; 117 lokale Browser-/Accessibility-Regressionen, vier gezielte Live-Regressionen und das Mobile-WebKit-Live-Gate mit sieben Fällen sind grün. Der vollständige 125/125-SHA-256-Abgleich liegt im datierten Deployment-Archiv des Website-Repositories.
+- Portfolio-Integration: vorbereiteter Auslieferungsstand `1.0.10` vom 30. August 2026. Globale Navigation und Footer, die getrennte Informationsarchitektur von Hauptseite, a11y-copilot und Dokumentseiten, der Abschnitt „Einsatzrahmen“ sowie die mobilen Hero-Aktionen sind synchronisiert. Vor der Veröffentlichung bestanden 120/120 reguläre Browser- und Accessibility-Regressionen sowie 9/9 mobile WebKit-Prüfungen; der vollständige Remote-Abgleich wird nach dem Deployment im Website-Repository dokumentiert.
 
 ## Offene Veröffentlichungspunkte
 
@@ -260,4 +260,4 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 Das Repository soll sich wie eine kompakte, belastbare und erweiterbare Accessibility-Wissensbasis anfühlen: direkt lesbar für Menschen, eindeutig steuerbar für Agents, portabel zwischen Werkzeugen und frei von organisationsspezifischem Prozessballast.
 
-Der Qualitätsanspruch lautet nicht „ein Tool behauptet 100 %“, sondern: **Barrieren so früh und umfassend wie möglich vermeiden, den vereinbarten Scope nachvollziehbar prüfen, Menschen einbeziehen und Grenzen ehrlich benennen.**
+Der Qualitätsanspruch lautet nicht „ein Tool behauptet 100 %“, sondern: **Barrieren so früh und umfassend wie möglich vermeiden, den vereinbarten Scope nachvollziehbar prüfen, Menschen einbeziehen und offene Punkte transparent benennen.**

@@ -28,7 +28,7 @@ Nenne möglichst:
 - bekannte Browser, Geräte, Eingabemethoden und assistive Technologien;
 - ob du Review, Umsetzung, Testplan oder konformitätsorientierte Prüfung erwartest.
 
-## Schritt 5 von 7: Quellen und Aussagegrenzen verlangen
+## Schritt 5 von 7: Quellen und Aussagekraft klären
 
 Bitte um direkte Primärquellen für normative Aussagen. Lass unterscheiden, was normative Anforderung, belastbare Umsetzung, Best Practice, Pattern oder Kontextentscheidung ist. Nicht praktisch geprüfte Punkte müssen als offen benannt werden.
 
