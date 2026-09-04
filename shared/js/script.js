@@ -212,16 +212,11 @@
     }
 
     function initInPageNavigation() {
-        var currentLinks = Array.prototype.slice.call(
-            document.querySelectorAll(".main-nav a[href^='#'], .skip-links a[href^='#']")
-        );
         var focusLinks = Array.prototype.slice.call(
             document.querySelectorAll(".main-nav a[href^='#'], .skip-links a[href^='#'], a.top[href^='#']")
         );
-        var sections = Array.prototype.slice.call(document.querySelectorAll("main > section[id]"));
-        var linksByHash = {};
 
-        if (!focusLinks.length || !sections.length) {
+        if (!focusLinks.length) {
             return;
         }
 
@@ -237,70 +232,9 @@
             });
         });
 
-        currentLinks.forEach(function(link) {
-            var hash = link.getAttribute("href");
-
-            if (!hash || hash === "#") {
-                return;
-            }
-
-            if (!linksByHash[hash]) {
-                linksByHash[hash] = [];
-            }
-
-            linksByHash[hash].push(link);
-        });
-
-        function setCurrent(hash) {
-            Object.keys(linksByHash).forEach(function(key) {
-                linksByHash[key].forEach(function(link) {
-                    if (key === hash) {
-                        link.setAttribute("aria-current", "location");
-                    } else {
-                        link.removeAttribute("aria-current");
-                    }
-                });
-            });
-        }
-
-        function getVisibleSectionHash() {
-            var currentHash = "#hero";
-
-            sections.forEach(function(section) {
-                var rect = section.getBoundingClientRect();
-
-                if (rect.top <= window.innerHeight * 0.35 && rect.bottom >= window.innerHeight * 0.35) {
-                    currentHash = "#" + section.id;
-                }
-            });
-
-            return currentHash;
-        }
-
-        function updateCurrentSection() {
-            var visibleHash = getVisibleSectionHash();
-            var hash = window.location.hash;
-
-            if (visibleHash && linksByHash[visibleHash]) {
-                setCurrent(visibleHash);
-                return;
-            }
-
-            if (hash && linksByHash[hash]) {
-                setCurrent(hash);
-                return;
-            }
-
-            setCurrent("#hero");
-        }
-
         window.addEventListener("hashchange", function() {
-            updateCurrentSection();
             focusInPageTarget(window.location.hash);
         });
-
-        window.addEventListener("scroll", updateCurrentSection, { passive: true });
-        updateCurrentSection();
     }
 
     function revealInitialInPageTarget() {

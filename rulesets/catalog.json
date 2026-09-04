@@ -17,7 +17,10 @@
         {
           "id": "en-301-549-web",
           "type": "jurisdictional",
-          "useWhen": "European scope requires the applicable EN 301 549 web requirements",
+          "useWhen": "European scope requires the web requirements from the EN 301 549 version applicable to the named legal or contractual context",
+          "publishedVersion": "V4.1.1 (2026-09)",
+          "publishedVersionUri": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf",
+          "harmonisationPolicy": "Record the legal act, version cited in the Official Journal, jurisdiction and assessment date; publication alone does not establish harmonisation",
           "sourceUri": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/"
         },
         {

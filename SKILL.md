@@ -11,6 +11,8 @@ Lies [ACCESSIBILITY.md](ACCESSIBILITY.md) vollständig, bevor du die fachliche A
 
 Führe normative Aussagen immer auf eine konkrete Quelle zurück. Beginne mit [WCAG 2.2](https://www.w3.org/TR/WCAG22/), dem [HTML Standard](https://html.spec.whatwg.org/), [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/) und [ARIA in HTML](https://www.w3.org/TR/html-aria/). Nutze den [BIK WCAG-Test](https://bitvtest.de/pruefverfahren/wcag-22-web) als dokumentierte Prüfmethode und den [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) als informative Patternreferenz. Prüfe bei versionsabhängigen Aussagen die aktuelle Primärquelle; behandle APG, BIK, Toolregeln und Best Practices nicht als zusätzliche WCAG-Kriterien.
 
+Bestimme vor der Normauswahl, ob Webinhalt, Non-Web-Dokument, Software oder andere ICT geprüft wird. Verwende WCAG 2.2 als Zielbasis für Webinhalte. Nutze WCAG2ICT bei Non-Web-Dokumenten und Software nur als informative Auslegungshilfe und ermittle zusätzlich die tatsächlich anwendbare Norm-, Plattform-, Vertrags- oder Rechtsgrundlage. Unterscheide bei EN 301 549 ausdrücklich zwischen veröffentlichter Normfassung, Harmonisierung im Amtsblatt und rechtlicher oder vertraglicher Verbindlichkeit im konkreten Scope.
+
 Lies anschließend nur die Referenzen und Patterns, die für den Prüfgegenstand relevant sind:
 
 - Normstatus, WCAG, EN, BITV oder Recht: [Standards](references/standards.md)
@@ -98,6 +100,8 @@ Kennzeichne Aussagen als:
 - **Kontextentscheidung:** mehrere vertretbare Lösungen, abhängig von Produkt und Nutzung.
 
 WCAG-Erfolgskriterien sind normativ. Understanding-Dokumente, Techniques, APG, ACT Rules und BIK-Prüfschritte helfen bei Interpretation oder Prüfung, sind aber nicht selbst zusätzliche WCAG-Anforderungen. Verifiziere kritische Zitate und Grenzwerte in der aktuellen W3C-Primärquelle.
+
+WCAG 2.2 enthält 4.1.1 Parsing nicht mehr. Für HTML und XML gilt das Kriterium nach den aktuellen W3C-Konformitätshinweisen auch unter WCAG 2.0 und 2.1 als stets erfüllt. Melde Syntax- oder Validatorfehler als WCAG-2.2-Verstoß nur, wenn ihre festgestellte Wirkung ein weiterhin geltendes Erfolgskriterium verletzt; dokumentiere die konkrete Zuordnung.
 
 ## 6. Implementieren
 

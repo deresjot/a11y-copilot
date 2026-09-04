@@ -22,31 +22,11 @@ revealInitialInPageTarget();
 
 window.addEventListener('hashchange', () => activateInPageTarget(location.hash, false));
 
-const copilotHeader = document.querySelector('[data-site-header]');
-const copilotSectionLinks = [...document.querySelectorAll('[data-site-navigation-list] a[href^="#"]')]
-  .map(link => ({ link, section: document.querySelector(link.hash) }))
-  .filter(item => item.section);
-
-function updateCurrentCopilotSection() {
-  if (!copilotSectionLinks.length) return;
-  const marker = window.scrollY + (copilotHeader?.offsetHeight || 0) + 24;
-  const current = copilotSectionLinks.reduce((active, item) =>
-    item.section.offsetTop <= marker ? item : active, copilotSectionLinks[0]);
-  copilotSectionLinks.forEach(item => {
-    if (item === current) item.link.setAttribute('aria-current', 'location');
-    else item.link.removeAttribute('aria-current');
-  });
-}
-
 document.addEventListener('click', event => {
   const link = event.target.closest('[data-site-navigation] a[href^="#"]');
   if (!link) return;
   window.setTimeout(() => activateInPageTarget(link.hash, false));
 });
-window.addEventListener('scroll', updateCurrentCopilotSection, { passive: true });
-window.addEventListener('hashchange', updateCurrentCopilotSection);
-window.addEventListener('load', updateCurrentCopilotSection);
-updateCurrentCopilotSection();
 
 const mdDialog = document.querySelector('#markdown-dialog');
 const mdTitle = document.querySelector('#markdown-dialog-title');

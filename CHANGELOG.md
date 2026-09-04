@@ -1,5 +1,12 @@
 # Changelog
 
+## Unveröffentlicht – 2026-09-04
+
+- WCAG 2.2, EN 301 549 V4.1.1, rechtliche Harmonisierung und WCAG2ICT nach Quellenstatus und Geltungsbereich klar getrennt.
+- 4.1.1 Parsing an die aktuellen W3C-Konformitätshinweise angepasst: für HTML/XML auch unter WCAG 2.0/2.1 stets erfüllt; Validatorfehler werden im WCAG-2.2-Profil nur über tatsächlich betroffene aktuelle Kriterien bewertet.
+- Ruleset-Mapping um Versions-, Amtsblatt- und Bewertungszeitpunkt ergänzt, ohne die weiterhin erforderlichen axe-core-Tags für WCAG 2.0, 2.1 und 2.2 zu entfernen.
+- Reproduzierbaren Generator für den lokalen Markdown-Bundle in die Portfolio-Integration aufgenommen.
+
 ## 0.2.3 – 2026-08-30
 
 - Gemeinsame mobile Header-/Navigationskomponente aus der Portfolio-Integration übernommen; die eigenständige App verwendet damit denselben Burger-, Fokus-, Safe-Area-, Viewport- und Escape-Mechanismus.

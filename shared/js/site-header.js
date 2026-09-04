@@ -5,8 +5,56 @@
   if (!headers.length) return;
 
   const mobileMedia = window.matchMedia("(max-width: 48rem)");
-  let scrollFrame = 0;
   let openController = null;
+
+  const createSectionTracker = (header, navigation) => {
+    const items = Array.from(navigation.querySelectorAll("[data-site-navigation-list] a[href^='#']"))
+      .map((link) => {
+        const targetId = decodeURIComponent(link.hash.slice(1));
+        return { link, target: document.getElementById(targetId) };
+      })
+      .filter(({ target }) => target);
+    if (!items.length) return;
+
+    let updateFrame = 0;
+    const updateCurrentSection = () => {
+      updateFrame = 0;
+      const marker = window.scrollY + header.offsetHeight + 24;
+      const current = items.reduce((active, item) => (
+        item.target.getBoundingClientRect().top + window.scrollY <= marker ? item : active
+      ), items[0]);
+      const currentIndex = items.indexOf(current);
+      const sectionStart = current.target.getBoundingClientRect().top + window.scrollY;
+      const nextStart = items[currentIndex + 1]?.target.getBoundingClientRect().top + window.scrollY;
+      const lastReachableMarker = document.documentElement.scrollHeight - window.innerHeight + header.offsetHeight + 24;
+      const sectionEnd = nextStart ?? Math.max(sectionStart + 1, lastReachableMarker);
+      const progress = Math.min(1, Math.max(0, (marker - sectionStart) / Math.max(1, sectionEnd - sectionStart)));
+      const underlineRem = .25 + progress * .45;
+      const isComplete = progress >= .94;
+
+      for (const item of items) {
+        if (item === current) {
+          item.link.setAttribute("aria-current", "location");
+          item.link.style.setProperty("--site-section-underline", `${underlineRem.toFixed(3)}rem`);
+          item.link.classList.toggle("is-section-progress-complete", isComplete);
+        } else {
+          item.link.style.removeProperty("--site-section-underline");
+          item.link.classList.remove("is-section-progress-complete");
+          if (item.link.getAttribute("aria-current") === "location") item.link.removeAttribute("aria-current");
+        }
+      }
+    };
+    const scheduleUpdate = () => {
+      if (updateFrame) return;
+      updateFrame = window.requestAnimationFrame(updateCurrentSection);
+    };
+
+    window.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate, { passive: true });
+    window.addEventListener("hashchange", scheduleUpdate);
+    window.addEventListener("load", scheduleUpdate);
+    updateCurrentSection();
+  };
 
   const lockPage = () => {
     if (document.body.classList.contains("site-navigation-open")) return;
@@ -88,6 +136,7 @@
     };
 
     controller = { button, navigation, links, setOpen, mountNavigation, positionNavigation };
+    createSectionTracker(header, navigation);
     button.addEventListener("click", () => setOpen(button.getAttribute("aria-expanded") !== "true", { focusFirst: true }));
     navigation.addEventListener("click", (event) => {
       if (event.target.closest("a[href]")) setOpen(false);
@@ -120,23 +169,29 @@
   };
 
   const controllers = headers.map(createController).filter(Boolean);
-  const updateHeaders = () => {
-    const currentScrollPosition = Math.max(window.scrollY, 0);
+  const updateHeaders = (isScrolled) => {
     for (const header of headers) {
-      header.classList.toggle("is-scrolled", currentScrollPosition > 48);
+      header.classList.toggle("is-scrolled", isScrolled);
       header.classList.remove("is-scroll-hidden");
     }
-    scrollFrame = 0;
   };
-  const requestHeaderUpdate = () => {
-    if (!scrollFrame) scrollFrame = window.requestAnimationFrame(updateHeaders);
-  };
+  const scrollSentinel = document.createElement("span");
+  scrollSentinel.className = "site-header-scroll-sentinel";
+  scrollSentinel.setAttribute("aria-hidden", "true");
+  document.body.prepend(scrollSentinel);
+  if ("IntersectionObserver" in window) {
+    const scrollObserver = new IntersectionObserver(([entry]) => updateHeaders(!entry.isIntersecting));
+    scrollObserver.observe(scrollSentinel);
+  } else {
+    const updateFromScrollPosition = () => updateHeaders(window.scrollY > 48);
+    window.addEventListener("scroll", updateFromScrollPosition, { passive: true });
+    updateFromScrollPosition();
+  }
   const syncViewport = () => {
     controllers.forEach((controller) => {
       controller.setOpen(false);
       controller.mountNavigation();
     });
-    requestHeaderUpdate();
   };
   const syncOpenNavigationPosition = () => {
     if (openController) openController.positionNavigation();
@@ -148,14 +203,11 @@
   if (typeof mobileMedia.addEventListener === "function") mobileMedia.addEventListener("change", syncViewport);
   else mobileMedia.addListener(syncViewport);
   window.addEventListener("scroll", () => {
-    requestHeaderUpdate();
     syncOpenNavigationPosition();
   }, { passive: true });
   window.addEventListener("resize", () => {
-    requestHeaderUpdate();
     syncOpenNavigationPosition();
   }, { passive: true });
   window.visualViewport?.addEventListener("resize", syncOpenNavigationPosition, { passive: true });
   window.visualViewport?.addEventListener("scroll", syncOpenNavigationPosition, { passive: true });
-  updateHeaders();
 })();

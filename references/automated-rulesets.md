@@ -26,7 +26,7 @@ Die Tags sind eine Auswahlhilfe, keine stabile Regelregistrierung. Vor einem Lau
 ## Getrennte Bewertungsspuren
 
 - **Normatives Profil:** Befunde werden erst nach Prüfung von Anwendbarkeit, Ausnahme und Ursache einem WCAG-Erfolgskriterium zugeordnet.
-- **EN 301 549:** Die Engine-Zuordnung unterstützt europäische Berichte, ersetzt aber weder die aktuelle Normfassung noch die Prüfung nicht-webbezogener Anforderungen.
+- **EN 301 549:** Die Engine-Zuordnung unterstützt europäische Berichte, ersetzt aber weder die ausgewählte Normfassung noch die Prüfung nicht-webbezogener Anforderungen. EN 301 549 V4.1.1 ist veröffentlicht und integriert WCAG 2.2; ob und in welchem Umfang eine Fassung für einen Rechtsakt harmonisiert oder anderweitig verbindlich ist, wird davon getrennt geprüft und mit Bewertungszeitpunkt dokumentiert.
 - **ACT:** Eine ACT-Zuordnung macht Regelannahmen vergleichbarer. Sie belegt weder vollständige ACT-Abdeckung noch WCAG-Konformität einer Seite.
 - **Best Practice:** Läuft als beratende Spur. Ein Befund darf nicht als WCAG-Verstoß oder rechtliche Abweichung bezeichnet werden, wenn dafür keine eigenständige Grundlage besteht.
 - **Experimentell:** Ist standardmäßig ausgeschaltet. Eine Aktivierung braucht Version, Zweck und manuelle Bestätigung; experimentelle Ergebnisse dürfen kein blockierendes Qualitätsgate bilden.
@@ -48,6 +48,8 @@ Ein Engine-Update ist eine fachliche Änderung, wenn Regeln hinzukommen, entfall
 6. Adapterstatus, Testartefakte und Changelog aktualisieren.
 
 Eine veränderliche Dokumentationsseite wie ein `develop`-Branch ist eine Recherchequelle, aber keine reproduzierbare Versionsangabe. Berichte nennen die installierte Engine-Version und verlinken nach Möglichkeit auf deren versionierten Release- oder Quellstand.
+
+Parsing- oder Validatorregeln dürfen im WCAG-2.2-Profil nicht pauschal als Verstoß gegen 4.1.1 ausgewertet werden. Für HTML und XML gilt 4.1.1 nach den aktuellen W3C-Konformitätshinweisen auch unter WCAG 2.0 und 2.1 als stets erfüllt. Nur eine festgestellte Auswirkung auf ein weiterhin geltendes Kriterium wird in der normativen Spur entsprechend zugeordnet; reine Syntaxqualität kann getrennt als technische oder Best-Practice-Spur erhalten bleiben.
 
 ## Vorbereitung auf WCAG 3
 

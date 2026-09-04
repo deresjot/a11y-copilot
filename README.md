@@ -34,6 +34,8 @@ Dieser Ordner ist die kanonische Quelle für die fachlichen Markdown-Dateien, Re
 
 Der universelle Kern basiert auf [WCAG 2.2](https://www.w3.org/TR/WCAG22/), dem [HTML Standard](https://html.spec.whatwg.org/), [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/), [ARIA in HTML](https://www.w3.org/TR/html-aria/) und den Ressourcen des W3C/WAI. Der [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) dient als informative Patternreferenz. Der [BIK WCAG-Test](https://bitvtest.de/pruefverfahren/wcag-22-web) liefert eine nachvollziehbare Prüfmethode. Für automatisierte Regressionstests werden die offiziellen Dokumentationen von [Playwright](https://playwright.dev/docs/accessibility-testing) und [axe-core](https://github.com/dequelabs/axe-core) herangezogen.
 
+WCAG 2.2 ist die Zielbasis für Webinhalte. Für Non-Web-Dokumente, Software und andere ICT bestimmt das Toolkit zuerst den Artefakttyp und den anwendbaren Norm-, Plattform-, Vertrags- und Rechtsrahmen. [WCAG2ICT](https://www.w3.org/TR/wcag2ict-22/) ist dafür eine informative Auslegungshilfe, kein eigener Konformitätsstandard. Bei EN 301 549 werden veröffentlichte Normfassung, Harmonisierung im EU-Amtsblatt und konkrete rechtliche oder vertragliche Verbindlichkeit getrennt ausgewiesen.
+
 Welche Aussage normativ ist, entscheidet die jeweilige Primärquelle, nicht dieses Repository und nicht die LLM. Rechtliche Anforderungen wie BITV, EN 301 549 oder BFSG werden getrennt eingeordnet. Das Toolkit leistet keine Rechtsberatung.
 
 ## Was das Ergebnis bedeutet

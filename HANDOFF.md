@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-Stand: 30. August 2026
+Stand: 4. September 2026
 
 ## Auftrag und Leitgedanke
 
@@ -14,9 +14,9 @@ Die zentrale fachliche Quelle ist [ACCESSIBILITY.md](ACCESSIBILITY.md). Andere D
 
 Die Startseite trennt drei Nutzungswege: ein direkt kopierbares Startpaket für einen KI-Chat, die dauerhafte Verwendung im Repository mit der Agent-Anweisung und das eigene Nachschlagen in der Wissensbasis. Das Startpaket wird aus [PROMPT.md](PROMPT.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md) zusammengesetzt. Die maschinenlesbaren Dokumente bleiben zusätzlich in einem scrollbaren Dialog und über einen direkten Dateilink erreichbar. Diese begrenzte Transferaufgabe und ihre begründete Dialog-Ausnahme sind in [patterns/dialog.md](patterns/dialog.md) festgehalten.
 
-Die empfohlene Einbindung in die persönliche Website ist in [INTEGRATION-STRATEGY.md](INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des gemeinsamen Webauftritts auf `sebastianjansen.com` und `deresjot.de`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen und auf beiden Domains zu prüfen.
+Die empfohlene Einbindung in die persönliche Website ist in der [Integrationsstrategie des Standalone-Repositories](https://github.com/deresjot/a11y-copilot/blob/main/INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des gemeinsamen Webauftritts auf `sebastianjansen.com` und `deresjot.de`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen und auf beiden Domains zu prüfen.
 
-Der UI-Stand `0.2.3` ist mit Website-Release `1.0.10` synchronisiert. Header, mobile Navigation und Footer werden als globale Komponenten gepflegt; Hauptseite und a11y-copilot besitzen jeweils ihre eigene Abschnittsnavigation, Dokumentseiten ausschließlich ihren hierarchischen Pfad. Der frühere Abschnitt „Grenzen“ heißt fachlich eindeutiger „Einsatzrahmen“. Vor der Veröffentlichung bestanden 120/120 reguläre Browser- und Accessibility-Regressionen sowie 9/9 mobile WebKit-Prüfungen. Der abschließende Live-Abgleich wird im Website-Changelog mit dem Deployment-Nachweis dokumentiert.
+Der veröffentlichte UI-Stand `0.2.3` ist in Website-Release `1.0.12` integriert. Der globale Footer enthält auf allen sieben öffentlichen Seitentypen eine eigene GitHub-Profilzeile mit Icon; ein All-Routes-Test verhindert künftig einseitige Header-/Footer-Änderungen. Die fachlichen Änderungen vom 4. September 2026 sind noch nicht veröffentlicht und verändern den UI-Vertrag nicht.
 
 ## Anspruch und Aussagekraft
 
@@ -67,12 +67,13 @@ Ein Ergebnis ohne automatisiert festgestellte Verstöße bedeutet nur, dass die 
 
 ### Jurisdiktionsabhängige Grundlagen
 
-- EN 301 549
+- [EN 301 549 V4.1.1 (2026-09)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf) ist als europäischer Standard veröffentlicht, integriert WCAG 2.2 und trennt Web, Non-Web-Dokumente, Non-Web-Software und weitere ICT.
+- [WCAG2ICT](https://www.w3.org/TR/wcag2ict-22/) unterstützt die Übertragung von WCAG 2.0, 2.1 und 2.2 auf Non-Web-Dokumente und Software informativ; die Group Note setzt selbst keine Anforderungen.
 - European Accessibility Act
 - Barrierefreiheitsstärkungsgesetz (BFSG)
 - BITV 2.0
 
-Diese Quellen sind je nach Angebot relevant, dominieren aber nicht den universellen Kern. Das Toolkit bietet keine Rechtsberatung. Aktuelle Fassungen, Geltungsbereich, Übergangsregeln und Ausnahmen müssen für den Einzelfall anhand amtlicher Quellen oder qualifizierter Beratung geprüft werden.
+Diese Quellen sind je nach Angebot relevant, dominieren aber nicht den universellen Kern. Veröffentlichung einer EN-Fassung, ihre Referenz als harmonisierter Standard im Amtsblatt sowie ihre konkrete rechtliche oder vertragliche Verbindlichkeit sind getrennt zu dokumentieren. Für die Web Accessibility Directive führt die Europäische Kommission derzeit EN 301 549 V3.2.1 als harmonisierte Fassung; V4.1.1 darf nicht allein wegen ihrer Veröffentlichung als bereits für jeden EU-Rechtsakt harmonisiert bezeichnet werden. Das Toolkit bietet keine Rechtsberatung. Aktuelle Fassungen, Geltungsbereich, Übergangsregeln und Ausnahmen müssen für den Einzelfall anhand amtlicher Quellen oder qualifizierter Beratung geprüft werden.
 
 ## Fachlicher Abdeckungsanspruch
 
@@ -230,10 +231,10 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.3`; der jeweilige Git-Commit auf `main` ist die verbindliche Revisionskennung.
+- Aktueller veröffentlichter funktionaler Stand: Version `0.2.3` auf `main`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: vorbereiteter Auslieferungsstand `1.0.10` vom 30. August 2026. Globale Navigation und Footer, die getrennte Informationsarchitektur von Hauptseite, a11y-copilot und Dokumentseiten, der Abschnitt „Einsatzrahmen“ sowie die mobilen Hero-Aktionen sind synchronisiert. Vor der Veröffentlichung bestanden 120/120 reguläre Browser- und Accessibility-Regressionen sowie 9/9 mobile WebKit-Prüfungen; der vollständige Remote-Abgleich wird nach dem Deployment im Website-Repository dokumentiert.
+- Portfolio-Integration: veröffentlichter Auslieferungsstand `1.0.12` vom 30. August 2026. Die Revisionskennung und die datierten Prüf- beziehungsweise Deployment-Artefakte des Website-Repositories sind für diesen Stand maßgeblich. Die fachlichen Änderungen vom 4. September 2026 wurden nicht veröffentlicht oder deployt.
 
 ## Offene Veröffentlichungspunkte
 

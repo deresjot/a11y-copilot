@@ -122,7 +122,11 @@ a.skip-link,
 .ui-dialog[open] { transform: translateY(0) scale(1); }
 @starting-style { .ui-dialog[open] { transform: translateY(.35rem) scale(.985); } }
 .ui-dialog--wide { width: min(calc(100vw - 2rem),62rem); max-width: 62rem; height: min(calc(100vh - 2rem),54rem); height: min(calc(100dvh - 2rem),54rem); }
-.ui-dialog--tutorial { height: min(calc(100vh - 2rem),42rem); height: min(calc(100dvh - 2rem),42rem); }
+.ui-dialog--tutorial {
+  width: min(calc(100vw - 2rem),72rem); max-width: 72rem;
+  height: min(calc(100vh - 2rem),56rem); height: min(calc(100dvh - 2rem),56rem);
+  max-height: min(calc(100vh - 2rem),56rem); max-height: min(calc(100dvh - 2rem),56rem);
+}
 .ui-dialog::backdrop { background: rgba(17,17,17,0); backdrop-filter: blur(0); transition: background-color var(--ui-duration-dialog) ease,backdrop-filter var(--ui-duration-dialog) ease,display var(--ui-duration-dialog) allow-discrete,overlay var(--ui-duration-dialog) allow-discrete; }
 .ui-dialog[open]::backdrop { background: rgba(17,17,17,.84); backdrop-filter: blur(6px); }
 @starting-style { .ui-dialog[open]::backdrop { background: rgba(17,17,17,0); backdrop-filter: blur(0); } }

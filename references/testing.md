@@ -194,7 +194,7 @@ Die Fragen sind Prüfauslöser, keine Ersatzformulierungen der Erfolgskriterien.
 
 ### 4 Robust
 
-- **4.1.1 Parsing:** WCAG 2.2 entfernte dieses Erfolgskriterium. Syntaxfehler bleiben technisch relevant, wenn sie Semantik, Beziehungen oder Bedienung beschädigen; in älteren oder gesetzlich referenzierten Standards kann 4.1.1 weiterhin im Scope liegen.
+- **4.1.1 Parsing:** WCAG 2.2 entfernte dieses Erfolgskriterium. Für HTML und XML gilt es nach den aktuellen W3C-Konformitätshinweisen auch unter WCAG 2.0 und 2.1 als stets erfüllt. Syntax- und Validatorfehler bleiben technisch relevant; als WCAG-2.2-Verstoß werden sie nur über ihre nachgewiesene Wirkung auf weiterhin geltende Kriterien bewertet, etwa 1.3.1 oder 4.1.2. Andere Markupsprachen und ausdrücklich fixierte historische Norm- oder Vertragsfassungen sind gesondert einzuordnen.
 - **4.1.2 Name, Rolle, Wert:** Sind Name und Rolle sowie gesetzte Werte und Zustände für alle UI-Komponenten programmatisch verfügbar und werden Änderungen mitgeteilt?
 - **4.1.3 Statusmeldungen:** Können assistive Technologien anwendbare Statusmeldungen ohne Fokusverschiebung bestimmen?
 
