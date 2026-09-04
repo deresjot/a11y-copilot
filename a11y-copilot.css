@@ -290,14 +290,16 @@
     .kicker,
     .limits-list > p { overflow-wrap: anywhere; }
     .chapter h2,
-    .limits h2 { font-size: clamp(1.8rem, 7.5vw, 2.25rem); overflow-wrap: normal; }
+    .limits h2 { font-size: clamp(1.8rem, 7.5vw, 2.25rem); overflow-wrap: normal; hyphens: manual; }
     .route-list,
     .steps { grid-template-columns: minmax(0, 1fr); }
     .steps li { min-height: 0; border-right: 0; }
   }
   @media (max-width: 34rem) {
+    .chapter,
+    .limits .chapter { padding-inline: 2rem; }
     .chapter h2,
-    .limits h2 { font-size: clamp(1.65rem, 8vw, 2.25rem); overflow-wrap: normal; }
+    .limits h2 { font-size: clamp(1.65rem, 8vw, 2.25rem); overflow-wrap: normal; hyphens: manual; }
     .situations,
     .limits-list { grid-template-columns: minmax(0, 1fr); }
     .actions { width: 100%; max-width: none; margin-inline: 0; }
