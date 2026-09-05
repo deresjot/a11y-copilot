@@ -19,7 +19,7 @@
   <meta name="twitter:description" content="Schritt-für-Schritt-Anleitung für die fachlich eingeordnete Nutzung des a11y-copilot.">
   <meta name="twitter:image" content="https://www.sebastianjansen.com/a11y-copilot/assets/a11y-copilot-topography-glossy-4k-v3.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="shared/css/global-footer.css">
+  <link rel="stylesheet" href="shared/css/global-footer.css?v=12">
   <link rel="stylesheet" href="shared/css/document-pages.css">
   <link rel="stylesheet" href="tutorial.css">
   <link rel="stylesheet" href="shared/css/ui-system.css">
@@ -54,8 +54,8 @@
       <li><div><h2 tabindex="-1">Das Ergebnis im Produkt prüfen</h2><p>Übernimm eine überzeugend klingende Antwort nicht ungeprüft. Teste die Lösung im vollständigen Ablauf, in relevanten Browsern und Zuständen sowie abhängig vom Risiko mit Tastatur, Vergrößerung, Screenreader und Menschen.</p></div></li>
     </ol>
     <div class="tutorial-page-controls" data-tutorial-controls hidden>
-      <button class="ui-button ui-button--secondary" type="button" data-tutorial-back>Zurück</button>
-      <button class="ui-button" type="button" data-tutorial-next>Weiter</button>
+      <button class="ui-button ui-button--secondary tutorial-back" type="button" data-tutorial-back><span aria-hidden="true">←</span><span>Zurück</span></button>
+      <button class="ui-button tutorial-next" type="button" data-tutorial-next><span data-tutorial-next-label>Weiter</span><span aria-hidden="true">→</span></button>
     </div>
     <p class="tutorial-page-live sr-only" data-tutorial-live aria-live="polite"></p>
     <div class="actions"><a class="ui-button" href="ACCESSIBILITY.md" download>ACCESSIBILITY.md laden</a><a class="ui-button" href="TUTORIAL.md">Markdown-Version</a><a class="ui-button" href="index.html">Zurück zum Toolkit</a></div>
@@ -82,12 +82,12 @@
       <p class="footer-github-row"><a class="footer-github" href="https://github.com/deresjot" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg><span>GitHub</span><span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></a></p>
     </nav>
     <p class="footer-meta">@deresjot · Sebastian Jansen · © 2026</p>
-    <p class="footer-release">Live-Version 1.0.12 · <time datetime="2026-08-30">30.08.2026</time></p>
+    <p class="footer-release"><button type="button" class="footer-release-button" data-release-changelog data-release-src="shared/release.json" aria-haspopup="dialog" aria-label="Changelog zur Live-Version 1.0.13 vom 04.09.2026 anzeigen">Live-Version 1.0.13 vom <time datetime="2026-09-04">04.09.2026</time></button></p>
     <a class="footer-top" href="#top" aria-label="Zurück zum Seitenanfang"><span aria-hidden="true">↑</span><span class="footer-visually-hidden">Zurück zum Seitenanfang</span></a>
   </div>
 </footer>
 <!-- global-footer:end -->
-  <script src="shared/js/site-header.js?v=6"></script>
+  <script src="shared/js/site-header.js?v=15"></script>
   <script src="tutorial.js"></script>
 </body>
 </html>

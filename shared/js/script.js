@@ -5,14 +5,10 @@
     function initSiteIntro() {
         var intro = document.querySelector("[data-site-intro]");
         var introControls = document.querySelector("[data-intro-controls]");
-        var introProgress = introControls ? introControls.querySelector("[data-intro-progress]") : null;
-        var introTime = introControls ? introControls.querySelector("[data-intro-time]") : null;
-        var introChapter = introControls ? introControls.querySelector("[data-intro-chapter]") : null;
         var introFrame = intro ? intro.querySelector(".motion-frame-signal") : null;
-        var introChapters = intro ? Array.prototype.slice.call(intro.querySelectorAll(".motion-chapter")) : [];
         var introFinale = intro ? intro.querySelector(".motion-finale") : null;
         var introSkip = document.querySelector("[data-intro-skip]");
-        var introDuration = 6800;
+        var introDuration = 3800;
         var progressFrame = 0;
         var alreadySeen = false;
 
@@ -34,7 +30,7 @@
         }
 
         try {
-            alreadySeen = window.sessionStorage.getItem("sebastian-intro-seen-v20") === "true";
+            alreadySeen = window.sessionStorage.getItem("sebastian-intro-seen-v21") === "true";
         } catch (error) {
             alreadySeen = false;
         }
@@ -50,7 +46,7 @@
             if (introControls) introControls.remove();
             window.cancelAnimationFrame(progressFrame);
             try {
-                window.sessionStorage.setItem("sebastian-intro-seen-v20", "true");
+                window.sessionStorage.setItem("sebastian-intro-seen-v21", "true");
             } catch (error) {
                 // Das Intro lässt sich auch ohne verfügbaren Sitzungsspeicher schließen.
             }
@@ -68,46 +64,15 @@
             if (event.key === "Escape" && intro.isConnected && !intro.classList.contains("is-hidden")) dismissIntro(true);
         });
 
-        if (introProgress && introTime && introChapter) {
-            var introStartedAt = window.performance.now();
-            var chapterLimits = [0, 2500, 5000, 6800];
-            var chapterLabels = ["01 Digitale Produkte", "02 Digitale Teilhabe", "03 Sebastian Jansen"];
-            var chapterBars = introProgress.querySelectorAll("i");
-            var previousChapter = -1;
-            var updateIntroProgress = function(now) {
-                var elapsed = Math.min(now - introStartedAt, introDuration);
-                var totalProgress = elapsed / introDuration;
-                var elapsedSeconds = Math.floor(elapsed / 1000);
-                var activeChapter = chapterLimits.findIndex(function(limit, index) {
-                    return index < chapterLimits.length - 1 && elapsed < chapterLimits[index + 1];
-                });
-                activeChapter = activeChapter < 0 ? chapterLabels.length - 1 : activeChapter;
-                chapterBars.forEach(function(bar, index) {
-                    var chapterProgress = index < activeChapter ? 1 : index > activeChapter ? 0 : (elapsed - chapterLimits[index]) / (chapterLimits[index + 1] - chapterLimits[index]);
-                    bar.style.transform = "scaleX(" + Math.max(0, Math.min(1, chapterProgress)) + ")";
-                });
-                if (introFrame) {
-                    introFrame.style.strokeDashoffset = String(1 - totalProgress);
-                }
-                intro.style.setProperty("--intro-progress", String(totalProgress));
-                if (activeChapter !== previousChapter) {
-                    introChapters.forEach(function(chapter, index) {
-                        chapter.classList.toggle("is-active", index === activeChapter);
-                    });
-                    if (introFinale) {
-                        introFinale.classList.toggle("is-active", activeChapter === chapterLabels.length - 1);
-                    }
-                    intro.dataset.introChapter = String(activeChapter + 1);
-                    previousChapter = activeChapter;
-                }
-                introChapter.textContent = chapterLabels[activeChapter];
-                introTime.textContent = "00:" + String(elapsedSeconds).padStart(2, "0") + " / 00:07";
-                if (elapsed < introDuration) {
-                    progressFrame = window.requestAnimationFrame(updateIntroProgress);
-                }
-            };
-            progressFrame = window.requestAnimationFrame(updateIntroProgress);
-        }
+        var introStartedAt = window.performance.now();
+        var updateIntroProgress = function(now) {
+            var totalProgress = Math.min(1, (now - introStartedAt) / introDuration);
+            if (introFrame) introFrame.style.strokeDashoffset = String(1 - totalProgress);
+            intro.style.setProperty("--intro-progress", String(totalProgress));
+            if (introFinale) introFinale.classList.toggle("is-active", totalProgress >= .58);
+            if (totalProgress < 1) progressFrame = window.requestAnimationFrame(updateIntroProgress);
+        };
+        progressFrame = window.requestAnimationFrame(updateIntroProgress);
 
         window.setTimeout(function() {
             dismissIntro(false);

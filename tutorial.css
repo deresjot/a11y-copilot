@@ -13,25 +13,31 @@
   .kicker { margin:0 0 1rem; color:var(--pink); font-size:.78rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
   h1,h2 { font-family:NeueMachina,system-ui,sans-serif; font-weight:400; letter-spacing:-.025em; line-height:1.04; text-wrap:balance; }
   h1 { max-width:12ch; margin:0; font-size:clamp(3rem,9vw,7rem); }
-  .intro { max-width:48rem; margin:2rem 0 5rem; color:var(--soft); font-size:clamp(1.15rem,1rem + .5vw,1.45rem); }
+  .intro { max-width:48rem; margin:2rem 0 clamp(3rem,7vw,5rem); color:var(--soft); font-size:clamp(1.15rem,1rem + .5vw,1.45rem); }
   ol { margin:0; padding:0; border-top:1px solid var(--line); list-style:none; counter-reset:steps; }
   main > ol > li { display:grid; grid-template-columns:5rem minmax(0,1fr); gap:clamp(1rem,4vw,4rem); padding:clamp(2rem,5vw,4rem) 0; border-bottom:1px solid var(--line); counter-increment:steps; }
   main > ol > li::before { color:var(--pink); font-weight:800; content:"0" counter(steps); }
   h2 { margin:0 0 1rem; font-size:clamp(1.7rem,4vw,3.2rem); }
   main > ol > li p { max-width:46rem; margin:.75rem 0; color:var(--soft); }
-  .tutorial-page-progress { display:grid; gap:.5rem; max-width:48rem; margin:0 0 1.25rem; padding:1rem 1.25rem; border:1px solid var(--line); background:var(--panel); }
+  .tutorial-page-progress { display:grid; gap:.7rem; max-width:none; margin:0; padding:1.15rem clamp(1rem,3vw,1.75rem); border:1px solid var(--line); border-bottom:0; background:var(--panel); }
   .tutorial-page-progress[hidden],.tutorial-page-controls[hidden] { display:none; }
   .tutorial-page-progress p { margin:0; color:var(--soft); font-size:.82rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
-  .tutorial-page-progress progress { width:100%; height:.65rem; border:1px solid var(--line); border-radius:0; background:var(--black); color:var(--pink); accent-color:var(--pink); }
+  .tutorial-page-progress progress { width:100%; height:.8rem; border:1px solid var(--line); border-radius:0; background:var(--black); color:var(--pink); accent-color:var(--pink); }
   .tutorial-page-progress progress::-webkit-progress-bar { background:var(--black); }
   .tutorial-page-progress progress::-webkit-progress-value { background:var(--pink); }
   .tutorial-page-progress progress::-moz-progress-bar { background:var(--pink); }
-  .js .tutorial-flow { min-height:clamp(22rem,50vh,34rem); border:1px solid var(--line); }
-  .js .tutorial-flow > li { min-height:inherit; padding:clamp(2rem,6vw,5rem); border:0; grid-template-columns:4rem minmax(0,1fr); align-content:center; }
+  .js .tutorial-flow { min-height:clamp(25rem,56vh,38rem); border:1px solid var(--line); background:linear-gradient(135deg,#171717,#111 62%); }
+  .js .tutorial-flow > li { min-height:inherit; padding:clamp(2rem,6vw,5rem); border:0; grid-template-columns:clamp(2.75rem,7vw,5.5rem) minmax(0,1fr); align-content:center; }
+  .js .tutorial-flow > li::before { display:grid; width:clamp(2.5rem,6vw,4.25rem); aspect-ratio:1; place-items:center; border:2px solid var(--pink); color:var(--pink); font-family:NeueMachina,system-ui,sans-serif; font-size:clamp(.8rem,2vw,1.15rem); }
   .js .tutorial-flow > li[hidden] { display:none; }
   .tutorial-flow h2:focus { outline:.2rem solid var(--white); outline-offset:.35rem; box-shadow:0 0 0 .55rem var(--pink); }
-  .tutorial-page-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.75rem; max-width:48rem; margin-top:1rem; }
+  .tutorial-page-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.75rem; max-width:none; margin-top:1rem; }
   .tutorial-page-controls .ui-button { width:100%; }
+  .tutorial-page-controls .ui-button span[aria-hidden="true"] { font-size:1.35rem; line-height:1; transition:transform .18s ease; }
+  .tutorial-page-controls .tutorial-back { gap:.75rem; }
+  .tutorial-page-controls .tutorial-next { gap:.75rem; }
+  .tutorial-page-controls .tutorial-back:hover span[aria-hidden="true"] { transform:translateX(-.25rem); }
+  .tutorial-page-controls .tutorial-next:hover span[aria-hidden="true"] { transform:translateX(.25rem); }
   .tutorial-page-controls button:disabled { opacity:.48; cursor:not-allowed; }
   pre { max-width:48rem; overflow:auto; padding:1rem; border:1px solid var(--line); background:var(--panel); white-space:pre-wrap; }
   .actions { display:flex; flex-wrap:wrap; gap:.75rem; margin-top:3rem; }

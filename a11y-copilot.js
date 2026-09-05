@@ -260,7 +260,6 @@ async function openMarkdown(url, returnTarget = document.activeElement) {
   try {
     const { markdown } = await loadMarkdownText(documentUrl);
     if (!mdDialog.open || currentDocumentUrl !== documentUrl) return;
-    if (!mdDialog.open || currentDocumentUrl !== documentUrl) return;
     currentMarkdown = markdown;
     copyMarkdownButton.disabled = false;
     const renderedMarkdown = withoutFrontmatter(markdown);
@@ -270,7 +269,6 @@ async function openMarkdown(url, returnTarget = document.activeElement) {
     mdBody.scrollTop = 0;
     mdBody.focus();
   } catch (error) {
-    if (!mdDialog.open || currentDocumentUrl !== documentUrl) return;
     if (!mdDialog.open || currentDocumentUrl !== documentUrl) return;
     mdTitle.textContent = 'Dokument konnte nicht geladen werden';
     const errorBox = document.createElement('div');

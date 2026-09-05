@@ -1,0 +1,79 @@
+{
+  "current": {
+    "version": "1.0.13",
+    "releasedOn": "2026-09-04",
+    "summary": "Bedienbarkeit und visuelle Konsistenz verbessert"
+  },
+  "history": [
+    {
+      "version": "1.0.13",
+      "releasedOn": "2026-09-04",
+      "summary": "Bedienbarkeit und visuelle Konsistenz verbessert"
+    },
+    {
+      "version": "1.0.12",
+      "releasedOn": "2026-08-30",
+      "summary": "Performance und Orientierung verbessert"
+    },
+    {
+      "version": "1.0.11",
+      "releasedOn": "2026-08-30",
+      "summary": "Bilddarstellung verbessert"
+    },
+    {
+      "version": "1.0.10",
+      "releasedOn": "2026-08-30",
+      "summary": "Navigation und Seitenstruktur verbessert"
+    },
+    {
+      "version": "1.0.9",
+      "releasedOn": "2026-08-29",
+      "summary": "Profile und Auffindbarkeit verbessert"
+    },
+    {
+      "version": "1.0.8",
+      "releasedOn": "2026-08-29",
+      "summary": "Darstellung und Kontraste verbessert"
+    },
+    {
+      "version": "1.0.7",
+      "releasedOn": "2026-08-28",
+      "summary": "Bedienbarkeit und Dokumentation verbessert"
+    },
+    {
+      "version": "1.0.6",
+      "releasedOn": "2026-08-28",
+      "summary": "Nutzung und Navigation verbessert"
+    },
+    {
+      "version": "1.0.5",
+      "releasedOn": "2026-08-28",
+      "summary": "Animationen verbessert"
+    },
+    {
+      "version": "1.0.4",
+      "releasedOn": "2026-08-28",
+      "summary": "Darstellung und Bewegung verbessert"
+    },
+    {
+      "version": "1.0.3",
+      "releasedOn": "2026-08-28",
+      "summary": "Intro-Bedienung verbessert"
+    },
+    {
+      "version": "1.0.2",
+      "releasedOn": "2026-08-28",
+      "summary": "Mobile Bedienbarkeit verbessert"
+    },
+    {
+      "version": "1.0.1",
+      "releasedOn": "2026-08-28",
+      "summary": "Auffindbarkeit verbessert"
+    },
+    {
+      "version": "1.0.0",
+      "releasedOn": "2026-08-26",
+      "summary": "Technische Grundlage und Auffindbarkeit verbessert"
+    }
+  ]
+}

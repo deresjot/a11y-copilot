@@ -18,6 +18,7 @@ const transformAppHtml = value => value
   .replaceAll('../css/', 'shared/css/')
   .replaceAll('../img/', 'shared/img/')
   .replaceAll('../js/', 'shared/js/')
+  .replaceAll('data-release-src="../release.json"', 'data-release-src="shared/release.json"')
   .replaceAll('href="../impressum.html"', 'href="shared/legal/impressum.html"')
   .replaceAll('href="../bildnutzung.html"', 'href="shared/legal/bildnutzung.html"')
   .replaceAll('href="../barrierefreiheit.html"', 'href="shared/legal/barrierefreiheit.html"')
@@ -48,11 +49,13 @@ for (const file of ["NeueMachina-Medium.woff2", "NeueMachina-Regular.woff"]) {
 for (const file of ["site-header.js", "script.js"]) {
   await cp(resolve(portfolioRoot, "js", file), resolve(shared, "js", file));
 }
+await cp(resolve(portfolioRoot, "release.json"), resolve(shared, "release.json"));
 
 const transformLegalHtml = value => value
   .replaceAll('href="css/', 'href="../css/')
   .replaceAll('src="img/', 'src="../img/')
   .replaceAll('src="js/', 'src="../js/')
+  .replaceAll('data-release-src="release.json"', 'data-release-src="../release.json"')
   .replaceAll('href="index.html"', 'href="../../index.html"');
 for (const file of ["impressum.html", "bildnutzung.html", "barrierefreiheit.html"]) {
   await copyText(resolve(portfolioRoot, file), resolve(shared, "legal", file), transformLegalHtml);

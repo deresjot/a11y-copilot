@@ -49,6 +49,13 @@ a[href] {
   text-underline-offset: .22em;
 }
 
+[data-mail-link]:not(.ui-button) {
+  text-decoration-line: underline;
+  text-decoration-color: var(--ui-accent);
+  text-decoration-thickness: .15em;
+  text-underline-offset: .24em;
+}
+
 a.ui-action,
 a.ui-button,
 a.ui-icon-button,

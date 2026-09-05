@@ -1,6 +1,87 @@
 (() => {
   "use strict";
 
+  const initReleaseChangelog = () => {
+    const triggers = Array.from(document.querySelectorAll("[data-release-changelog]"));
+    if (!triggers.length || typeof HTMLDialogElement === "undefined") return;
+    const dialog = document.createElement("dialog");
+    dialog.className = "release-dialog";
+    dialog.setAttribute("aria-labelledby", "release-dialog-title");
+    dialog.innerHTML = '<div class="release-dialog__shell"><header class="release-dialog__header"><div><p class="release-dialog__eyebrow">Versionierung</p><h2 class="release-dialog__title" id="release-dialog-title">Changelog</h2></div><button class="release-dialog__close" type="button" aria-label="Changelog schließen"><span aria-hidden="true">×</span></button></header><div class="release-dialog__body"><p class="release-dialog__status" role="status" aria-live="polite">Changelog wird geladen …</p><ol class="release-list" hidden></ol></div></div>';
+    document.body.append(dialog);
+    const close = dialog.querySelector(".release-dialog__close");
+    const status = dialog.querySelector(".release-dialog__status");
+    const list = dialog.querySelector(".release-list");
+    let returnTarget = null;
+    let loadedSource = "";
+
+    const loadReleases = async (source) => {
+      if (loadedSource === source && list.children.length) return;
+      status.hidden = false;
+      list.hidden = true;
+      try {
+        const response = await fetch(source, { credentials: "same-origin", cache: "no-store" });
+        if (!response.ok) throw new Error("release-load-failed");
+        const data = await response.json();
+        list.replaceChildren(...data.history.map((release) => {
+          const item = document.createElement("li");
+          const version = document.createElement("strong");
+          const date = document.createElement("time");
+          const summary = document.createElement("p");
+          version.textContent = `Version ${release.version}`;
+          date.dateTime = release.releasedOn;
+          date.textContent = new Intl.DateTimeFormat("de-DE").format(new Date(`${release.releasedOn}T12:00:00`));
+          summary.textContent = release.summary;
+          item.append(version, date, summary);
+          return item;
+        }));
+        loadedSource = source;
+        status.hidden = true;
+        list.hidden = false;
+      } catch (error) {
+        status.textContent = "Der Changelog konnte gerade nicht geladen werden.";
+      }
+    };
+
+    triggers.forEach((trigger) => {
+      trigger.setAttribute("aria-controls", "release-changelog-dialog");
+      trigger.addEventListener("click", async () => {
+        returnTarget = trigger;
+        dialog.id = "release-changelog-dialog";
+        dialog.showModal();
+        await loadReleases(trigger.dataset.releaseSrc || "release.json");
+        close.focus();
+      });
+    });
+    close.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+    dialog.addEventListener("close", () => returnTarget?.focus());
+  };
+
+  const initPageTransition = () => {
+    const loader = document.createElement("div");
+    loader.className = "page-transition-loader";
+    loader.setAttribute("aria-hidden", "true");
+    loader.innerHTML = '<span class="page-transition-loader__circle"><span class="loading-circle"></span></span>';
+    document.body.append(loader);
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      if (link.hasAttribute("download") || link.target || link.matches("[data-footer-document],[data-open-tutorial]") || link.protocol !== location.protocol || link.host !== location.host) return;
+      const destination = new URL(link.href, location.href);
+      if (destination.pathname.toLowerCase().endsWith(".md") && !link.hasAttribute("data-direct-document")) return;
+      if (destination.pathname === location.pathname && destination.search === location.search) return;
+      event.preventDefault();
+      document.documentElement.classList.add("is-page-leaving");
+      const delay = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 460;
+      window.setTimeout(() => { location.href = destination.href; }, delay);
+    });
+    window.addEventListener("pageshow", () => document.documentElement.classList.remove("is-page-leaving"));
+  };
+
+  initReleaseChangelog();
+  initPageTransition();
+
   const headers = Array.from(document.querySelectorAll("[data-site-header]"));
   if (!headers.length) return;
 

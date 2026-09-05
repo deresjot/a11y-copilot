@@ -8,11 +8,12 @@
   const controls = document.querySelector('[data-tutorial-controls]');
   const back = document.querySelector('[data-tutorial-back]');
   const next = document.querySelector('[data-tutorial-next]');
+  const nextLabel = next?.querySelector('[data-tutorial-next-label]');
   const live = document.querySelector('[data-tutorial-live]');
   const steps = flow ? [...flow.children] : [];
   let current = 0;
 
-  if (!steps.length || !progressWrap || !progress || !status || !controls || !back || !next) return;
+  if (!steps.length || !progressWrap || !progress || !status || !controls || !back || !next || !nextLabel) return;
 
   const render = (moveFocus = false) => {
     steps.forEach((step, index) => {
@@ -26,7 +27,7 @@
     progress.max = steps.length;
     progress.textContent = label;
     back.disabled = current === 0;
-    next.textContent = current === steps.length - 1 ? 'Fertig – zum Toolkit' : 'Weiter';
+    nextLabel.textContent = current === steps.length - 1 ? 'Fertig – zum Toolkit' : 'Weiter';
     if (live) live.textContent = `${label}: ${steps[current].querySelector('h2')?.textContent || ''}`;
     if (moveFocus) steps[current].querySelector('h2')?.focus();
   };
