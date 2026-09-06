@@ -35,16 +35,8 @@
 .global-footer .footer-release-button { display:inline-block; min-height:2.75rem; padding:.75rem .5rem; border:0; background:transparent; color:inherit; font:inherit; line-height:1.25rem; letter-spacing:inherit; white-space:nowrap; cursor:pointer; text-decoration:underline; text-decoration-color:#ff004f; text-decoration-thickness:.1em; text-underline-offset:.2em; }
 .global-footer .footer-release-button:hover { color:#fff; }
 .global-footer .footer-release-button:focus-visible { outline:.2rem solid #fff; outline-offset:.2rem; box-shadow:0 0 0 .35rem #ff004f; }
-.release-dialog { width:min(calc(100% - 2rem),52rem); max-height:min(88dvh,52rem); margin:auto; padding:0; overflow:hidden; border:1px solid #555; border-radius:.5rem; background:#151515; color:#fff; box-shadow:0 1.5rem 5rem rgba(0,0,0,.62); }
-.release-dialog::backdrop { background:rgba(0,0,0,.78); backdrop-filter:blur(.25rem); }
-.release-dialog__shell { display:grid; max-height:inherit; grid-template-rows:auto minmax(0,1fr); }
-.release-dialog__header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 1.25rem; border-bottom:1px solid #484848; background:#242424; }
-.release-dialog__eyebrow { margin:0 0 .2rem; color:#ff4778; font-size:.68rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase; }
-.release-dialog__title { margin:0; color:#fff; font-family:"NeueMachina",system-ui,sans-serif; font-size:clamp(1.35rem,3vw,2rem); font-weight:500; line-height:1.1; }
-.release-dialog__close { display:inline-flex; width:3rem; height:3rem; flex:0 0 auto; align-items:center; justify-content:center; border:1px solid #ff004f; border-radius:50%; background:#ff004f; color:#111; font-size:1.65rem; cursor:pointer; }
-.release-dialog__close:hover { border-color:#fff; background:#fff; }
-.release-dialog__close:focus-visible { outline:.2rem solid #fff; outline-offset:.2rem; box-shadow:0 0 0 .35rem #ff004f; }
 .release-dialog__body { overflow:auto; padding:clamp(1rem,4vw,2rem); overscroll-behavior:contain; }
+.release-dialog__actions { justify-content:flex-end; }
 .release-dialog__status { margin:0; color:#d4d4d4; }
 .release-list { display:grid; gap:.75rem; margin:0; padding:0; list-style:none; }
 .release-list>.release-day { padding:.85rem 1rem; border:1px solid #484848; background:#1b1b1b; }
@@ -75,6 +67,7 @@
 @keyframes page-transition-mark-in { from{opacity:0;transform:scale(.78)} 45%{opacity:1} to{opacity:1;transform:scale(1)} }
 @keyframes page-transition-cube-spin { from{transform:scale(.86) rotateX(0deg)} to{transform:scale(1.02) rotateX(-540deg)} }
 @keyframes page-transition-cube-fade { from{opacity:0} to{opacity:1} }
+@media(max-width:48rem){.ui-dialog__header .release-dialog__actions{width:auto}}
 @media(max-width:36rem){.release-day__changes li{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.page-transition-loader{display:none}.rubik-cube,.is-page-leaving .page-transition-loader::before,.is-page-leaving .page-transition-loader__mark{animation:none}}
 .global-footer.global-footer .footer-top { display:inline-flex; width:3rem; height:3rem; align-items:center; justify-content:center; margin-top:.75rem; border:1px solid #ff004f; border-radius:50%; background:#ff004f; color:#111; font-size:1.675rem; line-height:1; text-decoration:none; transition:color .14s ease,background-color .14s ease,border-color .14s ease,transform .14s ease; }

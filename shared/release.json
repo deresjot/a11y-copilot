@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.14",
+    "version": "1.0.15",
     "releasedOn": "2026-09-06",
-    "summary": "Bedienbarkeit, Übergänge und Übersicht verbessert"
+    "summary": "Anleitung und Dialoge verständlicher und einheitlicher gestaltet"
   },
   "history": [
+    {
+      "version": "1.0.15",
+      "releasedOn": "2026-09-06",
+      "summary": "Anleitung und Dialoge verständlicher und einheitlicher gestaltet"
+    },
     {
       "version": "1.0.14",
       "releasedOn": "2026-09-06",

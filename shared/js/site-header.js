@@ -5,9 +5,9 @@
     const triggers = Array.from(document.querySelectorAll("[data-release-changelog]"));
     if (!triggers.length || typeof HTMLDialogElement === "undefined") return;
     const dialog = document.createElement("dialog");
-    dialog.className = "release-dialog";
+    dialog.className = "ui-dialog release-dialog";
     dialog.setAttribute("aria-labelledby", "release-dialog-title");
-    dialog.innerHTML = '<div class="release-dialog__shell"><header class="release-dialog__header"><div><p class="release-dialog__eyebrow">Versionierung</p><h2 class="release-dialog__title" id="release-dialog-title">Changelog</h2></div><button class="release-dialog__close" type="button" aria-label="Changelog schließen"><span aria-hidden="true">×</span></button></header><div class="release-dialog__body"><p class="release-dialog__status" role="status" aria-live="polite">Changelog wird geladen …</p><ol class="release-list" hidden></ol></div></div>';
+    dialog.innerHTML = '<div class="ui-dialog__shell release-dialog__shell"><div class="ui-dialog__header"><div class="ui-dialog__heading"><p class="ui-dialog__eyebrow">Versionierung</p><h2 class="ui-dialog__title" id="release-dialog-title">Changelog</h2></div><div class="ui-action-group release-dialog__actions"><button class="ui-icon-button release-dialog__close" type="button" aria-label="Changelog schließen"><span aria-hidden="true">×</span></button></div></div><div class="ui-dialog__body release-dialog__body"><p class="release-dialog__status" role="status" aria-live="polite">Changelog wird geladen …</p><ol class="release-list" hidden></ol></div></div>';
     document.body.append(dialog);
     const close = dialog.querySelector(".release-dialog__close");
     const status = dialog.querySelector(".release-dialog__status");

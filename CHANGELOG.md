@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.7 – 2026-09-06
+
+- Anleitung vereinfacht und Dialogdarstellung vereinheitlicht.
+
 ## 0.2.6 – 2026-09-06
 
 - Übergänge, Versionsübersicht und visuelle Bedienbarkeit verbessert.

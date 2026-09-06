@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Schritt-für-Schritt-Anleitung: a11y-copilot mit einem KI-Chat oder Coding-Assistenten für Fragen zur digitalen Barrierefreiheit verwenden.">
+  <meta name="description" content="Einfache Schritt-für-Schritt-Anleitung: a11y-copilot im KI-Chat oder direkt im Code verwenden.">
   <meta name="robots" content="index,follow,max-snippet:-1">
   <link rel="canonical" href="https://www.sebastianjansen.com/a11y-copilot/tutorial.html">
   <title>a11y-copilot Anleitung – Sebastian Jansen</title>
   <meta name="author" content="Sebastian Jansen">
   <meta property="og:title" content="a11y-copilot Anleitung – Sebastian Jansen">
-  <meta property="og:description" content="Schritt-für-Schritt-Anleitung für die fachlich eingeordnete Nutzung des a11y-copilot bei Fragen zur digitalen Barrierefreiheit.">
+  <meta property="og:description" content="Einfache Schritt-für-Schritt-Anleitung für den a11y-copilot.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.sebastianjansen.com/a11y-copilot/tutorial.html">
   <meta property="og:image" content="https://www.sebastianjansen.com/a11y-copilot/assets/a11y-copilot-topography-glossy-4k-v3.jpg">
   <meta property="og:image:alt" content="Abstrakte, pixelige topografische Reliefstruktur in Schwarz mit pinken Akzenten">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="a11y-copilot Anleitung – Sebastian Jansen">
-  <meta name="twitter:description" content="Schritt-für-Schritt-Anleitung für die fachlich eingeordnete Nutzung des a11y-copilot.">
+  <meta name="twitter:description" content="Einfache Schritt-für-Schritt-Anleitung für den a11y-copilot.">
   <meta name="twitter:image" content="https://www.sebastianjansen.com/a11y-copilot/assets/a11y-copilot-topography-glossy-4k-v3.jpg">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="shared/css/global-footer.css?v=24">
+  <link rel="stylesheet" href="shared/css/global-footer.css?v=25">
   <link rel="stylesheet" href="shared/css/document-pages.css">
   <link rel="stylesheet" href="tutorial.css">
   <link rel="stylesheet" href="shared/css/ui-system.css">
@@ -38,20 +38,20 @@
   </header>
   <main id="main">
     <p class="kicker">Anleitung</p>
-    <h1>Wähle den passenden Weg.</h1>
-    <p class="intro">a11y-copilot gibt dir und deinem KI-Assistenten eine gemeinsame fachliche Grundlage. Diese Klickstrecke führt dich Schritt für Schritt vom passenden Einstieg bis zur praktischen Prüfung. Ohne JavaScript bleiben alle Schritte vollständig untereinander lesbar.</p>
+    <h1>So legst du los.</h1>
+    <p class="intro">Der a11y-copilot hilft dir bei Fragen zur digitalen Barrierefreiheit. Hier gehst du alles Schritt für Schritt durch. Du brauchst kein Vorwissen.</p>
     <div class="tutorial-page-progress" data-tutorial-progress hidden>
       <p id="tutorial-page-status">Schritt 1 von 7</p>
       <progress value="1" max="7" aria-labelledby="tutorial-page-status">1 von 7</progress>
     </div>
     <ol class="tutorial-flow" data-tutorial-flow>
-      <li><div><h2 tabindex="-1">Den passenden Weg wählen</h2><p>Nutze das Startpaket für eine konkrete Frage im KI-Chat, die Agent-Anweisung für Arbeit im Repository oder die Dokumente zum eigenen Nachschlagen. Du musst nicht für jede Aufgabe das gesamte Repository laden.</p></div></li>
-      <li><div><h2 tabindex="-1">Das Startpaket vorbereiten</h2><p>Auf der <a href="index.html#inhalt">Copilot-Startseite</a> kopiert „Startpaket kopieren“ die <a href="PROMPT.md">Startanweisung</a> und die <a href="ACCESSIBILITY.md">Arbeitsgrundlage</a> gemeinsam. Du musst keinen langen Text von Hand markieren.</p></div></li>
-      <li><div><h2 tabindex="-1">Einen neuen KI-Chat beginnen</h2><p>Füge das Startpaket als erste Nachricht in den KI-Chat ein, den du ohnehin verwendest. Das konkrete Werkzeug ist nicht entscheidend; wichtig ist der gemeinsame fachliche Kontext.</p></div></li>
-      <li><div><h2 tabindex="-1">Die Aufgabe konkret beschreiben</h2><p>Nenne das Ziel des Menschen, den vollständigen Ablauf, relevante Zustände und vorhandenes Material. Code, Text, Screenshot oder URL helfen, aus einer allgemeinen Frage einen prüfbaren Auftrag zu machen.</p></div></li>
-      <li><div><h2 tabindex="-1">Quellen und Aussagegrenzen verlangen</h2><p>Bitte um direkte Primärquellen für normative Aussagen. Lass unterscheiden, was Anforderung, belastbare Umsetzung, Best Practice, Pattern oder Kontextentscheidung ist und welche Punkte praktisch offen bleiben.</p></div></li>
-      <li><div><h2 tabindex="-1">Im Repository arbeiten</h2><p>Stelle <a href="SKILL.md">Agent-Anweisung</a>, Arbeitsgrundlage, <code>references/</code>, <code>patterns/</code> und bei automatisierten Prüfungen <code>rulesets/</code> als Projektkontext bereit. Der Agent lädt nur die für die Aufgabe nötigen Vertiefungen.</p></div></li>
-      <li><div><h2 tabindex="-1">Das Ergebnis im Produkt prüfen</h2><p>Übernimm eine überzeugend klingende Antwort nicht ungeprüft. Teste die Lösung im vollständigen Ablauf, in relevanten Browsern und Zuständen sowie abhängig vom Risiko mit Tastatur, Vergrößerung, Screenreader und Menschen.</p></div></li>
+      <li><div><h2 tabindex="-1">Was willst du machen?</h2><p>Für eine konkrete Frage nimmst du das Startpaket. Arbeitest du direkt im Code, bekommt dein Coding-Agent zusätzlich die Projektdateien. Zum Nachlesen öffnest du nur die Themen, die du gerade brauchst.</p></div></li>
+      <li><div><h2 tabindex="-1">Startpaket kopieren</h2><p>Auf der <a href="index.html#inhalt">Copilot-Startseite</a> klickst du auf „Startpaket kopieren“. Damit landen <a href="PROMPT.md">Startanweisung</a> und <a href="ACCESSIBILITY.md">Arbeitsgrundlage</a> gemeinsam in deiner Zwischenablage.</p></div></li>
+      <li><div><h2 tabindex="-1">In einen neuen Chat einfügen</h2><p>Füge das Startpaket als erste Nachricht in deinen KI-Chat ein. Welche KI du nutzt, ist egal. Bei einem neuen Chat kopierst du das Paket einfach noch einmal hinein.</p></div></li>
+      <li><div><h2 tabindex="-1">Sag klar, worum es geht</h2><p>Schreib nicht nur „Ist das barrierefrei?“. Nenne die Seite oder Funktion, das Ziel und den ganzen Ablauf. Code, Text, Screenshot oder Link helfen ebenfalls.</p></div></li>
+      <li><div><h2 tabindex="-1">Frag nach Quellen und Grenzen</h2><p>Bitte bei wichtigen Regeln um eine direkte Quelle. Die KI soll klar sagen, was Pflicht, was Empfehlung und was noch nicht praktisch geprüft ist.</p></div></li>
+      <li><div><h2 tabindex="-1">Arbeitest du direkt im Code?</h2><p>Dann liest dein Coding-Agent zuerst <a href="SKILL.md">SKILL.md</a> und <a href="ACCESSIBILITY.md">ACCESSIBILITY.md</a>. Weitere Dateien lädt er nur, wenn sie für deine Aufgabe wirklich nötig sind.</p></div></li>
+      <li><div><h2 tabindex="-1">Im echten Produkt testen</h2><p>Klingt die Antwort gut? Prima – aber bitte nicht blind übernehmen. Teste die Änderung im ganzen Ablauf, zum Beispiel mit Tastatur, Vergrößerung und einem kleinen Bildschirm.</p></div></li>
     </ol>
     <div class="tutorial-page-controls" data-tutorial-controls hidden>
       <button class="ui-button ui-button--secondary tutorial-back" type="button" data-tutorial-back><span aria-hidden="true">←</span><span>Zurück</span></button>
@@ -82,12 +82,12 @@
       <p class="footer-github-row"><a class="footer-github" href="https://github.com/deresjot" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg><span>GitHub</span><span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></a></p>
     </nav>
     <p class="footer-meta">@deresjot · Sebastian Jansen · © 2026</p>
-    <p class="footer-release"><button type="button" class="footer-release-button" data-release-changelog data-release-src="shared/release.json" aria-haspopup="dialog" aria-label="Changelog zur Live-Version 1.0.14 vom 06.09.2026 anzeigen">Live-Version 1.0.14 vom <time datetime="2026-09-06">06.09.2026</time></button></p>
+    <p class="footer-release"><button type="button" class="footer-release-button" data-release-changelog data-release-src="shared/release.json" aria-haspopup="dialog" aria-label="Changelog zur Live-Version 1.0.15 vom 06.09.2026 anzeigen">Live-Version 1.0.15 vom <time datetime="2026-09-06">06.09.2026</time></button></p>
     <a class="footer-top" href="#top" aria-label="Zurück zum Seitenanfang"><span aria-hidden="true">↑</span><span class="footer-visually-hidden">Zurück zum Seitenanfang</span></a>
   </div>
 </footer>
 <!-- global-footer:end -->
-  <script src="shared/js/site-header.js?v=19"></script>
+  <script src="shared/js/site-header.js?v=20"></script>
   <script src="tutorial.js"></script>
 </body>
 </html>

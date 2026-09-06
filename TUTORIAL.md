@@ -1,54 +1,52 @@
 # a11y-copilot benutzen
 
-`a11y-copilot` gibt Menschen und KI-Systemen eine gemeinsame fachliche Grundlage. Er prüft kein Produkt selbstständig im Hintergrund. Du wählst den passenden Einstieg, gibst den nötigen Kontext und prüfst das Ergebnis anschließend im echten Produkt.
+Der a11y-copilot hilft dir bei Fragen zur digitalen Barrierefreiheit. Er gibt deiner KI verlässlichen Hintergrund. Einen echten Test im Produkt ersetzt er nicht – den machst du am Ende selbst.
 
-## Schritt 1 von 7: Den passenden Weg wählen
+## Schritt 1 von 7: Was willst du machen?
 
-- **Konkrete Frage im KI-Chat:** Verwende das Startpaket aus [PROMPT.md](PROMPT.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md).
-- **Arbeit im Repository:** Verwende zusätzlich [SKILL.md](SKILL.md), die nötigen Dateien aus `references/` und `patterns/` sowie bei automatisierten Prüfungen `rulesets/`.
-- **Selbst nachschlagen:** Beginne mit der Arbeitsgrundlage und folge nur den thematisch passenden Vertiefungen.
+- **Du hast eine konkrete Frage:** Nimm das Startpaket für deinen KI-Chat.
+- **Du arbeitest direkt im Code:** Gib deinem Coding-Agent zusätzlich die Projektdateien.
+- **Du willst selbst nachlesen:** Öffne die Arbeitsgrundlage und danach nur die Themen, die du gerade brauchst.
 
-Du musst nicht das gesamte Repository in jeden Chat kopieren.
+Du musst nicht jedes Mal das ganze Repository laden.
 
-## Schritt 2 von 7: Das Startpaket vorbereiten
+## Schritt 2 von 7: Startpaket kopieren
 
-Die Website kopiert Startanweisung und Arbeitsgrundlage mit „Startpaket kopieren“ gemeinsam. Alternativ stellst du beide Dateien als ersten Kontext eines neuen Chats bereit. Der KI-Chat soll die Grundlage anwenden, aber nicht vollständig wiederholen.
+Klicke auf der Website auf **„Startpaket kopieren“**. Damit kopierst du die kurze Startanweisung und die fachliche Arbeitsgrundlage zusammen. Du musst nichts einzeln zusammensuchen.
 
-## Schritt 3 von 7: Einen neuen KI-Chat beginnen
+## Schritt 3 von 7: In einen neuen Chat einfügen
 
-Füge das Startpaket als erste Nachricht in den KI-Chat oder Assistenten ein, den du ohnehin verwendest. Bei einem neuen Chat oder wenn der Kontext nicht mehr zuverlässig vorhanden ist, gib das Startpaket erneut mit.
+Füge das Startpaket als erste Nachricht in deinen KI-Chat ein. Welche KI du nutzt, ist dabei egal. Wenn du später einen neuen Chat anfängst, kopierst du das Paket einfach noch einmal hinein.
 
-## Schritt 4 von 7: Die Aufgabe konkret beschreiben
+## Schritt 4 von 7: Sag klar, worum es geht
 
-Nenne möglichst:
+Schreib nicht nur: „Ist das barrierefrei?“ Hilfreicher ist:
 
-- das Ziel des Menschen;
-- den vollständigen Ablauf und relevante Initial-, Lade-, Fehler- und Erfolgszustände;
-- Code, Text, Entwurf, Screenshot oder URL;
-- bekannte Browser, Geräte, Eingabemethoden und assistive Technologien;
-- ob du Review, Umsetzung, Testplan oder konformitätsorientierte Prüfung erwartest.
+- Was möchtest du oder eine andere Person erreichen?
+- Welche Seite, Funktion oder welcher Ablauf ist gemeint?
+- Gibt es Code, Text, einen Entwurf, Screenshot oder Link?
+- Soll die KI etwas prüfen, verbessern, umsetzen oder einen Testplan schreiben?
 
-## Schritt 5 von 7: Quellen und Aussagekraft klären
+Je konkreter deine Frage ist, desto brauchbarer wird die Antwort.
 
-Bitte um direkte Primärquellen für normative Aussagen. Lass unterscheiden, was normative Anforderung, belastbare Umsetzung, Best Practice, Pattern oder Kontextentscheidung ist. Nicht praktisch geprüfte Punkte müssen als offen benannt werden.
+## Schritt 5 von 7: Frag nach Quellen und Grenzen
 
-## Schritt 6 von 7: Im Repository arbeiten
+Bitte bei wichtigen Regeln um eine direkte Quelle. Die KI soll außerdem klar sagen, was eine feste Anforderung ist, was nur eine Empfehlung ist und was sie nicht praktisch testen konnte.
 
-Ein Coding-Agent liest zuerst [SKILL.md](SKILL.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md). Danach lädt er nur die für die Aufgabe notwendigen Vertiefungen. Für automatisierte Tests wählt er das fachliche Profil aus [`rulesets/catalog.json`](rulesets/catalog.json), protokolliert die tatsächliche Engine-Version und Regel-IDs und behandelt `incomplete` als manuelle Prüfliste.
+## Schritt 6 von 7: Arbeitest du direkt im Code?
 
-Beispielauftrag:
+Dann soll dein Coding-Agent zuerst [SKILL.md](SKILL.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md) lesen. Weitere Dateien lädt er nur, wenn sie für deine Aufgabe wirklich nötig sind. Automatische Testergebnisse mit dem Status `incomplete` sind keine Entwarnung: Diese Punkte müssen noch von einem Menschen geprüft werden.
+
+Ein einfacher Beispielauftrag:
 
 ```text
-Lies SKILL.md und ACCESSIBILITY.md vollständig. Untersuche anschließend den
-Checkout-Prozess dieses Repositorys auf digitale Barrierefreiheit. Lade nur
-die benötigten Referenzen, Patterns und Ruleset-Profile. Bestimme vor einer
-Änderung Ursache, Nutzerwirkung, belastbaren Normbezug und Teststrategie.
-Implementiere und prüfe die kleinste robuste Lösung. Dokumentiere auch, was
-nicht geprüft werden konnte.
+Lies SKILL.md und ACCESSIBILITY.md. Prüfe danach meinen Checkout auf
+Barrieren. Erkläre kurz, wen ein Problem trifft und warum. Behebe die Ursache,
+teste den vollständigen Ablauf und sage offen, was du nicht prüfen konntest.
 ```
 
-## Schritt 7 von 7: Das Ergebnis im Produkt prüfen
+## Schritt 7 von 7: Im echten Produkt testen
 
-Eine überzeugend klingende Antwort ist kein Nachweis. Prüfe Änderungen im vollständigen Ablauf und in den relevanten Zuständen. Dokumentiere Scope, Browser, Viewports, Eingabemethoden, assistive Technologien, automatisierte Ergebnisse, manuelle Evidenz und offene Punkte. Abhängig von Risiko und Anspruch gehören Tests mit Menschen hinzu.
+Klingt die Antwort gut? Prima – aber bitte nicht blind übernehmen. Teste die Änderung im echten Ablauf: zum Beispiel mit Tastatur, Vergrößerung und einem kleinen Bildschirm. Je nach Risiko gehören auch Screenreader-Tests und Tests mit Menschen dazu.
 
-Ein automatisierter Lauf, eine einzelne Browser-/Screenreader-Kombination oder eine KI-Ausgabe belegt keine vollständige Barrierefreiheit und keine rechtliche Konformität.
+Kurz gesagt: KI und automatische Tests helfen dir. Sie können aber nicht allein beweisen, dass wirklich alles barrierefrei oder rechtlich konform ist.

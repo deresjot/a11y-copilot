@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-> Abschlussstand vom 6. September 2026: Die Anleitung besitzt eine stärkere visuelle Schritthierarchie und Richtungspfeile, der Hero endet ohne Restfläche auf einer durchgehenden Kante und der gemeinsame Footer gruppiert die Versionshistorie kompakt nach Tagen. Ein ruhiger, geometrischer Würfel begleitet Intro und interne Seitenwechsel; das Intro blendet direkt in den Hero über. Der Stand ist mit 132 vollständigen Regressionen, 9 mobilen WebKit-Fällen und 32 neu erzeugten WCAG-Prüffällen geprüft; Standalone-Version 0.2.6 ist in Website-Release 1.0.14 integriert.
+> Abschlussstand vom 6. September 2026: Die Anleitung erklärt den Einstieg jetzt kurz, direkt und in einfacher Alltagssprache. Der Changelog verwendet denselben globalen Dialogkopf und Schließen-Button wie Anleitung und Dokumente. Der Stand ist mit 132 vollständigen Regressionen, 9 mobilen WebKit-Fällen und 32 neu erzeugten WCAG-Prüffällen geprüft; Standalone-Version 0.2.7 ist in Website-Release 1.0.15 integriert.
 
 Stand: 6. September 2026
 
@@ -18,7 +18,7 @@ Die Startseite trennt drei Nutzungswege: ein direkt kopierbares Startpaket für 
 
 Die empfohlene Einbindung in die persönliche Website ist in der [Integrationsstrategie des Standalone-Repositories](https://github.com/deresjot/a11y-copilot/blob/main/INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des gemeinsamen Webauftritts auf `sebastianjansen.com` und `deresjot.de`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen und auf beiden Domains zu prüfen.
 
-Der Stand `0.2.6` ist in Website-Release `1.0.14` integriert. Der globale Footer enthält auf allen sieben öffentlichen Seitentypen eine eigene GitHub-Profilzeile mit Icon; ein All-Routes-Test verhindert künftig einseitige Header-/Footer-Änderungen. Die überarbeitete Abschnittsnavigation, Copilot-Rahmen, Überschriften, Anleitung, Dialogdarstellung und Ladezustände sind synchronisiert.
+Der Stand `0.2.7` ist in Website-Release `1.0.15` integriert. Der globale Footer enthält auf allen sieben öffentlichen Seitentypen eine eigene GitHub-Profilzeile mit Icon; ein All-Routes-Test verhindert künftig einseitige Header-/Footer-Änderungen. Die vereinfachte Anleitung sowie die global einheitliche Dialogdarstellung sind zwischen Website und Standalone synchronisiert.
 
 ## Anspruch und Aussagekraft
 
@@ -219,7 +219,7 @@ Der Bereich „Kein falsches Versprechen“ nutzt eine gemeinsame dunkle Träger
 - vollständige Website-Regression mit 132 Playwright-, Accessibility-, Reflow-, Ressourcen- und Performancefällen bestanden;
 - responsive iOS-/WebKit-Regression mit 9 von 9 Fällen bestanden;
 - nach dem Live-Deployment 6 gezielte Browser-Smoke-Tests für Aktivindikator, Headerkontrast, Bento-Rahmen, Überschriften, Copilot-Hero und 320-Pixel-Reflow bestanden;
-- eigenständigen Standalone-Build für Version `0.2.6` erzeugt und mit der Portfolio-Integration synchronisiert;
+- eigenständigen Standalone-Build für Version `0.2.7` erzeugt und mit der Portfolio-Integration synchronisiert;
 - finalen Release-Build auf `sebastianjansen.com` und `deresjot.de` in allen 20 geprüften Referenzdateien als inhaltsgleich bestätigt;
 - vollständiges Vorab-Backup unter `archive/remote-backup-20260904-212439-pre-release-1.0.13-ssh/` angelegt und die SSH-Transferprobe erfolgreich hochgeladen, zurückgelesen und entfernt;
 - HTML mit `html-validate` geprüft;
@@ -236,10 +236,10 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.6`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
+- Aktueller funktionaler Stand: Version `0.2.7`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: Website-Release `1.0.14` vom 6. September 2026; die Auslieferung erfolgt über den festgelegten SSH-Dienst nach `/home/webp4t2ii/html/deresjot` und wird im Website-Repository dokumentiert.
+- Portfolio-Integration: Website-Release `1.0.15` vom 6. September 2026; die Auslieferung erfolgt über den festgelegten SSH-Dienst nach `/home/webp4t2ii/html/deresjot` und wird im Website-Repository dokumentiert.
 
 ## Offene Veröffentlichungspunkte
 
