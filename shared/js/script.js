@@ -5,8 +5,6 @@
     function initSiteIntro() {
         var intro = document.querySelector("[data-site-intro]");
         var introControls = document.querySelector("[data-intro-controls]");
-        var introFrame = intro ? intro.querySelector(".motion-frame-signal") : null;
-        var introFinale = intro ? intro.querySelector(".motion-finale") : null;
         var introSkip = document.querySelector("[data-intro-skip]");
         var introDuration = 3800;
         var progressFrame = 0;
@@ -30,7 +28,7 @@
         }
 
         try {
-            alreadySeen = window.sessionStorage.getItem("sebastian-intro-seen-v21") === "true";
+            alreadySeen = window.sessionStorage.getItem("sebastian-intro-seen-v24") === "true";
         } catch (error) {
             alreadySeen = false;
         }
@@ -46,7 +44,7 @@
             if (introControls) introControls.remove();
             window.cancelAnimationFrame(progressFrame);
             try {
-                window.sessionStorage.setItem("sebastian-intro-seen-v21", "true");
+                window.sessionStorage.setItem("sebastian-intro-seen-v24", "true");
             } catch (error) {
                 // Das Intro lässt sich auch ohne verfügbaren Sitzungsspeicher schließen.
             }
@@ -67,9 +65,6 @@
         var introStartedAt = window.performance.now();
         var updateIntroProgress = function(now) {
             var totalProgress = Math.min(1, (now - introStartedAt) / introDuration);
-            if (introFrame) introFrame.style.strokeDashoffset = String(1 - totalProgress);
-            intro.style.setProperty("--intro-progress", String(totalProgress));
-            if (introFinale) introFinale.classList.toggle("is-active", totalProgress >= .58);
             if (totalProgress < 1) progressFrame = window.requestAnimationFrame(updateIntroProgress);
         };
         progressFrame = window.requestAnimationFrame(updateIntroProgress);

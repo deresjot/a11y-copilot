@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.13",
-    "releasedOn": "2026-09-04",
-    "summary": "Bedienbarkeit und visuelle Konsistenz verbessert"
+    "version": "1.0.14",
+    "releasedOn": "2026-09-06",
+    "summary": "Bedienbarkeit, Übergänge und Übersicht verbessert"
   },
   "history": [
+    {
+      "version": "1.0.14",
+      "releasedOn": "2026-09-06",
+      "summary": "Bedienbarkeit, Übergänge und Übersicht verbessert"
+    },
     {
       "version": "1.0.13",
       "releasedOn": "2026-09-04",

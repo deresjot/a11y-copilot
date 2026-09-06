@@ -1,6 +1,10 @@
 # Changelog
 
-## Unveröffentlicht – 2026-09-05
+## 0.2.6 – 2026-09-06
+
+- Übergänge, Versionsübersicht und visuelle Bedienbarkeit verbessert.
+
+## 0.2.5 – 2026-09-05
 
 - Darstellung, Bedienbarkeit und Orientierung verbessert.
 

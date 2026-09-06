@@ -23,16 +23,31 @@
         const response = await fetch(source, { credentials: "same-origin", cache: "no-store" });
         if (!response.ok) throw new Error("release-load-failed");
         const data = await response.json();
-        list.replaceChildren(...data.history.map((release) => {
+        const releasesByDate = data.history.reduce((groups, release) => {
+          const currentGroup = groups.at(-1);
+          if (currentGroup?.releasedOn === release.releasedOn) currentGroup.releases.push(release);
+          else groups.push({ releasedOn: release.releasedOn, releases: [release] });
+          return groups;
+        }, []);
+        list.replaceChildren(...releasesByDate.map((group) => {
           const item = document.createElement("li");
-          const version = document.createElement("strong");
           const date = document.createElement("time");
-          const summary = document.createElement("p");
-          version.textContent = `Version ${release.version}`;
-          date.dateTime = release.releasedOn;
-          date.textContent = new Intl.DateTimeFormat("de-DE").format(new Date(`${release.releasedOn}T12:00:00`));
-          summary.textContent = release.summary;
-          item.append(version, date, summary);
+          const changes = document.createElement("ul");
+          item.className = "release-day";
+          date.className = "release-day__date";
+          date.dateTime = group.releasedOn;
+          date.textContent = new Intl.DateTimeFormat("de-DE").format(new Date(`${group.releasedOn}T12:00:00`));
+          changes.className = "release-day__changes";
+          changes.replaceChildren(...group.releases.map((release) => {
+            const change = document.createElement("li");
+            const version = document.createElement("strong");
+            const summary = document.createElement("p");
+            version.textContent = `Version ${release.version}`;
+            summary.textContent = release.summary;
+            change.append(version, summary);
+            return change;
+          }));
+          item.append(date, changes);
           return item;
         }));
         loadedSource = source;
@@ -62,7 +77,7 @@
     const loader = document.createElement("div");
     loader.className = "page-transition-loader";
     loader.setAttribute("aria-hidden", "true");
-    loader.innerHTML = '<span class="page-transition-loader__circle"><span class="loading-circle"></span></span>';
+    loader.innerHTML = `<span class="page-transition-loader__mark"><span class="rubik-loader rubik-loader--compact"><svg class="rubik-cube" viewBox="0 0 120 120" focusable="false"><g class="rubik-face rubik-face--top"><path d="M60 6 108 32 60 58 12 32Z"/><path class="rubik-grid" d="M28 23 76 49M44 14 92 40M76 14 28 40M92 23 44 49"/></g><g class="rubik-face rubik-face--front"><path d="M12 32 60 58 60 112 12 86Z"/><path class="rubik-grid" d="M12 50 60 76M12 68 60 94M28 41 28 95M44 50 44 104"/></g><g class="rubik-face rubik-face--right"><path d="M60 58 108 32 108 86 60 112Z"/><path class="rubik-grid" d="M60 76 108 50M60 94 108 68M76 49 76 103M92 40 92 94"/></g></svg></span></span>`;
     document.body.append(loader);
     document.addEventListener("click", (event) => {
       const link = event.target.closest("a[href]");
