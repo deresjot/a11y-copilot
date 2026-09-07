@@ -1,10 +1,20 @@
 {
   "current": {
-    "version": "1.0.15",
-    "releasedOn": "2026-09-06",
-    "summary": "Anleitung und Dialoge verständlicher und einheitlicher gestaltet"
+    "version": "1.0.17",
+    "releasedOn": "2026-09-07",
+    "summary": "Profilbild erneuert und Changelog visuell vereinheitlicht"
   },
   "history": [
+    {
+      "version": "1.0.17",
+      "releasedOn": "2026-09-07",
+      "summary": "Profilbild erneuert und Changelog visuell vereinheitlicht"
+    },
+    {
+      "version": "1.0.16",
+      "releasedOn": "2026-09-07",
+      "summary": "Auffindbarkeit und Profilzuordnung verbessert"
+    },
     {
       "version": "1.0.15",
       "releasedOn": "2026-09-06",

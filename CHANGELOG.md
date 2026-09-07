@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.8 – 2026-09-07
+
+- Globalen Changelog-Dialog an die gemeinsame Dokumentdialog-Struktur angeglichen, Versionsangaben und Beschreibungen sauber ausgerichtet und das aktualisierte Profilbild übernommen.
+
 ## 0.2.7 – 2026-09-06
 
 - Anleitung vereinfacht und Dialogdarstellung vereinheitlicht.
