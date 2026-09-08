@@ -349,9 +349,27 @@ async function openTutorial(returnTarget = document.activeElement) {
   document.body.classList.add('is-modal-open');
   tutorialBody.focus();
   try {
-    const { documentUrl, markdown } = await loadMarkdownText('TUTORIAL.md');
+    const documentUrl = new URL('tutorial.html', location.href);
+    const response = await fetch(documentUrl);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const source = new DOMParser().parseFromString(await response.text(), 'text/html');
     if (!tutorialDialog.open) return;
-    renderMarkdown(markdown, documentUrl, tutorialBody);
+    const tutorial = document.createElement('div');
+    tutorial.className = 'tutorial-embed';
+    for (const selector of ['[data-tutorial-progress]', '[data-tutorial-flow]', '[data-tutorial-controls]', '[data-tutorial-live]']) {
+      const element = source.querySelector(selector);
+      if (element) tutorial.append(element.cloneNode(true));
+    }
+    tutorial.querySelectorAll('[id]').forEach(element => {
+      const oldId = element.id;
+      element.id = `dialog-${oldId}`;
+      tutorial.querySelectorAll(`[aria-labelledby="${oldId}"]`).forEach(control => control.setAttribute('aria-labelledby', element.id));
+    });
+    tutorial.querySelectorAll('a[href]').forEach(link => {
+      link.href = new URL(link.getAttribute('href'), documentUrl).href;
+    });
+    tutorialBody.replaceChildren(tutorial);
+    window.A11yTutorialFlow?.init(tutorial, { onFinish: () => tutorialDialog.close() });
     tutorialBody.scrollTop = 0;
   } catch (error) {
     tutorialDialog.close();

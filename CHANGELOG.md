@@ -2,6 +2,11 @@
 
 ## Unveröffentlicht
 
+## 0.2.10 – 2026-09-08
+
+- Anleitung und Modal verwenden denselben stabilen Ablauf mit fünf kurzen Schritten.
+- Sprache vereinfacht und den Seitensprung beim Schrittwechsel entfernt.
+
 ## 0.2.9 – 2026-09-08
 
 - Anweisungen für belegbare, konkrete Kurzantworten mit Ergebnis und tatsächlichem Arbeitsstand am Anfang geschärft.

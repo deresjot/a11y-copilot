@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.18",
+    "version": "1.0.19",
     "releasedOn": "2026-09-08",
-    "summary": "a11y-copilot: Anleitung, Quellenbasis und Antwortqualität verbessert."
+    "summary": "Anleitung und Modal vereinheitlicht, vereinfacht und ohne Seitensprung bedienbar gemacht."
   },
   "history": [
+    {
+      "version": "1.0.19",
+      "releasedOn": "2026-09-08",
+      "summary": "Anleitung und Modal vereinheitlicht, vereinfacht und ohne Seitensprung bedienbar gemacht."
+    },
     {
       "version": "1.0.18",
       "releasedOn": "2026-09-08",

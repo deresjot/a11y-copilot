@@ -374,16 +374,30 @@
   main .ui-section-target[tabindex="-1"]:focus,
   main .ui-section-target[tabindex="-1"]:focus-visible { outline: 0; box-shadow: none; }
   .tutorial-body { overflow: auto; }
-  .ui-dialog--tutorial .tutorial-body {
-    background: #151515;
-    font-size: clamp(1rem, .95rem + .2vw, 1.125rem);
-    line-height: 1.75;
-  }
-  .ui-dialog--tutorial .tutorial-body > * { width: min(100%, 52rem); margin-inline: auto; }
-  .ui-dialog--tutorial .tutorial-body h2 { padding: 1.5rem 0 .75rem; border-top: 1px solid #484848; color: var(--white); font-size: clamp(1.45rem, 2.5vw, 2rem); }
-  .ui-dialog--tutorial .tutorial-body h2:first-of-type { border-top-color: var(--pink); }
-  .ui-dialog--tutorial .tutorial-body p,
-  .ui-dialog--tutorial .tutorial-body li { color: var(--soft); }
+  .ui-dialog--tutorial .tutorial-body { overflow:hidden; padding:clamp(1rem,3vw,2rem); background:#111; }
+  .ui-dialog--tutorial .tutorial-embed { display:grid; width:min(100%,58rem); height:100%; min-height:0; margin:auto; grid-template-rows:auto minmax(0,1fr) auto; }
+  .ui-dialog--tutorial .tutorial-page-progress { display:grid; gap:.5rem; padding:.8rem 1rem; border:1px solid #555; border-bottom:0; background:var(--panel); }
+  .ui-dialog--tutorial .tutorial-page-progress[hidden],
+  .ui-dialog--tutorial .tutorial-page-controls[hidden] { display:none; }
+  .ui-dialog--tutorial .tutorial-page-progress p { margin:0; color:var(--soft); font-size:.78rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+  .ui-dialog--tutorial progress { width:100%; height:.65rem; accent-color:var(--pink); }
+  .ui-dialog--tutorial .tutorial-flow { min-height:0; margin:0; padding:0; overflow-y:auto; overflow-anchor:none; border:1px solid #555; background:radial-gradient(circle at 92% 5%,rgb(142 220 255 / .11),transparent 24%),linear-gradient(135deg,#17171b,#09090b 62%); list-style:none; overscroll-behavior:contain; scrollbar-gutter:stable; }
+  .ui-dialog--tutorial .tutorial-flow > li { display:grid; min-height:100%; grid-template-columns:3.5rem minmax(0,1fr); gap:clamp(1rem,3vw,2.5rem); align-content:center; padding:clamp(1.5rem,4vw,3rem); }
+  .ui-dialog--tutorial .tutorial-flow > li[hidden] { display:none; }
+  .ui-dialog--tutorial .tutorial-flow > li::before { display:grid; width:3rem; aspect-ratio:1; place-items:center; border:2px solid var(--pink); color:var(--pink); font-weight:800; content:attr(data-step); }
+  .ui-dialog--tutorial .tutorial-flow h2 { margin:0 0 1rem; color:var(--white); font-size:clamp(1.5rem,3vw,2.5rem); line-height:1.1; }
+  .ui-dialog--tutorial .tutorial-flow p { max-width:46rem; margin:.75rem 0; color:var(--soft); }
+  .ui-dialog--tutorial .step-kicker { color:var(--pink-soft)!important; font-size:.75rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+  .ui-dialog--tutorial .step-lead { color:var(--white)!important; font-size:clamp(1rem,.95rem + .3vw,1.2rem); }
+  .ui-dialog--tutorial .step-note { padding-left:1rem; border-left:2px solid var(--pink); }
+  .ui-dialog--tutorial .step-example,.ui-dialog--tutorial .step-verdict { margin:1rem 0; padding:1rem; border:1px solid var(--pink); }
+  .ui-dialog--tutorial .step-status { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1px; margin:1rem 0; background:#555; }
+  .ui-dialog--tutorial .step-status div { padding:.8rem; background:var(--panel); }
+  .ui-dialog--tutorial .step-status dt { color:var(--pink-soft); font-weight:800; }
+  .ui-dialog--tutorial .step-status dd { margin:.2rem 0 0; color:var(--soft); font-size:.85rem; }
+  .ui-dialog--tutorial .tutorial-page-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.75rem; padding-top:.75rem; }
+  .ui-dialog--tutorial .tutorial-page-controls .ui-button { width:100%; }
+  .ui-dialog--tutorial .tutorial-page-live { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
 
   @media (max-width: 48rem) {
     .site-header { position: absolute; background: rgba(17,17,17,.72); -webkit-backdrop-filter: saturate(150%) blur(18px); backdrop-filter: saturate(150%) blur(18px); }
@@ -403,6 +417,9 @@
     .dialog-toolbar { align-items: stretch; flex-direction: column; }
     .dialog-toolbar-actions { display: grid; width: 100%; }
     .dialog-toolbar .ui-button { width: 100%; }
+    .ui-dialog--tutorial .tutorial-body { padding:.75rem; }
+    .ui-dialog--tutorial .tutorial-flow > li { grid-template-columns:2.5rem minmax(0,1fr); align-content:start; padding:1.25rem 1rem; }
+    .ui-dialog--tutorial .step-status { grid-template-columns:1fr; }
   }
   @media (max-width:48rem) and (max-height:38rem) {
     .hero-visual { min-height: 24rem; }

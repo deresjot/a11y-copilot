@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-> Abschlussstand vom 8. September 2026: Antwortregeln, Startpaket und Anleitung sind auf konkrete, belegbare und kürzere Ergebnisse ausgerichtet. Die eigenständige Anleitung hat eine neue visuelle Dramaturgie und einen stabilen Schrittzähler; die WCAG-2.2-Quickref ist fachlich eingeordnet und der A/AA-Kriterienumfang abgeglichen. Der Stand ist mit 134 vollständigen Regressionen und 9 mobilen WebKit-Fällen geprüft; Standalone-Version 0.2.9 ist in Website-Release 1.0.18 integriert.
+> Abschlussstand vom 8. September 2026: Seite und Modal verwenden dieselbe einfache Anleitung mit fünf stabilen Schritten. Der Stand ist mit 134 vollständigen Regressionen und 9 mobilen WebKit-Fällen geprüft; Standalone-Version 0.2.10 ist in Website-Release 1.0.19 integriert.
 
 Stand: 8. September 2026
 
