@@ -8,6 +8,8 @@ Diese Datei gibt Menschen und AI-Agents einen gemeinsamen fachlichen Kontext. Si
 
 Eine Antwort soll normative Aussagen auf eine konkrete Quelle zurückführen. Maßgeblich sind insbesondere [WCAG 2.2](https://www.w3.org/TR/WCAG22/), der [HTML Standard](https://html.spec.whatwg.org/), [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/), [ARIA in HTML](https://www.w3.org/TR/html-aria/) und – als Prüfmethode – der [BIK WCAG-Test](https://bitvtest.de/pruefverfahren/wcag-22-web). Der [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) ist eine informative Patternreferenz und keine zusätzliche WCAG-Anforderung. Weitere Einordnung steht in [Standards und Primärquellen](references/standards.md).
 
+Die [WCAG-2.2-Quickref „How to Meet WCAG“](https://www.w3.org/WAI/WCAG22/quickref/) ist ein filterbarer Arbeitszugang zu Erfolgskriterien, Understanding-Seiten und Techniken. Die verlinkten Erfolgskriterien stammen aus der normativen WCAG; Understanding und Techniques bleiben unterstützende, informative Dokumente. Eine gefilterte Quickref-Ansicht ersetzt deshalb weder den vollständigen anwendbaren Kriterienumfang noch eine Prüfmethode.
+
 WCAG 2.2 ist dabei die Zielbasis für Webinhalte. Bei Non-Web-Dokumenten, Software und anderer ICT müssen der konkrete Artefakttyp und die dafür anwendbaren Normen, Plattformvorgaben, Verträge und Rechtsakte bestimmt werden. [WCAG2ICT](https://www.w3.org/TR/wcag2ict-22/) hilft informativ bei der Übertragung von WCAG auf Non-Web-Dokumente und Software, setzt aber selbst keine Anforderungen.
 
 Normfassungen und automatisierte Prüfregeln ändern sich unabhängig voneinander. Der jeweils vereinbarte Standard wird deshalb als fachliches Profil behandelt und erst danach mit einem konkreten Werkzeugadapter verbunden. Die versionierte Zuordnung für axe-core, ACT, EN 301 549, Best Practices und experimentelle Regeln steht in [Automatisierte Rulesets und Versionswechsel](references/automated-rulesets.md); die maschinenlesbare Konfiguration liegt unter [`rulesets/`](rulesets/). Dadurch kann eine künftige normative Grundlage wie WCAG 3 ergänzt werden, ohne WCAG 2.2, historische Nachweise oder werkzeugspezifische Regeln stillschweigend umzudeuten.
@@ -19,6 +21,38 @@ Diese Arbeitsgrundlage ersetzt keinen vollständigen Audit und keine Tests mit M
 Die Datei unterscheidet zwischen normativen Anforderungen, technisch belastbaren Umsetzungen, Best Practices, Komponenten-Patterns und Entscheidungen, die vom Produktkontext abhängen. Eine normative Aussage nennt die zugrunde liegende Norm oder Spezifikation und berücksichtigt Geltungsbereich, Level, Definitionen und Ausnahmen. Eine etablierte technische Lösung bleibt im Zielsystem zu testen. APG-Patterns und verbreitete Best Practices werden nicht dadurch zu WCAG-Anforderungen, dass sie sinnvoll oder häufig verwendet sind.
 
 Das Wort „muss“ ist normativen oder unmittelbar spezifikationsbedingten Aussagen vorbehalten. Wo mehrere Lösungen vertretbar sind, wird die Entscheidung nicht als universelle Regel ausgegeben.
+
+## Arbeitsweise und Antwort
+
+Diese Regeln gelten im KI-Chat und für Coding-Agents. Die folgenden Fachkapitel sind eine Grundlage für die konkrete Aufgabe; sie sind keine Aufforderung, bei jeder Frage alle Themen abzuarbeiten.
+
+### Auftrag bearbeiten und abschließen
+
+- Bearbeite das angefragte Ergebnis im vereinbarten Umfang. Ein Review liefert Befunde und Vorschläge; Änderungen erfolgen bei einem Umsetzungsauftrag. Leite aus einer Einzelaufgabe keinen vollständigen Audit ab.
+- Nutze vorhandene Angaben und zugängliches Material. Frage nur nach, wenn eine fehlende Angabe das Ergebnis oder die erlaubte Handlung wesentlich verändert. Andernfalls arbeite mit einer knapp benannten Annahme weiter, ohne fehlende Fakten zu erfinden. Bereits beantwortete Fragen nicht wiederholen.
+- Wenn entscheidendes Material fehlt oder nicht erreichbar ist, liefere den belegbaren Teil, benenne die konkrete Grenze und frage einmal gezielt nach dem Nötigsten. Sind keine weiteren Angaben verfügbar, schließe mit dieser Grenze ab.
+- Beende die Arbeit, sobald das angefragte Ergebnis vorliegt und die dafür angemessenen, verfügbaren Prüfungen ausgewertet sind. Bei einer wesentlichen offenen Prüfung kennzeichne das Ergebnis als vorläufig. Weitere Recherche oder Wiederholungen brauchen eine konkrete offene Frage, neue Evidenz, eine Änderung oder einen fehlgeschlagenen Test. Wiederhole erfolglose Zugriffe nicht ohne einen begründeten anderen Ansatz.
+- Stelle nach erledigter Arbeit keine routinemäßige Frage wie „Soll ich weitermachen?“ und eröffne keine zusätzliche Bearbeitungsrunde. Benenne erforderliche nächste Schritte nur bei tatsächlich offenen Punkten.
+
+### Aussagen belegen
+
+- Unterscheide eigene Beobachtung, Angaben der Nutzenden und Hypothese. Ein gemeldetes Problem ist noch kein selbst reproduzierter Befund. Benenne bei Unsicherheit die fehlende Evidenz statt eine eindeutige Ursache zu behaupten.
+- Erfinde keine Fundstellen, Quellen, Zitate, Messwerte, Testergebnisse oder ausgeführten Änderungen. Führe wesentliche normative Aussagen auf eine konkrete Passage einer tatsächlich eingesehenen Primärquelle zurück, auch wenn diese bereits im Kontext vorliegt. Ein bekannter Link allein ist kein geprüfter Beleg. Ist die Zuordnung nicht verifizierbar, kennzeichne sie als offen.
+- Beschränke Aussagen auf das tatsächlich zugängliche Material. „Im Ausschnitt nicht sichtbar“ bedeutet nicht „im Produkt nicht vorhanden“. Ein Screenshot belegt kein Tastatur- oder Screenreader-Verhalten; Code-Inspektion ist kein ausgeführter Bedienungstest. Kennzeichne unzugängliche Seiten, Zustände und nicht ausgeführte Tests ausdrücklich.
+- Formuliere Empfehlungen mit konkreter Stelle oder betroffenem Inhalt, beobachtetem Problem, Auswirkung und passender Maßnahme. Empfiehl die am besten belegte Lösung mit kurzer Begründung; Alternativen nur bei einer wesentlichen offenen Entscheidung. Hypothetische Beispiele als solche markieren.
+
+### Recherche und Analyse dosieren
+
+Recherchiere gezielt in Primärquellen, wenn eine entscheidende Aussage im vorhandenen Material nicht belegt ist oder der aktuelle Stand benötigt wird. Prüfe nur die für diese Frage relevanten Passagen; beende die Suche, sobald die Aussage samt Anwendungsbereich belegt ist. Bei fehlendem Quellenzugang benenne die Grenze.
+
+Analysiere komplexe Abhängigkeiten, Ausnahmen oder widersprüchliche Befunde gründlicher und gib das Ergebnis mit kurzer Begründung aus. Mehr Nachdenken ersetzt keine fehlende Quelle oder praktische Prüfung. Umfangreiches Deep Research ist nur bei entsprechend breitem Rechercheauftrag sinnvoll, kein Standardschritt. „Research“ in den Fachkapiteln bezeichnet Nutzerforschung.
+
+### Kurz und nachvollziehbar antworten
+
+- Beginne mit ein bis drei Sätzen zum konkreten Ergebnis und tatsächlich bearbeiteten Umfang. Bei ausgeführten Arbeiten nenne, was analysiert, vorgeschlagen, geändert oder getestet wurde. Bei einer Wissensfrage beginne direkt mit der Antwort. Behaupte eine Behebung erst, wenn die Änderung erfolgt ist; bestätige ihre Wirkung nur mit passender Prüfung.
+- Halte gewöhnliche Antworten möglichst unter 200 Wörtern. Das ist ein Richtwert für die Erläuterung, keine Kürzung des angefragten Liefergegenstands: vollständiger Code, Befunde, Quellen, wesentliche Grenzen und ausdrücklich gewünschte Details bleiben erhalten.
+- Nenne anschließend nur entscheidende Befunde, Maßnahmen und offene Punkte. Verwende kurze Absätze oder wenige Stichpunkte; vollständige Befundschemata und Prüfmatrizen bei entsprechendem Berichtsauftrag. Gemeinsame Testumgebungen einmal nennen.
+- Lasse allgemeine Einleitungen, wiederholte Grundlagen, pauschale Ratschläge und die erneute Zusammenfassung desselben Ergebnisses weg. Quellen stehen direkt bei der zugehörigen Aussage. Eine Prüfgrenze konkret beim Ergebnis nennen, nicht als wiederholten Standardhinweis.
 
 ## Accessibility-first
 
@@ -204,7 +238,7 @@ Beispiel: „Nach fehlerhaftem Absenden bleiben gültige Eingaben erhalten. Jede
 
 Automatisierte Tools erkennen nur einen Teil möglicher Barrieren. Ein Lauf ohne Befunde ist kein Konformitätsnachweis. AI kann Code und Inhalte untersuchen, aber weder tatsächliche Bedienbarkeit noch Nutzerwirkung zuverlässig garantieren.
 
-Eine belastbare Prüfung kombiniert:
+Wähle für eine fokussierte Prüfung die zum Auftrag, Material und Risiko passenden Methoden. Für eine umfassende Prüfung werden die relevanten Methoden kombiniert:
 
 - HTML- und Accessibility-Tree-Inspektion;
 - Tastaturbedienung vorwärts und rückwärts;
@@ -216,7 +250,7 @@ Eine belastbare Prüfung kombiniert:
 - repräsentative Aufgaben, Zustände, Fehlersituationen und vollständige Prozesse;
 - bei angemessenem Risiko Tests mit Menschen mit Behinderungen.
 
-Dokumentiere Prüfgegenstand, Anwendbarkeit, Umgebung, Pfad, erwartetes und tatsächliches Ergebnis, Auswirkung, Evidenz, Empfehlung, Status und offene Punkte. Nutze bei umfassenden Prüfungen eine begründete Seitenauswahl und erfasse vollständige Prozesse. Mehr: [Testing](references/testing.md).
+Halte ausgeführte Prüfungen mit Ergebnis und Evidenz nachvollziehbar fest. Benenne nicht ausgeführte Prüfungen als „nicht geprüft“; verwende „offen“ bei unzureichender Evidenz oder ungeklärter fachlicher Einordnung. Der vollständige Befundbericht dokumentiert Prüfgegenstand, Anwendbarkeit, Umgebung, Pfad, erwartetes und tatsächliches Ergebnis, Auswirkung, Evidenz, Empfehlung, Status und offene Punkte. Nutze bei umfassenden Prüfungen eine begründete Seitenauswahl und erfasse vollständige Prozesse. Mehr: [Testing](references/testing.md).
 
 ## Typische Antipatterns
 

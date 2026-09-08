@@ -1,6 +1,6 @@
 # Testing
 
-Diese Referenz übersetzt WCAG 2.2 in eine eigenständige, handhabbare Prüfstruktur. Der [BIK WCAG-Test (Web)](https://bitvtest.de/pruefverfahren/wcag-22-web) war ein methodischer Abgleich für Anwendbarkeit, manuelle Prüfhandlungen und Abgrenzungen. Seine Texte und Bewertungen werden nicht übernommen. Normative Quelle bleibt [WCAG 2.2](https://www.w3.org/TR/WCAG22/).
+Diese Referenz übersetzt WCAG 2.2 in eine eigenständige, handhabbare Prüfstruktur. Der [BIK WCAG-Test (Web)](https://bitvtest.de/pruefverfahren/wcag-22-web) war ein methodischer Abgleich für Anwendbarkeit, manuelle Prüfhandlungen und Abgrenzungen. Die [WCAG-2.2-Quickref](https://www.w3.org/WAI/WCAG22/quickref/) diente zum Abgleich des Kriterienumfangs und als Einstieg in Understanding-Seiten und Techniken. Ihre Filter verändern nur die Ansicht, nicht den anwendbaren Prüfumfang. Texte und Bewertungen der verlinkten Hilfsquellen werden nicht übernommen. Normative Quelle bleibt [WCAG 2.2](https://www.w3.org/TR/WCAG22/).
 
 ## Inhalt
 
@@ -14,6 +14,8 @@ Diese Referenz übersetzt WCAG 2.2 in eine eigenständige, handhabbare Prüfstru
 - [Befund und Bewertung](#befund-und-bewertung)
 
 ## Scope und Stichprobe
+
+Diese Referenz beschreibt die Abdeckung einer umfassenden Prüfung. Bei einem fokussierten Review oder Retest wähle die zum vereinbarten Umfang und Risiko passenden Methoden. Nicht ausführbare Prüfungen bleiben als Lücke dokumentiert; fehlender Zugang ist kein Prüfergebnis. Für kurze Ergebnisantworten gilt „Arbeitsweise und Antwort“ in [ACCESSIBILITY.md](../ACCESSIBILITY.md#arbeitsweise-und-antwort).
 
 Definiere Standard, Version, Konformitätslevel, Produktstand und Testzeitpunkt. Erfasse gemeinsame Seiten, unterschiedliche Seitentypen, zentrale Funktionen, Technologien, Medien, Dokumente, Drittinhalte und komplette Prozesse. Ein Prozess umfasst alle notwendigen Schritte bis zum Ergebnis, nicht nur einen einzelnen Screen.
 
@@ -252,7 +254,7 @@ Verwende dafür das fachliche Profil und den axe-Adapter aus [Automatisierte Rul
 
 Ausgeschlossene Bereiche und deaktivierte Regeln können reale Barrieren verbergen. Verwende sie so klein wie möglich und dokumentiere Begründung, verantwortliche Person, Ablaufdatum und Retest. Für bekannte Befunde sind stabile Fingerprints aus Regel-ID und betroffenem Ziel meist belastbarer als Snapshots des gesamten Ergebnisobjekts. Bewahre vollständige Resultate einschließlich `incomplete` als Testartefakt auf.
 
-Automatisiere bevorzugt wiederkehrende Zustände und Regressionen. Ergänze jeden Lauf durch die manuellen Routinen und die Prüfmatrix dieses Dokuments sowie – abhängig von Risiko und Anspruch – Tests mit assistiven Technologien und Menschen.
+Automatisiere bevorzugt wiederkehrende Zustände und Regressionen. Ergänze automatisierte Läufe durch die für den vereinbarten Umfang und das Risiko relevanten manuellen Routinen sowie Tests mit assistiven Technologien und Menschen. Verwende bei umfassenden Prüfungen die vollständige Prüfmatrix; ein begrenzter Retest löst keinen neuen Gesamtaudit aus.
 
 ## Screenreader-orientierte Prüfung
 
@@ -260,7 +262,7 @@ Teste nicht nur lineares Vorlesen. Nutze Überschriften-, Landmarken-, Link-, Fo
 
 ## Befund und Bewertung
 
-Ein reproduzierbarer Befund nennt:
+Ein vollständiger Befundbericht nennt je Befund die folgenden Angaben. Nutze für einen kurzen Review das kompakte Format aus der Arbeitsgrundlage; fehlende Angaben nicht durch Vermutungen ergänzen.
 
 - ID, Titel, Seite, Komponente, Zustand und Pfad;
 - Umgebung, Viewport und Eingabemethode;

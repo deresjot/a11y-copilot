@@ -29,7 +29,11 @@
     back.disabled = current === 0;
     nextLabel.textContent = current === steps.length - 1 ? 'Fertig – zum Toolkit' : 'Weiter';
     if (live) live.textContent = `${label}: ${steps[current].querySelector('h2')?.textContent || ''}`;
-    if (moveFocus) steps[current].querySelector('h2')?.focus();
+    if (moveFocus) {
+      const heading = steps[current].querySelector('h2');
+      heading?.focus({ preventScroll: true });
+      heading?.scrollIntoView({ block: 'start' });
+    }
   };
 
   progressWrap.hidden = false;

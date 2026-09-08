@@ -7,9 +7,9 @@ description: Plant, gestaltet, beschafft, implementiert, prüft und verbessert d
 
 ## Vor jeder Accessibility-Aufgabe
 
-Lies [ACCESSIBILITY.md](ACCESSIBILITY.md) vollständig, bevor du die fachliche Aufgabe bearbeitest. Sie ist die Source of Truth. Dieser Skill enthält nur den Arbeitsablauf und darf keine zweite Fassung des Fachwissens entwickeln.
+Lies [ACCESSIBILITY.md](ACCESSIBILITY.md) vollständig, bevor du die fachliche Aufgabe bearbeitest. Liegt die unveränderte Fassung bereits vollständig im Kontext, verwende sie weiter. Sie ist die gemeinsame Grundlage einschließlich „Arbeitsweise und Antwort“ für Belege, Antwortumfang, Rückfragen und Abschluss. Dieser Skill konkretisiert ihre Anwendung in einem Agent-Werkzeug.
 
-Führe normative Aussagen immer auf eine konkrete Quelle zurück. Beginne mit [WCAG 2.2](https://www.w3.org/TR/WCAG22/), dem [HTML Standard](https://html.spec.whatwg.org/), [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/) und [ARIA in HTML](https://www.w3.org/TR/html-aria/). Nutze den [BIK WCAG-Test](https://bitvtest.de/pruefverfahren/wcag-22-web) als dokumentierte Prüfmethode und den [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) als informative Patternreferenz. Prüfe bei versionsabhängigen Aussagen die aktuelle Primärquelle; behandle APG, BIK, Toolregeln und Best Practices nicht als zusätzliche WCAG-Kriterien.
+Wähle für normative Aussagen die relevante Primärquelle: [WCAG 2.2](https://www.w3.org/TR/WCAG22/), [HTML Standard](https://html.spec.whatwg.org/), [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/) oder [ARIA in HTML](https://www.w3.org/TR/html-aria/). Nutze den [BIK WCAG-Test](https://bitvtest.de/pruefverfahren/wcag-22-web) als dokumentierte Prüfmethode und den [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) als informative Patternreferenz. Prüfe bei versionsabhängigen Aussagen die aktuelle Primärquelle; behandle APG, BIK, Toolregeln und Best Practices nicht als zusätzliche WCAG-Kriterien. Es ist nicht nötig, für jede Aufgabe alle Quellen zu öffnen.
 
 Bestimme vor der Normauswahl, ob Webinhalt, Non-Web-Dokument, Software oder andere ICT geprüft wird. Verwende WCAG 2.2 als Zielbasis für Webinhalte. Nutze WCAG2ICT bei Non-Web-Dokumenten und Software nur als informative Auslegungshilfe und ermittle zusätzlich die tatsächlich anwendbare Norm-, Plattform-, Vertrags- oder Rechtsgrundlage. Unterscheide bei EN 301 549 ausdrücklich zwischen veröffentlichter Normfassung, Harmonisierung im Amtsblatt und rechtlicher oder vertraglicher Verbindlichkeit im konkreten Scope.
 
@@ -41,11 +41,11 @@ Ordne die Aufgabe vor dem Prüfen ein:
 - **Explorative Prüfung:** Barrieren suchen, ohne Vollständigkeits- oder Konformitätsanspruch.
 - **Konformitätsorientierte Prüfung:** vereinbarten Standard, Version, Level, Scope, Stichprobe und vollständige Prozesse nachvollziehbar prüfen.
 
-Behaupte bei den ersten drei Formen keine Konformität. Bezeichne automatisierte Ergebnisse nicht als Audit. Wenn der Auftrag unklar ist, arbeite mit einer transparent benannten, engen Annahme weiter.
+Leite aus Beratung, Umsetzung oder Teilprüfung keine Konformität ab. Bezeichne automatisierte Ergebnisse nicht als Audit. Bestimme den benötigten Liefergegenstand; die folgenden Abschnitte sind je nach Auftrag anzuwenden und keine Pflichtfolge für jede Frage.
 
 ## 2. Prüfgegenstand modellieren
 
-Erfasse vor Änderungen oder Tests:
+Erfasse vor Änderungen oder Tests nur die für den Auftrag entscheidenden Angaben aus dem verfügbaren Material. Bei einer umfassenden Prüfung gehören dazu:
 
 - Art des digitalen Angebots oder Artefakts und die dafür einschlägigen Standards, Plattformregeln und Vereinbarungen;
 - Ziel des Angebots und zentrale Aufgaben der Nutzenden;
@@ -58,7 +58,7 @@ Erfasse vor Änderungen oder Tests:
 - unterstützte Browser und assistive Technologien;
 - Drittinhalte, Dokumente, Medien und technisch nicht erreichbare Bereiche.
 
-Wähle bei einem größeren Angebot eine begründete Stichprobe: gemeinsame Seiten, wesentliche Seitentypen, zentrale Funktionen, unterschiedliche Technologien und mindestens je ein vollständiger kritischer Prozess. Eine Stichprobe erlaubt nur Aussagen über die geprüften Seiten; für den Rest bleibt höchstens eine begründete Vermutung.
+Wenn der Auftrag eine Stichprobe eines größeren Angebots umfasst, begründe die Auswahl: gemeinsame Seiten, wesentliche Seitentypen, zentrale Funktionen, unterschiedliche Technologien und mindestens je ein vollständiger kritischer Prozess. Eine Stichprobe erlaubt nur Aussagen über die geprüften Seiten; ungeprüfte Bereiche bleiben offen.
 
 ## 3. Anwendbarkeit vor Bewertung prüfen
 
@@ -73,7 +73,7 @@ Arbeite nicht mechanisch alle Kriterien als erfüllt ab. Entscheide für jeden e
 
 ## 4. In Nutzungspfaden prüfen
 
-Prüfe zuerst die Aufgabe, dann einzelne Regeln. Für jeden relevanten Pfad:
+Prüfe zuerst die Aufgabe, dann einzelne Regeln. Wähle aus diesen Methoden die zum vereinbarten Umfang und zur Änderung passenden Prüfungen. Führe nur mit den vorhandenen Werkzeugen und Zugängen mögliche Tests aus und dokumentiere wesentliche Lücken. Für eine umfassende Prüfung decke die relevanten Methoden und Zustände ab:
 
 1. Mit normaler Darstellung Orientierung, sichtbare Beschriftungen und erwartete Bedienung erfassen.
 2. DOM, native Semantik, berechnete Namen, Rollen, Werte, Zustände und Beziehungen inspizieren.
@@ -105,6 +105,8 @@ WCAG 2.2 enthält 4.1.1 Parsing nicht mehr. Für HTML und XML gilt das Kriterium
 
 ## 6. Implementieren
 
+Wende diesen Abschnitt bei einem Umsetzungsauftrag an. Ein Review oder eine Wissensfrage erteilt keinen Änderungsauftrag.
+
 - Leite aus erkannten Barrieren konkrete Folgen für Anforderungen, Gestaltung, Inhalt, Technik, Tests, Dokumentation und Betrieb ab, soweit sie für den Auftrag wesentlich sind.
 - Bevorzuge passendes natives HTML und eine einfache Informationsarchitektur.
 - Erhalte DOM-, Lese-, Fokus- und visuelle Reihenfolge in einem nachvollziehbaren Verhältnis.
@@ -117,22 +119,14 @@ WCAG 2.2 enthält 4.1.1 Parsing nicht mehr. Für HTML und XML gilt das Kriterium
 
 ## 7. Befunde bewerten und berichten
 
-Ein Befund enthält mindestens:
+Für einen fokussierten Review genügen pro Befund die konkrete Stelle mit Zustand, Beobachtung und Beleg, Auswirkung und empfohlene Maßnahme. Ergänze einen Normbezug nur bei belegter Anwendbarkeit und Zuordnung. Wiederhole eine gemeinsame Testumgebung nicht bei jedem Befund.
 
-- ID und präzisen Titel;
-- Seite, Komponente, Zustand und reproduzierbaren Pfad;
-- Umgebung, Viewport und Eingabemethode;
-- erwartetes und tatsächliches Ergebnis;
-- Auswirkung auf Menschen und Aufgabe;
-- Evidenz, beispielsweise DOM-Ausschnitt, Screenshot oder Bedienbeobachtung;
-- Normbezug nur, wenn Anwendbarkeit und Zuordnung belastbar sind;
-- Lösungsvorschlag mit Alternativen oder offener Kontextentscheidung;
-- Status und Retest-Ergebnis.
+Für einen vollständigen Befundbericht verwende das Schema in [Testing](references/testing.md#befund-und-bewertung). Halte vollständige Nachweise im Bericht oder Testartefakt fest und verlinke sie aus der kurzen Ergebnisantwort. Kürze keine wesentlichen Befunde oder Grenzen weg.
 
 Priorisiere nach Blockadegrad, Reichweite, Häufigkeit, betroffenen Pfaden, Sicherheits- oder Geschäftsrisiko und Reparaturabhängigkeiten. WCAG-Level allein ist keine ausreichende Produktpriorisierung.
 
 ## 8. Abschluss und Aussagekraft
 
-Der Abschluss nennt in zusammenhängender, knapper Form, was geprüft wurde, was nicht erreichbar war, welche Browser-, Assistive-Technology- und Toolkombinationen verwendet wurden und ob die Aussage aus einer Stichprobe, Teilprüfung oder einem vollständig vereinbarten Scope stammt. Offene manuelle Prüfungen und die Aussagekraft des Ergebnisses gehören in denselben Bericht.
+Beginne die Ergebnisantwort nach „Arbeitsweise und Antwort“ mit dem konkreten Ergebnis und bearbeiteten Umfang. Bei Umsetzungen nenne geänderte Dateien oder Inhalte und unterscheide ausgeführte Prüfungen mit Resultat von offenen Prüfungen. Bei Reviews benenne die Grundlage, etwa Code-Inspektion oder tatsächliche Bedienung; kennzeichne Stichprobe und Teilprüfung. Berichte nur wirklich verwendete Browser-, Assistive-Technology- und Toolkombinationen. Beende die Antwort nach den entscheidenden Befunden und offenen Punkten ohne erneute Zusammenfassung oder routinemäßiges Fortsetzungsangebot.
 
 Simuliere keine Rechtsberatung. Leite aus Code-Review, Komponentenprüfung, Stichprobe, AI-Ausgabe oder „null Violations“ keine Konformitätsgarantie ab. Verlinke im Ergebnis die Primär- oder Methodenquellen, auf denen wesentliche fachliche Aussagen beruhen.

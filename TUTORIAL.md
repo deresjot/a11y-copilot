@@ -1,52 +1,53 @@
-# a11y-copilot benutzen
+# Von der Frage zum belastbaren Ergebnis
 
-Der a11y-copilot hilft dir bei Fragen zur digitalen Barrierefreiheit. Er gibt deiner KI verlässlichen Hintergrund. Einen echten Test im Produkt ersetzt er nicht – den machst du am Ende selbst.
+Du lieferst den echten Kontext. Der a11y-copilot ordnet ein, belegt und begrenzt seine Aussage. Am Ende siehst du sofort, was bearbeitet wurde und was noch praktisch geprüft werden muss.
 
-## Schritt 1 von 7: Was willst du machen?
+## Schritt 1 von 7: Was soll am Ende vorliegen?
 
-- **Du hast eine konkrete Frage:** Nimm das Startpaket für deinen KI-Chat.
-- **Du arbeitest direkt im Code:** Gib deinem Coding-Agent zusätzlich die Projektdateien.
-- **Du willst selbst nachlesen:** Öffne die Arbeitsgrundlage und danach nur die Themen, die du gerade brauchst.
+- **KI-Chat:** Startpaket nutzen.
+- **Arbeit im Code:** Projektdateien ergänzen.
+- **Nachschlagen:** direkt in die fachliche Quelle einsteigen.
 
 Du musst nicht jedes Mal das ganze Repository laden.
 
-## Schritt 2 von 7: Startpaket kopieren
+## Schritt 2 von 7: Ein Paket, eine gemeinsame Grundlage
 
 Klicke auf der Website auf **„Startpaket kopieren“**. Damit kopierst du die kurze Startanweisung und die fachliche Arbeitsgrundlage zusammen. Du musst nichts einzeln zusammensuchen.
 
-## Schritt 3 von 7: In einen neuen Chat einfügen
+## Schritt 3 von 7: Erst Grundlage, dann Auftrag
 
-Füge das Startpaket als erste Nachricht in deinen KI-Chat ein. Welche KI du nutzt, ist dabei egal. Wenn du später einen neuen Chat anfängst, kopierst du das Paket einfach noch einmal hinein.
+Füge das Startpaket als erste Nachricht in deinen KI-Chat ein. Die KI soll den Erhalt kurz bestätigen und auf deine Aufgabe warten. Wenn du später einen neuen Chat anfängst, kopierst du das Paket einfach noch einmal hinein.
 
-## Schritt 4 von 7: Sag klar, worum es geht
+## Schritt 4 von 7: Beschreibe den Moment, der funktionieren muss
 
-Schreib nicht nur: „Ist das barrierefrei?“ Hilfreicher ist:
+Nenne Ziel, betroffene Seite oder Funktion und das gewünschte Ergebnis. Ergänze Code, Text, Screenshot oder URL, wenn vorhanden. Zum Beispiel:
 
-- Was möchtest du oder eine andere Person erreichen?
-- Welche Seite, Funktion oder welcher Ablauf ist gemeint?
-- Gibt es Code, Text, einen Entwurf, Screenshot oder Link?
-- Soll die KI etwas prüfen, verbessern, umsetzen oder einen Testplan schreiben?
+> Nach einem Eingabefehler soll die Person das Formular verstehen, korrigieren und ohne Datenverlust absenden können.
 
-Je konkreter deine Frage ist, desto brauchbarer wird die Antwort.
+Gib mit, was du weißt. Die KI soll mit den vorhandenen Angaben arbeiten und nur nachfragen, wenn eine entscheidende Information fehlt.
 
-## Schritt 5 von 7: Frag nach Quellen und Grenzen
+## Schritt 5 von 7: Was wurde wirklich bearbeitet?
 
-Bitte bei wichtigen Regeln um eine direkte Quelle. Die KI soll außerdem klar sagen, was eine feste Anforderung ist, was nur eine Empfehlung ist und was sie nicht praktisch testen konnte.
+Die Antwort soll mit dem Ergebnis beginnen: Was wurde angesehen, vorgeschlagen, geändert oder getestet? Danach folgen konkrete Befunde, Maßnahmen und offene Punkte. Eine gewöhnliche Antwort soll kurz bleiben; ausführliche Berichte kannst du ausdrücklich anfordern.
 
-## Schritt 6 von 7: Arbeitest du direkt im Code?
+Wichtige Regeln brauchen einen geprüften Beleg. Vermutungen und nicht durchgeführte Tests sollen erkennbar sein. Fehlt eine entscheidende Quelle, soll die KI gezielt nachschlagen. Umfangreiche Recherche ist für eine normale Einzelaufgabe kein Pflichtschritt. Wenn die Aufgabe bearbeitet ist, soll die KI abschließen.
+
+## Schritt 6 von 7: Der Agent arbeitet am konkreten Artefakt
 
 Dann soll dein Coding-Agent zuerst [SKILL.md](SKILL.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md) lesen. Weitere Dateien lädt er nur, wenn sie für deine Aufgabe wirklich nötig sind. Automatische Testergebnisse mit dem Status `incomplete` sind keine Entwarnung: Diese Punkte müssen noch von einem Menschen geprüft werden.
 
 Ein einfacher Beispielauftrag:
 
 ```text
-Lies SKILL.md und ACCESSIBILITY.md. Prüfe danach meinen Checkout auf
-Barrieren. Erkläre kurz, wen ein Problem trifft und warum. Behebe die Ursache,
-teste den vollständigen Ablauf und sage offen, was du nicht prüfen konntest.
+Lies SKILL.md und ACCESSIBILITY.md. Untersuche im beigefügten Checkout-Code
+die Feldbeschriftungen und Fehlermeldungen. Behebe belegte Probleme und teste
+die betroffenen Zustände, soweit dein Werkzeugzugang das ermöglicht.
+Beginne mit dem Ergebnis: Was wurde geändert, was wurde tatsächlich geprüft,
+was bleibt offen? Nenne zu jedem Befund die konkrete Stelle und den Beleg.
 ```
 
-## Schritt 7 von 7: Im echten Produkt testen
+## Schritt 7 von 7: Die letzte Antwort gibt das Produkt
 
-Klingt die Antwort gut? Prima – aber bitte nicht blind übernehmen. Teste die Änderung im echten Ablauf: zum Beispiel mit Tastatur, Vergrößerung und einem kleinen Bildschirm. Je nach Risiko gehören auch Screenreader-Tests und Tests mit Menschen dazu.
+Prüfe vorgeschlagene Änderungen im echten Ablauf: zum Beispiel mit Tastatur, Vergrößerung und einem kleinen Bildschirm. Je nach Änderung und Risiko gehören auch Screenreader-Tests und Tests mit Menschen dazu. Sieh im Ergebnis nach, welche Prüfungen tatsächlich erfolgt sind und welche noch fehlen.
 
 Kurz gesagt: KI und automatische Tests helfen dir. Sie können aber nicht allein beweisen, dass wirklich alles barrierefrei oder rechtlich konform ist.

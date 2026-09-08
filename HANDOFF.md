@@ -1,8 +1,8 @@
 # Übergabe: a11y-copilot
 
-> Abschlussstand vom 7. September 2026: Der Changelog verwendet nun auch dieselbe globale Dialog-Shell und Inhaltsbreite wie die Dokumentdialoge; Versionen und Beschreibungen sind an einer gemeinsamen Textgrundlinie ausgerichtet. Das neue Profilbild wurde aus der Portfolio-Integration übernommen. Der Stand ist mit 133 vollständigen Regressionen, 9 mobilen WebKit-Fällen und 32 neu erzeugten WCAG-Prüffällen geprüft; Standalone-Version 0.2.8 ist in Website-Release 1.0.17 integriert.
+> Abschlussstand vom 8. September 2026: Antwortregeln, Startpaket und Anleitung sind auf konkrete, belegbare und kürzere Ergebnisse ausgerichtet. Die eigenständige Anleitung hat eine neue visuelle Dramaturgie und einen stabilen Schrittzähler; die WCAG-2.2-Quickref ist fachlich eingeordnet und der A/AA-Kriterienumfang abgeglichen. Der Stand ist mit 134 vollständigen Regressionen und 9 mobilen WebKit-Fällen geprüft; Standalone-Version 0.2.9 ist in Website-Release 1.0.18 integriert.
 
-Stand: 7. September 2026
+Stand: 8. September 2026
 
 ## Auftrag und Leitgedanke
 
@@ -54,6 +54,7 @@ Absolute Regeln wie „immer“, „niemals“, „ARIA ist verboten“ oder „
 - [WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/): Rollen, Zustände und Eigenschaften für Accessibility APIs.
 - [ARIA in HTML](https://www.w3.org/TR/html-aria/): zulässige ARIA-Verwendung in HTML.
 - [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/) und [WCAG Techniques](https://www.w3.org/WAI/WCAG22/Techniques/): informative Interpretations- und Umsetzungsunterstützung.
+- [WCAG-2.2-Quickref](https://www.w3.org/WAI/WCAG22/quickref/): filterbarer Arbeitszugang zu Erfolgskriterien, Understanding-Seiten und Techniken; keine zusätzliche normative Quelle und kein Ersatz für eine vollständige Prüfmethode.
 - [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/): informative Pattern- und Implementierungsreferenz, keine zusätzliche WCAG-Anforderung und keine Garantie für produktionsfertigen Code.
 - [W3C ACT Rules](https://www.w3.org/WAI/standards-guidelines/act/rules/): Grundlage für vergleichbarere automatisierte und halbautomatisierte Prüfregeln.
 

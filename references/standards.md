@@ -9,13 +9,14 @@
 - Der [ARIA in HTML Standard](https://www.w3.org/TR/html-aria/) beschreibt erlaubte ARIA-Verwendung in HTML.
 - Der [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) ist eine informative Implementierungs- und Patternreferenz. Seine Beispiele sind keine zusätzlichen WCAG-Erfolgskriterien und nicht automatisch produktionsfertig.
 - [Understanding WCAG](https://www.w3.org/WAI/WCAG22/Understanding/) und [Techniques](https://www.w3.org/WAI/WCAG22/Techniques/) unterstützen die Interpretation. Techniken sind informativ; auch andere belastbare Lösungen können ein Erfolgskriterium erfüllen.
+- [How to Meet WCAG 2.2 (Quick Reference)](https://www.w3.org/WAI/WCAG22/quickref/) bündelt filterbar die WCAG-Erfolgskriterien mit Understanding-Seiten sowie ausreichenden Techniken, empfohlenen Techniken und dokumentierten Fehlern. Sie ist ein Arbeitszugang zu diesen W3C-Ressourcen, aber keine zusätzliche normative Quelle und keine vollständige Prüfmethode. Für eine normative Bewertung bleibt der verlinkte WCAG-Text maßgeblich; Techniken sind mögliche Wege und nicht die einzigen zulässigen Lösungen.
 - [ACT Rules](https://www.w3.org/WAI/standards-guidelines/act/rules/) können automatisierte und halbautomatisierte Prüfregeln vereinheitlichen. Die W3C-Veröffentlichung einer Regel bedeutet nicht, dass jede Implementierung oder jeder einzelne Test vollständige Konformität bewertet.
 - [Automatisierte Rulesets und Versionswechsel](automated-rulesets.md) trennt normative Profile, juristische Zuordnungen, Werkzeugadapter und manuelle Prüflücken. Diese Trennung ist auch die Migrationsgrenze für künftige Standards: Eine neue Fassung wird als neues Profil ergänzt und ersetzt bestehende Profile erst nach einer ausdrücklich dokumentierten Entscheidung.
 - Der [BIK WCAG-Test (Web)](https://bitvtest.de/pruefverfahren/wcag-22-web) ist ein öffentlich dokumentiertes Prüfverfahren mit praxisnahen Prüfschritten. Es unterstützt reproduzierbare Prüfungen, ist aber eine Sekundär- und Methodenquelle: Maßgeblich für WCAG-Konformität bleibt der normative W3C-Text.
 - Der [Playwright-Leitfaden zum Accessibility Testing](https://playwright.dev/docs/accessibility-testing) beschreibt browserbasierte Regressionstests mit `@axe-core/playwright`, Zustandsprüfungen, Scopes und den Umgang mit bekannten Befunden.
 - [axe-core](https://github.com/dequelabs/axe-core) ist eine automatisierte Prüfengine mit WCAG-bezogenen und zusätzlichen Regeln. Toolregeln und ihre Resultate sind weder eigene normative Anforderungen noch ein vollständiger Konformitätsnachweis.
 
-Prüfe bei normativ wichtigen Aussagen immer Version, Datum, Level, Definitionen, Ausnahmen und Konformitätsrahmen in der Primärquelle.
+Prüfe bei normativ wichtigen Aussagen immer Version, Datum, Level, Definitionen, Ausnahmen und Konformitätsrahmen in der Primärquelle. Filter einer Quickref-Ansicht begrenzen nur die Anzeige und nicht den anwendbaren Konformitätsumfang.
 
 ## Web, Non-Web und europäische Normfassungen
 

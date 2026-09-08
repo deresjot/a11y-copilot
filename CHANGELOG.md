@@ -1,5 +1,15 @@
 # Changelog
 
+## Unveröffentlicht
+
+## 0.2.9 – 2026-09-08
+
+- Anweisungen für belegbare, konkrete Kurzantworten mit Ergebnis und tatsächlichem Arbeitsstand am Anfang geschärft.
+- Rückfragen, Recherche und Prüfungen auf den Auftrag begrenzt; Abschlussregeln gegen unnötige Wiederholungen ergänzt.
+- Startpaket und Anleitung narrativ gestrafft; vollständige Befundberichte bleiben für entsprechende Aufträge verfügbar.
+- Eigenständige Anleitung visuell überarbeitet und den fehlerhaften, stets auf „01“ stehenden Schrittzähler behoben.
+- WCAG-2.2-Quickref ausdrücklich in Quellenbasis und Prüfmatrix eingeordnet und den A/AA-Kriterienumfang abgeglichen.
+
 ## 0.2.8 – 2026-09-07
 
 - Globalen Changelog-Dialog an die gemeinsame Dokumentdialog-Struktur angeglichen, Versionsangaben und Beschreibungen sauber ausgerichtet und das aktualisierte Profilbild übernommen.
