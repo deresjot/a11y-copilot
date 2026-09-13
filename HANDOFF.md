@@ -222,7 +222,7 @@ Der Bereich „Kein falsches Versprechen“ nutzt eine gemeinsame dunkle Träger
 - vollständige Website-Regression mit 137 Playwright-, Accessibility-, Reflow-, Ressourcen- und Performancefällen bestanden;
 - responsive iOS-/WebKit-Regression mit 9 von 9 Fällen bestanden;
 - nach dem Live-Deployment 6 gezielte Browser-Smoke-Tests für Aktivindikator, Headerkontrast, Bento-Rahmen, Überschriften, Copilot-Hero und 320-Pixel-Reflow bestanden;
-- eigenständigen Standalone-Build für Version `0.2.11` erzeugt und mit der Portfolio-Integration synchronisiert;
+- eigenständigen Standalone-Build für Version `0.2.12` erzeugt und mit der Portfolio-Integration synchronisiert;
 - finalen Release-Build auf `sebastianjansen.com` und `deresjot.de` in allen 20 geprüften Referenzdateien als inhaltsgleich bestätigt;
 - vollständiges Vorab-Backup unter `archive/remote-backup-20260904-212439-pre-release-1.0.13-ssh/` angelegt und die SSH-Transferprobe erfolgreich hochgeladen, zurückgelesen und entfernt;
 - HTML mit `html-validate` geprüft;
@@ -239,10 +239,10 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.11`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
+- Aktueller funktionaler Stand: Version `0.2.12`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: Website-Release `1.0.20` vom 13. September 2026. Die Auslieferung erfolgt über den festgelegten SSH-Dienst nach `/home/webp4t2ii/html/deresjot` und wird im Website-Repository dokumentiert.
+- Portfolio-Integration: Website-Release `1.0.21` vom 13. September 2026. Die Auslieferung erfolgt über den festgelegten SSH-Dienst nach `/home/webp4t2ii/html/deresjot` und wird im Website-Repository dokumentiert.
 
 ## Offene Veröffentlichungspunkte
 

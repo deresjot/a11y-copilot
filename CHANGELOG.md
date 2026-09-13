@@ -2,6 +2,11 @@
 
 ## Unveröffentlicht
 
+## 0.2.12 – 2026-09-13
+
+- Screenreader-Hinweise für die verständliche Auflösung von `a11y` sowie geräuscharme Skiplinks und Breadcrumbs ergänzt.
+- Die sichtbare Marke bleibt erhalten, während zentrale Dokumenttitel, Überschriften, Links und Navigationspfade „Accessibility Copilot“ als störungsfreie gesprochene Fassung ausgeben.
+
 ## 0.2.11 – 2026-09-13
 
 - Mobile Ansichten, Tutorial-Bedienung und die Safari-Darstellung von Navigation und Logo stabilisiert.

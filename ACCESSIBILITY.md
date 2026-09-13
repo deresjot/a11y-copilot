@@ -87,6 +87,7 @@ Verwende HTML entsprechend seiner Bedeutung. Native Elemente bringen Semantik, T
 - Verwende Listen für Listen, Tabellen für tabellarische Beziehungen und `fieldset`/`legend` für zusammengehörige Formulareingaben, wo diese Semantik passt.
 - Die DOM- und Lesereihenfolge soll sinnvoll sein. Visuelle CSS-Umsortierung darf keine widersprüchliche Tastatur- oder Screenreader-Reihenfolge erzeugen.
 - Biete bei umfangreichen wiederkehrenden Blöcken einen robusten Weg zum Hauptinhalt, etwa einen Skiplink.
+- Verlasse dich bei kompakten Buchstaben-Zahl-Kürzeln wie `a11y` nicht auf die automatische Aussprache. Gib für die zugängliche Ausgabe eine verständliche gesprochene Form wie „Accessibility“ an und prüfe sie mit einem echten Screenreader.
 
 Mehr dazu: [Semantik und Struktur](references/semantics-and-structure.md).
 
@@ -161,6 +162,8 @@ Bei clientseitigen Aktualisierungen müssen Wahrnehmbarkeit, Kontext und Bedienb
 - Seiten innerhalb eines Angebots brauchen, soweit das Erfolgskriterium anwendbar ist, mehr als einen Zugangsweg, etwa Navigation, Suche, Inhaltsverzeichnis oder Sitemap.
 - Wiederkehrende Hilfe wie Kontaktoptionen, Selbsthilfe oder automatisierte Unterstützung soll in derselben relativen Reihenfolge erscheinen, sofern keine durch Nutzende ausgelöste Änderung vorliegt.
 - Responsive Navigation braucht definierte Zustände für Öffnen, Schließen, Fokus und Vergrößerung. Ein Website-Menü ist meist eine Liste normaler Links, nicht automatisch ein ARIA-`menu`.
+- Halte Skiplinks auf wenige nützliche Ziele begrenzt und benenne sie knapp, etwa „Zum Inhalt“.
+- Benenne Breadcrumbs kurz, kennzeichne die aktuelle Seite mit `aria-current="page"` und verstecke rein visuelle Trenner vor assistiven Technologien. Vermeide doppelte Rollenwörter und wiederholte Pfadangaben im zugänglichen Namen.
 - Öffne neue Fenster nicht unerwartet; wenn es nötig ist, mache das Verhalten vor der Aktivierung verständlich.
 
 Siehe [Navigation](patterns/navigation.md).

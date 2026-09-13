@@ -4,7 +4,7 @@
 
 - Schreibe konkret, strukturiere mit aussagekräftigen Überschriften und stelle wichtige Information vor Details.
 - Verwende konsistente Begriffe und eindeutige Handlungslabels.
-- Erkläre ungewöhnliche Abkürzungen oder Fachbegriffe entsprechend Zielgruppe und Kontext.
+- Erkläre ungewöhnliche Abkürzungen oder Fachbegriffe beim ersten Auftreten entsprechend Zielgruppe und Kontext. Verlasse dich bei Buchstaben-Zahl-Kürzeln wie `a11y` nicht auf die automatische Aussprache: Verwende in der zugänglichen Ausgabe „Accessibility“, erkläre auf Deutsch „Barrierefreiheit“ und prüfe das Ergebnis mit einem echten Screenreader.
 - Verlasse dich nicht ausschließlich auf Form, Position, Richtung, Farbe oder sensorische Merkmale.
 - Kennzeichne Sprachwechsel, wenn sie für Aussprache und Verständnis relevant sind.
 

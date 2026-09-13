@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.20",
+    "version": "1.0.21",
     "releasedOn": "2026-09-13",
-    "summary": "a11y-copilot: mobile Darstellung, Safari-Navigation, verständliche Inhalte und KI-Sicherungen verbessert."
+    "summary": "VoiceOver-Aussprache des a11y-copilot sowie knappe Screenreader-Regeln für Skiplinks und Seitenpfade verbessert."
   },
   "history": [
+    {
+      "version": "1.0.21",
+      "releasedOn": "2026-09-13",
+      "summary": "VoiceOver-Aussprache des a11y-copilot sowie knappe Screenreader-Regeln für Skiplinks und Seitenpfade verbessert."
+    },
     {
       "version": "1.0.20",
       "releasedOn": "2026-09-13",
