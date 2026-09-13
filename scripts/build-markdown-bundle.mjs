@@ -2,8 +2,8 @@ import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { relative, resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
-const folders = ['', 'references', 'patterns'];
-const files = [];
+const folders = ['evals', 'patterns', 'references', 'rulesets'];
+const files = ['ACCESSIBILITY.md', 'CHANGELOG.md', 'HANDOFF.md', 'PROMPT.md', 'README.md', 'SKILL.md', 'TUTORIAL.md'];
 
 for (const folder of folders) {
   const directory = resolve(root, folder);

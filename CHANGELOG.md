@@ -2,6 +2,15 @@
 
 ## Unveröffentlicht
 
+## 0.2.11 – 2026-09-13
+
+- Mobile Ansichten, Tutorial-Bedienung und die Safari-Darstellung von Navigation und Logo stabilisiert.
+- Öffentliche Erklärung in Website, README und Anleitung vereinfacht: kein automatisches Prüfprogramm, Fähigkeiten und Grenzen direkt am Einstieg benannt.
+- KI-Anweisungen gegen erfundene Belege, Quellenkonflikte und Anweisungen in untersuchtem Material geschärft.
+- Flexibles Ergebnisschema für Umfang, Beobachtung oder Änderung, Begründung, ausgeführte und offene Prüfungen vereinheitlicht.
+- Quellenstand datiert, amtliche BFSG- und BITV-Quellen ergänzt, unbelegtes EN-Veröffentlichungsdatum entfernt und axe-core-Verweise auf Version 4.13.0 fixiert.
+- Acht maschinenlesbare LLM-Gegenproben mit Bewertungskriterien ergänzt.
+
 ## 0.2.10 – 2026-09-08
 
 - Anleitung und Modal verwenden denselben stabilen Ablauf mit fünf kurzen Schritten.

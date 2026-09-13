@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>a11y-copilot: Accessibility-Wissensbasis – Sebastian Jansen</title>
-  <meta name="description" content="a11y-copilot von Sebastian Jansen ist eine freie Wissensbasis für digitale Barrierefreiheit, WCAG, inklusive Produktentwicklung und KI-Assistenten.">
+  <meta name="description" content="a11y-copilot ist eine öffentlich einsehbare Sammlung aus Anweisungen, Fachwissen und Quellen für KI-gestützte Aufgaben zur digitalen Barrierefreiheit.">
   <meta name="author" content="Sebastian Jansen">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
   <link rel="canonical" href="https://www.sebastianjansen.com/a11y-copilot/">
   <meta property="og:title" content="a11y-copilot: Accessibility-Wissensbasis – Sebastian Jansen">
-  <meta property="og:description" content="Freie Wissens- und Arbeitsgrundlage für Fragen zur digitalen Barrierefreiheit – für Menschen und die KI ihrer Wahl.">
+  <meta property="og:description" content="Öffentlich einsehbare Anweisungen, Fachwissen und Quellen für Fragen zur digitalen Barrierefreiheit – für Menschen und die KI ihrer Wahl.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.sebastianjansen.com/a11y-copilot/">
   <meta property="og:locale" content="de_DE">
@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="2160">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="a11y-copilot: Accessibility-Wissensbasis – Sebastian Jansen">
-  <meta name="twitter:description" content="Freie Wissens- und Arbeitsgrundlage für Fragen zur digitalen Barrierefreiheit – für Menschen und die KI ihrer Wahl.">
+  <meta name="twitter:description" content="Öffentlich einsehbare Anweisungen, Fachwissen und Quellen für Fragen zur digitalen Barrierefreiheit – für Menschen und die KI ihrer Wahl.">
   <meta name="twitter:image" content="https://www.sebastianjansen.com/a11y-copilot/assets/a11y-copilot-topography-glossy-4k-v3.jpg">
   <script type="application/ld+json">
     {
@@ -29,10 +29,10 @@
       "url": "https://www.sebastianjansen.com/a11y-copilot/",
       "name": "a11y-copilot",
       "alternateName": "Accessibility Copilot",
-      "description": "Frei zugängliche, maschinenlesbare Wissensgrundlage für Fragen und Entscheidungen zur digitalen Barrierefreiheit.",
+      "description": "Öffentlich einsehbare Sammlung aus Anweisungen, Fachwissen und Quellen für KI-gestützte Aufgaben zur digitalen Barrierefreiheit.",
       "inLanguage": "de-DE",
       "isAccessibleForFree": true,
-      "dateModified": "2026-09-08",
+      "dateModified": "2026-09-13",
       "creator": {
         "@type": "Person",
         "@id": "https://www.sebastianjansen.com/#person",
@@ -48,9 +48,9 @@
   <link rel="stylesheet" href="shared/css/global-footer.css?v=25">
   <link rel="preload" href="shared/css/status-document.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="shared/css/status-document.css"></noscript>
+  <link rel="stylesheet" href="shared/css/ui-system.css">
   <link rel="stylesheet" href="a11y-copilot.css?v=4">
   <link rel="stylesheet" href="shared/css/footer-document-modal.css">
-  <link rel="stylesheet" href="shared/css/ui-system.css">
   <link rel="stylesheet" href="shared/css/site-header.css?v=7">
 </head>
 <body id="top">
@@ -109,7 +109,7 @@
           <div class="hero-copy">
             <div>
               <p class="kicker">@deresjot · a11y-copilot</p>
-              <p class="lead">Damit mehr Menschen digitale Angebote selbstbestimmt wahrnehmen, verstehen und bedienen können. Die gemeinsame Arbeitsgrundlage unterstützt Menschen, Teams und KI-Assistenten von der ersten Entscheidung bis zu Prüfung und Betrieb.</p>
+              <p class="lead">Der a11y-copilot ist kein automatisches Prüfprogramm. Du gibst einer KI seine Anweisungen, sein Fachwissen und seine Quellen zusammen mit einer konkreten Aufgabe. Die KI kann damit Material analysieren und Lösungen vorschlagen – das Ergebnis musst du anschließend im echten Produkt prüfen.</p>
             </div>
             <div class="actions">
               <button class="ui-button ui-button--large" type="button" data-copy-start-kit>Startpaket kopieren</button>
@@ -140,7 +140,7 @@
           <li><small>konzentrieren</small>weniger Ablenkung, genug Zeit, Fehlertoleranz</li>
           <li><small>wechseln</small>kleiner Bildschirm, laute Umgebung, nur eine freie Hand</li>
         </ul>
-        <p class="pullquote">Zugängliche Produkte geben Menschen mehr Möglichkeiten – und liefern auch Browsern, assistiven Technologien und agentischen Systemen klarere Strukturen und verlässlichere Bedienelemente.</p>
+        <p class="pullquote">Zugängliche Produkte geben Menschen mehr Möglichkeiten – und liefern auch Browsern, assistiven Technologien und KI-Werkzeugen klarere Strukturen und verlässlichere Bedienelemente.</p>
       </div>
     </section>
 
@@ -150,15 +150,15 @@
           <span class="chapter-no">02</span>
           <div>
             <p class="kicker">Das Werkzeug</p>
-            <h2 id="contents-title">Ent&shy;schei&shy;dungs&shy;hil&shy;fe für digitale Teilhabe.</h2>
-            <p>a11y-copilot stellt Menschen und KI-Assistenten dieselbe fachliche Grundlage bereit: normative Quellen, Prüfmethoden, skalierbare Rulesets und klare Grenzen automatisierter Aussagen. Semantisch klare, robust bedienbare Angebote helfen dabei nicht nur Menschen und assistiven Technologien; auch Browser-Automation und agentische Systeme können Inhalte, Zustände und Aktionen zuverlässiger erkennen. Das Werkzeug prüft nicht selbst und ersetzt weder Expertise noch Tests mit Menschen.</p>
+            <h2 id="contents-title">Eine gemeinsame Grundlage für bessere Ent&shy;schei&shy;dungen.</h2>
+            <p>a11y-copilot stellt Menschen und KI-Assistenten dieselben geprüften Ausgangspunkte bereit: verbindliche Standards, verständliche Erläuterungen, Prüfmethoden und klare Grenzen. Die KI kann bereitgestellte Texte, Gestaltung, Code und Nutzungsschritte analysieren. Mit dem nötigen Zugriff kann sie Änderungen umsetzen und verfügbare Tests ausführen. Sie prüft jedoch nichts, was sie nicht erreichen oder bedienen kann.</p>
           </div>
         </div>
         <ul class="route-list">
           <li><span class="no">A</span><h3>Im KI-Chat starten</h3><p>Kopiert die Startanweisung und die fachliche Hauptquelle als ein Startpaket. Danach stellst du deine konkrete Aufgabe.</p><button class="route-action" type="button" data-copy-start-kit>Startpaket kopieren</button><p class="route-copy-status" role="status" aria-live="polite" data-copy-status></p></li>
           <li><span class="no">B</span><h3>Selbst nachlesen</h3><p>Öffne die fachliche Hauptquelle, folge ihren Vertiefungen und prüfe die verlinkten Primärquellen.</p><a href="ACCESSIBILITY.md">Arbeitsgrundlage ansehen</a></li>
-          <li><span class="no">C</span><h3>Benutzung verstehen</h3><p>Die Anleitung erklärt die drei Wege für KI-Chat, Repository/Agent und eigenes Nachschlagen.</p><a href="tutorial.html" data-open-tutorial>Anleitung öffnen</a></li>
-          <li><span class="no">D</span><h3>Im Projekt verwenden</h3><p>Ein Coding-Agent liest zuerst die Agent-Anweisung und lädt danach nur die für die Aufgabe nötigen Quellen und Patterns.</p><a href="SKILL.md">Agent-Anweisung ansehen</a></li>
+          <li><span class="no">C</span><h3>Benutzung verstehen</h3><p>Die Anleitung erklärt die drei Wege: im KI-Chat, direkt im Code-Projekt oder durch eigenes Nachlesen.</p><a href="tutorial.html" data-open-tutorial>Anleitung öffnen</a></li>
+          <li><span class="no">D</span><h3>Im Code-Projekt verwenden</h3><p>Eine KI mit Zugriff auf dein Projekt liest zuerst ihre Arbeitsanweisung und lädt danach nur die für die Aufgabe nötigen Fachinformationen.</p><a href="SKILL.md">Arbeitsanweisung für die KI ansehen</a></li>
         </ul>
       </div>
     </section>
@@ -170,14 +170,14 @@
           <div>
             <p class="kicker">So wird es benutzt</p>
             <h2 id="start-title">Weg wählen. Kontext geben. Ergebnis prüfen.</h2>
-            <p>Für eine einzelne Frage reicht das Startpaket. In einem Repository steuert die Agent-Anweisung, welche Vertiefungen hinzukommen. Zum Nachschlagen kannst du jede Markdown-Datei direkt öffnen. Die Anleitung erklärt alle drei Wege ohne Werkzeugbindung.</p>
+            <p>Für eine einzelne Frage reicht das Startpaket. Arbeitet die KI direkt in deinem Code-Projekt, erhält sie zusätzlich eine Arbeitsanweisung. Zum eigenen Nachlesen kannst du jede Textdatei direkt öffnen. Die Anleitung erklärt alle drei Wege unabhängig vom verwendeten KI-Werkzeug.</p>
             <p><a href="tutorial.html" data-open-tutorial>Vollständige Anleitung öffnen</a></p>
           </div>
         </div>
         <ol class="steps">
-          <li><h3>Passenden Einstieg wählen</h3><p>Startpaket für einen KI-Chat, Agent-Anweisung für ein Repository oder die Dokumente zum eigenen Nachschlagen verwenden.</p></li>
+          <li><h3>Passenden Einstieg wählen</h3><p>Nutze das Startpaket im KI-Chat, die Arbeitsanweisung im Code-Projekt oder die Dokumente zum eigenen Nachlesen.</p></li>
           <li><h3>Aufgabe konkret machen</h3><p>Ziel, vollständigen Ablauf, Zustände, Material und bekannte Rahmenbedingungen nennen. So wird aus einer allgemeinen Frage ein prüfbarer Auftrag.</p></li>
-          <li><h3>Quellen und Tests prüfen</h3><p>Normative Aussagen belegen lassen und offene Prüfungen benennen. Die vorgeschlagene Lösung anschließend im echten Produkt überprüfen.</p></li>
+          <li><h3>Quellen und Tests prüfen</h3><p>Aussagen zu Standards belegen und offene Prüfungen benennen lassen. Die vorgeschlagene Lösung anschließend im echten Produkt überprüfen.</p></li>
         </ol>
       </div>
     </section>
@@ -188,13 +188,13 @@
           <span class="chapter-no">04</span>
           <div>
             <p class="kicker">Verantwortungsvoll einsetzen</p>
-            <h2 id="limits-title">Was das Werkzeug leistet – und was weiterhin geprüft werden muss.</h2>
-            <p>a11y-copilot hilft dabei, Analysen zu schärfen, Quellen einzuordnen und schlechte Abkürzungen sichtbar zu machen. Ob eine Lösung trägt, zeigt sich erst im vollständigen Ablauf, mit realen Browsern, assistiven Technologien und Menschen.</p>
+            <h2 id="limits-title">Was der Copilot kann – und was nicht.</h2>
+            <p>a11y-copilot hilft dabei, Probleme zu untersuchen, Quellen richtig einzuordnen und konkrete Lösungen vorzuschlagen. Ob eine Lösung funktioniert, zeigt sich erst im vollständigen Ablauf, mit echten Browsern, assistiven Technologien und Menschen.</p>
           </div>
         </div>
         <div class="limits-list">
-          <p>Ein Toollauf ist kein Audit. Eine Stichprobe ist kein Beleg für ungeprüfte Seiten. Und eine plausible Antwort ist keine normative Quelle.</p>
-          <p>Konformität braucht einen definierten Scope, reproduzierbare Evidenz und manuelle Prüfung. Rechtliche Einordnung und Tests mit Menschen bleiben eigene Aufgaben.</p>
+          <p>Der Copilot garantiert weder Barrierefreiheit noch Konformität. Ein automatischer Test ist kein vollständiger Audit, eine Stichprobe sagt nichts über ungeprüfte Seiten aus und eine plausible Antwort ist keine verbindliche Quelle.</p>
+          <p>Für belastbare Aussagen muss klar sein, was tatsächlich geprüft wurde. Manuelle Bedienungstests, Tests mit assistiven Technologien und Menschen sowie die rechtliche Einordnung bleiben eigene Aufgaben.</p>
         </div>
       </div>
     </section>
@@ -222,7 +222,7 @@
       <p class="footer-github-row"><a class="footer-github" href="https://github.com/deresjot" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.06.79 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/></svg><span>GitHub</span><span class="footer-visually-hidden">, öffnet in einem neuen Tab</span></a></p>
     </nav>
     <p class="footer-meta">@deresjot · Sebastian Jansen · © 2026</p>
-    <p class="footer-release"><button type="button" class="footer-release-button" data-release-changelog data-release-src="shared/release.json" aria-haspopup="dialog" aria-label="Changelog zur Live-Version 1.0.19 vom 08.09.2026 anzeigen">Live-Version 1.0.19 vom <time datetime="2026-09-08">08.09.2026</time></button></p>
+    <p class="footer-release"><button type="button" class="footer-release-button" data-release-changelog data-release-src="shared/release.json" aria-haspopup="dialog" aria-label="Changelog zur Live-Version 1.0.20 vom 13.09.2026 anzeigen">Live-Version 1.0.20 vom <time datetime="2026-09-13">13.09.2026</time></button></p>
     <a class="footer-top" href="#top" aria-label="Zurück zum Seitenanfang"><span aria-hidden="true">↑</span><span class="footer-visually-hidden">Zurück zum Seitenanfang</span></a>
   </div>
 </footer>

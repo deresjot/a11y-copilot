@@ -1,11 +1,13 @@
 # Standards und Primärquellen
 
+> Quellenstand zuletzt fachlich geprüft: 13. September 2026. Rechtliche und versionsabhängige Aussagen müssen bei jeder Verwendung erneut für den konkreten Fall geprüft werden.
+
 ## Quellenstatus
 
 - [WCAG 2.2](https://www.w3.org/TR/WCAG22/) ist eine W3C Recommendation mit testbaren Erfolgskriterien und Konformitätsmodell. Ziellevel und vollständige Prozesse gehören zum vereinbarten Prüfumfang.
 - WCAG ist ein Standard für Webinhalte. Für Non-Web-Dokumente und Software bestimmt nicht WCAG allein die verbindlichen Anforderungen; dort sind der einschlägige Produkt-, Vertrags- und Rechtsrahmen sowie passende Plattformstandards zu ermitteln.
 - Der [HTML Standard](https://html.spec.whatwg.org/) definiert Elemente, Attribute und browserseitiges Verhalten.
-- [WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/) definiert Rollen, Zustände und Eigenschaften. Hostsprachen wie HTML schränken ihre Nutzung zusätzlich ein.
+- [WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/) ist eine abgeschlossene W3C Recommendation und definiert Rollen, Zustände und Eigenschaften. WAI-ARIA 1.3 ist derzeit ein Entwurf und ersetzt diese Grundlage nicht. Hostsprachen wie HTML schränken die ARIA-Nutzung zusätzlich ein.
 - Der [ARIA in HTML Standard](https://www.w3.org/TR/html-aria/) beschreibt erlaubte ARIA-Verwendung in HTML.
 - Der [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) ist eine informative Implementierungs- und Patternreferenz. Seine Beispiele sind keine zusätzlichen WCAG-Erfolgskriterien und nicht automatisch produktionsfertig.
 - [Understanding WCAG](https://www.w3.org/WAI/WCAG22/Understanding/) und [Techniques](https://www.w3.org/WAI/WCAG22/Techniques/) unterstützen die Interpretation. Techniken sind informativ; auch andere belastbare Lösungen können ein Erfolgskriterium erfüllen.
@@ -21,7 +23,7 @@ Prüfe bei normativ wichtigen Aussagen immer Version, Datum, Level, Definitionen
 ## Web, Non-Web und europäische Normfassungen
 
 - [WCAG 2.2](https://www.w3.org/TR/WCAG22/) ist die aktuelle WCAG-2-Fassung als W3C Recommendation für Webinhalte. Sie setzt nicht aus sich heraus Anforderungen für Non-Web-Dokumente oder Software und ist nicht allein durch ihre Veröffentlichung in jedem Rechts- oder Vertragskontext verbindlich.
-- [EN 301 549 V4.1.1 (2026-09)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf) ist seit 2. September 2026 als europäischer Standard veröffentlicht. Sie integriert WCAG 2.2 und enthält getrennte Anforderungen für Web, Non-Web-Dokumente, Non-Web-Software und weitere ICT.
+- [EN 301 549 V4.1.1 (2026-09)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf) ist als europäischer Standard veröffentlicht. Sie integriert WCAG 2.2 und enthält getrennte Anforderungen für Web, Dokumente und Software außerhalb des Webs sowie weitere Informations- und Kommunikationstechnik.
 - Veröffentlichung einer EN-Fassung und rechtliche Harmonisierung sind verschiedene Schritte. Eine konkrete Fassung erzeugt eine unionsrechtliche Konformitätsvermutung erst im Umfang des jeweiligen Rechtsakts, wenn ihre Referenz im Amtsblatt der Europäischen Union veröffentlicht wurde und dort weiterhin geführt wird. Für die Web Accessibility Directive nennt die [Europäische Kommission](https://digital-strategy.ec.europa.eu/en/policies/web-accessibility-directive-standards-and-harmonisation) derzeit EN 301 549 V3.2.1 als harmonisierte Fassung. V4.1.1 darf deshalb nicht pauschal als bereits harmonisierte oder überall verbindliche Fassung bezeichnet werden.
 - [WCAG2ICT](https://www.w3.org/TR/wcag2ict-22/) ist eine informative W3C Group Note zur Übertragung der WCAG-2.0-, 2.1- und 2.2-Erfolgskriterien der Level A und AA auf Non-Web-Dokumente und Software. Sie setzt selbst keine Anforderungen, ist kein Konformitätsstandard und ersetzt weder EN 301 549 noch andere anwendbare Produkt-, Plattform- oder Rechtsvorgaben.
 
@@ -41,11 +43,11 @@ Diese Themen ergänzen den universellen Kern, hängen aber von Produkt, Markt, O
 
 - EN 301 549 für europäische Beschaffung und regulatorische Kontexte;
 - European Accessibility Act und nationale Umsetzung;
-- Barrierefreiheitsstärkungsgesetz (BFSG) in Deutschland;
-- BITV 2.0 für ihren deutschen öffentlich-rechtlichen Geltungsbereich.
+- [Barrierefreiheitsstärkungsgesetz (BFSG)](https://www.gesetze-im-internet.de/bfsg/) in Deutschland;
+- [BITV 2.0](https://www.gesetze-im-internet.de/bitv_2_0/) für ihren deutschen öffentlich-rechtlichen Geltungsbereich.
 
 Welche Fassung, Übergangsregel oder Ausnahme gilt, ist eine rechtliche und projektspezifische Frage. Das Toolkit bietet keine Rechtsberatung. Prüfe amtliche Quellen oder qualifizierte Rechtsberatung, bevor du Pflichten behauptest.
 
 ## Quellenpflege
 
-Verlinke möglichst auf stabile Primärquellen. Übernimm keine längeren fremden Texte. Paraphrasiere, prüfe Lizenz und Attribution und dokumentiere den eigenen Normbezug. Öffentliche Guides – einschließlich `KreerC/ACCESSIBILITY.md` – sind Impulse, keine automatisch belastbare oder lizenzfreie Hauptquelle.
+Verlinke möglichst auf stabile Primärquellen. Halte bei veränderlichen Quellen den geprüften Stand fest und prüfe ihn vor einer zeitabhängigen Aussage erneut. Übernimm keine längeren fremden Texte. Paraphrasiere, prüfe Lizenz und Attribution und dokumentiere den eigenen Normbezug. Öffentliche Guides – einschließlich `KreerC/ACCESSIBILITY.md` – sind Impulse, keine automatisch belastbare oder lizenzfreie Hauptquelle.

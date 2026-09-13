@@ -414,12 +414,60 @@
     .hero-copy { min-height: 0; gap: 1rem; padding: 2rem 1rem 2.5rem; border-top: 1px solid var(--line); border-left: 0; }
     .hero-copy .actions { width: 100%; max-width: none; justify-content: stretch; gap: .625rem; margin: .25rem 0 0; }
     .hero-copy .actions .ui-button { width: 100%; min-width: 0; padding-inline: 1rem; text-align: center; white-space: normal; overflow-wrap: anywhere; }
-    .dialog-toolbar { align-items: stretch; flex-direction: column; }
-    .dialog-toolbar-actions { display: grid; width: 100%; }
-    .dialog-toolbar .ui-button { width: 100%; }
-    .ui-dialog--tutorial .tutorial-body { padding:.75rem; }
-    .ui-dialog--tutorial .tutorial-flow > li { grid-template-columns:2.5rem minmax(0,1fr); align-content:start; padding:1.25rem 1rem; }
+    main > section:not(.hero) { padding-block:3.5rem; }
+    .section-grid { width:min(calc(100% - 1.5rem),var(--width)); }
+    .chapter,
+    .limits .chapter { padding:2rem 1.25rem; text-align:left; }
+    .chapter p { margin-inline:0; font-size:1rem; line-height:1.6; }
+    .chapter h2,
+    .limits h2 { font-size:clamp(1.75rem,7vw,2.15rem); }
+    .situations { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .situations li,
+    .situations li:nth-child(even) { padding:1rem; font-size:.92rem; line-height:1.45; }
+    .pullquote { padding:2.5rem 1.25rem; font-size:clamp(1.65rem,7vw,2.2rem); text-align:left; }
+    .route-list li,
+    .route-list li:nth-child(even) { min-height:0; padding:1.5rem 1.25rem; }
+    .route-list p { margin:.75rem 0 1.25rem; }
+    .steps { width:100%; }
+    .steps li { min-height:0; padding:1.5rem 1.25rem; }
+    .steps li::before { margin-bottom:1.25rem; }
+    .limits .section-grid { width:min(calc(100% - 1.5rem),var(--width)); }
+    .limits-list > p,
+    .limits-list > p:last-child { padding:1.5rem 1.25rem; font-size:1.05rem; }
+    .dialog-toolbar { padding:.625rem .75rem; }
+    .dialog-toolbar-actions { display:grid; width:100%; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; }
+    .dialog-toolbar .ui-button { width:100%; min-width:0; min-height:2.75rem; padding:.65rem .5rem; font-size:.7rem; white-space:normal; }
+    .ui-dialog--tutorial { width:100vw; max-width:none; height:var(--ui-viewport-dynamic); max-height:var(--ui-viewport-dynamic); border:0; border-radius:0; }
+    .ui-dialog--tutorial .ui-dialog__header { flex-wrap:nowrap; gap:.75rem; padding:.75rem max(.75rem,env(safe-area-inset-right)) .75rem max(.75rem,env(safe-area-inset-left)); }
+    .ui-dialog--tutorial .ui-dialog__heading { display:grid; grid-template-columns:auto 1fr; align-items:baseline; gap:.25rem .75rem; }
+    .ui-dialog--tutorial .ui-dialog__eyebrow { grid-column:1 / -1; margin:0; font-size:.65rem; }
+    .ui-dialog--tutorial .ui-dialog__title { font-size:1.25rem; }
+    .ui-dialog--tutorial .ui-action-group { width:auto; flex:0 0 auto; }
+    .ui-dialog--tutorial .ui-action { position:absolute; width:1px; height:1px; min-height:0; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+    .ui-dialog--tutorial .ui-action:focus { position:fixed; z-index:2; top:.75rem; right:4.25rem; width:auto; height:auto; min-height:2.75rem; padding:.65rem .8rem; clip:auto; background:#111; white-space:normal; }
+    .ui-dialog--tutorial .ui-icon-button { width:3rem; height:3rem; flex-basis:3rem; }
+    .ui-dialog--tutorial .dialog-toolbar { align-items:stretch; flex-direction:column; padding:.625rem max(.75rem,env(safe-area-inset-right)) .625rem max(.75rem,env(safe-area-inset-left)); }
+    .ui-dialog--tutorial .copy-status:empty { display:none; }
+    .ui-dialog--tutorial .tutorial-body { padding:.625rem max(.75rem,env(safe-area-inset-right)) max(.75rem,env(safe-area-inset-bottom)) max(.75rem,env(safe-area-inset-left)); }
+    .ui-dialog--tutorial .tutorial-page-progress { gap:.4rem; padding:.625rem .75rem; }
+    .ui-dialog--tutorial .tutorial-page-progress p { font-size:.7rem; }
+    .ui-dialog--tutorial progress { height:.55rem; }
+    .ui-dialog--tutorial .tutorial-flow { scrollbar-gutter:auto; }
+    .ui-dialog--tutorial .tutorial-flow > li { grid-template-columns:2.5rem minmax(0,1fr); gap:.75rem; align-content:start; padding:1rem .875rem; }
+    .ui-dialog--tutorial .tutorial-flow > li::before { width:2.25rem; font-size:.75rem; }
+    .ui-dialog--tutorial .tutorial-flow h2 { margin-bottom:.65rem; font-size:clamp(1.35rem,6.5vw,1.75rem); }
+    .ui-dialog--tutorial .tutorial-flow p { margin:.55rem 0; font-size:.95rem; line-height:1.5; }
+    .ui-dialog--tutorial .step-lead { font-size:1rem; }
+    .ui-dialog--tutorial .step-example,
+    .ui-dialog--tutorial .step-verdict { margin:.75rem 0; padding:.75rem; }
     .ui-dialog--tutorial .step-status { grid-template-columns:1fr; }
+    .ui-dialog--tutorial .step-status div { padding:.65rem .75rem; }
+    .ui-dialog--tutorial .tutorial-page-controls { gap:.5rem; padding-top:.5rem; }
+    .ui-dialog--tutorial .tutorial-page-controls .ui-button { min-width:0; min-height:3rem; padding:.65rem .5rem; font-size:.72rem; }
+  }
+  @media (max-width: 23rem) {
+    .situations { grid-template-columns:minmax(0,1fr); }
+    .ui-dialog--tutorial .tutorial-flow > li { grid-template-columns:2.25rem minmax(0,1fr); padding-inline:.75rem; }
   }
   @media (max-width:48rem) and (max-height:38rem) {
     .hero-visual { min-height: 24rem; }

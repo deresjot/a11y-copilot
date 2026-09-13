@@ -7,7 +7,7 @@ const publicEntries = [
   "index.html", "tutorial.html", "favicon.ico", "favicon.svg",
   "a11y-copilot.css", "a11y-copilot.js", "tutorial.css", "tutorial.js",
   "ACCESSIBILITY.md", "PROMPT.md", "SKILL.md", "TUTORIAL.md", "README.md", "CHANGELOG.md", "HANDOFF.md",
-  "assets", "font", "patterns", "references", "rulesets", "shared"
+  "assets", "evals", "font", "patterns", "references", "rulesets", "shared"
 ];
 
 if (output === root || !output.startsWith(root + "/")) throw new Error("Ungültiges Build-Ziel.");

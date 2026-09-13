@@ -1,6 +1,6 @@
 # So nutzt du den a11y-copilot
 
-Du gibst der KI eine klare Aufgabe. Der Copilot hilft bei der Antwort. Danach prüfst du das Ergebnis im echten Produkt.
+Der a11y-copilot ist kein automatisches Prüfprogramm. Du gibst einer KI seine Anweisungen und Quellen zusammen mit einer klaren Aufgabe. Die KI hilft bei der Antwort; danach prüfst du das Ergebnis im echten Produkt.
 
 ## Schritt 1 von 5: Sag, was du brauchst
 
@@ -10,7 +10,7 @@ Zum Beispiel: Prüfe dieses Formular. Oder: Verbessere diese Fehlermeldung. Eine
 
 Wähle auf der Website **„Startpaket kopieren“**. Füge den Text als erste Nachricht in einen neuen KI-Chat ein.
 
-Arbeitest du direkt im Code? Gib dem Agenten zusätzlich [SKILL.md](SKILL.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md).
+Arbeitet die KI direkt in deinem Code-Projekt? Gib ihr zusätzlich [SKILL.md](SKILL.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md).
 
 ## Schritt 3 von 5: Zeige die echte Stelle
 

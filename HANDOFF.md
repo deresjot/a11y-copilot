@@ -1,14 +1,14 @@
 # Übergabe: a11y-copilot
 
-> Abschlussstand vom 8. September 2026: Seite und Modal verwenden dieselbe einfache Anleitung mit fünf stabilen Schritten. Der Stand ist mit 134 vollständigen Regressionen und 9 mobilen WebKit-Fällen geprüft; Standalone-Version 0.2.10 ist in Website-Release 1.0.19 integriert.
+> Arbeitsstand vom 13. September 2026: Die öffentliche Erklärung, die KI-Anweisungen, der Quellenstatus und die Gegenproben wurden als zusammenhängendes System überarbeitet. Die abschließenden Prüfergebnisse und Release-Nummern stehen im jeweiligen Test- und Veröffentlichungsprotokoll.
 
-Stand: 8. September 2026
+Stand: 13. September 2026
 
 ## Auftrag und Leitgedanke
 
 Der fachliche Scope umfasst digitale Barrierefreiheit über den gesamten Lebenszyklus: Strategie und Governance, Beschaffung, Research und Konzeption, Anforderungen, Gestaltung, Inhalte, technische Umsetzung, Dokumentation, Qualitätssicherung, Veröffentlichung, Support, Betrieb und Weiterentwicklung. Der Copilot leitet aus einer konkreten Frage die relevanten Zusammenhänge ab, ohne Rollenpakete zu verlangen oder jede Antwort unnötig auf alle Phasen auszuweiten.
 
-`a11y-copilot` ist eine öffentlich einsehbare Wissens- und Arbeitsgrundlage für digitale Barrierefreiheit von Sebastian Jansen / [@deresjot](https://github.com/deresjot). Das Repository soll Menschen, Coding-Agents und LLMs bei Anforderungen, Gestaltung, Content, Frontend-Umsetzung und Testing unterstützen. Da noch keine Lizenz festgelegt ist, bedeutet die öffentliche Sichtbarkeit derzeit keine eingeräumte freie Nachnutzung.
+`a11y-copilot` ist kein automatisches Prüfprogramm. Es ist eine öffentlich einsehbare Sammlung aus Anweisungen, Fachwissen und Quellen für digitale Barrierefreiheit von Sebastian Jansen / [@deresjot](https://github.com/deresjot). Menschen geben diese Grundlage einer KI zusammen mit einer konkreten Aufgabe und dem zugänglichen Prüfmaterial. Da noch keine Lizenz festgelegt ist, bedeutet die öffentliche Sichtbarkeit derzeit keine eingeräumte freie Nachnutzung.
 
 Das Projekt ist kein rollenbasierter Prozessbaukasten. Accessibility-Fragen werden als zusammenhängende Produktfragen behandelt: Semantik, visuelle Gestaltung, Sprache, Interaktion, Tastatur, Fokus, assistive Technologien, Anforderungen und Tests gehören gemeinsam betrachtet.
 
@@ -18,7 +18,7 @@ Die Startseite trennt drei Nutzungswege: ein direkt kopierbares Startpaket für 
 
 Die empfohlene Einbindung in die persönliche Website ist in der [Integrationsstrategie des Standalone-Repositories](https://github.com/deresjot/a11y-copilot/blob/main/INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des gemeinsamen Webauftritts auf `sebastianjansen.com` und `deresjot.de`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen und auf beiden Domains zu prüfen.
 
-Der Stand `0.2.8` ist in Website-Release `1.0.17` integriert. Der globale Footer enthält auf allen sieben öffentlichen Seitentypen eine eigene GitHub-Profilzeile mit Icon; ein All-Routes-Test verhindert künftig einseitige Header-/Footer-Änderungen. Die vereinfachte Anleitung, die gemeinsame Dialog-Shell und das aktuelle Profilbild sind zwischen Website und Standalone synchronisiert.
+Website und Standalone werden über die vorgesehenen Synchronisationsskripte abgeglichen. Der globale Footer und Header bleiben Komponenten des Website-Projekts; fachliche Markdown-Dateien, Referenzen, Patterns, Rulesets und Gegenproben stammen aus dem Standalone-Repository.
 
 ## Anspruch und Aussagekraft
 
@@ -115,9 +115,11 @@ WCAG ist dabei die prüfbare Mindestgrundlage, nicht die Obergrenze guter Produk
 ├── CHANGELOG.md               Änderungen des öffentlichen Arbeitsstands
 ├── index.html                 Statische öffentliche Einstiegsseite
 ├── assets/                    Lokales Hero-Bild und Maskottchen
+├── evals/                     Gegenproben für das Verhalten der KI
 ├── font/                      Lokal eingebundene Webfonts
 ├── references/                Vertiefende Fachreferenzen
-└── patterns/                  Komponentenbezogene Patterns
+├── patterns/                  Komponentenbezogene Patterns
+└── rulesets/                  Versionierte Profile und Werkzeugadapter
 ```
 
 ### Referenzen
@@ -217,10 +219,10 @@ Der Bereich „Kein falsches Versprechen“ nutzt eine gemeinsame dunkle Träger
 
 ## Bereits durchgeführte technische Prüfungen
 
-- vollständige Website-Regression mit 133 Playwright-, Accessibility-, Reflow-, Ressourcen- und Performancefällen bestanden;
+- vollständige Website-Regression mit 137 Playwright-, Accessibility-, Reflow-, Ressourcen- und Performancefällen bestanden;
 - responsive iOS-/WebKit-Regression mit 9 von 9 Fällen bestanden;
 - nach dem Live-Deployment 6 gezielte Browser-Smoke-Tests für Aktivindikator, Headerkontrast, Bento-Rahmen, Überschriften, Copilot-Hero und 320-Pixel-Reflow bestanden;
-- eigenständigen Standalone-Build für Version `0.2.8` erzeugt und mit der Portfolio-Integration synchronisiert;
+- eigenständigen Standalone-Build für Version `0.2.11` erzeugt und mit der Portfolio-Integration synchronisiert;
 - finalen Release-Build auf `sebastianjansen.com` und `deresjot.de` in allen 20 geprüften Referenzdateien als inhaltsgleich bestätigt;
 - vollständiges Vorab-Backup unter `archive/remote-backup-20260904-212439-pre-release-1.0.13-ssh/` angelegt und die SSH-Transferprobe erfolgreich hochgeladen, zurückgelesen und entfernt;
 - HTML mit `html-validate` geprüft;
@@ -237,10 +239,10 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.8`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
+- Aktueller funktionaler Stand: Version `0.2.11`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: Website-Release `1.0.17` vom 7. September 2026; die Auslieferung erfolgt über den festgelegten SSH-Dienst nach `/home/webp4t2ii/html/deresjot` und wird im Website-Repository dokumentiert.
+- Portfolio-Integration: Website-Release `1.0.20` vom 13. September 2026. Die Auslieferung erfolgt über den festgelegten SSH-Dienst nach `/home/webp4t2ii/html/deresjot` und wird im Website-Repository dokumentiert.
 
 ## Offene Veröffentlichungspunkte
 

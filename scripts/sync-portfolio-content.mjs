@@ -7,7 +7,7 @@ const portfolioSource = process.env.A11Y_COPILOT_PORTFOLIO_SOURCE
   : resolve(root, "../deresjot-web/source");
 const portfolio = resolve(portfolioSource, "a11y-copilot");
 const documentFiles = ["ACCESSIBILITY.md", "CHANGELOG.md", "HANDOFF.md", "PROMPT.md", "README.md", "SKILL.md", "TUTORIAL.md"];
-const documentFolders = ["patterns", "references", "rulesets"];
+const documentFolders = ["evals", "patterns", "references", "rulesets"];
 
 for (const file of documentFiles) await cp(resolve(root, file), resolve(portfolio, file));
 for (const folder of documentFolders) {
@@ -15,8 +15,8 @@ for (const folder of documentFolders) {
   await cp(resolve(root, folder), resolve(portfolio, folder), { recursive: true, force: true });
 }
 
-const markdownFiles = [];
-for (const folder of ["", ...documentFolders]) {
+const markdownFiles = documentFiles.filter(file => file.endsWith(".md"));
+for (const folder of documentFolders) {
   for (const entry of await readdir(resolve(root, folder), { withFileTypes: true })) {
     if (entry.isFile() && entry.name.endsWith(".md")) markdownFiles.push(relative(root, resolve(root, folder, entry.name)).replaceAll("\\", "/"));
   }

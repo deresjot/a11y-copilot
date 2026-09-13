@@ -1,5 +1,7 @@
 # Automatisierte Rulesets und Versionswechsel
 
+> Quellen- und Adapterstand zuletzt fachlich geprüft: 13. September 2026. Der mitgelieferte axe-core-Adapter wurde mit Version 4.13.0 geprüft.
+
 ## Zweck und Grenze
 
 Ein automatisiertes Ruleset ist ein Werkzeugprofil, keine eigenständige Norm und kein Konformitätsnachweis. Der a11y-copilot trennt deshalb vier Ebenen:
@@ -59,8 +61,9 @@ Eine spätere Einführung erfolgt als neues Profil mit eigener ID, eigener Norm-
 
 ## Quellen
 
-- [axe-core Regelbeschreibungen](https://github.com/dequelabs/axe-core/blob/develop/doc/rule-descriptions.md)
-- [axe-core API und Regel-Tags](https://github.com/dequelabs/axe-core/blob/develop/doc/API.md)
+- [axe-core 4.13.0: Regelbeschreibungen](https://github.com/dequelabs/axe-core/blob/v4.13.0/doc/rule-descriptions.md)
+- [axe-core 4.13.0: API und Regel-Tags](https://github.com/dequelabs/axe-core/blob/v4.13.0/doc/API.md)
+- [axe-core: aktuelle Entwicklung](https://github.com/dequelabs/axe-core/tree/develop/doc) – nur zur Recherche, nicht als reproduzierbare Versionsangabe
 - [Deque DevTools Rulesets](https://docs.deque.com/devtools-for-web/4/en/rulesets/)
 - [W3C ACT Rules](https://www.w3.org/WAI/standards-guidelines/act/rules/)
 - [W3C-Übersicht der axe-core-ACT-Implementierung](https://www.w3.org/WAI/standards-guidelines/act/implementations/axe-core/)
