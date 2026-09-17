@@ -2,6 +2,12 @@
 
 ## Unveröffentlicht
 
+## 0.2.13 – 2026-09-17
+
+- Prüfgrundlage eigenständig auf WCAG 2.2 und die methodische Orientierung an WCAG-EM 2.0 ausgerichtet; fremde Prüfverfahrens- und Markenbezeichnungen entfernt.
+- Mobile Fokusführung, Tutorial-Überlauf, gemeinsame Dokumentseiten und die synchronisierte Website-Navigation verbessert.
+- Sebastian Jansen als Autor in den ausgelieferten HTML-Dokumenten eindeutig ausgewiesen.
+
 ## 0.2.12 – 2026-09-13
 
 - Screenreader-Hinweise für die verständliche Auflösung von `a11y` sowie geräuscharme Skiplinks und Breadcrumbs ergänzt.

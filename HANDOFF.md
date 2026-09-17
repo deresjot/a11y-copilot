@@ -25,7 +25,7 @@ Website und Standalone werden über die vorgesehenen Synchronisationsskripte abg
 Das Ziel ist eine möglichst umfassende, belastbare und nachvollziehbar geprüfte Barrierefreiheit. Die Formulierung „100 % barrierefrei“ darf trotzdem nicht als pauschales Versprechen verwendet werden:
 
 - WCAG-Konformität bezieht sich auf einen festgelegten Standard, ein Level, vollständige Webseiten und vollständige Prozesse in einem definierten Produktstand und Scope.
-- Ein bestandener BIK-Test, ein Audit oder ein automatisierter Scan deckt nicht automatisch alle Bedürfnisse aller Menschen und Nutzungssituationen ab.
+- Ein bestandener Konformitätstest, ein Audit oder ein automatisierter Scan deckt nicht automatisch alle Bedürfnisse aller Menschen und Nutzungssituationen ab.
 - Automatisierte Werkzeuge erkennen nur einen Teil möglicher Barrieren.
 - Eine einzelne Browser-/Screenreader-Kombination repräsentiert nicht alle Plattformen und assistiven Technologien.
 - KI-Ausgaben können Fehler enthalten und sind kein Konformitätsnachweis.
@@ -56,13 +56,14 @@ Absolute Regeln wie „immer“, „niemals“, „ARIA ist verboten“ oder „
 - [Understanding WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/) und [WCAG Techniques](https://www.w3.org/WAI/WCAG22/Techniques/): informative Interpretations- und Umsetzungsunterstützung.
 - [WCAG-2.2-Quickref](https://www.w3.org/WAI/WCAG22/quickref/): filterbarer Arbeitszugang zu Erfolgskriterien, Understanding-Seiten und Techniken; keine zusätzliche normative Quelle und kein Ersatz für eine vollständige Prüfmethode.
 - [WAI-ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/): informative Pattern- und Implementierungsreferenz, keine zusätzliche WCAG-Anforderung und keine Garantie für produktionsfertigen Code.
+- [Inclusive Components](https://inclusive-components.design/): ergänzende Design- und Patternreferenz für Semantik, Interaktion, progressive Verbesserung und robuste Inhalte; keine Norm und keine vollständige Prüfmethode.
 - [W3C ACT Rules](https://www.w3.org/WAI/standards-guidelines/act/rules/): Grundlage für vergleichbarere automatisierte und halbautomatisierte Prüfregeln.
 
 Native HTML-Lösungen werden bevorzugt. ARIA ergänzt fehlende Semantik; es erzeugt weder Verhalten noch Tastaturbedienung oder Fokusmanagement. Custom Widgets benötigen das vollständige Interaktionsmodell und Prüfungen im realen Zielsystem.
 
 ### Prüfmethoden und Werkzeuge
 
-- [BIK WCAG-Test (Web)](https://bitvtest.de/pruefverfahren/wcag-22-web): öffentlich dokumentiertes Prüfverfahren mit praxisnahen Prüfschritten. Es ist eine wertvolle Methoden- und Sekundärquelle; maßgeblich für WCAG-Konformität bleibt der normative W3C-Text.
+- [WCAG-EM 2.0](https://www.w3.org/TR/wcag-em-2/): informative W3C Group Note für Scope, Produkterkundung, repräsentative Auswahl, Evaluation und Berichterstattung.
 - [Playwright Accessibility Testing](https://playwright.dev/docs/accessibility-testing): browserbasierte Regressionstests, insbesondere mit `@axe-core/playwright`.
 - [axe-core](https://github.com/dequelabs/axe-core): automatisierte WCAG-bezogene und Best-Practice-Regeln. `violations`, `incomplete` und `passes` müssen differenziert ausgewertet werden.
 
@@ -133,7 +134,7 @@ WCAG ist dabei die prüfbare Mindestgrundlage, nicht die Obergrenze guter Produk
 - `references/content-and-media.md`
 - `references/testing.md`
 
-`references/testing.md` enthält eine eigenständig formulierte WCAG-2.2-AA-Prüfmatrix auf Grundlage des BIK-Verfahrens sowie Hinweise zu Scope, Stichprobe, manueller Prüfung, Screenreadern, Playwright und axe-core.
+`references/testing.md` enthält eine eigenständig formulierte WCAG-2.2-AA-Prüfmatrix, orientiert an WCAG-EM 2.0, sowie Hinweise zu Scope, Stichprobe, manueller Prüfung, Screenreadern, Playwright und axe-core.
 
 ### Patterns
 

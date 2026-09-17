@@ -1,10 +1,30 @@
 {
   "current": {
-    "version": "1.0.21",
-    "releasedOn": "2026-09-13",
-    "summary": "VoiceOver-Aussprache des a11y-copilot sowie knappe Screenreader-Regeln für Skiplinks und Seitenpfade verbessert."
+    "version": "1.0.25",
+    "releasedOn": "2026-09-17",
+    "summary": "Prüfmethodik, Tastaturbedienung, Urheberschaft und Ladezeiten verbessert"
   },
   "history": [
+    {
+      "version": "1.0.25",
+      "releasedOn": "2026-09-17",
+      "summary": "Prüfmethodik, Tastaturbedienung, Urheberschaft und Ladezeiten verbessert"
+    },
+    {
+      "version": "1.0.24",
+      "releasedOn": "2026-09-17",
+      "summary": "Stand der Barrierefreiheit auf den aktuellen Prüf- und Releasestand gebracht"
+    },
+    {
+      "version": "1.0.23",
+      "releasedOn": "2026-09-17",
+      "summary": "Seitenwechsel startet sofort und wird nur noch visuell begleitet"
+    },
+    {
+      "version": "1.0.22",
+      "releasedOn": "2026-09-17",
+      "summary": "Fragment-Intro, globale Header-Übergänge und Suchdarstellung verbessert"
+    },
     {
       "version": "1.0.21",
       "releasedOn": "2026-09-13",

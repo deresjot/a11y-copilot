@@ -6,7 +6,7 @@
         var intro = document.querySelector("[data-site-intro]");
         var introControls = document.querySelector("[data-intro-controls]");
         var introSkip = document.querySelector("[data-intro-skip]");
-        var introDuration = 3800;
+        var introDuration = 5100;
         var progressFrame = 0;
         var alreadySeen = false;
 
@@ -28,7 +28,7 @@
         }
 
         try {
-            alreadySeen = window.sessionStorage.getItem("sebastian-intro-seen-v24") === "true";
+            alreadySeen = window.sessionStorage.getItem("sebastian-intro-seen-v25") === "true";
         } catch (error) {
             alreadySeen = false;
         }
@@ -39,12 +39,28 @@
             return;
         }
 
+        Array.from(intro.querySelectorAll("[data-intro-tile]")).forEach(function(tile, index) {
+            var angle = Math.random() * Math.PI * 2;
+            var flyRadiusX = 24 + Math.random() * 20;
+            var flyRadiusY = 17 + Math.random() * 15;
+            var orbitRadiusX = 5 + Math.random() * 5;
+            var orbitRadiusY = 4 + Math.random() * 4;
+            tile.style.setProperty("--fly-x", Math.cos(angle) * flyRadiusX + "rem");
+            tile.style.setProperty("--fly-y", Math.sin(angle) * flyRadiusY + "rem");
+            tile.style.setProperty("--orbit-x", Math.cos(angle + 1.15) * orbitRadiusX + "rem");
+            tile.style.setProperty("--orbit-y", Math.sin(angle + 1.15) * orbitRadiusY + "rem");
+            tile.style.setProperty("--start-r", -220 + Math.random() * 760 + "deg");
+            tile.style.setProperty("--orbit-r", 180 + Math.random() * 520 + "deg");
+            tile.style.setProperty("--tile-delay", (index % 3) * .035 + Math.random() * .2 + "s");
+        });
+        intro.classList.add("is-running");
+
         var dismissIntro = function(restoreFocus) {
             intro.classList.add("is-hidden");
             if (introControls) introControls.remove();
             window.cancelAnimationFrame(progressFrame);
             try {
-                window.sessionStorage.setItem("sebastian-intro-seen-v24", "true");
+                window.sessionStorage.setItem("sebastian-intro-seen-v25", "true");
             } catch (error) {
                 // Das Intro lässt sich auch ohne verfügbaren Sitzungsspeicher schließen.
             }

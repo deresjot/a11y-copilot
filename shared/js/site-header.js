@@ -74,11 +74,14 @@
   };
 
   const initPageTransition = () => {
-    const loader = document.createElement("div");
-    loader.className = "page-transition-loader";
-    loader.setAttribute("aria-hidden", "true");
-    loader.innerHTML = `<span class="page-transition-loader__mark"><span class="rubik-loader rubik-loader--compact"><svg class="rubik-cube" viewBox="0 0 120 120" focusable="false"><g class="rubik-face rubik-face--top"><path d="M60 6 108 32 60 58 12 32Z"/><path class="rubik-grid" d="M28 23 76 49M44 14 92 40M76 14 28 40M92 23 44 49"/></g><g class="rubik-face rubik-face--front"><path d="M12 32 60 58 60 112 12 86Z"/><path class="rubik-grid" d="M12 50 60 76M12 68 60 94M28 41 28 95M44 50 44 104"/></g><g class="rubik-face rubik-face--right"><path d="M60 58 108 32 108 86 60 112Z"/><path class="rubik-grid" d="M60 76 108 50M60 94 108 68M76 49 76 103M92 40 92 94"/></g></svg></span></span>`;
-    document.body.append(loader);
+    document.querySelectorAll("[data-site-header]").forEach((header) => {
+      const transition = document.createElement("span");
+      transition.className = "site-header-transition";
+      transition.dataset.siteHeaderTransition = "";
+      transition.setAttribute("aria-hidden", "true");
+      transition.innerHTML = '<span class="site-header-transition__glow"></span>';
+      header.append(transition);
+    });
     document.addEventListener("click", (event) => {
       const link = event.target.closest("a[href]");
       if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
@@ -86,10 +89,7 @@
       const destination = new URL(link.href, location.href);
       if (destination.pathname.toLowerCase().endsWith(".md") && !link.hasAttribute("data-direct-document")) return;
       if (destination.pathname === location.pathname && destination.search === location.search) return;
-      event.preventDefault();
       document.documentElement.classList.add("is-page-leaving");
-      const delay = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 460;
-      window.setTimeout(() => { location.href = destination.href; }, delay);
     });
     window.addEventListener("pageshow", () => document.documentElement.classList.remove("is-page-leaving"));
   };
@@ -253,6 +253,9 @@
       } else if (event.shiftKey && document.activeElement === button) {
         event.preventDefault();
         last.focus();
+      } else if (!event.shiftKey && document.activeElement === button) {
+        event.preventDefault();
+        first.focus();
       } else if (!event.shiftKey && document.activeElement === last) {
         event.preventDefault();
         button.focus();

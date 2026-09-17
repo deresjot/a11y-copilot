@@ -51,15 +51,15 @@
 .status-document .matrix { display:grid; gap:1rem; }
 .status-document .matrix-item { padding:1.25rem; border-left:.2rem solid var(--status-border); background:rgba(255,255,255,.025); }
 .status-document .note { padding-left:1rem; border-left:.25rem solid var(--status-review); color:var(--status-muted); }
-.status-document .bik-groups { display:grid; gap:.75rem; }
-.status-document .bik-group { margin:0; padding:0; border:1px solid var(--status-border); background:var(--status-raised); }
-.status-document .bik-group summary { position:relative; min-height:3.5rem; padding:1rem 3.5rem 1rem 1.25rem; color:var(--status-text); font-weight:800; cursor:pointer; }
-.status-document .bik-group summary::after { position:absolute; top:50%; right:1.25rem; color:var(--status-accent); font-size:1.35rem; line-height:1; content:"+"; transform:translateY(-50%); }
-.status-document .bik-group[open] summary::after { content:"−"; }
-.status-document .bik-group[open] summary { border-bottom:1px solid var(--status-border); }
-.status-document .bik-checklist { margin:0; padding:0; list-style:none; }
-.status-document .bik-checklist li { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:1rem; align-items:start; padding:.85rem 1.25rem; border-bottom:1px solid var(--status-border); }
-.status-document .bik-checklist li:last-child { border-bottom:0; }
+.status-document .criteria-groups { display:grid; gap:.75rem; }
+.status-document .criteria-group { margin:0; padding:0; border:1px solid var(--status-border); background:var(--status-raised); }
+.status-document .criteria-group summary { position:relative; min-height:3.5rem; padding:1rem 3.5rem 1rem 1.25rem; color:var(--status-text); font-weight:800; cursor:pointer; }
+.status-document .criteria-group summary::after { position:absolute; top:50%; right:1.25rem; color:var(--status-accent); font-size:1.35rem; line-height:1; content:"+"; transform:translateY(-50%); }
+.status-document .criteria-group[open] summary::after { content:"−"; }
+.status-document .criteria-group[open] summary { border-bottom:1px solid var(--status-border); }
+.status-document .criteria-checklist { margin:0; padding:0; list-style:none; }
+.status-document .criteria-checklist li { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:1rem; align-items:start; padding:.85rem 1.25rem; border-bottom:1px solid var(--status-border); }
+.status-document .criteria-checklist li:last-child { border-bottom:0; }
 .status-document .check-status { display:inline-block; padding:.2rem .45rem; border:1px solid currentColor; border-radius:999px; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:.68rem; font-weight:750; line-height:1.25; white-space:nowrap; }
 .status-document .status-na { color:var(--status-muted); }
-@media (max-width:620px) { .status-document .page-intro,.status-document .report-cluster-header,.status-document .signal-grid { grid-template-columns:1fr; } .status-document .page-nav li,.status-document .page-nav a { width:100%; } .status-document .bik-checklist li { grid-template-columns:1fr; } .status-document .check-status { justify-self:start; } .status-document .metric { min-height:0; } }
+@media (max-width:620px) { .status-document .page-intro,.status-document .report-cluster-header,.status-document .signal-grid { grid-template-columns:1fr; } .status-document .page-nav li,.status-document .page-nav a { width:100%; } .status-document .criteria-checklist li { grid-template-columns:1fr; } .status-document .check-status { justify-self:start; } .status-document .metric { min-height:0; } }

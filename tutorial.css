@@ -10,7 +10,7 @@
   .skip-link { position:fixed; z-index:20; inset:.75rem auto auto .75rem; padding:.7rem 1rem; background:var(--pink); color:var(--black); transform:translateY(-180%); }
   .skip-link:focus { transform:translateY(0); }
   main { position:relative; isolation:isolate; width:min(calc(100% - 2rem),74rem); margin-inline:auto; padding:clamp(3.5rem,8vw,7rem) 0; }
-  main::before { position:absolute; z-index:-1; top:1rem; right:-10vw; width:min(50rem,90vw); height:34rem; background:radial-gradient(circle at 65% 35%,rgb(255 0 79 / .22),transparent 26%),repeating-linear-gradient(90deg,transparent 0 3.95rem,rgb(255 255 255 / .045) 4rem),repeating-linear-gradient(0deg,transparent 0 3.95rem,rgb(255 255 255 / .045) 4rem); content:""; mask-image:linear-gradient(to bottom,#000,transparent); }
+  main::before { position:absolute; z-index:-1; top:1rem; right:calc((100vw - 100%) / -2); width:min(50rem,90vw); height:34rem; background:radial-gradient(circle at 65% 35%,rgb(255 0 79 / .22),transparent 26%),repeating-linear-gradient(90deg,transparent 0 3.95rem,rgb(255 255 255 / .045) 4rem),repeating-linear-gradient(0deg,transparent 0 3.95rem,rgb(255 255 255 / .045) 4rem); content:""; mask-image:linear-gradient(to bottom,#000,transparent); }
   .tutorial-intro { display:grid; grid-template-columns:minmax(0,1fr) minmax(16rem,27rem); column-gap:clamp(2rem,7vw,7rem); align-items:end; margin-bottom:clamp(3rem,7vw,6rem); }
   .tutorial-intro .kicker,.tutorial-intro h1,.tutorial-intro .intro { grid-column:1; }
   .kicker { margin:0 0 1rem; color:var(--pink); font-size:.78rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }

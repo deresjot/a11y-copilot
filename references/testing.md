@@ -1,6 +1,6 @@
 # Testing
 
-Diese Referenz übersetzt WCAG 2.2 in eine eigenständige, handhabbare Prüfstruktur. Der [BIK WCAG-Test (Web)](https://bitvtest.de/pruefverfahren/wcag-22-web) war ein methodischer Abgleich für Anwendbarkeit, manuelle Prüfhandlungen und Abgrenzungen. Die [WCAG-2.2-Quickref](https://www.w3.org/WAI/WCAG22/quickref/) diente zum Abgleich des Kriterienumfangs und als Einstieg in Understanding-Seiten und Techniken. Ihre Filter verändern nur die Ansicht, nicht den anwendbaren Prüfumfang. Texte und Bewertungen der verlinkten Hilfsquellen werden nicht übernommen. Normative Quelle bleibt [WCAG 2.2](https://www.w3.org/TR/WCAG22/).
+Diese Referenz übersetzt WCAG 2.2 in eine eigenständige, handhabbare Prüfstruktur. [WCAG-EM 2.0](https://www.w3.org/TR/wcag-em-2/) liefert den methodischen Rahmen für Scope, Produkterkundung, repräsentative Auswahl, Evaluation und Bericht. Die [WCAG-2.2-Quickref](https://www.w3.org/WAI/WCAG22/quickref/) dient zum Abgleich des Kriterienumfangs und als Einstieg in Understanding-Seiten und Techniken. Ihre Filter verändern nur die Ansicht, nicht den anwendbaren Prüfumfang. Texte und Bewertungen unterstützender Quellen werden nicht übernommen. Normative Quelle bleibt [WCAG 2.2](https://www.w3.org/TR/WCAG22/).
 
 ## Inhalt
 
