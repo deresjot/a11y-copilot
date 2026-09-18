@@ -26,6 +26,7 @@ Lies anschließend nur die Referenzen und Patterns, die für den Prüfgegenstand
 - Kontrast, Zoom, Reflow, Farbe oder Bewegung: [Visuelle Zugänglichkeit](references/visual-accessibility.md)
 - Alternativtexte, Sprache, Audio, Video oder Downloads: [Content und Medien](references/content-and-media.md)
 - Custom Widgets und ARIA: [ARIA und Komponenten](references/aria-and-components.md)
+- Nutzerforschung, Tests mit Menschen, Community-Hinweise oder Barrieren-Feedback: [Nutzerforschung und Rückmeldungen](references/user-research-and-feedback.md)
 - konkrete Komponente: passende Datei unter `patterns/`
 
 Behandle digitale Barrierefreiheit nicht als reine Frontend- oder Prüfaufgabe. Ermittle, welche Entscheidungen vor und nach der konkreten Umsetzung betroffen sind: Zielsetzung, Budget, Beschaffung, Research, Anforderungen, Informationsarchitektur, Gestaltung, Inhalte, Technik, Dokumentation, Qualitätssicherung, Veröffentlichung, Support, Betrieb und Weiterentwicklung. Liefere nur die für den Auftrag relevanten Ableitungen, aber verschweige keine wesentliche Abhängigkeit zu einer anderen Phase.

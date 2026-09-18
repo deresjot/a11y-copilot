@@ -156,6 +156,8 @@ details > summary::after { transition: transform var(--ui-disclosure-duration) v
 
 @media (max-width:48rem) {
   .ui-section-target:target { min-block-size: calc(var(--ui-viewport-small) - var(--ui-header-height)); }
+  .ui-button,
+  .ui-mobile-wide { width: 100%; max-width: 100%; min-width: 0; text-align: center; white-space: normal; }
   .ui-dialog,
   .ui-dialog--wide,
   .ui-dialog--tutorial { width: calc(100vw - 1rem); max-height: calc(var(--ui-viewport-small) - 1rem); }

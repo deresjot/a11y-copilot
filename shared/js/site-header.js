@@ -94,8 +94,113 @@
     window.addEventListener("pageshow", () => document.documentElement.classList.remove("is-page-leaving"));
   };
 
+  const initAccessibilityFeedback = () => {
+    const fieldError = (form, name) => form.querySelector(`[data-field-error="${name}"]`);
+    const clearFieldError = (form, name) => {
+      const field = form.elements[name];
+      const error = fieldError(form, name);
+      if (!field || !error) return;
+      field.removeAttribute("aria-invalid");
+      error.textContent = "";
+      error.hidden = true;
+    };
+    const showFieldError = (form, name, message) => {
+      const field = form.elements[name];
+      const error = fieldError(form, name);
+      if (!field || !error) return false;
+      field.setAttribute("aria-invalid", "true");
+      error.textContent = message;
+      error.hidden = false;
+      return true;
+    };
+    const validateForm = (form) => {
+      const errors = {};
+      const email = form.elements.absender.value.trim();
+      const comment = form.elements.kommentar.value.trim();
+      if (!email) errors.absender = "Bitte gib deine E-Mail-Adresse ein.";
+      else if (!form.elements.absender.validity.valid) errors.absender = "Die E-Mail-Adresse ist nicht vollständig. Beispiel: name@domain.de.";
+      if (!comment) errors.kommentar = "Bitte gib eine Nachricht ein.";
+      else if (comment.length < 3) errors.kommentar = "Bitte schreibe mindestens 3 Zeichen.";
+      else if (comment.length > 5000) errors.kommentar = "Die Nachricht ist zu lang. Bitte kürze sie auf höchstens 5.000 Zeichen.";
+      return errors;
+    };
+    const showErrors = (form, errors) => {
+      for (const name of ["absender", "kommentar"]) clearFieldError(form, name);
+      const firstName = ["absender", "kommentar"].find(name => errors[name] && showFieldError(form, name, errors[name]));
+      if (firstName) form.elements[firstName].focus();
+      return Boolean(firstName);
+    };
+    const updateStatus = (status, message) => {
+      if (!status) return;
+      status.textContent = message;
+    };
+    document.addEventListener("input", (event) => {
+      const form = event.target.closest("[data-feedback-form]");
+      if (form && ["absender", "kommentar"].includes(event.target.name)) {
+        clearFieldError(form, event.target.name);
+        if (!form.querySelector('[aria-invalid="true"]')) form.querySelector("[data-feedback-status]").textContent = "";
+      }
+    });
+    const result = new URLSearchParams(location.search).get("meldung");
+    if (result) {
+      const status = document.querySelector("[data-feedback-status]");
+      if (status) status.textContent = result === "gesendet"
+        ? "Danke. Deine Nachricht wurde gesendet."
+        : "Die Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.";
+    }
+
+    document.addEventListener("submit", async (event) => {
+      const form = event.target.closest("[data-feedback-form]");
+      if (!form) return;
+      const destination = new URL(form.action, location.href);
+      if (destination.origin !== location.origin) return;
+      event.preventDefault();
+      if (form.dataset.submitting === "true") return;
+
+      const status = form.querySelector("[data-feedback-status]");
+      const honeypot = form.elements.firma;
+      if (honeypot?.value) {
+        updateStatus(status, "Die Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.");
+        return;
+      }
+
+      const errors = validateForm(form);
+      if (showErrors(form, errors)) {
+        if (status) status.textContent = "Bitte prüfe die markierten Felder.";
+        return;
+      }
+
+      const button = form.querySelector('[type="submit"]');
+      form.dataset.submitting = "true";
+      button.setAttribute("aria-disabled", "true");
+      if (status) status.textContent = "Nachricht wird gesendet …";
+      try {
+        const response = await fetch(destination, {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: new FormData(form)
+        });
+        const payload = await response.json();
+        if (!response.ok && showErrors(form, payload.errors || {})) {
+          if (status) status.textContent = "Bitte prüfe die markierten Felder.";
+          return;
+        }
+        if (!response.ok) throw new Error(payload.message || "Die Nachricht konnte nicht gesendet werden.");
+        form.reset();
+        for (const name of ["absender", "kommentar"]) clearFieldError(form, name);
+        updateStatus(status, payload.message);
+      } catch (error) {
+        updateStatus(status, error.message || "Die Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.");
+      } finally {
+        delete form.dataset.submitting;
+        button.removeAttribute("aria-disabled");
+      }
+    });
+  };
+
   initReleaseChangelog();
   initPageTransition();
+  initAccessibilityFeedback();
 
   const headers = Array.from(document.querySelectorAll("[data-site-header]"));
   if (!headers.length) return;

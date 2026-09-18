@@ -428,6 +428,7 @@
     .route-list li,
     .route-list li:nth-child(even) { min-height:0; padding:1.5rem 1.25rem; }
     .route-list p { margin:.75rem 0 1.25rem; }
+    .route-action { width:100%; justify-content:flex-start; }
     .steps { width:100%; }
     .steps li { min-height:0; padding:1.5rem 1.25rem; }
     .steps li::before { margin-bottom:1.25rem; }

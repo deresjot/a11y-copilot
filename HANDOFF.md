@@ -1,8 +1,8 @@
 # Übergabe: a11y-copilot
 
-> Arbeitsstand vom 13. September 2026: Die öffentliche Erklärung, die KI-Anweisungen, der Quellenstatus und die Gegenproben wurden als zusammenhängendes System überarbeitet. Die abschließenden Prüfergebnisse und Release-Nummern stehen im jeweiligen Test- und Veröffentlichungsprotokoll.
+> Arbeitsstand vom 18. September 2026: Version 0.2.14 ergänzt die fachliche Grundlage um Community-Hinweise, datensparsame Rückmeldewege und präzisere Formular-, Fehler- und Statusmuster. Die abschließenden Prüfergebnisse und Website-Release-Nummern stehen im jeweiligen Test- und Veröffentlichungsprotokoll.
 
-Stand: 13. September 2026
+Stand: 18. September 2026
 
 ## Auftrag und Leitgedanke
 
@@ -133,6 +133,7 @@ WCAG ist dabei die prüfbare Mindestgrundlage, nicht die Obergrenze guter Produk
 - `references/visual-accessibility.md`
 - `references/content-and-media.md`
 - `references/testing.md`
+- `references/user-research-and-feedback.md`
 
 `references/testing.md` enthält eine eigenständig formulierte WCAG-2.2-AA-Prüfmatrix, orientiert an WCAG-EM 2.0, sowie Hinweise zu Scope, Stichprobe, manueller Prüfung, Screenreadern, Playwright und axe-core.
 

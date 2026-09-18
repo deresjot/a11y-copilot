@@ -1,6 +1,15 @@
 # Changelog
 
-## Unveröffentlicht
+## 0.2.14 – 2026-09-18
+
+- Nutzerforschung, Community-Hinweise und ein erreichbarer Rückmeldeprozess als eigene fachliche Referenz ergänzt.
+- Semantische Elementwahl mit MDN-Arbeitsindex, HTML-Standard-Grenze und konkreten Leitplanken für Sectioning, Disclosures und Dialoge geschärft.
+- Accessibility-Overlays sowie unnötige Eingriffe in Zoom, Suche, Scrollen, Farbanpassung und Tastatursteuerung als Antipatterns ergänzt.
+- Formularregeln auf Datensparsamkeit, klare Inline-Fehler, sinnvolles Fokusmanagement, identische Serverprüfung und verständliche Statusmeldungen konkretisiert.
+- Rückmeldeweg bewusst auf Antwortadresse und freie Beschreibung begrenzt; weitere technische Angaben bleiben freiwilliger Kontext statt eigener Pflichtfelder.
+- Rückmeldeweg für allgemeine Nachrichten geöffnet und im Footer als eigenständige Aktion von den Dokumentlinks abgesetzt; Barrieremeldungen bleiben ausdrücklich möglich.
+- Gemeinsames Kontakt- und Barrieremeldeformular ins neu gegliederte Impressum verschoben; der Prüfbericht verweist auf diesen zentralen Rückmeldeweg.
+- Primäre mobile Aktionen über die verfügbare Breite vereinheitlicht; zusammengehörige Vor-/Zurück-Steuerungen bleiben als gleich breite Gruppe erhalten.
 
 ## 0.2.13 – 2026-09-17
 

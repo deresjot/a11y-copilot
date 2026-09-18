@@ -21,6 +21,7 @@ const transformAppHtml = value => value
   .replaceAll('data-release-src="../release.json"', 'data-release-src="shared/release.json"')
   .replaceAll('href="../impressum.html"', 'href="shared/legal/impressum.html"')
   .replaceAll('href="../bildnutzung.html"', 'href="shared/legal/bildnutzung.html"')
+  .replaceAll('href="../impressum.html#kontakt"', 'href="shared/legal/impressum.html#kontakt"')
   .replaceAll('href="../barrierefreiheit.html"', 'href="shared/legal/barrierefreiheit.html"')
   .replaceAll('href="../"', 'href="https://www.sebastianjansen.com/"');
 
@@ -37,7 +38,7 @@ await mkdir(resolve(shared, "img"), { recursive: true });
 await mkdir(resolve(shared, "js"), { recursive: true });
 await mkdir(resolve(shared, "font"), { recursive: true });
 await mkdir(resolve(shared, "legal"), { recursive: true });
-for (const file of ["ui-system.css", "global-footer.css", "status-document.css", "footer-document-modal.css", "document-pages.css", "accessibility-report.css", "site-header.css"]) {
+for (const file of ["ui-system.css", "global-footer.css", "status-document.css", "footer-document-modal.css", "document-pages.css", "accessibility-report.css", "legal-document.css", "site-header.css"]) {
   await cp(resolve(portfolioRoot, "css", file), resolve(shared, "css", file));
 }
 for (const file of ["sebastian-jansen-80.png", "sebastian-jansen-160.png", "footer-badge-320.png", "footer-badge-512.png", "sebastian_jansen.jpg"]) {
@@ -56,6 +57,7 @@ const transformLegalHtml = value => value
   .replaceAll('src="img/', 'src="../img/')
   .replaceAll('src="js/', 'src="../js/')
   .replaceAll('data-release-src="release.json"', 'data-release-src="../release.json"')
+  .replaceAll('action="/barriere-melden.php"', 'action="https://www.sebastianjansen.com/barriere-melden.php"')
   .replaceAll('href="index.html"', 'href="../../index.html"');
 for (const file of ["impressum.html", "bildnutzung.html", "barrierefreiheit.html"]) {
   await copyText(resolve(portfolioRoot, file), resolve(shared, "legal", file), transformLegalHtml);

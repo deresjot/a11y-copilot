@@ -88,9 +88,8 @@
     .step-verdict { padding:1rem; }
     .tutorial-page-controls { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; margin-top:.75rem; }
     .tutorial-page-controls .ui-button { min-width:0; padding-inline:.65rem; font-size:.75rem; }
-    .actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:.5rem; margin-top:2rem; }
+    .actions { display:grid; grid-template-columns:minmax(0,1fr); gap:.5rem; margin-top:2rem; }
     .actions .ui-button { width:100%; min-width:0; padding-inline:.65rem; white-space:normal; }
-    .actions .ui-button:first-child { grid-column:1 / -1; }
   }
   @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
   @media (forced-colors:active) { :root { --pink:LinkText; --pink-soft:LinkText; } main::before { display:none; } }

@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.25",
-    "releasedOn": "2026-09-17",
-    "summary": "Prüfmethodik, Tastaturbedienung, Urheberschaft und Ladezeiten verbessert"
+    "version": "1.0.26",
+    "releasedOn": "2026-09-18",
+    "summary": "Kontakt, Barrieremeldung, Datenschutz und manuelle Prüfgrundlage verbessert"
   },
   "history": [
+    {
+      "version": "1.0.26",
+      "releasedOn": "2026-09-18",
+      "summary": "Kontakt, Barrieremeldung, Datenschutz und manuelle Prüfgrundlage verbessert"
+    },
     {
       "version": "1.0.25",
       "releasedOn": "2026-09-17",

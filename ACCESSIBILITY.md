@@ -77,6 +77,18 @@ Digitale Barrierefreiheit erzeugt nicht nur technische Aufgaben. Aus einem erkan
 
 Welche Ableitung relevant ist, hängt vom Auftrag und Artefakt ab. Eine Codefrage kann eine unklare Anforderung offenlegen; ein wiederkehrender Inhaltsfehler kann eine Redaktions- oder Systementscheidung erfordern; eine Barriere eines eingekauften Produkts kann Beschaffung, Vertrag, Support und Alternativprozess betreffen. Der Copilot soll diese Zusammenhänge sichtbar machen, ohne jede Antwort künstlich auf alle Phasen auszuweiten.
 
+## Nutzerforschung und Rückmeldungen
+
+Erfahrungsberichte von Menschen mit Behinderungen sind keine Randnotiz nach dem Audit. Sie helfen, reale Aufgaben, Umgehungsstrategien, störende Interaktionen und Barrieren zu erkennen, die eine Kriterienprüfung oder Automatisierung nicht zuverlässig sichtbar macht.
+
+- Prüfe mit Menschen nicht nur, ob Inhalte ausgegeben oder Controls erreicht werden, sondern ob sie eine relevante Aufgabe selbstständig verstehen, abschließen, unterbrechen und wiederaufnehmen können.
+- Beziehe unterschiedliche Behinderungen, Geräte, assistive Technologien und Erfahrungsgrade passend zur Zielgruppe ein. Eine einzelne Person oder Screenreader-Kombination repräsentiert nicht alle Nutzungssituationen.
+- Behandle Beiträge aus Communities, Support und sozialen Medien als qualitative Signale. Dokumentiere Kontext und Häufigkeit, verallgemeinere einzelne Aussagen nicht zu universellen Anforderungen und validiere Produktentscheidungen mit geeigneter Forschung.
+- Biete einen leicht auffindbaren, direkt nutzbaren Weg, Barrieren zu melden, und frage nur die für Rückmeldung und Bearbeitung notwendigen Angaben ab. Aufgabe, Stelle, Gerät, Browser oder assistive Technologie können hilfreicher freiwilliger Kontext sein; eine Diagnose oder Rechtfertigung der meldenden Person darf nie verlangt werden.
+- Bestätige Rückmeldungen, ermögliche bei blockierenden Barrieren einen Alternativweg und kommuniziere Status, Priorität, Lösung oder begründete offene Punkte nachvollziehbar.
+
+Mehr dazu: [Nutzerforschung und Rückmeldungen](references/user-research-and-feedback.md).
+
 ## Semantik und Struktur
 
 Verwende HTML entsprechend seiner Bedeutung. Native Elemente bringen Semantik, Tastaturverhalten und Plattformintegration mit, die bei Eigenbauten vollständig nachgebildet und getestet werden müssten.
@@ -269,6 +281,8 @@ Halte ausgeführte Prüfungen mit Ergebnis und Evidenz nachvollziehbar fest. Ben
 - Fokusentfernung mit `outline: none` ohne Ersatz;
 - Hover-only-Inhalte oder kleine Icon-Ziele ohne robuste Alternative;
 - Modals für normale Dokumentinhalte;
+- Accessibility-Overlays oder Anpassungsleisten als Ersatz für zugänglichen Quellcode, Browserfunktionen oder Nutzerpräferenzen;
+- Eingriffe in Browser- und Hilfsfunktionen wie Zoom, Suche, Scrollen, Farbanpassung oder Tastatursteuerung ohne wesentlichen Grund und gleichwertige Alternative;
 - automatisch wechselnde Carousels mit zentralen Inhalten;
 - horizontales Abschneiden statt Reflow;
 - Tests ausschließlich mit axe, Lighthouse oder einer AI-Ausgabe;

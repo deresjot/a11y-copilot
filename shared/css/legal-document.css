@@ -1,0 +1,418 @@
+@font-face {
+  font-family: "NeueMachina";
+  src: url("../font/NeueMachina-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 20px;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
+}
+
+/* Skip-Link für Tastatur-/Screenreader-Nutzende */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: #ff004f;
+  color: #000;
+  text-decoration: none;
+  z-index: 1000;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+section.main {
+  padding-top: 5.42857rem;
+  padding-bottom: 5.42857rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-sm-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+a:hover {
+  color: #ff004f;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1, h2, h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+/* Fokus-Stile für interaktive Elemente */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px dotted #ff004f;   /* rot + dotted */
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
+.legal-page {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+
+.legal-page .container {
+  max-width: 1180px;
+}
+
+.legal-hero {
+  max-width: 58rem;
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+  padding-left: clamp(1rem, 3vw, 1.5rem);
+  border-left: 0.4rem solid #ff004f;
+}
+
+.legal-kicker,
+.legal-card-label {
+  margin: 0 0 0.65rem;
+  color: #ff4778;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.legal-hero h1 {
+  max-width: 12ch;
+  margin: 0;
+  font-family: "NeueMachina", system-ui, sans-serif;
+  font-size: clamp(3.2rem, 10vw, 7rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.legal-lead {
+  max-width: 48rem;
+  margin: 1.25rem 0 0;
+  color: #d4d4d4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.05rem, 1rem + 0.3vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.legal-card {
+  grid-column: span 6;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid #555;
+  background: #1b1b1b;
+  text-align: left;
+}
+
+.legal-card--wide {
+  grid-column: 1 / -1;
+}
+
+.legal-card[id] {
+  scroll-margin-top: 5rem;
+}
+
+.legal-card--identity,
+.legal-card--contact {
+  border-color: #ff004f;
+}
+
+.legal-card--identity {
+  background: #242424;
+}
+
+.legal-card--statement {
+  background: #ff004f;
+  color: #111;
+}
+
+.legal-card--statement .legal-card-label {
+  color: #111;
+}
+
+.legal-card h2,
+.privacy-card h3 {
+  font-family: "NeueMachina", system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+.legal-card h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.65rem, 3vw, 2.65rem);
+}
+
+.legal-card p:last-child,
+.privacy-card p:last-child {
+  margin-bottom: 0;
+}
+
+.legal-card address {
+  font-style: normal;
+  line-height: 1.8;
+}
+
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.privacy-card {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid #444;
+  background: #151515;
+}
+
+.privacy-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.feedback-form {
+  display: grid;
+  max-width: 48rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.feedback-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.feedback-field label {
+  font-weight: 700;
+}
+
+.feedback-field input,
+.feedback-field textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 2px solid #777;
+  border-radius: 0;
+  background: #111;
+  color: #fff;
+  font: inherit;
+}
+
+.feedback-field textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.feedback-field input:hover,
+.feedback-field textarea:hover {
+  border-color: #aaa;
+}
+
+.feedback-field input:focus-visible,
+.feedback-field textarea:focus-visible {
+  border-color: #fff;
+}
+
+.feedback-field input[aria-invalid="true"],
+.feedback-field textarea[aria-invalid="true"] {
+  border-color: #ff9ab5;
+}
+
+.field-hint,
+.feedback-privacy,
+.feedback-status {
+  margin: 0;
+  color: #c9c9c9;
+  font-size: 0.9rem;
+}
+
+.field-error {
+  margin: 0;
+  color: #ffb0c6;
+  font-weight: 700;
+}
+
+.feedback-status:not(:empty) {
+  padding: 0.5rem 0.75rem;
+  border-left: 0.25rem solid #ff004f;
+  color: #fff;
+}
+
+.feedback-submit {
+  min-height: 2.75rem;
+  justify-self: start;
+  padding: 0.65rem 1.1rem;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.feedback-submit:hover {
+  border-color: #ff004f;
+  background: #ff004f;
+  color: #fff;
+}
+
+.feedback-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.feedback-trap,
+.legal-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.legacy-anchor {
+  position: relative;
+  top: -5rem;
+  display: block;
+}
+
+.feedback-fallback {
+  margin-bottom: 0;
+}
+
+.legal-closing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.legal-closing p {
+  margin: 0;
+}
+
+@media (max-width: 48rem) {
+  .legal-card {
+    grid-column: 1 / -1;
+  }
+
+  .privacy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 36rem) {
+  .legal-page {
+    padding: 2.5rem 0;
+  }
+
+  .legal-card {
+    padding: 1rem;
+  }
+
+  .privacy-card {
+    padding: 1rem;
+  }
+
+  .feedback-submit {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .legal-closing {
+    display: grid;
+  }
+}
+
+@media (forced-colors: active) {
+  .legal-card,
+  .privacy-card,
+  .feedback-field input,
+  .feedback-field textarea,
+  .feedback-submit,
+  .feedback-status:not(:empty) {
+    border: 2px solid CanvasText;
+  }
+
+  .legal-card--statement,
+  .feedback-submit {
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}
