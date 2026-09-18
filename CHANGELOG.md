@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.15 – 2026-09-18
+
+- Gemeinsame Navigation wechselt früher in die aufklappbare Darstellung; die im manuellen Nachtest beobachtete Überlagerung bei 175 Prozent Vergrößerung ist behoben.
+- Gemeinsame Impressumsansicht erhält robuste Umbrüche für Überschrift und Kontaktadressen bei vergrößerten Textabständen.
+- Aktualisierter Prüfbericht unterscheidet die nachgeprüfte Behebung von weiterhin offenen manuellen Prüfungen. Keine vollständige Konformitätsaussage.
+
 ## 0.2.14 – 2026-09-18
 
 - Tagesabschluss: gemeinsame Dokumentseiten und Website-Versionsanzeige mit Release 1.0.27 synchronisiert; der Barrierefreiheitsbericht enthält den begrenzten manuellen Gegencheck samt offenen Nachprüfungen.

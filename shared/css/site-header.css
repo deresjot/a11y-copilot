@@ -124,7 +124,7 @@
 }
 [data-site-header].is-scrolled [data-site-navigation] > .site-header-tutorial:visited { color: var(--site-header-black); }
 
-@media (min-width:48.0625rem) {
+@media (min-width:64.0625rem) {
   [data-site-navigation-list] a { padding-inline: .625rem; border-radius: .2rem; }
   [data-site-navigation-list] a:hover,
   [data-site-navigation-list] a:focus-visible {
@@ -142,7 +142,7 @@
   [data-site-header].is-scrolled { background: var(--site-header-pink); }
 }
 
-@media (max-width:48rem) {
+@media (max-width:64rem) {
   :root { --ui-header-height: calc(var(--site-header-height) + env(safe-area-inset-top)); }
   [data-site-header], [data-site-header-inner] { min-height: calc(var(--site-header-height) + env(safe-area-inset-top)); }
   [data-site-header-inner] { flex-wrap: nowrap; padding-top: env(safe-area-inset-top); }

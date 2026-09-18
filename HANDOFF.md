@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-> Arbeitsstand vom 18. September 2026: Version 0.2.14 ergänzt die fachliche Grundlage um Community-Hinweise, datensparsame Rückmeldewege und präzisere Formular-, Fehler- und Statusmuster. Die abschließenden Prüfergebnisse und Website-Release-Nummern stehen im jeweiligen Test- und Veröffentlichungsprotokoll.
+> Arbeitsstand vom 18. September 2026: Version 0.2.15 übernimmt die nachgeprüfte Korrektur der Navigation bei Vergrößerung und robustere Umbrüche der gemeinsamen Impressumsansicht. Die fachliche Grundlage aus 0.2.14 bleibt erhalten. Behobene Fundstellen und offene manuelle Restprüfungen sind im Website-Prüfbericht getrennt dokumentiert; dies ist keine vollständige Konformitätsaussage.
 
 Stand: 18. September 2026
 

@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.28",
+    "version": "1.0.29",
     "releasedOn": "2026-09-18",
-    "summary": "Manuellen Prüfstand präzisiert: tatsächliche Ausgaben dokumentiert, Teilprüfungen abgegrenzt und einen Zoom-Mangel offengelegt."
+    "summary": "Navigation bei Vergrößerung und Umbrüche im Impressum verbessert; bekannte Fundstellen nachgeprüft und dokumentiert."
   },
   "history": [
+    {
+      "version": "1.0.29",
+      "releasedOn": "2026-09-18",
+      "summary": "Navigation bei Vergrößerung und Umbrüche im Impressum verbessert; bekannte Fundstellen nachgeprüft und dokumentiert."
+    },
     {
       "version": "1.0.28",
       "releasedOn": "2026-09-18",

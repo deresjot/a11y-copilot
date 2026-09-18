@@ -205,7 +205,8 @@
   const headers = Array.from(document.querySelectorAll("[data-site-header]"));
   if (!headers.length) return;
 
-  const mobileMedia = window.matchMedia("(max-width: 48rem)");
+  // Keep this threshold aligned with the shared header stylesheet.
+  const mobileMedia = window.matchMedia("(max-width: 64rem)");
   let openController = null;
 
   const createSectionTracker = (header, navigation) => {
