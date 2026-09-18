@@ -2,6 +2,7 @@
 
 ## 0.2.14 – 2026-09-18
 
+- Tagesabschluss: gemeinsame Dokumentseiten und Website-Versionsanzeige mit Release 1.0.27 synchronisiert; der Barrierefreiheitsbericht enthält den begrenzten manuellen Gegencheck samt offenen Nachprüfungen.
 - Nutzerforschung, Community-Hinweise und ein erreichbarer Rückmeldeprozess als eigene fachliche Referenz ergänzt.
 - Semantische Elementwahl mit MDN-Arbeitsindex, HTML-Standard-Grenze und konkreten Leitplanken für Sectioning, Disclosures und Dialoge geschärft.
 - Accessibility-Overlays sowie unnötige Eingriffe in Zoom, Suche, Scrollen, Farbanpassung und Tastatursteuerung als Antipatterns ergänzt.
