@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.16 – 2026-09-18
+
+- Kontaktformular als gemeinsames Stilmodul aus der Impressumsseite herausgelöst und in die Dokumentdialoge eingebunden. Dadurch bleiben Felder, Schaltfläche und verborgenes Spam-Schutzfeld in eigenständiger Seite und Modal konsistent.
+- Gemeinsamer Komponentenvertrag der Portfolio-Integration deckt beide Modal-Hosts und die eigenständige Impressumsseite ab.
+
 ## 0.2.15 – 2026-09-18
 
 - Gemeinsame Navigation wechselt früher in die aufklappbare Darstellung; die im manuellen Nachtest beobachtete Überlagerung bei 175 Prozent Vergrößerung ist behoben.

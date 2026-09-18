@@ -38,7 +38,7 @@ await mkdir(resolve(shared, "img"), { recursive: true });
 await mkdir(resolve(shared, "js"), { recursive: true });
 await mkdir(resolve(shared, "font"), { recursive: true });
 await mkdir(resolve(shared, "legal"), { recursive: true });
-for (const file of ["ui-system.css", "global-footer.css", "status-document.css", "footer-document-modal.css", "document-pages.css", "accessibility-report.css", "legal-document.css", "site-header.css"]) {
+for (const file of ["ui-system.css", "global-footer.css", "status-document.css", "footer-document-modal.css", "feedback-form.css", "document-pages.css", "accessibility-report.css", "legal-document.css", "site-header.css"]) {
   await cp(resolve(portfolioRoot, "css", file), resolve(shared, "css", file));
 }
 for (const file of ["sebastian-jansen-80.png", "sebastian-jansen-160.png", "footer-badge-320.png", "footer-badge-512.png", "sebastian_jansen.jpg"]) {

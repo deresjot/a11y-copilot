@@ -241,98 +241,6 @@ select:focus-visible {
   font-size: clamp(1.2rem, 2vw, 1.55rem);
 }
 
-.feedback-form {
-  display: grid;
-  max-width: 48rem;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.feedback-field {
-  display: grid;
-  gap: 0.35rem;
-}
-
-.feedback-field label {
-  font-weight: 700;
-}
-
-.feedback-field input,
-.feedback-field textarea {
-  width: 100%;
-  padding: 0.7rem 0.8rem;
-  border: 2px solid #777;
-  border-radius: 0;
-  background: #111;
-  color: #fff;
-  font: inherit;
-}
-
-.feedback-field textarea {
-  min-height: 9rem;
-  resize: vertical;
-}
-
-.feedback-field input:hover,
-.feedback-field textarea:hover {
-  border-color: #aaa;
-}
-
-.feedback-field input:focus-visible,
-.feedback-field textarea:focus-visible {
-  border-color: #fff;
-}
-
-.feedback-field input[aria-invalid="true"],
-.feedback-field textarea[aria-invalid="true"] {
-  border-color: #ff9ab5;
-}
-
-.field-hint,
-.feedback-privacy,
-.feedback-status {
-  margin: 0;
-  color: #c9c9c9;
-  font-size: 0.9rem;
-}
-
-.field-error {
-  margin: 0;
-  color: #ffb0c6;
-  font-weight: 700;
-}
-
-.feedback-status:not(:empty) {
-  padding: 0.5rem 0.75rem;
-  border-left: 0.25rem solid #ff004f;
-  color: #fff;
-}
-
-.feedback-submit {
-  min-height: 2.75rem;
-  justify-self: start;
-  padding: 0.65rem 1.1rem;
-  border: 2px solid #fff;
-  border-radius: 999px;
-  background: #fff;
-  color: #111;
-  font: inherit;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.feedback-submit:hover {
-  border-color: #ff004f;
-  background: #ff004f;
-  color: #fff;
-}
-
-.feedback-submit:disabled {
-  cursor: wait;
-  opacity: 0.7;
-}
-
-.feedback-trap,
 .legal-visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -350,10 +258,6 @@ select:focus-visible {
   position: relative;
   top: -5rem;
   display: block;
-}
-
-.feedback-fallback {
-  margin-bottom: 0;
 }
 
 .legal-closing {
@@ -392,11 +296,6 @@ select:focus-visible {
     padding: 1rem;
   }
 
-  .feedback-submit {
-    width: 100%;
-    justify-content: center;
-  }
-
   .legal-closing {
     display: grid;
   }
@@ -404,16 +303,11 @@ select:focus-visible {
 
 @media (forced-colors: active) {
   .legal-card,
-  .privacy-card,
-  .feedback-field input,
-  .feedback-field textarea,
-  .feedback-submit,
-  .feedback-status:not(:empty) {
+  .privacy-card {
     border: 2px solid CanvasText;
   }
 
-  .legal-card--statement,
-  .feedback-submit {
+  .legal-card--statement {
     background: ButtonFace;
     color: ButtonText;
   }

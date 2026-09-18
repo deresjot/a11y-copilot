@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.30",
+    "version": "1.0.31",
     "releasedOn": "2026-09-18",
-    "summary": "Aktuelle Barrierefreiheit nach Komponenten eingeordnet; bestätigte Ergebnisse und konkrete Prüfgrenzen getrennt."
+    "summary": "Kontaktformular als gemeinsame Komponente für Seite und Dokumentdialoge abgesichert."
   },
   "history": [
+    {
+      "version": "1.0.31",
+      "releasedOn": "2026-09-18",
+      "summary": "Kontaktformular als gemeinsame Komponente für Seite und Dokumentdialoge abgesichert."
+    },
     {
       "version": "1.0.30",
       "releasedOn": "2026-09-18",
