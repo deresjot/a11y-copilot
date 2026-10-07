@@ -122,6 +122,8 @@ a.skip-link,
 .ui-nav-toggle[aria-expanded="true"] .ui-nav-toggle__lines::after { top: 0; transform: rotate(-45deg); }
 
 .ui-section-target { scroll-margin-block-start: var(--ui-header-height); }
+/* In-page destinations keep focus without Safari's default section outline. */
+main .ui-section-target[tabindex="-1"]:focus { outline: none; }
 .ui-section-target--top { scroll-margin-block-start: 0; }
 .ui-hero { min-block-size: var(--ui-viewport-small); }
 
