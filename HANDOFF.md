@@ -1,14 +1,14 @@
 # Übergabe: a11y-copilot
 
-> Arbeitsstand vom 18. September 2026: Version 0.2.15 übernimmt die nachgeprüfte Korrektur der Navigation bei Vergrößerung und robustere Umbrüche der gemeinsamen Impressumsansicht. Die fachliche Grundlage aus 0.2.14 bleibt erhalten. Behobene Fundstellen und offene manuelle Restprüfungen sind im Website-Prüfbericht getrennt dokumentiert; dies ist keine vollständige Konformitätsaussage.
+> Arbeitsstand vom 11. Oktober 2026: Version 0.2.17 aktualisiert Texte und Begleitdokumentation und übernimmt die abgestimmten gemeinsamen Seitenelemente. Die fachliche Grundlage bleibt erhalten. Bestehende Prüfgrenzen bleiben im Website-Prüfbericht dokumentiert.
 
-Stand: 18. September 2026
+Stand: 11. Oktober 2026
 
 ## Auftrag und Leitgedanke
 
 Der fachliche Scope umfasst digitale Barrierefreiheit über den gesamten Lebenszyklus: Strategie und Governance, Beschaffung, Research und Konzeption, Anforderungen, Gestaltung, Inhalte, technische Umsetzung, Dokumentation, Qualitätssicherung, Veröffentlichung, Support, Betrieb und Weiterentwicklung. Der Copilot leitet aus einer konkreten Frage die relevanten Zusammenhänge ab, ohne Rollenpakete zu verlangen oder jede Antwort unnötig auf alle Phasen auszuweiten.
 
-`a11y-copilot` ist kein automatisches Prüfprogramm. Es ist eine öffentlich einsehbare Sammlung aus Anweisungen, Fachwissen und Quellen für digitale Barrierefreiheit von Sebastian Jansen / [@deresjot](https://github.com/deresjot). Menschen geben diese Grundlage einer KI zusammen mit einer konkreten Aufgabe und dem zugänglichen Prüfmaterial. Da noch keine Lizenz festgelegt ist, bedeutet die öffentliche Sichtbarkeit derzeit keine eingeräumte freie Nachnutzung.
+`a11y-copilot` ist kein automatisches Prüfprogramm. Es ist eine öffentlich einsehbare Sammlung aus Anweisungen, Fachwissen und Quellen für digitale Barrierefreiheit von [Sebastian Jansen](https://www.sebastianjansen.com/). Menschen geben diese Grundlage einer KI zusammen mit einer konkreten Aufgabe und dem zugänglichen Prüfmaterial. Da noch keine Lizenz festgelegt ist, bedeutet die öffentliche Sichtbarkeit derzeit keine eingeräumte freie Nachnutzung.
 
 Das Projekt ist kein rollenbasierter Prozessbaukasten. Accessibility-Fragen werden als zusammenhängende Produktfragen behandelt: Semantik, visuelle Gestaltung, Sprache, Interaktion, Tastatur, Fokus, assistive Technologien, Anforderungen und Tests gehören gemeinsam betrachtet.
 
@@ -16,7 +16,7 @@ Die zentrale fachliche Quelle ist [ACCESSIBILITY.md](ACCESSIBILITY.md). Andere D
 
 Die Startseite trennt drei Nutzungswege: ein direkt kopierbares Startpaket für einen KI-Chat, die dauerhafte Verwendung im Repository mit der Agent-Anweisung und das eigene Nachschlagen in der Wissensbasis. Das Startpaket wird aus [PROMPT.md](PROMPT.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md) zusammengesetzt. Die maschinenlesbaren Dokumente bleiben zusätzlich in einem scrollbaren Dialog und über einen direkten Dateilink erreichbar. Diese begrenzte Transferaufgabe und ihre begründete Dialog-Ausnahme sind in [patterns/dialog.md](patterns/dialog.md) festgehalten.
 
-Die empfohlene Einbindung in die persönliche Website ist in der [Integrationsstrategie des Standalone-Repositories](https://github.com/deresjot/a11y-copilot/blob/main/INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des gemeinsamen Webauftritts auf `sebastianjansen.com` und `deresjot.de`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen und auf beiden Domains zu prüfen.
+Die empfohlene Einbindung in die persönliche Website ist in der [Integrationsstrategie des Standalone-Repositories](https://github.com/deresjot/a11y-copilot/blob/main/INTEGRATION-STRATEGY.md) beschrieben. Das Toolkit bleibt technisch als Unterseite wartbar, ist produktseitig aber ein fester Bestandteil des Webauftritts auf `sebastianjansen.com`. Die Hauptseite und ihr a11y-copilot-Teaser sind die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser, Unterseite und Markdown-Kern müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Jede relevante Änderung ist deshalb im Zusammenhang aller drei Ebenen auf der professionellen Hauptdomain zu prüfen.
 
 Website und Standalone werden über die vorgesehenen Synchronisationsskripte abgeglichen. Der globale Footer und Header bleiben Komponenten des Website-Projekts; fachliche Markdown-Dateien, Referenzen, Patterns, Rulesets und Gegenproben stammen aus dem Standalone-Repository.
 
@@ -210,7 +210,7 @@ Damit die Markdown-Dialoge auch beim direkten Öffnen von `index.html` über `fi
 - großzügiger Weißraum und klare typografische Hierarchie;
 - Bento-/Werkzeugkistenraster;
 - lokales Hero-Hintergrundbild;
-- freigestelltes helles 3D-Maskottchen als Retro-Computer-Roboter mit CRT-Gesicht, kurzen Gelenkarmen und deresjot-pinken Signalen;
+- freigestelltes helles 3D-Maskottchen als Retro-Computer-Roboter mit CRT-Gesicht, kurzen Gelenkarmen und pinken Signalen;
 - Projekttitel als pink-weißer, leicht gedrehter Störer unmittelbar am zentrierten Maskottchen in einem vollständigen ersten Viewport; Kurzbeschreibung und Download bleiben Teil dieser Bühne;
 - überlagerter Header mit Sebastians Bildlogo, kompakter mobiler Navigation und pinkem Scrollzustand nach dem Vorbild der Hauptseite;
 - schwarzer Footer strukturell nach der Hauptseite: identische Badge-Größen, zentrierte schmale Inhaltsspalte, Textgröße und Zeilenhöhe, Impressum-/Bildnutzungslinks sowie runder Zurück-nach-oben-Link;
@@ -225,7 +225,7 @@ Der Bereich „Kein falsches Versprechen“ nutzt eine gemeinsame dunkle Träger
 - responsive iOS-/WebKit-Regression mit 9 von 9 Fällen bestanden;
 - nach dem Live-Deployment 6 gezielte Browser-Smoke-Tests für Aktivindikator, Headerkontrast, Bento-Rahmen, Überschriften, Copilot-Hero und 320-Pixel-Reflow bestanden;
 - eigenständigen Standalone-Build für Version `0.2.12` erzeugt und mit der Portfolio-Integration synchronisiert;
-- finalen Release-Build auf `sebastianjansen.com` und `deresjot.de` in allen 20 geprüften Referenzdateien als inhaltsgleich bestätigt;
+- finalen Release-Build auf der Hauptdomain und ihrer damaligen Aliasdomain in allen 20 geprüften Referenzdateien als inhaltsgleich bestätigt;
 - vollständiges Vorab-Backup unter `archive/remote-backup-20260904-212439-pre-release-1.0.13-ssh/` angelegt und die SSH-Transferprobe erfolgreich hochgeladen, zurückgelesen und entfernt;
 - HTML mit `html-validate` geprüft;
 - Transparenz, Abmessungen und Darstellung des PNG-Maskottchens auf dunklem Hintergrund geprüft;
@@ -241,10 +241,10 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.12`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
+- Aktueller funktionaler Stand: Version `0.2.17`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
-- Portfolio-Integration: Website-Release `1.0.21` vom 13. September 2026. Die Auslieferung erfolgt über den festgelegten SSH-Dienst nach `/home/webp4t2ii/html/deresjot` und wird im Website-Repository dokumentiert.
+- Portfolio-Integration: Website-Release `1.0.35` vom 11. Oktober 2026. Die Auslieferung erfolgt über den festgelegten SSH-Dienst und wird im Website-Repository dokumentiert.
 
 ## Offene Veröffentlichungspunkte
 

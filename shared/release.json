@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.34",
+    "version": "1.0.35",
     "releasedOn": "2026-10-11",
-    "summary": "Dekorative Hintergrundbilder von der Google-Bildindexierung ausschließen; Sitemap aktualisieren."
+    "summary": "Redaktionelle Pflege und Aktualisierung der Dokumentation."
   },
   "history": [
+    {
+      "version": "1.0.35",
+      "releasedOn": "2026-10-11",
+      "summary": "Redaktionelle Pflege und Aktualisierung der Dokumentation."
+    },
     {
       "version": "1.0.34",
       "releasedOn": "2026-10-11",

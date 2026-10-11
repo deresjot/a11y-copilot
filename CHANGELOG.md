@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.17 – 2026-10-11
+
+- Texte und Begleitdokumentation redaktionell aktualisiert.
+- Gemeinsame Seitenelemente mit dem aktuellen Webauftritt abgestimmt.
+
 ## 0.2.16 – 2026-09-18
 
 - Kontaktformular als gemeinsames Stilmodul aus der Impressumsseite herausgelöst und in die Dokumentdialoge eingebunden. Dadurch bleiben Felder, Schaltfläche und verborgenes Spam-Schutzfeld in eigenständiger Seite und Modal konsistent.

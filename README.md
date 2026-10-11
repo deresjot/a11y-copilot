@@ -6,7 +6,7 @@ Die KI kann damit Texte, Gestaltung, Code und Nutzungsschritte analysieren, Anfo
 
 Ich pflege das Toolkit, weil eine überzeugend klingende Antwort noch lange keine fachlich richtige Antwort ist. Gerade bei Accessibility werden Best Practices regelmäßig zu angeblichen WCAG-Pflichten erklärt, Toolergebnisse mit Audits verwechselt und ARIA-Reparaturen vorgeschlagen, obwohl das zugrunde liegende HTML falsch ist. Der Copilot soll solche Abkürzungen schwieriger machen.
 
-— Sebastian Jansen / [@deresjot](https://sebastianjansen.com/)
+[Sebastian Jansen](https://www.sebastianjansen.com/)
 
 ## So benutzt du a11y-copilot
 
@@ -18,7 +18,7 @@ In Codex, Claude Code oder vergleichbaren agentenfähigen Werkzeugen kann [SKILL
 
 ## Teil des gemeinsamen Webauftritts
 
-Die öffentliche Copilot-Unterseite ist Teil des Webauftritts von [sebastianjansen.com](https://www.sebastianjansen.com/) und [deresjot.de](https://www.deresjot.de/), keine unabhängige Designinsel. Die Hauptseite mit ihrem a11y-copilot-Teaser ist die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser und Unterseite müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Änderungen an Oberfläche oder Markdown-Kern werden deshalb immer auf beide Berührungspunkte und beide Domains geprüft.
+Die öffentliche Copilot-Unterseite ist Teil des Webauftritts von [sebastianjansen.com](https://www.sebastianjansen.com/), keine unabhängige Designinsel. Die Hauptseite mit ihrem a11y-copilot-Teaser ist die verbindliche Referenz für Absender, Sprache, visuelle Grundelemente, Navigation, Footer, responsive Verhalten und Release-Kommunikation. Teaser und Unterseite müssen denselben Zweck, dieselben Einstiege und denselben fachlichen Stand vermitteln. Änderungen an Oberfläche oder Markdown-Kern werden deshalb immer an beiden Berührungspunkten auf der professionellen Hauptdomain geprüft.
 
 ## Was im Repository liegt
 
@@ -44,7 +44,7 @@ Welche Aussage normativ ist, entscheidet die jeweilige Primärquelle, nicht dies
 
 Der Copilot kann Ausschlussrisiken analysieren und daraus Entscheidungen, Anforderungen, Gestaltungshinweise, Inhaltsregeln, Implementierungen, Testpläne, Befunde und Maßnahmen für den Betrieb ableiten. Belastbare Aussagen müssen benennen, was tatsächlich untersucht und getestet wurde. Ein automatisierter Lauf deckt nur einen Teil möglicher Barrieren ab; eine einzelne Kombination aus Browser und assistiver Technologie steht nicht für alle Plattformen; eine Stichprobe belegt keine ungeprüften Bereiche.
 
-Das Projekt wird von [Sebastian Jansen](https://sebastianjansen.com/) / `@deresjot` gepflegt. Der German-UPA-Vortrag [„Normale Nutzer gibt’s nicht! Ein Plädoyer für Barrierefreiheit“](https://germanupa.de/sites/default/files/2021-11/15-11-12vortragblinddatewudmucfinal_0.pdf) war ein inhaltlicher Impuls. Texte, Bilder und Folien daraus wurden nicht übernommen.
+Das Projekt wird von [Sebastian Jansen](https://sebastianjansen.com/) gepflegt. Der German-UPA-Vortrag [„Normale Nutzer gibt’s nicht! Ein Plädoyer für Barrierefreiheit“](https://germanupa.de/sites/default/files/2021-11/15-11-12vortragblinddatewudmucfinal_0.pdf) war ein inhaltlicher Impuls. Texte, Bilder und Folien daraus wurden nicht übernommen.
 
 ## Lizenz
 
