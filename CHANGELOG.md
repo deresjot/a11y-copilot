@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.18 – 2026-10-17
+
+- Gemeinsame Formularvalidierung verbessert: Gleichzeitige Feldfehler werden vollständig angezeigt.
+- Begleitender Prüfbericht und Website-Versionsanzeige aktualisiert.
+
 ## 0.2.17 – 2026-10-11
 
 - Texte und Begleitdokumentation redaktionell aktualisiert.

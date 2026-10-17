@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-> Arbeitsstand vom 11. Oktober 2026: Version 0.2.17 aktualisiert Texte und Begleitdokumentation und übernimmt die abgestimmten gemeinsamen Seitenelemente. Die fachliche Grundlage bleibt erhalten. Bestehende Prüfgrenzen bleiben im Website-Prüfbericht dokumentiert.
+> Arbeitsstand vom 17. Oktober 2026: Version 0.2.18 verbessert die gemeinsame Formularvalidierung und übernimmt den aktualisierten Prüfbericht sowie die Website-Versionsanzeige. Die fachliche Grundlage bleibt erhalten. Bestehende Prüfgrenzen bleiben im Website-Prüfbericht dokumentiert.
 
 Stand: 11. Oktober 2026
 
@@ -241,7 +241,7 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.17`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
+- Aktueller funktionaler Stand: Version `0.2.18`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
 - Portfolio-Integration: Website-Release `1.0.35` vom 11. Oktober 2026. Die Auslieferung erfolgt über den festgelegten SSH-Dienst und wird im Website-Repository dokumentiert.

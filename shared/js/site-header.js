@@ -126,7 +126,8 @@
     };
     const showErrors = (form, errors) => {
       for (const name of ["absender", "kommentar"]) clearFieldError(form, name);
-      const firstName = ["absender", "kommentar"].find(name => errors[name] && showFieldError(form, name, errors[name]));
+      const invalidNames = ["absender", "kommentar"].filter(name => errors[name] && showFieldError(form, name, errors[name]));
+      const firstName = invalidNames[0];
       if (firstName) form.elements[firstName].focus();
       return Boolean(firstName);
     };

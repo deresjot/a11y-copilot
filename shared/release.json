@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.35",
-    "releasedOn": "2026-10-11",
-    "summary": "Redaktionelle Pflege und Aktualisierung der Dokumentation."
+    "version": "1.0.36",
+    "releasedOn": "2026-10-17",
+    "summary": "Fehlerhinweise im Kontaktformular und ältere Website-Verweise verbessert."
   },
   "history": [
+    {
+      "version": "1.0.36",
+      "releasedOn": "2026-10-17",
+      "summary": "Fehlerhinweise im Kontaktformular und ältere Website-Verweise verbessert."
+    },
     {
       "version": "1.0.35",
       "releasedOn": "2026-10-11",
