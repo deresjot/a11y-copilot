@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.22 – 2026-10-18
+
+- Statischer mobiler Copilot-Hintergrund als 17-KB-WebP und exklusive Ladehinweise aus der Website übernommen.
+- Globalen Seitenübergang auf 350 ms verkürzt, native Navigation bleibt unverzögert.
+- Geteilte Dokumentseiten und Versionsanzeige auf Website 1.0.40 synchronisiert.
+
 ## 0.2.21 – 2026-10-18
 
 - Gemeinsame Abschnittsnavigation mit weniger DOM-Messungen und Attributänderungen importiert.

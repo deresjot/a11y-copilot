@@ -1,6 +1,8 @@
 # Übergabe: a11y-copilot
 
-> Arbeitsstand vom 18. Oktober 2026: Version 0.2.21 übernimmt die optimierte globale Abschnittsnavigation, WOFF2-Schriften, frühe Ressourcenhinweise und zugänglichen Linknamen der Website 1.0.39. Bilddateien und bestehende manuelle Prüfgrenzen bleiben erhalten.
+> Arbeitsstand vom 18. Oktober 2026: Version 0.2.22 übernimmt den statischen mobilen Hintergrund, passende Ladehinweise und kurzen globalen Übergang aus Website 1.0.40.
+
+> Vorheriger Stand: Version 0.2.21 übernimmt die optimierte globale Abschnittsnavigation, WOFF2-Schriften, frühe Ressourcenhinweise und zugänglichen Linknamen der Website 1.0.39. Bilddateien und bestehende manuelle Prüfgrenzen bleiben erhalten.
 
 Stand: 11. Oktober 2026
 

@@ -57,8 +57,8 @@
   box-shadow:inset 0 0 1.6rem rgba(var(--site-transition-accent),.216),inset 0 -1px rgba(var(--site-transition-highlight),.144);
   transform:scaleX(0); transform-origin:left center; will-change:transform,opacity;
 }
-.is-page-leaving .site-header-transition { animation:site-header-transition-surface 1.8s ease-in-out both; }
-.is-page-leaving .site-header-transition__glow { animation:site-header-transition-fill 1.8s cubic-bezier(.37,0,.63,1) both; }
+.is-page-leaving .site-header-transition { animation:site-header-transition-surface .35s ease-out both; }
+.is-page-leaving .site-header-transition__glow { animation:site-header-transition-fill .35s ease-out both; }
 
 @keyframes site-header-transition-surface { 0%,100%{background-color:rgba(var(--site-transition-accent),.018)} 35%,72%{background-color:rgba(var(--site-transition-accent),.108)} }
 @keyframes site-header-transition-fill { 0%{opacity:0;transform:scaleX(0)} 14%{opacity:.78} 74%{opacity:.9;transform:scaleX(1)} 100%{opacity:0;transform:scaleX(1)} }
