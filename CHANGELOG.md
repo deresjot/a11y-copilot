@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.20 – 2026-10-18
+
+- Geteilten Prüfbericht um die kombinierte Nutzung von Playwright und axe-core im Entwicklungsalltag ergänzt.
+- Gemeinsame Website-Versionsanzeige und Dokumentseiten mit Website 1.0.38 synchronisiert.
+
 ## 0.2.19 – 2026-10-18
 
 - Gemeinsame Oberfläche und Website-Versionsanzeige mit Website 1.0.37 synchronisiert.

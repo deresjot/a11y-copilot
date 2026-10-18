@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.37",
+    "version": "1.0.38",
     "releasedOn": "2026-10-18",
-    "summary": "Profiltexte und Hintergrundbilder aktualisiert; gemeinsame Seitenelemente und Barrierefreiheit geprüft."
+    "summary": "Prüfbericht um automatisierte Tests mit Playwright und axe-core im Entwicklungsalltag ergänzt."
   },
   "history": [
+    {
+      "version": "1.0.38",
+      "releasedOn": "2026-10-18",
+      "summary": "Prüfbericht um automatisierte Tests mit Playwright und axe-core im Entwicklungsalltag ergänzt."
+    },
     {
       "version": "1.0.37",
       "releasedOn": "2026-10-18",
