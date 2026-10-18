@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.40",
+    "version": "1.0.41",
     "releasedOn": "2026-10-18",
-    "summary": "Intro entfernt, mobile Copilot-Hintergründe statisch und kompakt ausgeliefert; Ladeprioritäten und Seitenübergang gestrafft."
+    "summary": "Lighthouse-Nacharbeit: gebündelte Styles, Layoutmessungen nach dem Layout und gezielte Bildprioritäten; hohe Bildqualität bewusst beibehalten."
   },
   "history": [
+    {
+      "version": "1.0.41",
+      "releasedOn": "2026-10-18",
+      "summary": "Lighthouse-Nacharbeit: gebündelte Styles, Layoutmessungen nach dem Layout und gezielte Bildprioritäten; hohe Bildqualität bewusst beibehalten."
+    },
     {
       "version": "1.0.40",
       "releasedOn": "2026-10-18",

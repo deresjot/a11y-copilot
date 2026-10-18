@@ -220,23 +220,25 @@
     if (!items.length) return;
 
     let updateFrame = 0;
-    let geometryDirty = true;
     let starts = [];
     let headerHeight = 0;
     let lastSectionEnd = 0;
     let activeItem = null;
     let activeUnderline = "";
     let activeComplete = false;
+    // ResizeObserver runs after layout. Read geometry here, before scheduling
+    // attribute/style writes for the next frame; measuring in that frame would
+    // force layout during the first paint (including pending font/style changes).
+    const measureGeometry = () => {
+      const scrollY = window.scrollY;
+      headerHeight = header.offsetHeight;
+      starts = items.map(item => item.target.getBoundingClientRect().top + scrollY);
+      lastSectionEnd = document.documentElement.scrollHeight - window.innerHeight + headerHeight + 24;
+    };
     const updateCurrentSection = () => {
       updateFrame = 0;
+      if (!starts.length) return;
       const scrollY = window.scrollY;
-      // Read layout together, only after a size change. Scrolling reuses it.
-      if (geometryDirty) {
-        headerHeight = header.offsetHeight;
-        starts = items.map(item => item.target.getBoundingClientRect().top + scrollY);
-        lastSectionEnd = document.documentElement.scrollHeight - window.innerHeight + headerHeight + 24;
-        geometryDirty = false;
-      }
       const marker = scrollY + headerHeight + 24;
       let currentIndex = 0;
       starts.forEach((start, index) => { if (start <= marker) currentIndex = index; });
@@ -273,20 +275,22 @@
     const scheduleUpdate = () => {
       if (!updateFrame) updateFrame = window.requestAnimationFrame(updateCurrentSection);
     };
-    const invalidateGeometry = () => {
-      geometryDirty = true;
+    const refreshGeometry = () => {
+      measureGeometry();
       scheduleUpdate();
     };
 
     window.addEventListener("scroll", scheduleUpdate, { passive: true });
-    window.addEventListener("resize", invalidateGeometry, { passive: true });
     window.addEventListener("hashchange", scheduleUpdate);
-    window.addEventListener("load", invalidateGeometry);
     if ("ResizeObserver" in window) {
-      const observer = new ResizeObserver(invalidateGeometry);
+      const observer = new ResizeObserver(refreshGeometry);
       for (const element of new Set([header, document.body, ...items.map(item => item.target)])) observer.observe(element);
+    } else {
+      // Older browsers still refresh after load and viewport changes.
+      window.addEventListener("resize", refreshGeometry, { passive: true });
+      window.addEventListener("load", refreshGeometry);
+      refreshGeometry();
     }
-    scheduleUpdate();
   };
 
   const lockPage = () => {

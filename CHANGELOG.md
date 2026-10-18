@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.23 – 2026-10-18
+
+- Abschnittsmessungen im gemeinsamen Header nach das Layout verlagert.
+- Stylesheets für das Produktionsbündel zusammengeführt und das unverändert hochauflösende Maskottchen nachrangig geladen.
+- Bewusste Beibehaltung der hohen Bildqualität im HTML dokumentiert.
+- Geteilte Dokumentseiten und Versionsanzeige auf Website 1.0.41 synchronisiert.
+
 ## 0.2.22 – 2026-10-18
 
 - Statischer mobiler Copilot-Hintergrund als 17-KB-WebP und exklusive Ladehinweise aus der Website übernommen.
