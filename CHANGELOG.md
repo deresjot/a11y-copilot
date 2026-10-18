@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.19 – 2026-10-18
+
+- Gemeinsame Oberfläche und Website-Versionsanzeige mit Website 1.0.37 synchronisiert.
+- Barrierefreiheitsbericht mit WebKit-Prüfnachweisen aktualisiert; bestehende manuelle Prüfgrenzen bleiben offen.
+
 ## 0.2.18 – 2026-10-17
 
 - Gemeinsame Formularvalidierung verbessert: Gleichzeitige Feldfehler werden vollständig angezeigt.
