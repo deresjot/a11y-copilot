@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.21 – 2026-10-18
+
+- Gemeinsame Abschnittsnavigation mit weniger DOM-Messungen und Attributänderungen importiert.
+- WOFF2-Schriften, frühe Ressourcenhinweise und abgestimmte zugängliche Linknamen übernommen; Bilddateien bleiben unverändert.
+- Geteilte Dokumentseiten und Versionsanzeige mit Website 1.0.39 synchronisiert.
+
 ## 0.2.20 – 2026-10-18
 
 - Geteilten Prüfbericht um die kombinierte Nutzung von Playwright und axe-core im Entwicklungsalltag ergänzt.

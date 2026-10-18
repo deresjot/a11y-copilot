@@ -1,6 +1,7 @@
   @font-face {
     font-family: "NeueMachina";
-    src: url("font/NeueMachina-Regular.woff") format("woff");
+    src: url("font/NeueMachina-Regular.woff2") format("woff2"),
+         url("font/NeueMachina-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -8,7 +9,7 @@
   /* Kiwi Soda by jeti / Font End Dev, CC BY 4.0. See font/KiwiSoda-LICENSE.txt. */
   @font-face {
     font-family: "KiwiSoda";
-    src: url("font/KiwiSoda.ttf") format("truetype");
+    src: url("font/KiwiSoda.woff2") format("woff2"), url("font/KiwiSoda.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
     font-display: swap;

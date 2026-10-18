@@ -44,13 +44,15 @@ for (const file of ["ui-system.css", "global-footer.css", "status-document.css",
 for (const file of ["sebastian-jansen-80.png", "sebastian-jansen-160.png", "footer-badge-320.png", "footer-badge-512.png", "sebastian_jansen.jpg"]) {
   await cp(resolve(portfolioRoot, "img", file), resolve(shared, "img", file));
 }
-for (const file of ["NeueMachina-Medium.woff2", "NeueMachina-Regular.woff"]) {
+for (const file of ["NeueMachina-Medium.woff2", "NeueMachina-Regular.woff2", "NeueMachina-Regular.woff"]) {
   await cp(resolve(portfolioRoot, "font", file), resolve(shared, "font", file));
+  await cp(resolve(portfolioRoot, "font", file), resolve(root, "font", file));
 }
 for (const file of ["site-header.js", "script.js"]) {
   await cp(resolve(portfolioRoot, "js", file), resolve(shared, "js", file));
 }
 await cp(resolve(portfolioRoot, "release.json"), resolve(shared, "release.json"));
+await cp(resolve(portfolioApp, "font/KiwiSoda.woff2"), resolve(root, "font/KiwiSoda.woff2"));
 
 const transformLegalHtml = value => value
   .replaceAll('href="css/', 'href="../css/')

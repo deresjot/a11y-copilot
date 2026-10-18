@@ -220,43 +220,73 @@
     if (!items.length) return;
 
     let updateFrame = 0;
+    let geometryDirty = true;
+    let starts = [];
+    let headerHeight = 0;
+    let lastSectionEnd = 0;
+    let activeItem = null;
+    let activeUnderline = "";
+    let activeComplete = false;
     const updateCurrentSection = () => {
       updateFrame = 0;
-      const marker = window.scrollY + header.offsetHeight + 24;
-      const current = items.reduce((active, item) => (
-        item.target.getBoundingClientRect().top + window.scrollY <= marker ? item : active
-      ), items[0]);
-      const currentIndex = items.indexOf(current);
-      const sectionStart = current.target.getBoundingClientRect().top + window.scrollY;
-      const nextStart = items[currentIndex + 1]?.target.getBoundingClientRect().top + window.scrollY;
-      const lastReachableMarker = document.documentElement.scrollHeight - window.innerHeight + header.offsetHeight + 24;
-      const sectionEnd = nextStart ?? Math.max(sectionStart + 1, lastReachableMarker);
+      const scrollY = window.scrollY;
+      // Read layout together, only after a size change. Scrolling reuses it.
+      if (geometryDirty) {
+        headerHeight = header.offsetHeight;
+        starts = items.map(item => item.target.getBoundingClientRect().top + scrollY);
+        lastSectionEnd = document.documentElement.scrollHeight - window.innerHeight + headerHeight + 24;
+        geometryDirty = false;
+      }
+      const marker = scrollY + headerHeight + 24;
+      let currentIndex = 0;
+      starts.forEach((start, index) => { if (start <= marker) currentIndex = index; });
+      const current = items[currentIndex];
+      const sectionStart = starts[currentIndex];
+      const sectionEnd = starts[currentIndex + 1] ?? Math.max(sectionStart + 1, lastSectionEnd);
       const progress = Math.min(1, Math.max(0, (marker - sectionStart) / Math.max(1, sectionEnd - sectionStart)));
-      const underlineRem = .25 + progress * .45;
+      const underline = `${(.25 + progress * .45).toFixed(3)}rem`;
       const isComplete = progress >= .94;
 
-      for (const item of items) {
-        if (item === current) {
-          item.link.setAttribute("aria-current", "location");
-          item.link.style.setProperty("--site-section-underline", `${underlineRem.toFixed(3)}rem`);
-          item.link.classList.toggle("is-section-progress-complete", isComplete);
-        } else {
-          item.link.style.removeProperty("--site-section-underline");
-          item.link.classList.remove("is-section-progress-complete");
-          if (item.link.getAttribute("aria-current") === "location") item.link.removeAttribute("aria-current");
+      // Write only changed state, after every layout read has finished.
+      if (current !== activeItem) {
+        for (const item of items) {
+          if (item === current) item.link.setAttribute("aria-current", "location");
+          else {
+            item.link.removeAttribute("aria-current");
+            item.link.style.removeProperty("--site-section-underline");
+            item.link.classList.remove("is-section-progress-complete");
+          }
         }
+        activeItem = current;
+        activeUnderline = "";
+        activeComplete = false;
+      }
+      if (underline !== activeUnderline) {
+        current.link.style.setProperty("--site-section-underline", underline);
+        activeUnderline = underline;
+      }
+      if (isComplete !== activeComplete) {
+        current.link.classList.toggle("is-section-progress-complete", isComplete);
+        activeComplete = isComplete;
       }
     };
     const scheduleUpdate = () => {
-      if (updateFrame) return;
-      updateFrame = window.requestAnimationFrame(updateCurrentSection);
+      if (!updateFrame) updateFrame = window.requestAnimationFrame(updateCurrentSection);
+    };
+    const invalidateGeometry = () => {
+      geometryDirty = true;
+      scheduleUpdate();
     };
 
     window.addEventListener("scroll", scheduleUpdate, { passive: true });
-    window.addEventListener("resize", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", invalidateGeometry, { passive: true });
     window.addEventListener("hashchange", scheduleUpdate);
-    window.addEventListener("load", scheduleUpdate);
-    updateCurrentSection();
+    window.addEventListener("load", invalidateGeometry);
+    if ("ResizeObserver" in window) {
+      const observer = new ResizeObserver(invalidateGeometry);
+      for (const element of new Set([header, document.body, ...items.map(item => item.target)])) observer.observe(element);
+    }
+    scheduleUpdate();
   };
 
   const lockPage = () => {

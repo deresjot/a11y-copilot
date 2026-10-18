@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-> Arbeitsstand vom 18. Oktober 2026: Version 0.2.20 übernimmt den ergänzten Prüfbericht zur Nutzung von Playwright und axe-core im Entwicklungsalltag und die gemeinsame Versionsanzeige der Website 1.0.38. Bestehende manuelle Prüfgrenzen bleiben offen.
+> Arbeitsstand vom 18. Oktober 2026: Version 0.2.21 übernimmt die optimierte globale Abschnittsnavigation, WOFF2-Schriften, frühe Ressourcenhinweise und zugänglichen Linknamen der Website 1.0.39. Bilddateien und bestehende manuelle Prüfgrenzen bleiben erhalten.
 
 Stand: 11. Oktober 2026
 
@@ -241,7 +241,7 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 
 - Repository: `https://github.com/deresjot/a11y-copilot`
 - Standardbranch: `main`
-- Aktueller funktionaler Stand: Version `0.2.20`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
+- Aktueller funktionaler Stand: Version `0.2.21`; der jeweilige Git-Commit ist die verbindliche Revisionskennung.
 - Sichtbarkeit: öffentlich
 - Lokaler Standalone-Build: `npm run build`; Ausgabe unter `dist/`
 - Portfolio-Integration: Website-Release `1.0.35` vom 11. Oktober 2026. Die Auslieferung erfolgt über den festgelegten SSH-Dienst und wird im Website-Repository dokumentiert.
