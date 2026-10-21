@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.41",
-    "releasedOn": "2026-10-18",
-    "summary": "Lighthouse-Nacharbeit: gebündelte Styles, Layoutmessungen nach dem Layout und gezielte Bildprioritäten; hohe Bildqualität bewusst beibehalten."
+    "version": "1.0.42",
+    "releasedOn": "2026-10-21",
+    "summary": "Maskottchen als Link-Vorschaubild für a11y-copilot und Anleitung hinterlegt."
   },
   "history": [
+    {
+      "version": "1.0.42",
+      "releasedOn": "2026-10-21",
+      "summary": "Maskottchen als Link-Vorschaubild für a11y-copilot und Anleitung hinterlegt."
+    },
     {
       "version": "1.0.41",
       "releasedOn": "2026-10-18",
