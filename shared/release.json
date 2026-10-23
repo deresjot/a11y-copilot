@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.44",
+    "version": "1.0.45",
     "releasedOn": "2026-10-23",
-    "summary": "VoiceOver-Nachtest mit tatsächlichen Ansagetexten dokumentiert: Navigation, Formularfehler, Kopieren, Anleitung und Dialog-Rückwege."
+    "summary": "Tagesabschluss: VoiceOver-Rotor und leere Formularvalidierung nachgeprüft; Prüfstand und Restprüfungen aktualisiert."
   },
   "history": [
+    {
+      "version": "1.0.45",
+      "releasedOn": "2026-10-23",
+      "summary": "Tagesabschluss: VoiceOver-Rotor und leere Formularvalidierung nachgeprüft; Prüfstand und Restprüfungen aktualisiert."
+    },
     {
       "version": "1.0.44",
       "releasedOn": "2026-10-23",
