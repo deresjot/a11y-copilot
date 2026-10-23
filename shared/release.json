@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.42",
-    "releasedOn": "2026-10-21",
-    "summary": "Maskottchen als Link-Vorschaubild für a11y-copilot und Anleitung hinterlegt."
+    "version": "1.0.43",
+    "releasedOn": "2026-10-23",
+    "summary": "Safari-Nachtest dokumentiert: Tastaturwege bestätigt, VoiceOver-Prüfgrenzen transparent aktualisiert."
   },
   "history": [
+    {
+      "version": "1.0.43",
+      "releasedOn": "2026-10-23",
+      "summary": "Safari-Nachtest dokumentiert: Tastaturwege bestätigt, VoiceOver-Prüfgrenzen transparent aktualisiert."
+    },
     {
       "version": "1.0.42",
       "releasedOn": "2026-10-21",
