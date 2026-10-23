@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.43",
+    "version": "1.0.44",
     "releasedOn": "2026-10-23",
-    "summary": "Safari-Nachtest dokumentiert: Tastaturwege bestätigt, VoiceOver-Prüfgrenzen transparent aktualisiert."
+    "summary": "VoiceOver-Nachtest mit tatsächlichen Ansagetexten dokumentiert: Navigation, Formularfehler, Kopieren, Anleitung und Dialog-Rückwege."
   },
   "history": [
+    {
+      "version": "1.0.44",
+      "releasedOn": "2026-10-23",
+      "summary": "VoiceOver-Nachtest mit tatsächlichen Ansagetexten dokumentiert: Navigation, Formularfehler, Kopieren, Anleitung und Dialog-Rückwege."
+    },
     {
       "version": "1.0.43",
       "releasedOn": "2026-10-23",
