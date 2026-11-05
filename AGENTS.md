@@ -1,5 +1,11 @@
 # Project instructions
 
+## Public release notes
+
+- Keep changelog entries brief and focused on user-visible outcomes. Describe maintenance work in general terms.
+- Keep detailed operational and security verification records in the private portfolio development documentation, outside this public repository and the published application.
+- Preserve meaningful accessibility limitations; do not imply security or conformance guarantees.
+
 ## Shared website shell
 
 - The canonical a11y-copilot website UI, including the shared header and footer, is maintained in the sibling portfolio repository `deresjot-web/source`.
