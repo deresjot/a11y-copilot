@@ -1,24 +1,34 @@
 {
   "current": {
-    "version": "1.0.45",
-    "releasedOn": "2026-10-23",
-    "summary": "Tagesabschluss: VoiceOver-Rotor und leere Formularvalidierung nachgeprüft; Prüfstand und Restprüfungen aktualisiert."
+    "version": "1.0.47",
+    "releasedOn": "2026-11-05",
+    "summary": "Fachliche Grundlagen und Anleitung des a11y-copilot sowie Website-Inhalte aktualisiert."
   },
   "history": [
     {
+      "version": "1.0.47",
+      "releasedOn": "2026-11-05",
+      "summary": "Fachliche Grundlagen und Anleitung des a11y-copilot sowie Website-Inhalte aktualisiert."
+    },
+    {
+      "version": "1.0.46",
+      "releasedOn": "2026-10-29",
+      "summary": "Kontaktfunktion und allgemeine Zuverlässigkeit verbessert."
+    },
+    {
       "version": "1.0.45",
       "releasedOn": "2026-10-23",
-      "summary": "Tagesabschluss: VoiceOver-Rotor und leere Formularvalidierung nachgeprüft; Prüfstand und Restprüfungen aktualisiert."
+      "summary": "Prüfstand und Begleitinformationen aktualisiert."
     },
     {
       "version": "1.0.44",
       "releasedOn": "2026-10-23",
-      "summary": "VoiceOver-Nachtest mit tatsächlichen Ansagetexten dokumentiert: Navigation, Formularfehler, Kopieren, Anleitung und Dialog-Rückwege."
+      "summary": "Bedienbarkeit mit assistiven Technologien nachgeprüft und dokumentiert."
     },
     {
       "version": "1.0.43",
       "releasedOn": "2026-10-23",
-      "summary": "Safari-Nachtest dokumentiert: Tastaturwege bestätigt, VoiceOver-Prüfgrenzen transparent aktualisiert."
+      "summary": "Bedienungsprüfung und Hinweise zur Zugänglichkeit aktualisiert."
     },
     {
       "version": "1.0.42",
@@ -28,27 +38,27 @@
     {
       "version": "1.0.41",
       "releasedOn": "2026-10-18",
-      "summary": "Lighthouse-Nacharbeit: gebündelte Styles, Layoutmessungen nach dem Layout und gezielte Bildprioritäten; hohe Bildqualität bewusst beibehalten."
+      "summary": "Ladeverhalten und Darstellung verbessert."
     },
     {
       "version": "1.0.40",
       "releasedOn": "2026-10-18",
-      "summary": "Intro entfernt, mobile Copilot-Hintergründe statisch und kompakt ausgeliefert; Ladeprioritäten und Seitenübergang gestrafft."
+      "summary": "Direkten Seitenstart und mobile Darstellung verbessert."
     },
     {
       "version": "1.0.39",
       "releasedOn": "2026-10-18",
-      "summary": "Ladeverhalten, Schriftauslieferung und Abschnittsnavigation verbessert; zugängliche Linknamen abgestimmt."
+      "summary": "Ladeverhalten und Orientierung verbessert."
     },
     {
       "version": "1.0.38",
       "releasedOn": "2026-10-18",
-      "summary": "Prüfbericht um automatisierte Tests mit Playwright und axe-core im Entwicklungsalltag ergänzt."
+      "summary": "Informationen zur laufenden Qualitätsprüfung ergänzt."
     },
     {
       "version": "1.0.37",
       "releasedOn": "2026-10-18",
-      "summary": "Profiltexte und Hintergrundbilder aktualisiert; gemeinsame Seitenelemente und Barrierefreiheit geprüft."
+      "summary": "Profil, Darstellung und Begleitinformationen aktualisiert."
     },
     {
       "version": "1.0.36",
@@ -68,7 +78,7 @@
     {
       "version": "1.0.33",
       "releasedOn": "2026-10-07",
-      "summary": "Overlay Fact Sheet im globalen Footer ergänzt, Sounddesign aus Profil-Metadaten entfernt und automatisierten Prüfbericht aktualisiert."
+      "summary": "Profilangaben, Verweise und Prüfbericht aktualisiert."
     },
     {
       "version": "1.0.32",
@@ -78,7 +88,7 @@
     {
       "version": "1.0.31",
       "releasedOn": "2026-09-18",
-      "summary": "Kontaktformular als gemeinsame Komponente für Seite und Dokumentdialoge abgesichert."
+      "summary": "Kontaktfunktion vereinheitlicht."
     },
     {
       "version": "1.0.30",
@@ -103,7 +113,7 @@
     {
       "version": "1.0.26",
       "releasedOn": "2026-09-18",
-      "summary": "Kontakt, Barrieremeldung, Datenschutz und manuelle Prüfgrundlage verbessert"
+      "summary": "Kontakt, Barrieremeldung und Nutzungshinweise verbessert."
     },
     {
       "version": "1.0.25",
@@ -123,7 +133,7 @@
     {
       "version": "1.0.22",
       "releasedOn": "2026-09-17",
-      "summary": "Fragment-Intro, globale Header-Übergänge und Suchdarstellung verbessert"
+      "summary": "Seitenübergänge und Auffindbarkeit verbessert."
     },
     {
       "version": "1.0.21",
@@ -133,7 +143,7 @@
     {
       "version": "1.0.20",
       "releasedOn": "2026-09-13",
-      "summary": "a11y-copilot: mobile Darstellung, Safari-Navigation, verständliche Inhalte und KI-Sicherungen verbessert."
+      "summary": "a11y-copilot: mobile Darstellung, Orientierung und Inhalte verbessert."
     },
     {
       "version": "1.0.19",

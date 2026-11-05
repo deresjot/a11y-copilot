@@ -1,5 +1,8 @@
 # Übergabe: a11y-copilot
 
+> Releasevorbereitung 0.2.24 vom 5. November 2026: Strategie und Pflege, KI-Regressionen, Nutzungspfade und Grenzen synthetischer Personas ergänzt. Fachliche Dateien werden im Standalone-Repository gepflegt und mit `npm run sync:portfolio` in die Website übertragen; die Oberfläche kommt anschließend mit `npm run sync:app` aus dem Portfolio zurück. Markdown-Bündel werden generiert. Neue LLM-Gegenproben sind spezifiziert; daraus folgt noch kein bestandener Modelllauf.
+
+
 > Arbeitsstand vom 18. Oktober 2026: Version 0.2.23 übernimmt die Layoutmessungen nach dem Layout, zusammengeführte Styles und gezielte Bildprioritäten aus Website 1.0.41. Die hohe Bildqualität bleibt bewusst erhalten.
 
 > Vorheriger Stand: Version 0.2.21 übernimmt die optimierte globale Abschnittsnavigation, WOFF2-Schriften, frühe Ressourcenhinweise und zugänglichen Linknamen der Website 1.0.39. Bilddateien und bestehende manuelle Prüfgrenzen bleiben erhalten.

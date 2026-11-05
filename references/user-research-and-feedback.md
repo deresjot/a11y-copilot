@@ -14,6 +14,10 @@ Community-Beiträge, Supportfälle und einzelne Erfahrungsberichte sind qualitat
 - Vergüte Beteiligung angemessen und plane barrierefreie Rekrutierung, Einwilligung, Termine, Materialien und Kommunikationswege.
 - Trenne beobachtete Evidenz von Interpretation. Eine Person spricht für ihre Erfahrung, nicht stellvertretend für alle Menschen mit derselben Behinderung.
 
+## KI-Personas
+
+Synthetische Personas und KI-simulierte Nutzung können Hypothesen und frühe Prüfszenarien anregen. Sie zählen weder als Beteiligung behinderter Menschen noch als beobachtete Nutzungsevidenz und ersetzen keine Tests mit Menschen. Kennzeichne simulierte Aussagen als solche; überprüfe daraus abgeleitete Annahmen mit geeigneter Forschung.
+
 ## Rückmeldungen im Betrieb
 
 Ein wirksamer Rückmeldeweg ist auffindbar, mit assistiven Technologien nutzbar und verlangt keine unnötigen Angaben. Für einen einfachen Rückkanal können eine Antwortadresse und eine freie Beschreibung ausreichen. Die betroffene Seite, Aufgabe, Gerät, Browser oder assistive Technologie können bei Bedarf im Freitext stehen oder später erfragt werden; eine Diagnose oder Begründung darf nie vorausgesetzt werden.

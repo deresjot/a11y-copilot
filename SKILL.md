@@ -17,6 +17,7 @@ Bestimme vor der Normauswahl, ob Webinhalt, Non-Web-Dokument, Software oder ande
 
 Lies anschließend nur die Referenzen und Patterns, die für den Prüfgegenstand relevant sind:
 
+- Strategie, Zuständigkeiten, Wissenspflege oder Übergaben: [Strategie und Pflege](references/governance-and-maintenance.md)
 - Normstatus, WCAG, EN, BITV oder Recht: [Standards](references/standards.md)
 - vollständiger Test, Auditplanung oder Befundbericht: [Testing](references/testing.md)
 - automatisierte Regelprofile, axe-core, ACT, EN 301 549 oder Versionswechsel: [Automatisierte Rulesets](references/automated-rulesets.md) und [`rulesets/catalog.json`](rulesets/catalog.json)
@@ -111,13 +112,14 @@ WCAG 2.2 enthält 4.1.1 Parsing nicht mehr. Für HTML und XML gilt das Kriterium
 Wende diesen Abschnitt bei einem Umsetzungsauftrag an. Ein Review oder eine Wissensfrage erteilt keinen Änderungsauftrag.
 
 - Leite aus erkannten Barrieren konkrete Folgen für Anforderungen, Gestaltung, Inhalt, Technik, Tests, Dokumentation und Betrieb ab, soweit sie für den Auftrag wesentlich sind.
+- Ermittle zuerst vorhandene Komponenten, Projektkonventionen und bekannte Prüfgrenzen. Nutze passende, im relevanten Zustand geprüfte Komponenten; validiere Änderungen daran erneut.
 - Bevorzuge passendes natives HTML und eine einfache Informationsarchitektur.
 - Erhalte DOM-, Lese-, Fokus- und visuelle Reihenfolge in einem nachvollziehbaren Verhältnis.
 - Nutze ARIA nur für tatsächlich benötigte Semantik und halte Zustände mit dem UI synchron.
 - Implementiere für Custom Widgets das vollständige Tastatur- und Fokusmodell; Semantik allein erzeugt kein Verhalten.
 - Vermeide Reparaturen, die eine Barriere in einen anderen Nutzungskanal verschieben.
 - Ändere keine fachlich oder rechtlich relevante Aussage allein auf Grundlage eines automatisierten Tools.
-- Teste die konkrete Änderung einschließlich angrenzender Zustände und regressionsgefährdeter Komponenten.
+- Trenne den Retest bekannter Befunde von der Prüfung neu erzeugter Oberfläche. Erfasse neue und betroffene bestehende Komponenten und prüfe relevante Zustände, Namen, Rollen, Fokusziele, Bestätigung, Abbruch und Rückkehr. Ein erfolgreicher Retest bestätigt keine Fehlerfreiheit neuer UI; dokumentiere nicht ausgeführte Bedienungsprüfungen.
 - Formuliere bei nichttechnischen Aufgaben entsprechend prüfbare Ergebnisse: Entscheidungskriterien, Ausschreibungstexte, Akzeptanzkriterien, Research-Fragen, Redaktionsregeln, Testpläne, Befunde, Priorisierung oder Maßnahmen für Betrieb und Support.
 
 ## 7. Befunde bewerten und berichten

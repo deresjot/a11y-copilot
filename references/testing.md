@@ -5,6 +5,7 @@ Diese Referenz übersetzt WCAG 2.2 in eine eigenständige, handhabbare Prüfstru
 ## Inhalt
 
 - [Scope und Stichprobe](#scope-und-stichprobe)
+- [Änderungen und Nutzungspfade](#änderungen-und-nutzungspfade)
 - [Prüfstatus](#prüfstatus)
 - [Prüfreihenfolge](#prüfreihenfolge)
 - [Werkzeugunabhängige Prüfroutinen](#werkzeugunabhängige-prüfroutinen)
@@ -20,6 +21,20 @@ Diese Referenz beschreibt die Abdeckung einer umfassenden Prüfung. Bei einem fo
 Definiere Standard, Version, Konformitätslevel, Produktstand und Testzeitpunkt. Erfasse gemeinsame Seiten, unterschiedliche Seitentypen, zentrale Funktionen, Technologien, Medien, Dokumente, Drittinhalte und komplette Prozesse. Ein Prozess umfasst alle notwendigen Schritte bis zum Ergebnis, nicht nur einen einzelnen Screen.
 
 Bei einer Stichprobe müssen typische und risikoreiche Varianten enthalten sein: Start- und Inhaltsseiten, Navigation, Suche, Formulare, Authentifizierung, Fehlerzustände, Transaktionen, responsive Varianten und dynamische Widgets. Konformität kann nur für tatsächlich vollständig geprüfte Seiten und vollständige Prozesse bewertet werden; Änderungen nach dem Test können das Ergebnis entwerten.
+
+## Änderungen und Nutzungspfade
+
+Beschreibe für einen relevanten Nutzungspfad:
+
+- Ausgangszustand, Produktstand, Ziel und notwendige Voraussetzungen;
+- sichtbare Aufgabe, Rolle und zugänglichen Namen der verwendeten Elemente;
+- Eingabe oder Aktion sowie erwartetes und tatsächlich beobachtetes Ergebnis;
+- Fehler, Abbruch, Rückkehr und Wiederaufnahme, soweit für den Pfad relevant;
+- Prüfmittel, Ergebnis und verbleibende Grenzen.
+
+Bei einer Änderung teste bekannte Befunde gezielt nach. Erfasse zusätzlich neu erzeugte und betroffene bestehende Komponenten: Eine neue Bestätigung kann den Ausgangsbefund beheben und zugleich unbeschriftete Fokusziele oder neue Tastaturprobleme einführen. Prüfe diese Oberfläche eigenständig und beziehe vergleichbare bestehende Komponenten ein, soweit die Änderung sie betrifft. Automatische Tests und Code-Inspektion belegen keine tatsächlich ausgeführte Screenreader-Prüfung. Für native Apps wähle passende Plattformkomponenten und assistive Technologien; Web-Ergebnisse sind nicht ohne Prüfung übertragbar.
+
+Automatisiere passende Abläufe über Rollen und zugängliche Namen. DOM-Selektoren bleiben für technische Zustandskontrollen sinnvoll, ersetzen aber keine Prüfung der nutzbaren Semantik. Ein programmatisches Aktivieren allein belegt keine Tastaturbedienung. [UCDL](https://ucdl.org/) beschreibt einen optionalen Ansatz für lesbare Nutzungspfade und deren Automatisierung. Es ist kein W3C-Standard und kein vollständiger Konformitätsnachweis. Prüfe Spezifikation, Runner und Mehrwert in einem Pilot, bevor eine zusätzliche Abhängigkeit eingeführt wird.
 
 ## Prüfstatus
 

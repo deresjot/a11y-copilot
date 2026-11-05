@@ -16,6 +16,12 @@ WCAG 2.2 ist dabei die Zielbasis für Webinhalte. Bei Non-Web-Dokumenten, Softwa
 
 Normfassungen und automatisierte Prüfregeln ändern sich unabhängig voneinander. Der jeweils vereinbarte Standard wird deshalb als fachliches Profil behandelt und erst danach mit einem konkreten Werkzeugadapter verbunden. Die versionierte Zuordnung für axe-core, ACT, EN 301 549, Best Practices und experimentelle Regeln steht in [Automatisierte Rulesets und Versionswechsel](references/automated-rulesets.md); die maschinenlesbare Konfiguration liegt unter [`rulesets/`](rulesets/). Dadurch kann eine künftige normative Grundlage wie WCAG 3 ergänzt werden, ohne WCAG 2.2, historische Nachweise oder werkzeugspezifische Regeln stillschweigend umzudeuten.
 
+## Änderungen mit KI absichern
+
+Ermittle vor einer Umsetzung die vorhandenen Komponenten, Projektkonventionen und ihre bekannten Prüfgrenzen. Verwende passende, im relevanten Zustand geprüfte Lösungen weiter und validiere Änderungen daran erneut. Vertrauter Code oder eine Wissensgrundlage allein belegen kein korrektes Ergebnis.
+
+Trenne den Retest bekannter Befunde von der Prüfung neu erzeugter Oberfläche. Prüfe neue und betroffene bestehende Komponenten einschließlich Fehler-, Bestätigungs-, Abbruch- und Rückwegen. Ein behobener Ausgangsbefund bestätigt keine Fehlerfreiheit neuer Dialoge oder Bedienelemente. Nicht ausgeführte Bedienungsprüfungen bleiben ausdrücklich offen. Die [Prüfung von Änderungen und Nutzungspfaden](references/testing.md#änderungen-und-nutzungspfade) konkretisiert das Vorgehen.
+
 ## So ist diese Quelle zu lesen
 
 Die Datei unterscheidet zwischen normativen Anforderungen, technisch belastbaren Umsetzungen, Best Practices, Komponenten-Patterns und Entscheidungen, die vom Produktkontext abhängen. Eine normative Aussage nennt die zugrunde liegende Norm oder Spezifikation und berücksichtigt Geltungsbereich, Level, Definitionen und Ausnahmen. Eine etablierte technische Lösung bleibt im Zielsystem zu testen. APG-Patterns und verbreitete Best Practices werden nicht dadurch zu WCAG-Anforderungen, dass sie sinnvoll oder häufig verwendet sind.
@@ -76,6 +82,8 @@ Digitale Barrierefreiheit erzeugt nicht nur technische Aufgaben. Aus einem erkan
 - Veröffentlichung und Betrieb benötigen Monitoring, erreichbare Rückmeldewege, Priorisierung, nachvollziehbare Behebung, Regressionsschutz und transparente Kommunikation über bekannte Einschränkungen.
 
 Welche Ableitung relevant ist, hängt vom Auftrag und Artefakt ab. Eine Codefrage kann eine unklare Anforderung offenlegen; ein wiederkehrender Inhaltsfehler kann eine Redaktions- oder Systementscheidung erfordern; eine Barriere eines eingekauften Produkts kann Beschaffung, Vertrag, Support und Alternativprozess betreffen. Der Copilot soll diese Zusammenhänge sichtbar machen, ohne jede Antwort künstlich auf alle Phasen auszuweiten.
+
+Für Strategieaufgaben verbinde prüfbare Anforderungen mit gemeinsamer Verantwortung und der Befähigung der beteiligten Teams. Halte Wissen, Entscheidungen, Pflege und Übergaben auffindbar; wähle den Umfang passend zur Organisation. Der [Strategie- und Pflegecheck](references/governance-and-maintenance.md) konkretisiert diese nicht normative Entscheidungshilfe.
 
 ## Nutzerforschung und Rückmeldungen
 

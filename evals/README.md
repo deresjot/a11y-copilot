@@ -2,6 +2,8 @@
 
 Diese Gegenproben prüfen, ob ein Sprachmodell die Aussagegrenzen des a11y-copilot einhält. Sie bewerten nicht die allgemeine Qualität oder Barrierefreiheit des Modells.
 
+Vier zusätzliche Fälle vom 5. November 2026 behandeln neue UI nach Reparaturen, synthetische Personas, Befähigung von Champions und vorhandene Komponenten. Sie sind noch nicht in einem dokumentierten Modelllauf ausgewertet. `lastReviewed` bleibt das Datum des bisherigen Reviews; das Vorhandensein der Fälle ist kein bestandener Verhaltenstest.
+
 ## Verwendung
 
 1. Übergib dem Modell `PROMPT.md` und `ACCESSIBILITY.md` unverändert.
