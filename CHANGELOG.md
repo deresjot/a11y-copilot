@@ -2,6 +2,11 @@
 
 Die Einträge beschreiben die wesentlichen Änderungen für die Nutzung.
 
+## 0.2.25 – 2026-11-06
+
+- Hinweise zu KI, Selbstbestimmung und kritischer Prüfung von Antworten ergänzt.
+- Anleitung und Zugänglichkeit bei Zustandswechseln verbessert.
+
 ## 0.2.24 – 2026-11-05
 
 - Fachliche Grundlagen, Anleitung und laufende Pflege erweitert.

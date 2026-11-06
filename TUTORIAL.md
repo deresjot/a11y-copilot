@@ -14,7 +14,7 @@ Arbeitet die KI direkt in deinem Code-Projekt? Gib ihr zusätzlich [SKILL.md](SK
 
 ## Schritt 3 von 5: Zeige die echte Stelle
 
-Sende den Text, Code, Screenshot oder Link. Schreibe dazu, was eine Person dort tun möchte. Zum Beispiel:
+Sende den Text, Code, Screenshot oder Link. Schreibe dazu, was eine Person dort tun möchte. Nutze möglichst anonymisierte Ausschnitte und beachte die Datenregeln deines KI-Dienstes. Zum Beispiel:
 
 > Nach einem Fehler soll die Person das Formular korrigieren können. Ihre Eingaben dürfen nicht verloren gehen.
 
@@ -26,10 +26,10 @@ Die Antwort soll sofort zeigen:
 - **Geändert:** Was ist jetzt anders?
 - **Offen:** Was muss noch geprüft werden?
 
-Für wichtige Aussagen soll die KI eine Quelle nennen. Vermutungen müssen als Vermutung erkennbar sein.
+Die Startanweisung fordert eine kritische Selbstprüfung: Annahmen hinterfragen, wichtige Aussagen belegen, Gegenargumente und Grenzen nennen. Das garantiert keine richtige Antwort. Prüfe die Belege und widersprich bei Fehlern.
 
 ## Schritt 5 von 5: Teste den ganzen Weg
 
-Probiere die Änderung im echten Produkt aus. Nutze passende Tests: zum Beispiel Tastatur, Zoom, kleinen Bildschirm oder Screenreader.
+Probiere die Änderung im echten Produkt aus. Teste bekannte Fehler nach und prüfe neue sowie betroffene bestehende Bedienelemente, einschließlich Abbruch und Rückkehr. Nutze passende Tests: zum Beispiel Tastatur, Zoom, kleinen Bildschirm oder Screenreader.
 
-Die KI hilft. Sie kann einen echten Test nicht ersetzen.
+Halte fest, was geprüft wurde. Prüfe auch Inhalt und Bedeutung. Nicht ausgeführte Tests bleiben offen.

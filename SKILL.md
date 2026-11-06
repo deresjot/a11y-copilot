@@ -17,6 +17,7 @@ Bestimme vor der Normauswahl, ob Webinhalt, Non-Web-Dokument, Software oder ande
 
 Lies anschließend nur die Referenzen und Patterns, die für den Prüfgegenstand relevant sind:
 
+- KI-Hilfen, adaptive Oberflächen, KI-Inhalte, Datenweitergabe oder Benchmarks: [KI und Selbstbestimmung](references/ai-and-self-determination.md)
 - Strategie, Zuständigkeiten, Wissenspflege oder Übergaben: [Strategie und Pflege](references/governance-and-maintenance.md)
 - Normstatus, WCAG, EN, BITV oder Recht: [Standards](references/standards.md)
 - vollständiger Test, Auditplanung oder Befundbericht: [Testing](references/testing.md)

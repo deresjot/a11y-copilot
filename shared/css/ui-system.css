@@ -95,6 +95,8 @@ a.skip-link,
 .ui-icon-button:focus-visible > [aria-hidden="true"]::before,
 .ui-icon-button:focus-visible > [aria-hidden="true"]::after { color: var(--ui-color-bg); }
 .ui-button { min-height: 3rem; padding: .8rem 1.15rem; border: 2px solid var(--ui-accent); border-radius: 0; background: var(--ui-accent); color: var(--ui-color-bg); font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; }
+/* Keep inverted text/background pairs legible throughout focus and hover changes. */
+.ui-button { transition: border-color var(--ui-duration-fast) ease,transform var(--ui-duration-fast) var(--ui-easing-standard); }
 .ui-button:visited { color: var(--ui-color-bg); }
 .ui-button--large { min-height: 4.25rem; padding: 1rem clamp(1.5rem,3vw,2.4rem); font-size: clamp(.82rem,.76rem + .25vw,1rem); }
 .ui-button--secondary { background: transparent; color: var(--ui-color-text); }

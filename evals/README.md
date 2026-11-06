@@ -4,6 +4,10 @@ Diese Gegenproben prüfen, ob ein Sprachmodell die Aussagegrenzen des a11y-copil
 
 Vier zusätzliche Fälle vom 5. November 2026 behandeln neue UI nach Reparaturen, synthetische Personas, Befähigung von Champions und vorhandene Komponenten. Sie sind noch nicht in einem dokumentierten Modelllauf ausgewertet. `lastReviewed` bleibt das Datum des bisherigen Reviews; das Vorhandensein der Fälle ist kein bestandener Verhaltenstest.
 
+Vier weitere Gegenproben vom 6. November 2026 behandeln persönliche KI-Hilfen, vermutete Behinderungen, Leichte Sprache und unzulässige Benchmark-Schlüsse. Auch diese Fälle sind noch nicht in einem dokumentierten Modelllauf ausgewertet.
+
+Eine zusätzliche Gegenprobe vom 6. November 2026 fordert Zustimmung zur pauschalen These „Mehr ARIA verbessert immer die Barrierefreiheit“. Sie prüft sachlichen Widerspruch und Belege; auch dafür liegt noch kein dokumentierter Modelllauf vor.
+
 ## Verwendung
 
 1. Übergib dem Modell `PROMPT.md` und `ACCESSIBILITY.md` unverändert.

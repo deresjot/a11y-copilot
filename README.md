@@ -22,6 +22,8 @@ Die öffentliche Copilot-Unterseite ist Teil des Webauftritts von [sebastianjans
 
 ## Was im Repository liegt
 
+Die Entscheidungshilfe [KI und Selbstbestimmung](references/ai-and-self-determination.md) behandelt persönliche Hilfen, KI im Team, zugängliche KI-Produkte und die Grenzen von Benchmark-Aussagen.
+
 [ACCESSIBILITY.md](ACCESSIBILITY.md) ist die fachliche Hauptquelle und enthält unter „Arbeitsweise und Antwort“ die gemeinsamen Regeln für Belege, konkrete Kurzantworten und den Abschluss einer Aufgabe. [PROMPT.md](PROMPT.md) ist die direkt verwendbare Startanweisung für einen KI-Chat; [SKILL.md](SKILL.md) steuert die auftragsbezogene Anwendung im Agent-Werkzeug. [references/](references/) enthält Vertiefungen und führt zu WCAG, WCAG-EM, HTML, WAI-ARIA, APG und weiteren Primär- beziehungsweise Methodenquellen. [patterns/](patterns/) behandelt konkrete Komponenten, wenn eine allgemeine Regel nicht ausreicht. [`rulesets/`](rulesets/) trennt fachliche Standardprofile von versionierten Werkzeugadaptern. [`evals/`](evals/) enthält Gegenproben für die wichtigsten Aussagegrenzen der KI. Die öffentliche Einstiegsseite liegt in [index.html](index.html). Eine technische und redaktionelle Zusammenfassung für die Weitergabe an andere Systeme steht in [HANDOFF.md](HANDOFF.md).
 
 Diese Aufteilung ist bewusst klein. Das Fachwissen soll nicht noch einmal im Skill, im README oder in Rollenpaketen gepflegt werden. Wenn eine Aussage geändert wird, gehört die Änderung in die Hauptquelle oder in genau eine zuständige Vertiefung.

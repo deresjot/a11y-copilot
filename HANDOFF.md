@@ -1,5 +1,7 @@
 # Übergabe: a11y-copilot
 
+Releasevorbereitung 0.2.25 vom 6. November 2026: Hinweise zu KI und Selbstbestimmung, Inhaltsprüfung und kritischer Antwortprüfung ergänzt. Startpaket, Fachgrundlage und beide Anleitungsfassungen sind abgestimmt. Die Gegenproben umfassen nun 17 Fälle; die neuen Fälle wurden noch nicht mit Modellen ausgewertet.
+
 > Releasevorbereitung 0.2.24 vom 5. November 2026: Strategie und Pflege, KI-Regressionen, Nutzungspfade und Grenzen synthetischer Personas ergänzt. Fachliche Dateien werden im Standalone-Repository gepflegt und mit `npm run sync:portfolio` in die Website übertragen; die Oberfläche kommt anschließend mit `npm run sync:app` aus dem Portfolio zurück. Markdown-Bündel werden generiert. Neue LLM-Gegenproben sind spezifiziert; daraus folgt noch kein bestandener Modelllauf.
 
 

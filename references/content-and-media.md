@@ -10,6 +10,8 @@
 
 Einfache Sprache oder Leichte Sprache kann Menschen unterstützen, ist aber nicht für jeden Inhalt dieselbe normative Pflicht. Zielgruppe, rechtlicher Kontext und Informationsverlust sind abzuwägen.
 
+KI-Entwürfe brauchen einen Vergleich mit dem Ausgangsinhalt: Bedeutung, Auslassungen, Kontext und notwendige Erklärungen. Weise sie ohne passende Prüfung nicht als geprüfte Leichte Sprache aus. Persönlich angeforderte Beschreibungen und veröffentlichte Alternativtexte haben unterschiedliche Nutzungskontexte. Mehr: [KI und Selbstbestimmung](ai-and-self-determination.md#inhalte-vor-veröffentlichung-prüfen).
+
 ## Alternativtexte
 
 Frage: Welche Information oder Funktion würde fehlen, wenn das Bild nicht sichtbar wäre? Formuliere genau diese Information im Kontext. Bei verlinkten Bildern beschreibt der Name meist das Ziel. Bei Diagrammen gehören Kernaussage und Datenzugang zusammen. Dekorative Wiederholungen erhalten leeres `alt`; ein fehlendes `alt` ist technisch etwas anderes.
