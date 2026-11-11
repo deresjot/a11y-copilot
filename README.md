@@ -1,6 +1,6 @@
 # a11y-copilot
 
-`a11y-copilot` ist kein automatisches Prüfprogramm. Es ist eine öffentlich einsehbare Sammlung aus Anweisungen, Fachwissen und Quellen für Fragen zur digitalen Barrierefreiheit. Du gibst sie einer KI zusammen mit einer konkreten Aufgabe und dem Material, das sie untersuchen soll.
+`a11y-copilot` verbindet eine öffentlich einsehbare Wissensbasis mit KI-gestützter Qualitätssicherung für digitale Barrierefreiheit. Anweisungen, Fachwissen und Quellen unterstützen beim Analysieren, Planen und Bewerten von Tests. Du gibst sie einer KI zusammen mit einer konkreten Aufgabe und dem Material, das sie untersuchen soll.
 
 Die KI kann damit Texte, Gestaltung, Code und Nutzungsschritte analysieren, Anforderungen und Lösungen vorschlagen und – mit dem nötigen Zugriff – Änderungen umsetzen und verfügbare Tests ausführen. Das Ergebnis muss anschließend im echten Produkt geprüft werden. Der Copilot garantiert weder Barrierefreiheit noch Konformität, ersetzt keinen vollständigen Audit oder Tests mit Menschen und leistet keine Rechtsberatung.
 
@@ -40,7 +40,7 @@ Der universelle Kern basiert auf [WCAG 2.2](https://www.w3.org/TR/WCAG22/), dem 
 
 WCAG 2.2 ist die Zielbasis für Webinhalte. Für Non-Web-Dokumente, Software und andere ICT bestimmt das Toolkit zuerst den Artefakttyp und den anwendbaren Norm-, Plattform-, Vertrags- und Rechtsrahmen. [WCAG2ICT](https://www.w3.org/TR/wcag2ict-22/) ist dafür eine informative Auslegungshilfe, kein eigener Konformitätsstandard. Bei EN 301 549 werden veröffentlichte Normfassung, Harmonisierung im EU-Amtsblatt und konkrete rechtliche oder vertragliche Verbindlichkeit getrennt ausgewiesen.
 
-Welche Aussage normativ ist, entscheidet die jeweilige Primärquelle, nicht dieses Repository und nicht die LLM. Rechtliche Anforderungen wie BITV, EN 301 549 oder BFSG werden getrennt eingeordnet. Das Toolkit leistet keine Rechtsberatung.
+Welche Aussage normativ ist, entscheidet die jeweilige Primärquelle, nicht dieses Repository und nicht die LLM. Standards wie EN 301 549 und rechtliche Vorgaben wie BITV oder BFSG werden getrennt eingeordnet. Das Toolkit leistet keine Rechtsberatung.
 
 ## Was das Ergebnis bedeutet
 
@@ -55,3 +55,11 @@ Dieses Repository ist derzeit öffentlich, aber es ist noch keine Lizenz festgel
 Die Startseite verwendet lokale Dateien der Schriftfamilie Neue Machina aus sebastianjansen.com. Die Nutzungs- und Distributionsrechte für diese Fontdateien müssen ausdrücklich geprüft werden; eine spätere Projektlizenz schließt sie nicht automatisch ein. Bis zur Klärung sollte auch die öffentliche Repository-Sichtbarkeit bewusst bewertet werden.
 
 Die Wortmarke verwendet lokal **Kiwi Soda** von jeti unter [CC BY 4.0](font/KiwiSoda-LICENSE.txt). Die erforderliche Namensnennung und die Herkunft der Fontdatei sind im Repository dokumentiert.
+
+## KI-Prüflauf Barrierefreiheit
+
+Der [Prüfauftrag mit Testübersicht](references/ai-test-run.md) verbindet die Wissensbasis mit vorhandenen automatisierten Tests, fachlicher Befundbewertung und Retests. Der Copilot selbst ist keine Prüfengine. Tests führt der eingesetzte KI-Assistent nur mit dem nötigen Projekt- und Werkzeugzugriff aus; manuelle Prüfungen und Tests mit Menschen bleiben erforderlich.
+
+## Vom Projektproblem zur überprüfbaren Lösung
+
+Die [Projektarbeit](references/project-work.md) verbindet Nutzungsszenarien, Konzeption, Gestaltung, technische Umsetzung und Projektsteuerung. Sie hilft, Anforderungen in bearbeitbare Aufgaben mit Abnahmekriterien zu übersetzen, Nutzerwirkung und Aufwand getrennt zu priorisieren und Ergebnisse wieder in die Wissenspflege einfließen zu lassen. Persönliche Erfahrung, heuristische Bewertung, beobachtete Nutzung und normative Nachweise bleiben unterscheidbar. Das sind auftragsbezogene Arbeitshilfen, keine zusätzlichen Pflichtformulare.

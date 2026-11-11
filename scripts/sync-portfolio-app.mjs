@@ -23,6 +23,7 @@ const transformAppHtml = value => value
   .replaceAll('href="../bildnutzung.html"', 'href="shared/legal/bildnutzung.html"')
   .replaceAll('href="../impressum.html#kontakt"', 'href="shared/legal/impressum.html#kontakt"')
   .replaceAll('href="../barrierefreiheit.html"', 'href="shared/legal/barrierefreiheit.html"')
+  .replaceAll('href="../#arbeit"', 'href="https://www.sebastianjansen.com/#arbeit"')
   .replaceAll('href="../"', 'href="https://www.sebastianjansen.com/"');
 
 await copyText(resolve(portfolioApp, "index.html"), resolve(root, "index.html"), transformAppHtml);
@@ -60,6 +61,7 @@ const transformLegalHtml = value => value
   .replaceAll('src="js/', 'src="../js/')
   .replaceAll('data-release-src="release.json"', 'data-release-src="../release.json"')
   .replaceAll('action="/barriere-melden.php"', 'action="https://www.sebastianjansen.com/barriere-melden.php"')
+  .replaceAll('href="index.html#arbeit"', 'href="https://www.sebastianjansen.com/#arbeit"')
   .replaceAll('href="index.html"', 'href="../../index.html"');
 for (const file of ["impressum.html", "bildnutzung.html", "barrierefreiheit.html"]) {
   await copyText(resolve(portfolioRoot, file), resolve(shared, "legal", file), transformLegalHtml);

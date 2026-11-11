@@ -194,3 +194,23 @@
   [data-site-navigation] { border-color: CanvasText; background: Canvas; color: CanvasText; }
   .site-header-transition { display:none; }
 }
+
+/* Shared route to the professional profile, including document pages. */
+.site-profile-link {
+  display: inline-flex; align-items: center; min-height: 2.75rem; flex-shrink: 0;
+  margin-left: 1rem; padding: .5rem; color: inherit; font-size: .75rem;
+  font-weight: 700; line-height: 1.4; text-decoration: underline;
+  text-decoration-color: var(--site-header-pink); text-underline-offset: .3rem;
+}
+.site-profile-link:focus-visible { outline: 3px solid currentColor; outline-offset: 2px; }
+[data-site-header].is-scrolled .site-profile-link { color: #111; text-decoration-color: #111; }
+@media (max-width:64rem) {
+  [data-site-header]:not([data-site-navigation-context="sections"]) [data-site-header-inner] { flex-wrap: wrap; }
+  [data-site-header]:not([data-site-navigation-context="sections"]) .site-profile-link { margin-left: auto; }
+  [data-site-navigation] .site-profile-link { margin: .5rem 0; }
+}
+
+@media (min-width:64.0625rem) and (max-width:79.99rem) {
+  [data-site-navigation-list] { column-gap: .75rem; }
+  [data-site-navigation-list] a { padding-inline: .35rem; }
+}

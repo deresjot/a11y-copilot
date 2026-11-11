@@ -33,3 +33,9 @@ Die Startanweisung fordert eine kritische Selbstprüfung: Annahmen hinterfragen,
 Probiere die Änderung im echten Produkt aus. Teste bekannte Fehler nach und prüfe neue sowie betroffene bestehende Bedienelemente, einschließlich Abbruch und Rückkehr. Nutze passende Tests: zum Beispiel Tastatur, Zoom, kleinen Bildschirm oder Screenreader.
 
 Halte fest, was geprüft wurde. Prüfe auch Inhalt und Bedeutung. Nicht ausgeführte Tests bleiben offen.
+
+## Aus einem Problem eine Projektaufgabe machen
+
+Beispielauftrag nach dem Startpaket: „Menschen können einen Inhalt bearbeiten, verlieren aber beim Speichern die Orientierung. Untersuche mit dem bereitgestellten Material den Ablauf. Trenne Beobachtungen und offene Fragen. Beschreibe erwartetes Verhalten, eine umsetzbare Aufgabe und Abnahmekriterien. Ordne Nutzerwirkung und geschätzten Aufwand getrennt ein. Nenne, wie die Korrektur nachgetestet werden kann.“
+
+Liefere nur die tatsächlich belegbaren Teile. Ohne Zugriff auf das Produkt entsteht ein Prüf- oder Umsetzungsauftrag, kein ausgeführter Test. Die [Projektarbeit](references/project-work.md) vertieft das Vorgehen; bei Redaktionswerkzeugen zusätzlich [Autorensysteme](references/authoring-tools.md) heranziehen.

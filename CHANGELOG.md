@@ -2,6 +2,10 @@
 
 Die Einträge beschreiben die wesentlichen Änderungen für die Nutzung.
 
+## 0.2.26 – 2026-11-11
+
+- Wissensbasis und Prüfabläufe erweitert; Darstellung, mobile Nutzung und Linkvorschauen verbessert.
+
 ## 0.2.25 – 2026-11-06
 
 - Hinweise zu KI, Selbstbestimmung und kritischer Prüfung von Antworten ergänzt.

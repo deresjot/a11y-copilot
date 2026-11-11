@@ -29,3 +29,13 @@ Bestätige den Eingang. Bei einer Blockade gehört ein erreichbarer Alternativwe
 Öffentliche Fach- und Betroffenencommunities können zusätzliche Erfahrungsberichte, Gegenperspektiven und Hinweise auf praktische Barrieren liefern. Wiederkehrende Themen sind beispielsweise unsichtbarer Fokus, nicht bedienbare Menüs und Dialoge, blockierter Zoom, Eingriffe in Browserfunktionen, schlechte ARIA-Ergänzungen, Accessibility-Overlays, verlorener Kontext nach dynamischer Navigation und Produkte, die ohne echte Nutzerprüfung als zugänglich bezeichnet werden. Solche Beiträge sind qualitative Signale, aber weder normative Quellen noch repräsentative Forschung. Prüfe die jeweilige Beobachtung im eigenen Produkt und ordne normative Aussagen separat über Primärquellen zu.
 
 Für die technische Gegenprobe hilft die [MDN-Grundlage zu zugänglichem HTML](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Accessibility/HTML): passende native Elemente liefern Bedeutung und Tastaturverhalten, während eine sinnvolle DOM-Reihenfolge die Orientierung unterstützt. MDN ist hier Umsetzungsreferenz; der HTML Standard und WCAG bleiben für normative Aussagen maßgeblich.
+
+## Erfahrung, Heuristik und Beobachtung auseinanderhalten
+
+Eigene Behinderungserfahrung und Berichte aus Communities können früh auf Barrieren hinweisen. Kennzeichne Kontext und Herkunft, soweit dies für die Bewertung nötig und von der beteiligten Person gewollt ist. Verlange keine Diagnose und leite keine Behinderung aus Schreibweise oder Verhalten ab.
+
+Eine heuristische Evaluation beurteilt ein Produkt fachlich anhand benannter Prinzipien und Anforderungen. Ein empirischer Nutzungstest beobachtet reale Menschen bei Aufgaben unter dokumentierten Bedingungen. Ein eigener Bedienversuch ist kein durchgeführter Nutzungstest mit der Zielgruppe; eine KI-Simulation ebenfalls nicht. Beide Methoden können die Normprüfung ergänzen, ersetzen sie aber nicht. Wähle passend zur offenen Frage; nicht jede Codekorrektur braucht eine neue Studie.
+
+Wenn Erfahrungen oder Ergebnisse auseinandergehen, untersuche Aufgaben, Kontext, Hilfsmittel und Bedingungen. Relativiere einen reproduzierbaren Befund nicht allein wegen einer abweichenden Einzelmeinung. Begründe Änderungen am Vorgehen und halte offen, wo die vorhandene Evidenz noch keine Entscheidung trägt.
+
+Methodischer Bezug: [W3C WAI: Involving Users in Evaluating Web Accessibility](https://www.w3.org/WAI/test-evaluate/involving-users/), geprüft am 11. November 2026. Die dortige Nutzerbeteiligung ist von standardbezogener Prüfung zu unterscheiden.

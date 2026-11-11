@@ -1,6 +1,6 @@
 # Übergabe: a11y-copilot
 
-Releasevorbereitung 0.2.25 vom 6. November 2026: Hinweise zu KI und Selbstbestimmung, Inhaltsprüfung und kritischer Antwortprüfung ergänzt. Startpaket, Fachgrundlage und beide Anleitungsfassungen sind abgestimmt. Die Gegenproben umfassen nun 17 Fälle; die neuen Fälle wurden noch nicht mit Modellen ausgewertet.
+Release 0.2.26 vom 11. November 2026: Wissensbasis zu Prüfaufträgen, Autorensystemen und Projektarbeit erweitert; Darstellung und Linkvorschauen vereinheitlicht. Die Gegenproben umfassen 20 Fälle. Für die ergänzten Fälle liegt noch kein dokumentierter Modelllauf vor.
 
 > Releasevorbereitung 0.2.24 vom 5. November 2026: Strategie und Pflege, KI-Regressionen, Nutzungspfade und Grenzen synthetischer Personas ergänzt. Fachliche Dateien werden im Standalone-Repository gepflegt und mit `npm run sync:portfolio` in die Website übertragen; die Oberfläche kommt anschließend mit `npm run sync:app` aus dem Portfolio zurück. Markdown-Bündel werden generiert. Neue LLM-Gegenproben sind spezifiziert; daraus folgt noch kein bestandener Modelllauf.
 
@@ -279,3 +279,7 @@ Diese Prüfungen sind keine Konformitätsgarantie. NVDA/Firefox, VoiceOver/Safar
 Das Repository soll sich wie eine kompakte, belastbare und erweiterbare Accessibility-Wissensbasis anfühlen: direkt lesbar für Menschen, eindeutig steuerbar für Agents, portabel zwischen Werkzeugen und frei von organisationsspezifischem Prozessballast.
 
 Der Qualitätsanspruch lautet nicht „ein Tool behauptet 100 %“, sondern: **Barrieren so früh und umfassend wie möglich vermeiden, den vereinbarten Scope nachvollziehbar prüfen, Menschen einbeziehen und offene Punkte transparent benennen.**
+
+## Projektarbeit und fachliches Lernen
+
+[Projektarbeit](references/project-work.md) führt vom Nutzungsziel zur umsetzbaren Aufgabe mit Abnahme, Priorisierung und Nachtest. Autorensysteme erhalten getrennte Nachweise für Werkzeugbedienung und erzeugte Inhalte. Nutzerforschung unterscheidet persönliche Erfahrung, Heuristik und empirische Beobachtung. Pflege reagiert auf nachvollziehbare Quellen und Rückmeldungen; keine automatische Community-Beobachtung behaupten. Die Produktnavigation enthält bewusst keinen Link zum beruflichen Portfolioabschnitt.

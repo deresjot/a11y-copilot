@@ -12,3 +12,5 @@
 - Never fix a shared header or footer only in this standalone repository or only on the Copilot page. Apply global shell changes to every public page in `deresjot-web`, extend its all-routes Playwright contract test, and then import the verified UI with `A11Y_COPILOT_PORTFOLIO_SOURCE=... npm run sync:app`.
 - Preserve the project-specific “Quellcode auf GitHub” link as an explicit Copilot extension; global profile, legal, release, and back-to-top elements must remain consistent with the portfolio shell.
 - After synchronization, run the standalone build and inspect the generated application before committing.
+
+- Follow the component roles and explicit variants in the canonical portfolio `source/dev/DESIGN-SYSTEM.md`; change shared tokens in its `source/css/ui-system.css`, then synchronize the app.

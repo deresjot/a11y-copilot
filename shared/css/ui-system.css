@@ -7,6 +7,22 @@
   --ui-color-text-muted: #c8c8c8;
   --ui-color-border: #555;
   --ui-accent: #ff004f;
+  --ui-color-surface-light: #fff;
+  --ui-color-text-on-light: #111;
+  --ui-color-muted-on-light: #333;
+  --ui-color-border-strong: #777;
+  --ui-accent-on-light: #a90035;
+  --ui-accent-on-dark: #ff709b;
+  --ui-border-width: 1px;
+  --ui-font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ui-font-heading: "NeueMachina", system-ui, sans-serif;
+  --ui-type-meta: .75rem;
+  --ui-type-index: .8rem;
+  --ui-type-body: 1rem;
+  --ui-type-card-title: clamp(1.2rem, 1.6vw, 1.5rem);
+  --ui-type-section-title: clamp(1.8rem, 2.65vw, 2.6rem);
+  --ui-line-body: 1.65;
+  --ui-line-heading: 1.1;
   --ui-space-1: .25rem;
   --ui-space-2: .5rem;
   --ui-space-3: .75rem;
@@ -72,9 +88,9 @@ a.skip-link,
 }
 
 :where(a[href], button, [role="button"], input, textarea, select, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
-  outline: .2rem solid var(--ui-color-text) !important;
+  outline: .2rem solid var(--ui-focus-color, var(--ui-color-text)) !important;
   outline-offset: .25rem !important;
-  box-shadow: 0 0 0 .4rem var(--ui-accent) !important;
+  box-shadow: 0 0 0 .4rem var(--ui-focus-halo, var(--ui-accent)) !important;
 }
 
 .ui-action-group { display: flex; flex-wrap: wrap; align-items: center; gap: var(--ui-space-2); }
@@ -94,9 +110,8 @@ a.skip-link,
 .ui-icon-button:hover > [aria-hidden="true"]::after,
 .ui-icon-button:focus-visible > [aria-hidden="true"]::before,
 .ui-icon-button:focus-visible > [aria-hidden="true"]::after { color: var(--ui-color-bg); }
-.ui-button { min-height: 3rem; padding: .8rem 1.15rem; border: 2px solid var(--ui-accent); border-radius: 0; background: var(--ui-accent); color: var(--ui-color-bg); font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; }
-/* Keep inverted text/background pairs legible throughout focus and hover changes. */
-.ui-button { transition: border-color var(--ui-duration-fast) ease,transform var(--ui-duration-fast) var(--ui-easing-standard); }
+/* Keep inverted text/background pairs legible: do not tween their colors. */
+.ui-button { min-height: 3rem; padding: .8rem 1.15rem; border: 2px solid var(--ui-accent); border-radius: 0; background: var(--ui-accent); color: var(--ui-color-bg); font-size: .8125rem; letter-spacing: .08em; text-transform: uppercase; transition: border-color var(--ui-duration-fast) ease,transform var(--ui-duration-fast) var(--ui-easing-standard); }
 .ui-button:visited { color: var(--ui-color-bg); }
 .ui-button--large { min-height: 4.25rem; padding: 1rem clamp(1.5rem,3vw,2.4rem); font-size: clamp(.82rem,.76rem + .25vw,1rem); }
 .ui-button--secondary { background: transparent; color: var(--ui-color-text); }
@@ -147,7 +162,7 @@ main .ui-section-target[tabindex="-1"]:focus { outline: none; }
 .ui-dialog__header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--ui-space-4); padding: var(--ui-space-5); border-bottom: 1px solid rgba(255,255,255,.14); background: var(--ui-color-bg); }
 .ui-dialog__heading { min-width: 0; flex: 1 1 auto; }
 .ui-dialog__eyebrow { margin: 0 0 .35rem; color: var(--ui-accent); font-size: .75rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.ui-dialog__title { max-width: none; margin: 0; color: var(--ui-color-text); font-family: "NeueMachina",system-ui,sans-serif; font-size: clamp(1.25rem,2vw,1.75rem); font-weight: 500; letter-spacing: -.02em; line-height: 1.2; overflow-wrap: anywhere; text-wrap: balance; }
+.ui-dialog__title { max-width: none; margin: 0; color: var(--ui-color-text); font-family: var(--ui-font-heading); font-size: clamp(1.25rem,2vw,1.75rem); font-weight: 500; letter-spacing: -.02em; line-height: 1.2; overflow-wrap: anywhere; text-wrap: balance; }
 .ui-dialog__body { min-width: 0; min-height: 0; overflow: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 
 @supports selector(details::details-content) {

@@ -42,3 +42,9 @@ Stelle der KI die relevanten Projektkonventionen, geprüften Komponenten und Que
 - [AbilityNet: How to build accessible AI](https://abilitynet.org.uk/news-blogs/how-build-accessible-ai-insights-industry-leaders): Roundtable-Bericht zu Fachwissen, Design-Systemen, falschem Vertrauen und menschlicher Beteiligung; keine kontrollierte Wirksamkeitsstudie.
 
 Diese Quellen begründen Methodenimpulse. Normative oder rechtliche Aussagen benötigen weiterhin die für den Auftrag maßgeblichen Primärquellen.
+
+## Aus Rückmeldungen weiterlernen
+
+Leite aus wiederkehrenden Befunden konkrete Verbesserungen an Anforderungen, Komponenten, Prüfmethoden oder Schulungen ab. Halte Anlass, Quelle, Änderung und benötigte Gegenprüfung nachvollziehbar. Ein neuer Community-Beitrag ist ein Rechercheanlass, keine automatisch gültige Anforderung. Widersprüche zur bisherigen Wissensbasis werden anhand einschlägiger Primärquellen und Produktbeobachtungen geklärt.
+
+Definiere bei Bedarf eine verantwortliche Pflegestelle und sinnvolle Auslöser: etwa Änderungen an Standards, unterstützten Plattformen, Komponenten oder häufige Supportmeldungen. Behaupte keine automatische Hintergrundbeobachtung von Fachkanälen, wenn dafür kein tatsächlich eingerichteter Prozess besteht. Die [Projektarbeit](project-work.md) verbindet diese Erkenntnisse mit Aufgaben, Prioritäten und Abnahme.

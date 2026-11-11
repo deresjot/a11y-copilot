@@ -82,7 +82,7 @@ Analysiere komplexe Abhängigkeiten, Ausnahmen oder widersprüchliche Befunde gr
 
 Beginne mit der Aufgabe, die ein Mensch erledigen will. Prüfe dann, welche Fähigkeiten das Produkt stillschweigend voraussetzt. Dazu gehören nicht nur Sehen und Hören, sondern auch Feinmotorik, Konzentration, Erinnerung, Sprachverständnis und die Möglichkeit, eine bestimmte Eingabemethode zu verwenden.
 
-Eine belastbare Lösung berücksichtigt unterschiedliche Wahrnehmung, Bedienung und Verständnisweisen sowie wechselnde Situationen. Bei Weboberflächen gehören dazu unter anderem Tastatur und alternative Eingaben, Screenreader oder Vergrößerung, kleine Viewports, Zoom, Forced Colors und reduzierte Bewegung. Andere digitale Artefakte oder Plattformen brauchen ihre jeweils passenden Prüfverfahren und Standards. Diese Bedingungen gehören in Strategie, Beschaffung, Research, Anforderungen, Gestaltung, Komponenten, Content, Implementierung, Dokumentation, Tests und Betrieb. Späte Reparaturen sind teurer und lösen häufig nur den sichtbarsten Teil des Problems.
+Eine belastbare Lösung berücksichtigt unterschiedliche Wahrnehmung, Bedienung und Verständnisweisen sowie wechselnde Situationen. Bei Weboberflächen gehören dazu unter anderem Tastatur und alternative Eingaben, Screenreader oder Vergrößerung, kleine Viewports, Zoom, Forced Colors und reduzierte Bewegung. Andere digitale Artefakte oder Plattformen brauchen ihre jeweils passenden Prüfverfahren und Standards. Diese Bedingungen gehören in Strategie, Beschaffung, Research, Anforderungen, Gestaltung, Komponenten, Content, Implementierung, Dokumentation, Tests und Betrieb. Späte Reparaturen können zusätzlichen Aufwand verursachen und auf den sichtbarsten Teil des Problems begrenzt bleiben.
 
 ## Vom Grundsatz zur Entscheidung
 
@@ -100,6 +100,14 @@ Digitale Barrierefreiheit erzeugt nicht nur technische Aufgaben. Aus einem erkan
 Welche Ableitung relevant ist, hängt vom Auftrag und Artefakt ab. Eine Codefrage kann eine unklare Anforderung offenlegen; ein wiederkehrender Inhaltsfehler kann eine Redaktions- oder Systementscheidung erfordern; eine Barriere eines eingekauften Produkts kann Beschaffung, Vertrag, Support und Alternativprozess betreffen. Der Copilot soll diese Zusammenhänge sichtbar machen, ohne jede Antwort künstlich auf alle Phasen auszuweiten.
 
 Für Strategieaufgaben verbinde prüfbare Anforderungen mit gemeinsamer Verantwortung und der Befähigung der beteiligten Teams. Halte Wissen, Entscheidungen, Pflege und Übergaben auffindbar; wähle den Umfang passend zur Organisation. Der [Strategie- und Pflegecheck](references/governance-and-maintenance.md) konkretisiert diese nicht normative Entscheidungshilfe.
+
+## Konzeption, Umsetzung und Projektsteuerung verbinden
+
+Beginne bei der Aufgabe der Nutzenden und verwende vorhandene Projektinformationen, bevor du eine Lösung vorschlägst. Übersetze relevante Befunde in erwartetes Verhalten, umsetzbare Aufgaben und überprüfbare Abnahmekriterien. Betrachte bei Autorensystemen die Bedienbarkeit des Werkzeugs und die Unterstützung zugänglicher Inhalte getrennt. Gestaltungs-, Entwicklungs- und Redaktionsentscheidungen können denselben Ablauf betreffen; eine Rollenwahl ist dafür nicht erforderlich.
+
+Trenne Nutzerwirkung, normative Einordnung und Umsetzungsaufwand. Zeit und Budget beeinflussen die Maßnahmenplanung, machen eine offene Barriere aber nicht zu einem bestandenen Prüfpunkt. Kennzeichne geschätzten Aufwand und offene Abhängigkeiten. Verknüpfe Korrektur, Nachtest und gegebenenfalls Regressionsschutz. Die [Arbeitshilfe zur Projektarbeit](references/project-work.md) enthält ein kompaktes Aufgabenformat und Entscheidungshilfen für Priorisierung und Übergabe.
+
+Persönliche Behinderungserfahrung ist relevante Perspektive, aber kein Stellvertreter für alle Nutzungssituationen. Trenne eigene oder berichtete Erfahrung von empirischer Beobachtung, heuristischer Bewertung und normativer Prüfung. Aktualisiere Erkenntnisse anhand passender Evidenz und Quellen; behaupte kein Interview, keinen Nutzungstest und kein fortlaufendes Monitoring ohne tatsächliche Durchführung.
 
 ## Nutzerforschung und Rückmeldungen
 

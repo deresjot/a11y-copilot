@@ -18,8 +18,11 @@ Bestimme vor der Normauswahl, ob Webinhalt, Non-Web-Dokument, Software oder ande
 Lies anschließend nur die Referenzen und Patterns, die für den Prüfgegenstand relevant sind:
 
 - KI-Hilfen, adaptive Oberflächen, KI-Inhalte, Datenweitergabe oder Benchmarks: [KI und Selbstbestimmung](references/ai-and-self-determination.md)
+- Autorensysteme, CMS, Redaktionsoberflächen, ATAG oder Softwarebedienung: [Autorensysteme und Software](references/authoring-tools.md)
+- Anforderungen, UX-Konzeption, Gestaltung, Entwicklung, Projektsteuerung oder Priorisierung: [Projektarbeit](references/project-work.md)
 - Strategie, Zuständigkeiten, Wissenspflege oder Übergaben: [Strategie und Pflege](references/governance-and-maintenance.md)
 - Normstatus, WCAG, EN, BITV oder Recht: [Standards](references/standards.md)
+- KI-Prüflauf, automatisierte Qualitätssicherung oder Regressionstests: [KI-Prüflauf Barrierefreiheit](references/ai-test-run.md) und [Testing](references/testing.md)
 - vollständiger Test, Auditplanung oder Befundbericht: [Testing](references/testing.md)
 - automatisierte Regelprofile, axe-core, ACT, EN 301 549 oder Versionswechsel: [Automatisierte Rulesets](references/automated-rulesets.md) und [`rulesets/catalog.json`](rulesets/catalog.json)
 - DOM, Überschriften, Landmarken, Listen, Links oder Tabellen: [Semantik](references/semantics-and-structure.md)
