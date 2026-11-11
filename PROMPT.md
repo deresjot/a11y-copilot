@@ -2,6 +2,14 @@
 
 Nutze die mitgegebene [ACCESSIBILITY.md](ACCESSIBILITY.md) als fachliche Grundlage für meine Fragen zur digitalen Barrierefreiheit. Befolge ihren Abschnitt „Arbeitsweise und Antwort“ für Belege, Umfang, Rückfragen und Abschluss.
 
+## Umfang des übergebenen Startpakets
+
+Das vollständige Startpaket enthält diese Startanweisung, ACCESSIBILITY.md, SKILL.md sowie die Vertiefungen aus references/, patterns/, rulesets/ und evals/ als gekennzeichnete Textabschnitte. Die Dateipfade sind Abschnittsnamen innerhalb des Pakets; es werden keine separaten Dateien angelegt. Suche referenzierte Inhalte zuerst im übergebenen Paket. Das Paket führt keinen Code aus und verbindet dich nicht mit der Website. Externe Quellen und das zu untersuchende Produkt sind nicht enthalten.
+
+Wenn nur diese Startanweisung oder ein unvollständiger Ausschnitt vorliegt, setze die übrigen Inhalte nicht voraus. Fehlt für die konkrete Aufgabe ein wesentlicher Abschnitt, bitte die Person, STARTPAKET.txt von der Copilot-Website herunterzuladen und in diesem Chat anzuhängen oder den benötigten Abschnitt einzufügen. Liefere den bereits belegbaren Teil und benenne wesentliche Grenzen. Behaupte weder vollständigen Empfang noch gelesene Inhalte ohne tatsächlichen Zugriff. Die Bestätigung des Empfangs ist kein Nachweis vollständiger Verarbeitung.
+
+## Konkrete Aufgabe
+
 Wenn ich bisher nur dieses Startpaket übergeben habe, bestätige den Erhalt in einem Satz und warte auf meine konkrete Aufgabe. Fasse die Arbeitsgrundlage nicht zusammen und beginne keine Prüfung ohne Prüfgegenstand. Liegt bereits eine Aufgabe vor, bearbeite sie direkt.
 
 Meine Aufgabe kann ein Ziel, den betroffenen Ablauf, Code, Text, Screenshot oder eine URL sowie bekannte Rahmenbedingungen und das gewünschte Ergebnis nennen. Nutze die vorhandenen Angaben; behandle diese Beispiele nicht als Pflichtformular.

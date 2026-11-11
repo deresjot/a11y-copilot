@@ -10,6 +10,10 @@ Zum Beispiel: Prüfe dieses Formular. Oder: Verbessere diese Fehlermeldung. Eine
 
 Wähle auf der Website **„Startpaket kopieren“**. Füge den Text als erste Nachricht in einen neuen KI-Chat ein.
 
+Das Startpaket enthält die Anweisung, die fachliche Grundlage und alle Vertiefungen gemeinsam als Text. Es verbindet deine KI nicht mit dieser Website. Externe Quellen und dein eigenes Projekt sind nicht enthalten.
+
+**So übergibst du das Wissen:** Kopiere das Startpaket und füge es in deinen KI-Chat ein. Ist der Text für deinen Chat zu lang? Lade [STARTPAKET.txt](STARTPAKET.txt) herunter und hänge diese Datei im Chat an, sofern dein KI-Werkzeug Dateianhänge unterstützt. Eine heruntergeladene Datei allein ist noch nicht bei der KI angekommen. Akzeptiert dein Werkzeug weder das ganze Paket noch einen Dateianhang, füge die [Arbeitsgrundlage](ACCESSIBILITY.md) und die für deine Aufgabe benötigten Vertiefungen aus der Wissensbasis einzeln ein. Diese Teilübergabe enthält nur die von dir ausgewählten Inhalte.
+
 Arbeitet die KI direkt in deinem Code-Projekt? Gib ihr zusätzlich [SKILL.md](SKILL.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md).
 
 ## Schritt 3 von 5: Zeige die echte Stelle

@@ -10,7 +10,11 @@ Ich pflege das Toolkit, weil eine überzeugend klingende Antwort noch lange kein
 
 ## So benutzt du a11y-copilot
 
-Für eine einzelne Aufgabe kopierst du das **Startpaket** aus [PROMPT.md](PROMPT.md) und [ACCESSIBILITY.md](ACCESSIBILITY.md) in einen neuen KI-Chat. Alternativ kannst du beide Dateien als Kontext anhängen. Stelle danach deine konkrete Frage und gib den betroffenen Code, den Nutzungspfad und bekannte Rahmenbedingungen mit. Bitte bei normativen Aussagen um die genaue Quelle und teste die vorgeschlagene Lösung anschließend im echten Produkt.
+Für eine einzelne Aufgabe kopierst du das **Startpaket** als gemeinsame Textdatei [STARTPAKET.txt](STARTPAKET.txt) in einen neuen KI-Chat. Alternativ kannst du die Paketdatei als Kontext anhängen. Stelle danach deine konkrete Frage und gib den betroffenen Code, den Nutzungspfad und bekannte Rahmenbedingungen mit. Bitte bei normativen Aussagen um die genaue Quelle und teste die vorgeschlagene Lösung anschließend im echten Produkt.
+
+Das Startpaket enthält die Anweisung, die fachliche Grundlage und alle Vertiefungen gemeinsam als Text. Es verbindet deine KI nicht mit dieser Website. Externe Quellen und dein eigenes Projekt sind nicht enthalten.
+
+**So übergibst du das Wissen:** Kopiere das Startpaket und füge es in deinen KI-Chat ein. Ist der Text für deinen Chat zu lang? Lade [STARTPAKET.txt](STARTPAKET.txt) herunter und hänge diese Datei im Chat an, sofern dein KI-Werkzeug Dateianhänge unterstützt. Eine heruntergeladene Datei allein ist noch nicht bei der KI angekommen. Akzeptiert dein Werkzeug weder das ganze Paket noch einen Dateianhang, füge die [Arbeitsgrundlage](ACCESSIBILITY.md) und die für deine Aufgabe benötigten Vertiefungen aus der Wissensbasis einzeln ein. Diese Teilübergabe enthält nur die von dir ausgewählten Inhalte.
 
 Eine vollständige Anleitung mit kopierbaren Prompt-Beispielen steht in [TUTORIAL.md](TUTORIAL.md).
 

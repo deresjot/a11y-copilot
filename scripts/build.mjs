@@ -1,12 +1,14 @@
 import { cp, mkdir, rm } from "node:fs/promises";
 import { resolve } from "node:path";
 
+await import('./build-markdown-bundle.mjs');
+
 const root = resolve(import.meta.dirname, "..");
 const output = resolve(root, "dist");
 const publicEntries = [
   "index.html", "tutorial.html", "favicon.ico", "favicon.svg",
   "a11y-copilot.css", "a11y-copilot.js", "tutorial.css", "tutorial.js",
-  "ACCESSIBILITY.md", "PROMPT.md", "SKILL.md", "TUTORIAL.md", "README.md", "CHANGELOG.md", "HANDOFF.md",
+  "STARTPAKET.txt", "ACCESSIBILITY.md", "PROMPT.md", "SKILL.md", "TUTORIAL.md", "README.md", "CHANGELOG.md", "HANDOFF.md",
   "assets", "evals", "font", "patterns", "references", "rulesets", "shared"
 ];
 

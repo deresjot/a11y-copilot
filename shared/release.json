@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.49",
+    "version": "1.0.50",
     "releasedOn": "2026-11-11",
-    "summary": "Berufliches Profil und a11y-copilot erweitert; Darstellung, mobile Nutzung und Linkvorschauen verbessert."
+    "summary": "a11y-copilot: vollständiges Startpaket zum Kopieren oder Herunterladen und verständlichere Anleitung für den KI-Chat."
   },
   "history": [
+    {
+      "version": "1.0.50",
+      "releasedOn": "2026-11-11",
+      "summary": "a11y-copilot: vollständiges Startpaket zum Kopieren oder Herunterladen und verständlichere Anleitung für den KI-Chat."
+    },
     {
       "version": "1.0.49",
       "releasedOn": "2026-11-11",

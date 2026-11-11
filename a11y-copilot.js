@@ -326,16 +326,12 @@ async function copyStartKit(button) {
   button.disabled = true;
   if (status) status.textContent = 'Startpaket wird vorbereitet …';
   try {
-    const [prompt, accessibility] = await Promise.all([
-      loadMarkdownText('PROMPT.md'),
-      loadMarkdownText('ACCESSIBILITY.md')
-    ]);
-    const payload = `${prompt.markdown.trim()}\n\n---\n\n${accessibility.markdown.trim()}\n`;
+    const { markdown: payload } = await loadMarkdownText('STARTPAKET.txt');
     await writeClipboard(payload);
-    if (status) status.textContent = 'Startanweisung und ACCESSIBILITY.md wurden kopiert. Füge das Startpaket jetzt als erste Nachricht in einen neuen KI-Chat ein.';
+    if (status) status.textContent = 'Das vollständige Startpaket mit allen Vertiefungen wurde kopiert. Füge das Startpaket jetzt als erste Nachricht in einen neuen KI-Chat ein.';
     button.textContent = 'Startpaket kopiert';
   } catch (error) {
-    if (status) status.textContent = 'Das Startpaket konnte nicht kopiert werden. Öffne stattdessen PROMPT.md und ACCESSIBILITY.md.';
+    if (status) status.textContent = 'Das Startpaket konnte nicht kopiert werden. Lade STARTPAKET.txt herunter und hänge die Datei in deinem KI-Chat an.';
   } finally {
     button.disabled = false;
     window.setTimeout(() => { button.textContent = previousLabel; }, 2500);

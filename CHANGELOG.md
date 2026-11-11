@@ -2,6 +2,10 @@
 
 Die Einträge beschreiben die wesentlichen Änderungen für die Nutzung.
 
+## 0.2.27 – 2026-11-11
+
+- Vollständiges Startpaket zum Kopieren oder Herunterladen und verständlichere Anleitung für die Übergabe an einen KI-Chat.
+
 ## 0.2.26 – 2026-11-11
 
 - Wissensbasis und Prüfabläufe erweitert; Darstellung, mobile Nutzung und Linkvorschauen verbessert.
