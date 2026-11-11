@@ -1,5 +1,7 @@
 # Übergabe: a11y-copilot
 
+Release 0.2.27 vom 11. November 2026: Vollständiges Startpaket zum Kopieren oder Herunterladen; explizite Übergabe in den KI-Chat und Eingabegrenzen erklärt. Die enthaltenen Dateipfade sind Abschnittsnamen, keine bereitgestellten Dateien. Kein neuer dokumentierter Modelllauf.
+
 Release 0.2.26 vom 11. November 2026: Wissensbasis zu Prüfaufträgen, Autorensystemen und Projektarbeit erweitert; Darstellung und Linkvorschauen vereinheitlicht. Die Gegenproben umfassen 20 Fälle. Für die ergänzten Fälle liegt noch kein dokumentierter Modelllauf vor.
 
 > Releasevorbereitung 0.2.24 vom 5. November 2026: Strategie und Pflege, KI-Regressionen, Nutzungspfade und Grenzen synthetischer Personas ergänzt. Fachliche Dateien werden im Standalone-Repository gepflegt und mit `npm run sync:portfolio` in die Website übertragen; die Oberfläche kommt anschließend mit `npm run sync:app` aus dem Portfolio zurück. Markdown-Bündel werden generiert. Neue LLM-Gegenproben sind spezifiziert; daraus folgt noch kein bestandener Modelllauf.
