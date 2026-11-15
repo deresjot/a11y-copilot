@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.51",
+    "version": "1.0.52",
     "releasedOn": "2026-11-15",
-    "summary": "Kontaktformular bei vorübergehenden Einschränkungen verbessert und Datenschutzhinweise aktualisiert."
+    "summary": "Fehlerhinweise und Korrekturwege im Kontaktformular verbessert; Darstellung und Bedienung mit VoiceOver nachgeprüft."
   },
   "history": [
+    {
+      "version": "1.0.52",
+      "releasedOn": "2026-11-15",
+      "summary": "Fehlerhinweise und Korrekturwege im Kontaktformular verbessert; Darstellung und Bedienung mit VoiceOver nachgeprüft."
+    },
     {
       "version": "1.0.51",
       "releasedOn": "2026-11-15",
