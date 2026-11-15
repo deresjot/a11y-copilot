@@ -5,6 +5,37 @@
   margin-top: 1.5rem;
 }
 
+/* A focused notification precedes the fields; field links keep correction direct. */
+.feedback-error-summary {
+  padding: var(--ui-space-4);
+  border: 2px solid var(--ui-accent-on-dark);
+  background: var(--ui-color-surface);
+  color: var(--ui-color-text);
+  overflow-wrap: anywhere;
+}
+
+.feedback-error-summary p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.feedback-error-summary p:focus {
+  outline: 3px solid var(--ui-color-text);
+  outline-offset: 4px;
+}
+
+.feedback-error-summary ul {
+  margin: var(--ui-space-2) 0 0;
+  padding-inline-start: var(--ui-space-5);
+}
+
+.feedback-error-summary a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--ui-control-min);
+  color: var(--ui-color-text);
+}
+
 .feedback-field {
   display: grid;
   gap: 0.35rem;

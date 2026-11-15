@@ -100,7 +100,7 @@
       const field = form.elements[name];
       const error = fieldError(form, name);
       if (!field || !error) return;
-      field.removeAttribute("aria-invalid");
+      field.setAttribute("aria-invalid", "false");
       error.textContent = "";
       error.hidden = true;
     };
@@ -124,12 +124,46 @@
       else if (comment.length > 5000) errors.kommentar = "Die Nachricht ist zu lang. Bitte kürze sie auf höchstens 5.000 Zeichen.";
       return errors;
     };
+    const renderErrorSummary = (form, focus = false) => {
+      const container = form.querySelector("[data-feedback-errors]");
+      const summary = form.querySelector("[data-feedback-error-summary]");
+      const links = form.querySelector("[data-feedback-error-links]");
+      if (!container || !summary || !links) return;
+      const names = ["absender", "kommentar"].filter(name => form.elements[name].getAttribute("aria-invalid") === "true");
+      const labels = { absender: "E-Mail-Adresse", kommentar: "Deine Nachricht" };
+      const text = names.length ? "Bitte prüfe deine Angaben. " + names.map(name => `${labels[name]}: ${fieldError(form, name).textContent}`).join(" ") : "";
+      summary.textContent = text;
+      links.replaceChildren(...names.map(name => {
+        const item = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = `#${form.elements[name].id}`;
+        link.textContent = `${labels[name]} korrigieren`;
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          form.elements[name].focus();
+        });
+        item.append(link);
+        return item;
+      }));
+      container.hidden = !names.length;
+      if (focus && names.length) {
+        const previousFocus = document.activeElement;
+        // Render the complete notification before focusing it; avoid a competing live announcement.
+        window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
+          if (!container.hidden && summary.textContent === text && document.activeElement === previousFocus) {
+            const headerBottom = form.closest("dialog") ? 0 : document.querySelector("[data-site-header]")?.getBoundingClientRect().bottom || 0;
+            summary.style.scrollMarginBlockStart = `${Math.max(0, headerBottom) + 16}px`;
+            summary.focus({ preventScroll: true });
+            summary.scrollIntoView({ block: "start", behavior: "instant" });
+          }
+        }));
+      }
+    };
     const showErrors = (form, errors) => {
       for (const name of ["absender", "kommentar"]) clearFieldError(form, name);
       const invalidNames = ["absender", "kommentar"].filter(name => errors[name] && showFieldError(form, name, errors[name]));
-      const firstName = invalidNames[0];
-      if (firstName) form.elements[firstName].focus();
-      return Boolean(firstName);
+      renderErrorSummary(form, Boolean(invalidNames.length));
+      return Boolean(invalidNames.length);
     };
     const updateStatus = (status, message) => {
       if (!status) return;
@@ -139,6 +173,7 @@
       const form = event.target.closest("[data-feedback-form]");
       if (form && ["absender", "kommentar"].includes(event.target.name)) {
         clearFieldError(form, event.target.name);
+        renderErrorSummary(form);
         if (!form.querySelector('[aria-invalid="true"]')) form.querySelector("[data-feedback-status]").textContent = "";
       }
     });
@@ -167,7 +202,7 @@
 
       const errors = validateForm(form);
       if (showErrors(form, errors)) {
-        if (status) status.textContent = "Bitte prüfe die markierten Felder.";
+        if (status) status.textContent = "";
         return;
       }
 
@@ -175,6 +210,7 @@
       form.dataset.submitting = "true";
       button.setAttribute("aria-disabled", "true");
       if (status) status.textContent = "Nachricht wird gesendet …";
+      let serverErrorMessage = "";
       try {
         const response = await fetch(destination, {
           method: "POST",
@@ -183,15 +219,19 @@
         });
         const payload = await response.json();
         if (!response.ok && showErrors(form, payload.errors || {})) {
-          if (status) status.textContent = "Bitte prüfe die markierten Felder.";
+          if (status) status.textContent = "";
           return;
         }
-        if (!response.ok) throw new Error(payload.message || "Die Nachricht konnte nicht gesendet werden.");
+        if (!response.ok) {
+          serverErrorMessage = typeof payload.message === "string" ? payload.message : "";
+          throw new Error("Feedback request failed");
+        }
+        if (payload.ok !== true || typeof payload.message !== "string" || !payload.message.trim()) throw new Error("Incomplete feedback response");
         form.reset();
         for (const name of ["absender", "kommentar"]) clearFieldError(form, name);
         updateStatus(status, payload.message);
-      } catch (error) {
-        updateStatus(status, error.message || "Die Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.");
+      } catch {
+        updateStatus(status, serverErrorMessage || "Die Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.");
       } finally {
         delete form.dataset.submitting;
         button.removeAttribute("aria-disabled");

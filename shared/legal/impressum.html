@@ -73,16 +73,20 @@
                 <p>Du möchtest etwas mitteilen, eine Frage stellen oder eine Barriere melden? Schreib mir kurz, worum es geht. Wenn du eine Barriere meldest, reicht eine Beschreibung dessen, was nicht funktioniert hat.</p>
                 <p>Persönliche Angaben zu einer Behinderung oder zu verwendeten Hilfsmitteln brauchst du nicht zu machen. Beide Felder sind erforderlich.</p>
                 <form class="feedback-form" data-feedback-form action="https://www.sebastianjansen.com/barriere-melden.php" method="post" novalidate>
+                  <div class="feedback-error-summary" data-feedback-errors hidden>
+                    <p data-feedback-error-summary tabindex="-1"></p>
+                    <ul data-feedback-error-links></ul>
+                  </div>
                   <div class="feedback-field">
                     <label for="feedback-email">E-Mail-Adresse</label>
                     <p class="field-error" id="feedback-email-error" data-field-error="absender" hidden></p>
-                    <input id="feedback-email" name="absender" type="email" autocomplete="email" maxlength="254" required aria-describedby="feedback-email-error feedback-email-hint" aria-errormessage="feedback-email-error">
+                    <input id="feedback-email" name="absender" type="email" autocomplete="email" maxlength="254" required aria-invalid="false" aria-describedby="feedback-email-error feedback-email-hint" aria-errormessage="feedback-email-error">
                     <p class="field-hint" id="feedback-email-hint">Damit ich dir antworten kann.</p>
                   </div>
                   <div class="feedback-field">
                     <label for="feedback-comment">Deine Nachricht</label>
                     <p class="field-error" id="feedback-comment-error" data-field-error="kommentar" hidden></p>
-                    <textarea id="feedback-comment" name="kommentar" rows="7" minlength="3" maxlength="5000" required aria-describedby="feedback-comment-error" aria-errormessage="feedback-comment-error"></textarea>
+                    <textarea id="feedback-comment" name="kommentar" rows="7" minlength="3" maxlength="5000" required aria-invalid="false" aria-describedby="feedback-comment-error" aria-errormessage="feedback-comment-error"></textarea>
                   </div>
                   <div class="feedback-trap" aria-hidden="true">
                     <label for="feedback-company">Firma</label>
