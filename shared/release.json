@@ -1,10 +1,15 @@
 {
   "current": {
-    "version": "1.0.50",
-    "releasedOn": "2026-11-11",
-    "summary": "a11y-copilot: vollständiges Startpaket zum Kopieren oder Herunterladen und verständlichere Anleitung für den KI-Chat."
+    "version": "1.0.51",
+    "releasedOn": "2026-11-15",
+    "summary": "Kontaktformular bei vorübergehenden Einschränkungen verbessert und Datenschutzhinweise aktualisiert."
   },
   "history": [
+    {
+      "version": "1.0.51",
+      "releasedOn": "2026-11-15",
+      "summary": "Kontaktformular bei vorübergehenden Einschränkungen verbessert und Datenschutzhinweise aktualisiert."
+    },
     {
       "version": "1.0.50",
       "releasedOn": "2026-11-11",
