@@ -210,12 +210,13 @@
       form.dataset.submitting = "true";
       button.setAttribute("aria-disabled", "true");
       if (status) status.textContent = "Nachricht wird gesendet …";
+      const submittedData = new FormData(form);
       let serverErrorMessage = "";
       try {
         const response = await fetch(destination, {
           method: "POST",
           headers: { Accept: "application/json" },
-          body: new FormData(form)
+          body: submittedData
         });
         const payload = await response.json();
         if (!response.ok && showErrors(form, payload.errors || {})) {
@@ -227,9 +228,12 @@
           throw new Error("Feedback request failed");
         }
         if (payload.ok !== true || typeof payload.message !== "string" || !payload.message.trim()) throw new Error("Incomplete feedback response");
-        form.reset();
+        const hasNewDraft = ["absender", "kommentar"].some(name => form.elements[name].value !== submittedData.get(name));
+        if (!hasNewDraft) form.reset();
         for (const name of ["absender", "kommentar"]) clearFieldError(form, name);
-        updateStatus(status, payload.message);
+        updateStatus(status, hasNewDraft
+          ? `${payload.message} Deine Änderungen während des Sendens wurden nicht mitgesendet und bleiben im Formular.`
+          : payload.message);
       } catch {
         updateStatus(status, serverErrorMessage || "Die Nachricht konnte nicht gesendet werden. Bitte versuche es erneut.");
       } finally {
