@@ -39,10 +39,10 @@ await mkdir(resolve(shared, "img"), { recursive: true });
 await mkdir(resolve(shared, "js"), { recursive: true });
 await mkdir(resolve(shared, "font"), { recursive: true });
 await mkdir(resolve(shared, "legal"), { recursive: true });
-for (const file of ["ui-system.css", "global-footer.css", "status-document.css", "footer-document-modal.css", "feedback-form.css", "document-pages.css", "accessibility-report.css", "legal-document.css", "site-header.css"]) {
+for (const file of ["ui-system.css", "global-footer.css", "status-document.css", "footer-document-modal.css", "feedback-form.css", "document-pages.css", "accessibility-report.css", "legal-document.css", "image-usage-document.css", "site-header.css"]) {
   await cp(resolve(portfolioRoot, "css", file), resolve(shared, "css", file));
 }
-for (const file of ["sebastian-jansen-80.png", "sebastian-jansen-160.png", "footer-badge-320.png", "footer-badge-512.png", "sebastian_jansen.jpg"]) {
+for (const file of ["sebastian-jansen-80.png", "sebastian-jansen-160.png", "footer-badge-320.png", "footer-badge-512.png", "sebastian_jansen.jpg", "sebastian-jansen-portraet-dc33e326826a.jpg"]) {
   await cp(resolve(portfolioRoot, "img", file), resolve(shared, "img", file));
 }
 for (const file of ["NeueMachina-Medium.woff2", "NeueMachina-Regular.woff2", "NeueMachina-Regular.woff"]) {
@@ -57,6 +57,7 @@ await cp(resolve(portfolioApp, "font/KiwiSoda.woff2"), resolve(root, "font/KiwiS
 
 const transformLegalHtml = value => value
   .replaceAll('href="css/', 'href="../css/')
+  .replaceAll('href="img/', 'href="../img/')
   .replaceAll('src="img/', 'src="../img/')
   .replaceAll('src="js/', 'src="../js/')
   .replaceAll('data-release-src="release.json"', 'data-release-src="../release.json"')

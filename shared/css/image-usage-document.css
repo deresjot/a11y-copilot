@@ -1,0 +1,108 @@
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: #111;
+  color: #fff;
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #ff004f;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: #ff004f;
+  color: #000;
+  text-decoration: none;
+  z-index: 10;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.page {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 5rem 1rem 4rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.lead {
+  max-width: 48rem;
+}
+
+.asset-grid {
+  display: grid;
+  gap: 2rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.asset-grid > li {
+  min-width: 0;
+}
+
+.asset-card {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.asset-card figure {
+  margin: 0 0 1rem;
+}
+
+.asset-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.asset-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.muted {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (min-width: 800px) {
+  .asset-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
